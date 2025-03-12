@@ -1,0 +1,61 @@
+{
+    "login": {
+      "label": {
+        "userId": "ID User",
+        "pwd": "Password",
+        "forgotPwd": "Tidak ingat Password?",
+        "rememberMe": "Remember Me",
+        "or": "Atau",
+        "greetings": "Halo, ",
+        "noAccount": "Tidak memiliki akun? ",
+        "backToLoginPage": "Back to Login Page"
+      },
+      "btn": {
+        "signIn": "Masuk",
+        "signUp": "Daftar disini"
+      },
+        "msgs": {
+          "error": {
+            "usrIdRequired": "ID User diperlukan",
+            "pwdRequired": "Password diperlukan"
+          }
+        }
+    },
+    "forgotPwd": {
+      "msgs": {
+        "success": "Jika email yang diberikan adalah ID email yang terdaftar di ClicDo, Anda akan menerima email dengan instruksi lebih lanjut tentang cara mengatur ulang Password Anda."
+      }
+    },
+    "forcedPwdChange": {
+      "label": {
+        "header": "Harap ubah Password Anda",
+        "userId": "ID User",
+        "currentPwd": "Password saat ini​",
+        "newPwd": "Password baru",
+        "confirmPwd": "Konfirmasi Password"
+      },
+      "msgs": {
+        "usrIdRequired": "ID pengguna diperlukan",
+        "oldPwdRequired": "Password saat ini diperlukan",
+        "newPwdRequired": "Password baru diperlukan",
+        "confPwdRequired": "Password yang dikonfirmasi diperlukan",
+        "pwdNoMatch": "Password tidak cocok",
+        "pwdChngSuccess": "Password berhasil diubah!",
+        "passwordFormat": "Password harus terdiri dari 8-20 karakter. Password disini peka huruf besar-kecil."
+      },
+      "btn": {
+        "changePwd": "Ganti Password",
+        "signIn": "Masuk",
+        "backToSignIn": "Kembali ke Masuk"
+      }
+    },
+  "resetPwd": {
+    "reset": "Reset Password",
+    "signIn": "Masuk",
+    "email": "Email"
+  },
+  "notFound": {
+    "msg": "Halaman itu tidak ada atau tidak tersedia.",
+    "btnBack": "Kembali ke Dashboard"
+  }
+}

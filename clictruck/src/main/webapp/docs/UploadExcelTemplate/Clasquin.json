@@ -1,0 +1,136 @@
+[
+    {
+        "field": "init_shipment_ref",
+        "label": "INIT_SHIPMENT_REF",
+        "default": "3",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location_name",
+        "label": "INIT_FROM_LOCATION_NAME",
+        "default": "12",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location",
+        "label": "INIT_FROM_LOCATION",
+        "default": "12",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location_name",
+        "label": "INIT_TO_LOCATION_NAME",
+        "default": "2",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location",
+        "label": "INIT_TO_LOCATION",
+        "default": "2",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "customer_name",
+        "label": "Customer_name",
+        "default": ""
+    },
+    {
+        "field": "cargo_owner_csp",
+        "label": "cargo_owner",
+        "default": ""
+    },
+    {
+        "field": "end_location",
+        "label": "end_location",
+        "default": ""
+    },
+    {
+        "field": "customer_invoice_number",
+        "label": "customer_invoice_number",
+        "default": ""
+    },
+    {
+        "field": "cases_qty",
+        "label": "cases_qty",
+        "default": ""
+    },
+    {
+        "field": "date_of_delivery_csp",
+        "label": "date_of_delivery",
+        "default": ""
+    },
+    {
+        "field": "hbod_no",
+        "label": "Clasquin_HBOD_#",
+        "default": ""
+    },
+    {
+        "field": "description",
+        "label": "description",
+        "default": ""
+    },
+    {
+        "field": "cargo_type",
+        "label": "cargo_type",
+        "default": ""
+    },
+    {
+        "field": "no_of_bottles",
+        "label": "No. of Bottles",
+        "default": ""
+    },
+    {
+        "field": "cargo_truck_type",
+        "label": "cargo_truck_type",
+        "default": ""
+    },
+    {
+        "field": "contract_id",
+        "label": "contract_id",
+        "default": "Clasquin"
+    },
+    {
+        "field": "start_location",
+        "label": "start_location",
+        "default": ""
+    },
+    {
+        "field": "plan_date_csp",
+        "label": "plan_date",
+        "default": ""
+    },
+    {
+        "field": "phone_number_notification",
+        "label": "phone_number_notification",
+        "default": ""
+    },
+    {
+        "field": "booking_date_csq",
+        "label": "booking_date",
+        "default": "",
+        "hidden": "Y"
+    },
+    {
+        "field": "loading_csq",
+        "label": "loading",
+        "default": "FTL",
+        "hidden": "Y"
+    },
+    {
+        "field": "booking_date_csp",
+        "label": "payment_method",
+        "default": "credit",
+        "hidden": "Y"
+    },
+    {
+        "field": "pickup_datetime",
+        "label": "PICKUP_DATETIME",
+        "default": "%s 09:30:00",
+        "hidden": "Y"
+    }
+]

@@ -1,0 +1,315 @@
+[
+    {
+        "provider": "YINSON",
+        "email": "sagarqavcc@gmail.com",
+        "trucks": [
+            {
+                "name": "CITROEN E BERLINGO (2023)",
+                "providerCode": "YINSON",
+                "picture": "CITROEN_E_BERLINGO(2023).jpg",
+                "description": [
+                    {
+                        "cargoLength": "4753",
+                        "cargoWidth": "1848",
+                        "cargoHeight": "1880",
+                        "volume": "0",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "0"
+                    }
+                ],
+                "features": [
+                    {
+                        "rangeKm": "293",
+                        "onboardCharging": "AC 7.4kW / DC 100kW"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "1950"
+                    }
+                ]
+            },
+            {
+                "name": "CITROEN E DISPATCH",
+                "providerCode": "YINSON",
+                "picture": "CITROEN_E_DISPATCH.png",
+                "description": [
+                    {
+                        "cargoLength": "4959",
+                        "cargoWidth": "1920",
+                        "cargoHeight": "1902",
+                        "volume": "5.3",
+                        "maxPower": "100",
+                        "maxTorque": "260",
+                        "payload": "985"
+                    }
+                ],
+                "features": [
+                    {
+                        "cargoAreaMm": "2,435 x 1,595 x 1,387",
+                        "batteryCapacity": "75 kWh",
+                        "range": "339 km",
+                        "panel": "3.5” Colour Matrix instrument panel",
+                        "laden": "Max laden weight / Max unladen weight: 3,040kg / 2,040kg",
+                        "screenDisplay": "7” touchscreen display with Apple Carplay & Android Auto",
+                        "others": "Driver & Passenger airbags, ABS, ESP, Hill Start Assist",
+                        "curbWeight": "2,040 kg",
+                        "maxWeight": "3,025 kg"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "2630"
+                    }
+                ]
+            },
+            {
+                "name": "MAXUS E DELIVER 3",
+                "providerCode": "YINSON",
+                "picture": "MAXUS_E_DELIVER_3.png",
+                "description": [
+                    {
+                        "cargoLength": "4555",
+                        "cargoWidth": "1780",
+                        "cargoHeight": "1895",
+                        "volume": "4.8",
+                        "maxPower": "90",
+                        "maxTorque": "255",
+                        "payload": "905"
+                    }
+                ],
+                "features": [
+                    {
+                        "cargo_area_mm": "2,180 x 1,665 x 1,330",
+                        "batteryCapacity": "52.5 kWh",
+                        "range": "240 km",
+                        "curbWeight": "1,555 kg",
+                        "maxWeight": "2,460 kg",
+                        "screen_display": "7” display with Apple Carplay and reverse camera",
+                        "others": "Cruise control, Driver & Passenger airbags"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "2400"
+                    }
+                ]
+            },
+            {
+                "name": "KING LONG 6500 (2022)",
+                "providerCode": "YINSON",
+                "picture": "KING_LONG_6500(2022).png",
+                "description": [
+                    {
+                        "cargoLength": "5000",
+                        "cargoWidth": "1700",
+                        "cargoHeight": "1965",
+                        "volume": "0",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "0"
+                    }
+                ],
+                "features": [
+                    {
+                        "onboardCharging": "AC 11kW / DC 233kW",
+                        "range": "230 km",
+                        "Tech": "Vehicle-to-Load Technology",
+                        "others": "Wireless Phone Charging (WPC)"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "1800"
+                    }
+                ]
+            },
+            {
+                "name": "SOKON EC35",
+                "providerCode": "YINSON",
+                "picture": "SOKON_EC35.png",
+                "description": [
+                    {
+                        "cargoLength": "4500",
+                        "cargoWidth": "1680",
+                        "cargoHeight": "1985",
+                        "volume": "4.8",
+                        "maxPower": "60",
+                        "maxTorque": "200",
+                        "payload": "1100"
+                    }
+                ],
+                "features": [
+                    {
+                        "cargo_area_mm": "2,570 x 1,440 x 1,270",
+                        "onboardCharging": "AC 6.6kW / DC 40kW",
+                        "estRange": "280 km",
+                        "batteryCapacity": "38,7 kWh",
+                        "maxWeight": "2,600 kg",
+                        "curbWeight": "1,500 kg"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "2250"
+                    }
+                ]
+            },
+            {
+                "name": "DFSK EC31 (2023)",
+                "providerCode": "YINSON",
+                "picture": "DFSK_EC31(2023).jpg",
+                "description": [
+                    {
+                        "cargoLength": "4730",
+                        "cargoWidth": "1635",
+                        "cargoHeight": "1985",
+                        "volume": "0",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "0"
+                    }
+                ],
+                "features": [
+                    {
+                        "onboardCharging": "AC 6.6kW / DC 40kW",
+                        "rangeKm": "278"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "1950"
+                    }
+                ]
+            },
+            {
+                "name": "KING LONG 5030EV",
+                "providerCode": "YINSON",
+                "picture": "KING_LONG_5030EV.jpeg",
+                "description": [
+                    {
+                        "cargoLength": "5000",
+                        "cargoWidth": "1700",
+                        "cargoHeight": "1965",
+                        "volume": "6.2",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "1380"
+                    }
+                ],
+                "features": [
+                    {
+                        "cargo_area_mm": "2,940 x 1,555 x 1,360",
+                        "curbWeight": "1,880 kg",
+                        "maxWeight": "3,260 kg",
+                        "batteryCapacity": "50.23 kWh",
+                        "estRange": "230 km"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "2360"
+                    }
+                ]
+            },
+            {
+                "name": "HIGER H5F",
+                "providerCode": "YINSON",
+                "picture": "HIGER_H5F.jpeg",
+                "description": [
+                    {
+                        "cargoLength": "4880",
+                        "cargoWidth": "1700",
+                        "cargoHeight": "1995",
+                        "volume": "6.1",
+                        "maxPower": "80",
+                        "maxTorque": "0",
+                        "payload": "1380"
+                    }
+                ],
+                "features": [
+                    {
+                        "laden_weight": "3,280 kg",
+                        "curbWeight": "1,900 kg",
+                        "batteryCapacity": "50.23 kWh",
+                        "range": "Est. 230 km"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "2670"
+                    }
+                ]
+            },
+            {
+                "name": "SANY EV490-20 Prime Mover 4x2",
+                "providerCode": "YINSON",
+                "picture": "SANY_EV490-20_Prime_Mover_4x2.jpg",
+                "description": [
+                    {
+                        "cargoLength": "0",
+                        "cargoWidth": "0",
+                        "cargoHeight": "0",
+                        "volume": "0",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "40000"
+                    }
+                ],
+                "features": [
+                    {
+                        "tonnage": "GCW: 80 tons",
+                        "kerbWeight": "10 tons",
+                        "batteryCapacity": "350 kWh\nCharging time: 20%-90% ≤ 1 h",
+                        "range": "without load: 420 km\nwith load: 160-180 km"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "7200"
+                    }
+                ]
+            },
+            {
+                "name": "SANY EV490-30 Prime Mover 6x4",
+                "providerCode": "YINSON",
+                "picture": "SANY_EV490-30_Prime_Mover_6x4.jpg",
+                "description": [
+                    {
+                        "cargoLength": "0",
+                        "cargoWidth": "0",
+                        "cargoHeight": "0",
+                        "volume": "0",
+                        "maxPower": "0",
+                        "maxTorque": "0",
+                        "payload": "60000"
+                    }
+                ],
+                "features": [
+                    {
+                        "tonnage": "GCW 120 tons",
+                        "kerbWeight": "12 tons",
+                        "batteryCapacity": "350 kWh\ncharging time: 20%-90% ≤ 1 h",
+                        "range": "without load: 420 km\nwith load: 160-180 km"
+                    }
+                ],
+                "plans": [
+                    {
+                        "months": "36",
+                        "price": "7650"
+                    }
+                ]
+            }
+        ]
+    }
+]

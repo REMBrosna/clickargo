@@ -1,0 +1,171 @@
+{
+    "paymentAdvice": {
+        "list": {
+            "routeSegment": "Payment & Generate Payment Advice list",
+            "table": {
+                "title": "Payment & Generate Advice",
+                "title_db": "Payment Collection",
+                "headers": {
+                    "payAdvRefNo": "Payment Ref. No.",
+                    "payInvRefNo": "Invoice Ref. No.",
+                    "payAdvAppNo": "Application Ref. No.",
+                    "payAdvAppType": "Application Type",
+                    "payAdvPayDate": "Payment Date",
+                    "payAdvPayAmt": "Payment Amount",
+                    "payAdvStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "title": "Payment & Generate Advice",
+            "viewAdvLabel": "View Payment Advice Generation",
+            "payAdvLabel": "Payment Advice Generation",
+            "table": {
+                "title": "Payment & Generate Advice",
+                "detailsTitle": "Payment Details",
+                "headers": {
+                    "payAdvRefNo": "Payment Ref. No.",
+                    "payAdvAppNo": "Application Ref. No.",
+                    "payAdvAppType": "Application Type",
+                    "payAdvPayDate": "Payment Date",
+                    "payAdvPayAmt": "Payment Amount",
+                    "payAdvStatus": "Status"
+                },
+                "fields": {
+                    "balanceAmount": "Balance Amount ",
+                    "totalAmount": "Total Amount ",
+                    "paidAmount": "Paid Amount ",
+                    "outstandingBalanceAmount": "Outstanding Balance Amount ",
+                    "importantText": " Important : Payment advice reference will be saved upon selecting Proceed to Payment.",
+                    "btnProceedText": "Proceed to Payment",
+                    "btnOk": "Ok"
+                }
+            },
+            "msg": {
+                "refNoIs": "Payment Invoice Ref. No. is {{payInvRefNo}}",
+                "notice": "Please take note of the Payment Invoice Ref. No. and use MPWT Payment Gateway to proceed to payment."
+            },
+            "bank": "Payment Bank",
+            "paymentDate": "Payment Date",
+            "uploadReceipt": "Upload Receipt",
+            "transactionNo": "Bank Transaction no.",
+            "paymentAdvDate": "Payment Advice Date",
+            "remarks": "Remarks",
+            "officerRemarks": "Officer Remarks",
+            "paymentType": "Payment Type",
+            "paymentExemption": "Exemption Payment"
+        }
+    },
+    "paymentDetails": {
+        "label": {
+            "payments": "Payments",
+            "paymentDet": "Payment Details",
+            "paymentHistory": "Payment History",
+            "paymentActive": "Payment Active",
+            "history": "History",
+            "active": "Active",
+            "paymentRef": "Payment Reference",
+            "transactions": "Transactions",
+            "listDo": "List of DO",
+            "viewListDo": "View list of DO",
+            "payDo": "Pay DO",
+            "payDos": "Pay DOs",
+            "confirmPay": "Confirm Make Payment",
+            "billingDate": "Billing Date",
+            "paidDate": "Paid Date",
+            "error": "Error",
+            "genDetails": "General Details",
+            "listInvoices": "List of Invoices",
+            "total": "Total",
+            "fields": {
+                "totalIdr": "Total IDR",
+                "totalUsd": "Total USD",
+                "viaIdrVa": "Via IDR VA",
+                "viaUsdVa": "Via USD VA",
+                "viaBiFast": "Via BI Fast",
+                "bankAccnName": "Bank Account Name"
+            },
+            "confirmAction": "Confirm",
+            "confirmCancel": "Confirm Cancel"
+        },
+        "list": {
+            "table": {
+                "headers": {
+                    "paymentId": "Payment Id",
+                    "jobId": "Job Id",
+                    "bLNo": "BL No",
+                    "paymentDate": "Payment Creation Date",
+                    "dueDate": "Payment Due Date",
+                    "details": "Details",
+                    "paidDate": "Paid Date",
+                    "invoices": "Invoices",
+                    "invoiceNo": "Invoice No",
+                    "currency": "Currency",
+                    "amount": "Amount",
+                    "slNo": "S/No",
+                    "itemDescription": "Item Description",
+                    "quantity": "Qty",
+                    "status": "Status",
+                    "txnStatus": "Transaction Status"
+                }
+            }
+        },
+        "msg": {
+            "selectJob": "Please select at least one job for payment",
+            "noJobSelected": "No Job selected!",
+            "confirmPay": "Are you sure you want to pay for {{selectedRowIds}}",
+            "confirmAction": "Are you sure you want to {{action}}?"
+        }
+    },
+    "paymentVerification": {
+        "tabs": {
+            "doPayments": "DO Payments"
+        },
+        "label": {
+            "sections": {
+                "genDet": "General Details",
+                "countDet": "Count Details ({{date}})",
+                "totalChrgs": "Total Charges ({{date}})",
+                "consignRegionPayList": "Consignee Region Payment List",
+                "amount": "Amount"
+            },
+            "clicDoPaymentVerification": "ClicDo Payment Verification",
+            "payments": "Payments",
+            "confirmation": "Confirmation",
+            "ok": "Ok",
+            "error": "Error",
+            "fields": {
+                "date": "Date",
+                "totalDo": "Total DO",
+                "totalCo": "Total CO",
+                "totalClmChrgIdr": "Total Claim Charges (IDR)",
+                "totalClmChrgUsd": "Total Claim Charges (USD)",
+                "authriserPayDet": "Authoriser Payment Details",
+                "region": "Region",
+                "amountIdr": "Amount (IDR)",
+                "amountUsd": "Amount (USD)"
+            }
+        },
+        "list": {
+            "table": {
+                "headers": {
+                    "doNo": "DO No.",
+                    "bLNo": "BL No.",
+                    "invoiceNo": "Invoice Number",
+                    "invoiceAmt": "Invoice Amount",
+                    "currency": "Currency"
+                }
+            }
+        },
+        "msg": {
+            "paymentsVerified": "Payments Verified",
+            "noPaymentToVerify": "No Payment to verify!",
+            "confirmation": "Are you sure you want to {{action}} Payments on this date {{date}}?"
+        }
+    },
+    "errors": {
+        "jobInPayProcessing": "Following jobs {{jobIds}} already processed for payment. Please try again!",
+        "existingNewTxn": "There is already an existing NEW payment transaction: {{txnId}}. Please settle this first before doing another one.",
+        "jobNotOutPayYet": "Unable to proceed. Following jobs {{jobIds}} not paid yet to TO. Please try again."
+    }
+}

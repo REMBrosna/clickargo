@@ -1,0 +1,792 @@
+{
+  "audit": {
+    "list": {
+      "routeSegment": "Daftar Log Audit",
+      "table": {
+        "title": "Daftar Log Audit",
+        "headers": {
+          "audtId": "Referensi",
+          "audtEvent": "Event",
+          "audtUid": "ID User",
+          "audtUname": "Nama User",
+          "audtReckey": "No Referensi Aplikasi"
+        }
+      }
+    },
+    "details": {
+      "view": "Lihat Log Audit",
+      "tabs": {
+        "recordDetails": {
+          "audtId": "Referensi",
+          "audtEvent": "Event",
+          "audtUid": "ID User",
+          "audtAccnid": "Akun",
+          "audtTimestamp": "Tanggal/Waktu Event",
+          "audtCreatedDate": "Tanggal Dibuat",
+          "audtRemoteIp": "Source IP",
+          "audtUname": "Record",
+          "audtParam1": "Parameter 1",
+          "audtParam2": "Parameter 2",
+          "audtParam3": "Parameter 3",
+          "audtRemarks": "Catatan"
+        }
+      }
+    }
+  },
+  "exception": {
+    "list": {
+      "routeSegment": "Daftar Pengecualian",
+      "table": {
+        "title": "Daftar Pengecualian",
+        "headers": {
+          "expToken": "Referensi",
+          "expCode": "Kode Aplikasi",
+          "expMsg": "Pesan Pengecualian",
+          "expUid": "ID User"
+        }
+      }
+    },
+    "details": {
+      "view": "Lihat Pengecualian",
+      "tabs": {
+        "recordDetails": {
+          "expToken": "Referensi",
+          "expCode": "Kode Aplikasi",
+          "expMsg": "Pesan Pengecualian",
+          "expUid": "ID User",
+          "expLevel": "Tingkatan Pengecualian",
+          "expSvrAddr": "IP",
+          "expApp": "Nama aplikasi",
+          "expAddinfo": "Informasi Pengecualian",
+          "expDetails": "Detail Pengecualian",
+          "expTimestamp": "Tanggal/Waktu Pengecualian",
+          "expCreatedDate": "Tanggal Dibuat"
+        }
+      }
+    }
+  },
+  "document": {
+    "list": {
+      "routeSegment": "Kelola Dokumen",
+      "table": {
+        "title": "Kelola Dokumen",
+        "subtitle": "Dokumen",
+        "headers": {
+          "appnId": "ID aplikasi",
+          "appnAppType": "Jenis Aplikasi",
+          "attDtCreate": "Tanggal",
+          "docType": "Jenis Dokumen",
+          "refNo": "Nomor Referensi Dokumen",
+          "attName": "Nama Dokumen",
+          "shipperName": "Shipping Line/Nama Agen",
+          "shipName": "Nama Kapal",
+          "voyageType": "Jenis Pelayaran",
+          "voyageNo": "Nomor Pelayaran"
+        },
+        "button": {
+          "search": "Search",
+          "download": "Download"
+        }
+      }
+    },
+    "options": {
+      "appnId": "ID Aplikasi",
+      "appType": "Jenis Aplikasi",
+      "docType": "Jenis Dokumen",
+      "shipperName": "Shipping Line/Nama Agen",
+      "fromDate": "Tanggal Dimulai",
+      "toDate": "Tanggal Berakhir"
+    }
+  },
+  "applicationAdvancedSearch": {
+    "list": {
+      "routeSegment": "Advanced Search Aplikasi",
+      "table": {
+        "title": "Advanced Search Aplikasi",
+        "subtitle": "Advanced Search List",
+        "headers": {
+          "appnId": "ID Aplikasi",
+          "appnParentId": "Parent ID",
+          "appnAppType": "Jenis Aplikasi",
+          "appnAppStatus": "Status Aplikasi",
+          "appnDtSubmit": "Tanggal Submit",
+          "lastActionDate": "Tanggal Disetujui",
+          "docType": "Jenis Aplikasi",
+          "refNo": "Nomor Referensi Aplikasi",
+          "attName": "Nama Aplikasi",
+          "shipperName": "Shipping Line/Nama Agen",
+          "shipName": "Nama Kapal",
+          "portName": "Nama Pelabuhan",
+          "voyageType": "Jenis Pelayaran",
+          "voyageNo": "Nomor Pelayaran"
+        },
+        "button": {
+          "search": "Search",
+          "download": "Download",
+          "clear": "Clear"
+        }
+      }
+    },
+    "options": {
+      "appnId": "Dynamic Fields",
+      "appnParentId": "Parent ID",
+      "appType": "Jenis Aplikasi",
+      "docType": "Jenis Dokumen",
+      "appnAppStatus": "Status Aplikasi",
+      "port": "Pelabuhan",
+      "shipperName": "Shipping Line/Nama Agen",
+      "fromDate": "{{status}} Tanggal Dari",
+      "toDate": "{{status}} Sampai Tanggal"
+    }
+  },
+  "report": {
+    "title": {
+      "reports": "Report",
+      "report": "Report",
+      "reportFilters": "Filter Report",
+      "reportPreview": "Preview"
+    },
+    "list": {
+      "reportGroup": "Grup Report",
+      "reportName": "Nama Report",
+      "reportTitle": "Judul Report"
+    },
+    "button": {
+      "search": "Search",
+      "generateReport": "Generate Report",
+      "generateExcel": "Generate Excel",
+      "cancel": "Cancel",
+      "previewReport": "Preview Report"
+    },
+    "msg": {
+      "generate": "Generate",
+      "confirmGenerate": "Apakah Anda sudah yakin ingin melakukan Generate?"
+    }
+  },
+  "sysParam": {
+    "list": {
+      "routeSegment": "Daftar Parameter Sistem",
+      "table": {
+        "title": "Daftar Parameter Sistem",
+        "headers": {
+          "sysKey": "Kunci",
+          "sysVal": "Nilai",
+          "sysDesc": "Deskripsi",
+          "sysStatus": "Status"
+        },
+        "refreshBtn": "Refresh SysParam Cache"
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Parameter Sistem",
+        "sub": {
+          "edit": "Edit Parameter Sistem",
+          "view": "Lihat Parameter Sistem"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "sysKey": "Kunci",
+          "sysVal": "Nilai",
+          "sysDesc": "Deskripsi"
+        }
+      }
+    }
+  },
+  "contractManagement": {
+    "request": "Contract Management Request",
+    "title": "Contract Management",
+    "popupTitle": "Truck Contract",
+    "tabs": {
+      "details": "Truck Contract Details",
+      "audits": "Audits"
+    },
+    "details": {
+      "generalDetails": "Detail Umum",
+      "properties": "Keterangan",
+      "valilidilityDetails": "Rincian Validitas",
+      "partiesDetail": "Detail Perusahaan",
+      "requestorDetails": "Requestor",
+      "approverDetails": "Approver",
+      "truckOperatorDetails": "Truck Operator - Charges Details",
+      "rateTableDetails": "Rate Table Details",
+      "forwaderDetails": "CO/FF - Charges Details",
+      "cargoOwnerDetails": "Cargo Owner - Charges Details",
+      "payTerm": "Termin Pembayaran",
+      "id": "Id",
+      "desc": "Deskripsi",
+      "name": "Nama",
+      "currency": "Currency",
+      "startDate": "Tanggal Mulai",
+      "expiredDate": "Tanggal Kadaluarsa",
+      "truckOperator": "Truck Operator",
+      "forwader": "Forwader",
+      "cargoOwner": "Cargo Owner",
+      "platformFee": "Platform Fee",
+      "additionalTax": "Tambahan Tax",
+      "withHoldTax": "Withold Tax",
+      "rateTable": "Rate Table",
+      "createdBy": "Dibuat Oleh",
+      "createdAt": "Dibuat Pada",
+      "createdDate": "Tanggal Pembuatan",
+      "updatedBy": "Pembaruan Oleh",
+      "updatedDate": "Tanggal Pembaruan",
+      "toPayTerm": "Truck Operator (days)",
+      "coffPayTerm": "CO/FF (days)",
+      "username": "User Name",
+      "comments": "Comments",
+      "creationDt": "Creation Date",
+      "submittedDt": "Submitted Date",
+      "appRejDt": "Approved/Rejected Date",
+      "financing": "Financing",
+      "financingModel": "Model",
+      "bank": "Bank",
+      "bankCharge": "Bank Charge"
+    },
+    "breadCrumbs": {
+      "create": "New Contract Request",
+      "requestList": "Contract Management Requests List",
+      "list": "Contract Management Request List",
+      "edit": "Edit Contract Request",
+      "view": "View Contract Request",
+      "editContract": "Edit Contract",
+      "viewContract": "View Contract"
+    },
+    "form": {
+      "edit": "Edit Contract Request",
+      "view": "View Contract Request",
+      "viewContract": "View Contract"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "truckManagement": {
+    "title": "Truck Management",
+    "tabs": {
+      "truckDetails": "Detail Truk",
+      "audits": "Audits"
+    },
+    "truckDetails": {
+      "generalDetails": "Detail Umum",
+      "chasisDetails": "Detail Chasis (Optional)",
+      "truckMonitor": "Trucking & Monitoring",
+      "dwv": "Dimensi, Beban dan Volume",
+      "otherDetails": "Detail Lainnya",
+      "id": "Id",
+      "desc": "Deskripsi",
+      "properties": "Keterangan",
+      "name": "Nama",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Dibuat Oleh",
+      "createdAt": "Dibuat Pada",
+      "createdDate": "Tanggal Pembuatan",
+      "updatedBy": "Pembaruan Oleh",
+      "updatedDate": "Tanggal Pembaruan",
+      "type": "Tipe",
+      "platNo": "Plat Nomor",
+      "class": "Kelas",
+      "photo": "Photo (jpg, jpeg, png, pdf, doc, docx)",
+      "dimention": "Dimensi (LWH)",
+      "maxWeight": "Beban Maksimal (Kg)",
+      "volume": "Volume (CBM)",
+      "maintenance": "Maintenance",
+      "size": "Ukuran",
+      "number": "Nomor",
+      "numberOth": "Number (Others)",
+      "noFileChosen": "No File Chosen",
+      "remark": "Catatan",
+      "imei": "IMEI",
+      "odo": "Odometer",
+      "department": "Department"
+    },
+    "breadCrumbs": {
+      "createTruck": "New Truck",
+      "truckList": "Truck Management List",
+      "editTruckList": "Edit Truck",
+      "viewTruckList": "View Truck"
+    },
+    "form": {
+      "editTruckList": "Edit Truck",
+      "viewTruckList": "View Truck"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "driverManagement": {
+    "title": "Driver Management",
+    "tabs": {
+      "details": "Detail Pengemudi",
+      "audits": "Audits"
+    },
+    "driverDetails": {
+      "generalDetails": "Detail Umum",
+      "licenseDetails": "Detail SIM",
+      "id": "Id",
+      "desc": "Deskripsi",
+      "properties": "Keterangan",
+      "name": "Nama",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Dibuat Oleh",
+      "createdAt": "Dibuat Pada",
+      "createdDate": "Tanggal Pembuatan",
+      "updatedBy": "Pembaruan Oleh",
+      "updatedDate": "Tanggal Pembaruan",
+      "photo": "Photo (jpg, jpeg, png)",
+      "licenseNo": "Nomor SIM",
+      "expiredDate": "Tanggal Kadaluarsa",
+      "userId": "User Id",
+      "password": "Password",
+      "accountDetails": "Detail Akun",
+      "contactDetails": "Detail Kontak",
+      "email": "Email",
+      "phone": "Phone",
+      "noFileChosen": "No File Chosen",
+      "browse": "Browse"
+    },
+    "breadCrumbs": {
+      "create": "New Driver",
+      "list": "Driver Management List",
+      "edit": "Edit Driver",
+      "view": "View Driver"
+    },
+    "form": {
+      "edit": "Edit Driver",
+      "view": "View Driver"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "locationManagement": {
+    "title": "Location Management",
+    "tabs": {
+      "details": "Detail Lokasi",
+      "audits": "Audits"
+    },
+    "locationDetails": {
+      "generalDetails": "Detail Umum",
+      "valilidilityDetails": "Detail Validitas",
+      "coordinates": "Koordinat",
+      "id": "Id",
+      "desc": "Deskripsi",
+      "properties": "Keterangan",
+      "name": "Nama",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Dibuat Oleh",
+      "createdAt": "Dibuat Pada",
+      "createdDate": "Tanggal Pembuatan",
+      "updatedBy": "Pembaruan Oleh",
+      "updatedDate": "Tanggal Pembaruan",
+      "type": "Tipe",
+      "address": "Alamat",
+      "remarks": "Catatan",
+      "startDate": "Tanggal Mulai",
+      "endDate": "Tanggal Berakhir",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "gps": "GPS"
+    },
+    "breadCrumbs": {
+      "create": "New Location",
+      "list": "Location Management List",
+      "edit": "Edit Location",
+      "view": "View Location"
+    },
+    "form": {
+      "edit": "Edit Location",
+      "view": "View Location"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "chassisManagement": {
+    "title": "Chassis Management",
+    "tabs": {
+      "details": "Chassis Details",
+      "audits": "Audits"
+    },
+    "chassisDetails": {
+      "generalDetails": "General Details",
+      "licenseDetails": "License Details",
+      "id": "Id",
+      "desc": "Description",
+      "properties": "Properties",
+      "name": "Name",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "photo": "Photo",
+      "licenseNo": "License No",
+      "expiredDate": "Expired Date",
+      "userId": "User Id",
+      "password": "Password",
+      "chassisDetails": "Chassis Details",
+      "chsSize": "Size",
+      "chsNo": "No.",
+      "contactDetails": "Contact Details",
+      "email": "Email",
+      "phone": "Phone",
+      "noFileChosen": "No File Chosen",
+      "browse": "Browse"
+    },
+    "breadCrumbs": {
+      "create": "New Chassis",
+      "list": "Chassis Management List",
+      "edit": "Edit Chassis",
+      "view": "View Chassis"
+    },
+    "form": {
+      "edit": "Edit Chassis",
+      "view": "View Chassis"
+    }
+  },
+  "rateTableManagement": {
+    "breadCrumbs": {
+      "title": "Rate Table",
+      "list": "Rate Table List",
+      "create": "New Rate Table",
+      "edit": "Edit Rate Table",
+      "view": "View Rate Table"
+    },
+    "tabs": {
+      "rateTable": "Rate Table",
+      "comments": "Comments",
+      "audit": "Audits"
+    },
+    "listing": {
+      "from": "Dari",
+      "to": "Ke",
+      "locationType": "Tipe Lokasi",
+      "truckType": "Tipe Truk",
+      "rateType": "Tipe Rate",
+      "price": "Harga",
+      "dateCreated": "Tanggal Pembuatan",
+      "dateUpdated": "Tanggal Pembaruan",
+      "action": "Aksi",
+      "name": "Nama",
+      "startDate": "Tanggal Mulai",
+      "endDate": "Tanggal Berakhir",
+      "expiredDate": "Tanggal Kadaluarsa",
+      "coFfSelect": "Select Accounts",
+      "toAccn": "Trucking Operator",
+      "coFfAccn": "Freight Forwarder / Cargo Owner",
+      "status": "Status"
+    },
+    "details": {
+      "generalDetails": "Detail Umum",
+      "properties": "Keterangan",
+      "validityDetails": "Detail Validitas",
+      "partiesDetails": "Detail Perusahaan",
+      "id": "Id",
+      "description": "Deskripsi",
+      "accnTo": "Truck Operator",
+      "accnCoff": "CO / FF",
+      "vehType": "Vehicle Type",
+      "name": "Nama",
+      "currency": "Mata Uang",
+      "expiredDate": "Tanggal Kadaluarsa",
+      "truckOperator": "Truck Operator",
+      "forwader": "Forwarder",
+      "cargoOwner": "Cargo Owner",
+      "rateTable": "Rate Table",
+      "createdBy": "Dibuat Oleh",
+      "createdAt": "Dibuat Pada",
+      "createdDate": "Tanggal Pembuatan",
+      "updatedBy": "Pembaruan Oleh",
+      "updatedDate": "Tanggal Pembaruan",
+      "startDate": "Tanggal Mulai",
+      "endDate": "Tanggal Berakhir"
+    },
+    "tripRates": {
+      "title": "Trip Rate",
+      "location": "Lokasi",
+      "charges": "Trip Type and Charges",
+      "properties": "Properties",
+      "truckType": "Tipe Truk",
+      "rateType": "Tipe Rate",
+      "charge": "Trip Charge (IDR)",
+      "locFrom": "From",
+      "locTo": "To",
+      "createdBy": "Created By",
+      "createdDt": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDt": "Updated Date"
+    },
+    "msg": {
+      "duplicate": "Existing rate trip {{rateTripDetails}} already exists.",
+      "minimum": "Silahkan buat setidaknya dua trip untuk MultiDrop"
+    }
+  },
+  "liveTracking": {
+    "title": "Live Truck Tracking",
+    "details": "Tracking Details",
+    "truck": "Truck",
+    "trucks": "Trucks",
+    "history": "Historical Tracking",
+    "start": "Start Date Time",
+    "end": "End Date Time",
+    "location": "Truck Location"
+  },
+  "trucksRental": {
+    "title": "Trucks Rental",
+    "tabs": {
+      "rentals": "Rental Details",
+      "leaseApplications": "Lease Applications",
+      "audits": "Audits"
+    },
+    "rentals": {
+      "accId": "Account ID",
+      "name": "Account Name",
+      "generalDetails": "Rentals",
+      "licenseDetails": "License Details",
+      "provider": "Provider",
+      "description": "Description",
+      "features": "Features",
+      "leasePlans": "Lease Plans",
+      "quotation": "Quotation",
+      "months": "Months",
+      "price": "Price",
+      "trucks": "Trucks",
+      "numberTrucks": "Number of Trucks",
+      "dateSubmit": "Date Submitted",
+      "status": "Status",
+      "rfq": "RFQ"
+    },
+    "leaseApplication": {
+      "provider": "Provider",
+      "description": "Description",
+      "features": "Features",
+      "leasePlans": "Lease Plans",
+      "quotation": "Quotation",
+      "months": "Months",
+      "price": "Price",
+      "trucks": "Trucks",
+      "rfq": "RFQ"
+    },
+    "breadCrumbs": {
+      "create": "New Truck Rental",
+      "list": "Truck Rental",
+      "edit": "Edit Truck Rental",
+      "view": "View Truck Rental",
+      "leasingList": "Leasing Application List"
+    },
+    "form": {
+      "edit": "Edit Truck Rental",
+      "view": "View Truck Rental",
+      "popupTitle": "Lease Form",
+      "popupCategory": "Lease Application Details",
+      "listTitle": "Lease Application List",
+      "leasingList": "Truck Leasing",
+      "popupField": {
+        "company": "Company",
+        "name": "Name",
+        "contact": "Contact",
+        "email": "Email",
+        "account": "Account"
+      }
+    },
+    "tooltip": {
+      "photo": "Upload Photo",
+      "rfqTips": "Request for Quotation"
+    }
+  },
+  "co2x": {
+    "listing": {
+      "title": "CO2x Monitoring",
+      "accnId": "Account ID",
+      "accnName": "Account Name",
+      "companyId": "Company ID",
+      "userEmail": "User Email",
+      "userPwd": "User Password",
+      "expiryDt": "Expiry Date",
+      "dtCreated": "Date Created",
+      "dtLupd": "Date Updated",
+      "status": "Status"
+    },
+    "form": {
+      "tab": {
+        "details": "CO2x Monitoring",
+        "audits": "Audits"
+      },
+      "edit": "Edit CO2x Monitoring",
+      "view": "View CO2x Monitoring",
+      "new": "New CO2x Monitoring",
+      "accnId": "Account ID",
+      "accnName": "Account Name",
+      "companyId": "Company ID",
+      "expiryDate": "Expiry Date",
+      "userId": "User ID",
+      "userPwd": "Password",
+      "catGeneralDetails": "General Details",
+      "catCredentials": "Credential Details",
+      "catProperties": "Properties"
+    },
+    "truckInsurance": {
+      "title": "Application Insurance",
+      "details": "General Details",
+      "accountId": "Account ID",
+      "accountName": "Account Name",
+      "mobileNumber": "Mobile Number",
+      "email": "Email",
+      "trucks": "Trucks",
+      "usage": "Usage",
+      "plateNumber": "Plate Number",
+      "makeModel": "Make & Model",
+      "coverage": "Coverage",
+      "claims": "Claims",
+      "suspension": "Suspension",
+      "selectYesOrNo": "Select Yes or No",
+      "suspensionOfDriving": "Suspension of driving"
+    }
+  },
+  "department": {
+    "listing": {
+      "title": "Manage Departments",
+      "id": "ID",
+      "name": "Name",
+      "desc": "Description",
+      "colorCode": "Color Code",
+      "dtCreated": "Date Created",
+      "dtLupd": "Date Update",
+      "status": "Status"
+    },
+    "form": {
+      "tab": {
+        "details": "Department Details",
+        "audits": "Audits"
+      },
+      "edit": "Edit Department",
+      "view": "View Department",
+      "new": "New Department",
+      "accn": "Account",
+      "name": "Name",
+      "desc": "Description",
+      "colorCode": "Color Code",
+      "available": "Available",
+      "selected": "Selected",
+      "catGeneralDetails": "General Details",
+      "catUsers": "Users",
+      "catVeh": "Trucks",
+      "catProperties": "Properties"
+    }
+  },
+  "truckTracking": {
+    "listing": {
+      "title": "Trucks",
+      "location": "Location"
+    }
+  },
+  "shell": {
+    "title": "Shell Card Management",
+    "list": {
+      "accId": "Account ID & Name",
+      "cardNo": "Card Number",
+      "truckPlateNo": "Truck Plate Number",
+      "dateAssign": "Date Assigned",
+      "assignBy": "Assigned By",
+      "status": "Status",
+      "action": "Action"
+    },
+    "form": {
+      "title": "Form Detail",
+      "section": "Card Assignment",
+      "button": {
+        "assign": "Assign",
+        "newAssign": "New Assignment"
+      },
+      "control": {
+        "accId": "Account ID",
+        "name": "Account Name",
+        "cardNo": "Card Number",
+        "truckPlateNo": "Truck Plate Number"
+      }
+    },
+    "breadCrumbs": {
+      "listTitle": "Shell Card Management",
+      "list": "Shell Card Management",
+      "view": "View Assignment"
+    }
+  },
+  "shellCardInv": {
+    "title": "Shell Card & Invoicing",
+    "list": {
+      "accId": "Account ID & Name",
+      "cardNo": "Card Number",
+      "truckPlateNo": "Truck & Plate Number",
+      "dateAssign": "Date Assigned",
+      "assignBy": "Assigned By",
+      "status": "Status",
+      "action": "Action"
+    },
+    "section": {
+      "saving": {
+        "title": "Saving"
+      },
+      "invoice": {
+        "title": "Invoice",
+        "list": {
+          "invNo": "Invoice No",
+          "companyName": "Company Name",
+          "payInfo": "Payment Info",
+          "invAmount": "Invoice Amount($)",
+          "invDate": "Invoice Date",
+          "amount": "Amount",
+          "payDate": "Payment Date",
+          "status": "Status",
+          "select": "Select"
+        }
+      }
+    },
+    "popup": {
+      "title": "Invoice Details",
+      "section": {
+        "inv": {
+          "title": "Details",
+          "invNo": "Invoice No",
+          "companyName": "Company Name",
+          "payInfo": "Payment Info",
+          "invAmount": "Invoice Amount($)",
+          "select": "Select",
+          "invDate": "Invoice Date",
+          "amount": "Amount",
+          "payDate": "Payment Date",
+          "payAmount": "Payment Amount",
+          "balAmount": "Balance Amount"
+        },
+        "invItem": {
+          "title": "Invoice Items List",
+          "list": {
+            "vehNo": "Vehicle No",
+            "txnDateTime": "Date Time",
+            "kiosk": "Kiosk",
+            "fuelType": "Fuel Type",
+            "actCost": "Actual Cost",
+            "discount": "Discount",
+            "gtsAmt": "GTS Amount",
+            "co2Com": "CO2 Compensation Fee",
+            "totalAmt": "Inv. Total($)"
+          }
+        }
+      }
+    },
+    "button": {
+      "updatePay": "INVOICE PAY"
+    },
+    "breadCrumbs": {
+      "title": "Shell Cards",
+      "titleInv": "Update Payment Information",
+      "list": "Shell Card & Invoicing"
+    }
+  }
+}

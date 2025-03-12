@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InvoiceClictruck" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb669414-f35c-4e8b-bc7d-16ccf7bebe7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="defaultStyle" isDefault="true" fontSize="8">
+		<paragraph leftIndent="3"/>
+	</style>
+	<subDataset name="cargoLinesSet" uuid="9442406f-e911-48c3-87cb-d9cef83eca67">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="cargoType" class="java.lang.String"/>
+		<field name="quantity" class="java.lang.String"/>
+		<field name="truckType" class="java.lang.String"/>
+		<field name="size" class="java.lang.String"/>
+		<field name="goodsDescription" class="java.lang.String"/>
+		<field name="weight" class="java.lang.String"/>
+		<field name="volume" class="java.lang.String"/>
+		<field name="cWeight" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PARAM_INFO" class="java.util.HashMap"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cargoLines" class="java.util.List">
+		<fieldDescription><![CDATA[cargoLines]]></fieldDescription>
+	</field>
+	<title>
+		<band height="85">
+			<image>
+				<reportElement x="7" y="5" width="153" height="25" uuid="dba61b0a-f7ca-44ea-b03d-f5650faa41a2"/>
+				<imageExpression><![CDATA[$P{PARAM_INFO}.get("logo")]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement x="7" y="40" width="114" height="30" uuid="f27d7010-f1d0-4a08-be31-6e6ee897858d">
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="80">
+					<jr:codeExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("shipmentRef","")]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="9" y="72" width="180" height="12" uuid="d7f16e33-4a87-4801-b7c7-22d89026d30d"/>
+				<textFieldExpression><![CDATA["STT No.: " + $P{PARAM_INFO}.getOrDefault("shipmentRef","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="2" width="198" height="74" uuid="77b97574-ba0b-4273-8e8e-af1cdb38af80"/>
+				<textFieldExpression><![CDATA[($P{PARAM_INFO}.get("accnNameFf") != null ? $P{PARAM_INFO}.get("accnNameFf") : "")
++ "\n" 
++ ($P{PARAM_INFO}.get("accnAddressFf") != null ? $P{PARAM_INFO}.get("accnAddressFf") : "")
++ ($P{PARAM_INFO}.get("fFcity") != null ? $P{PARAM_INFO}.get("fFcity") : "") + " " 
++ ($P{PARAM_INFO}.get("fFPostalCode") != null ? $P{PARAM_INFO}.get("fFPostalCode") : "")  
++ "\nPhone No.: " + ($P{PARAM_INFO}.get("jobContactTelFf") != null ? $P{PARAM_INFO}.get("jobContactTelFf") : "") 
++ "\nFax No.: " + ($P{PARAM_INFO}.get("fFContactFax") != null ? $P{PARAM_INFO}.get("fFContactFax") : "") 
++ "\nE-mail: " + ($P{PARAM_INFO}.get("fFAccntEmail") != null ? $P{PARAM_INFO}.get("fFAccntEmail") : "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="464">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="22" uuid="2e7b76ac-b5c1-4622-81b9-d00359c884b0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="6" y="1" width="169" height="21" uuid="53a1f7dd-6916-4dc6-ac12-5d655769d478">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Delivery Instruction:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="179" y="3" width="359" height="18" uuid="edd1955d-91fc-4911-93b0-22b798e505bb"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("doNO","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="23" width="263" height="86" uuid="f7335969-cfdc-4651-9844-f22f73c97064">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="186" height="86" uuid="43656a08-b1d6-4582-9194-8f083821af00">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Sent to:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="10" width="186" height="15" uuid="e79b82cc-ddc3-4a9d-aefa-b110de030674"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("accnNameTo")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="25" width="186" height="49" uuid="ec962c51-b436-42d1-bc87-fa45d68e3763"/>
+					<textFieldExpression><![CDATA[($P{PARAM_INFO}.get("accnAddressTo") != null ? $P{PARAM_INFO}.get("accnAddressTo").toString() : "")
++ ($P{PARAM_INFO}.get("toCity") != null ? $P{PARAM_INFO}.get("toCity").toString() : "") + " "
++ ($P{PARAM_INFO}.get("toPostalCode") != null ? $P{PARAM_INFO}.get("toPostalCode").toString() : "")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="74" width="186" height="12" uuid="c19193e9-8308-4a5a-9b16-c2017539b90b"/>
+					<textFieldExpression><![CDATA["Contact: "+($P{PARAM_INFO}.get("jobContactTelTo") != null ? $P{PARAM_INFO}.get("jobContactTelTo") : "")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="263" y="23" width="292" height="86" uuid="d79b34c1-1fe3-4405-942c-34af65f0109c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField>
+					<reportElement x="110" y="0" width="160" height="12" uuid="4c1e41b2-3c20-401a-b8d6-7513628bc1e7"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd-MMM-yyyy"))
+        : ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="1" y="0" width="68" height="12" uuid="d0d67fb8-11cb-46e2-a57b-3834daf94fa4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Date:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="12" width="68" height="12" uuid="53a424d9-9e3b-45d0-a9e5-af44a8f33ee8"/>
+					<text><![CDATA[Page:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="24" width="68" height="12" uuid="d4fd3515-8439-4c25-b7ab-32b824e7c91d"/>
+					<text><![CDATA[Your Contact:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="37" width="68" height="12" uuid="b8a5ff16-9b74-4583-baff-d3683e57cacd"/>
+					<text><![CDATA[Phone No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="60" width="68" height="12" uuid="ab0868af-b144-492c-8a07-a366e14019f9"/>
+					<text><![CDATA[E-mail :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="49" width="68" height="12" uuid="fb446ca8-df72-447c-b5da-4c4b7e5dc9db"/>
+					<text><![CDATA[Fax No. :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="110" y="12" width="19" height="12" uuid="50f6103d-f30c-4e1a-b5f2-91895501ea5a">
+						<property name="com.jaspersoft.studio.unit.tabStopWidth" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<paragraph tabStopWidth="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + " of"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="25" width="160" height="12" uuid="56ed3e2b-8441-4466-9bdd-1af8f5d87f95"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("jobContactNameFf","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="37" width="160" height="12" uuid="dd08b7c7-acb1-4dd7-ace2-a484b19e6da7"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("jobContactTelFf","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="49" width="160" height="12" uuid="68b33dba-7467-4fbc-9ea0-05142973b58c"/>
+					<textFieldExpression><![CDATA[($P{PARAM_INFO}.get("jobContactFaxNo") != null ? $P{PARAM_INFO}.get("jobContactFax") : "")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="62" width="160" height="12" uuid="8c795e32-3370-42bc-a720-0135682cd78f"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("jobcontactEmailFf","")]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement x="129" y="12" width="141" height="12" uuid="6d7afc31-65ae-4577-b9e7-1a5863e0f842">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="109" width="263" height="67" uuid="582a7fed-4b41-46a3-af11-3727be26d753">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="100" height="12" uuid="6b3d0cc1-9587-412d-bb68-b43b904b3292">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Shipper:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="13" width="186" height="54" uuid="db8ab777-8066-4ab1-b2d4-983fe737536e">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("SHIPPER","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="263" y="109" width="292" height="67" uuid="7672734e-f80a-4143-9fe6-e36f9d140858">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="100" height="12" uuid="add17806-25ad-4045-80f5-36c9a16701a3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Transporter:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="12" width="201" height="13" uuid="9db8d8a0-3ef9-4151-a99d-0944b4163ad9"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("accnNameTo")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="25" width="239" height="42" uuid="67b76ae5-0c90-4daf-889e-0b889c4ff25f">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[($P{PARAM_INFO}.get("accnAddressTo") != null ? $P{PARAM_INFO}.get("accnAddressTo").toString() : "")
++ ($P{PARAM_INFO}.get("toCity") != null ? $P{PARAM_INFO}.get("toCity").toString() : "") + " "
++ ($P{PARAM_INFO}.get("toPostalCode") != null ? $P{PARAM_INFO}.get("toPostalCode").toString() : "")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="176" width="263" height="68" uuid="df79b7ad-fe12-4257-ac37-573031303e49">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="100" height="12" uuid="c22b9a93-9bc8-4ee6-9a92-d973203a83fd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Consignee:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="12" width="220" height="43" uuid="994bd962-bcd0-4f26-b22d-0ab751235cd4">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("CONSIGNEE","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="263" y="176" width="292" height="68" uuid="650b8002-0fd6-4f0b-9f9b-7db01f0c1d93">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="0" width="128" height="12" uuid="838af09c-ae20-4f92-9f54-1e8fa98e7629">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Place of Empty Return:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="55" width="128" height="12" uuid="dd2e3f83-475d-4f27-a2d5-739008df9460">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Delivery Date & Time:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="244" width="555" height="115" uuid="f12a6e0e-6e30-4910-860a-1036a2ec72a6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="74" height="12" uuid="438033e8-95db-4594-8c66-2fa38bae64a5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[STT No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="26" width="74" height="12" uuid="c280aef9-e013-4925-94bb-c96ebd3e3db2">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[B/L / MAWB:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="14" width="74" height="12" uuid="7ff92380-a4f5-41ec-bb83-2186beaf50da">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Archive No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="39" width="74" height="12" uuid="e2a9e29c-8f72-47ee-b1ee-64244ac62cfc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[HB/L / HAWB:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="52" width="74" height="12" uuid="b8d5b8c3-40c2-40a5-9aaa-7c895b8b7932">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Voyage / Flight:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="64" width="74" height="12" uuid="a368675d-7b8f-4abf-a139-bcbe37875ea0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Freight Payable:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="102" width="74" height="12" uuid="60566167-aee6-4b72-b90b-76e02a93a93f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="90" width="74" height="12" uuid="67220bf5-59a9-41fb-86e5-8d9b4d9ea259">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Duty/Tax Paid:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="77" width="74" height="12" uuid="87809149-22d3-4bad-a410-faddad80327c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="2" width="128" height="12" uuid="5ba84fd0-f7a5-4eb1-9362-b76ed814838a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Place of Receipt:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="78" width="128" height="12" uuid="3dda1fec-328b-488c-bd95-8376ba36c583">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Dangerous Goods:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="15" width="128" height="12" uuid="44d35321-77c7-44aa-b3da-c82b1876559f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Port/Airport of Departure:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="27" width="128" height="12" uuid="67770b94-80a9-4af8-a90f-5c2f65a5f685">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Port/Airport of Destination:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="91" width="128" height="12" uuid="ab91fb7a-d874-4f3e-913b-ff310742ebda">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Origin of Goods:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="103" width="128" height="12" uuid="30b0bc83-e7c2-4f07-9e62-56e22290d7eb">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Value of Goods:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="53" width="128" height="12" uuid="795db561-680e-4e55-a227-da22908fceb9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[ETD / ETA:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="40" width="128" height="12" uuid="45239ef7-4951-46f0-933a-cda5a43c8742">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Place of Delivery:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="221" y="65" width="128" height="12" uuid="89ad2a5b-a7ee-4a25-8475-4b47f1affe03">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[INCO Terms:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="80" y="1" width="130" height="12" uuid="d3d8229c-fea6-4298-98b8-7cfe3c8068f8">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("shipmentRef","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="80" y="26" width="123" height="12" uuid="bcc6d3ca-78f6-4802-a78e-e0aaa48f5433">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("MAWB","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="80" y="39" width="123" height="12" uuid="21af754f-328d-41b8-8baf-0ffbdc0acf4d">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("HAWB","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="359" width="263" height="105" uuid="569b3c99-93ae-42e1-9874-4e31b9806464">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="67" width="108" height="12" uuid="0c5f4a17-52c2-490e-9e4d-554352aa7876">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Contact:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="0" width="200" height="12" uuid="10c18b50-2f86-4072-8f21-e41fba52d35f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Delivery Location:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="13" width="200" height="12" uuid="28651153-7cb0-4870-8e7b-238310bdb75e"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocationName","")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="1" y="79" width="108" height="12" uuid="88571232-5951-4dfd-898b-3e71b12c81bc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Phone No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="90" width="108" height="12" uuid="c59cc8e4-d22b-42b6-9e50-2949a3f77513">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Delivery Date & Time:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="34" width="199" height="33" uuid="b712393c-99e6-4cb1-94e8-62c3bf6837f5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocation","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="119" y="90" width="129" height="12" uuid="e86103c5-0589-4c5c-9fbf-abe5dae06020"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm"))
+        : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="263" y="359" width="292" height="105" uuid="337f68cc-1484-4174-9eea-af0bb1beaaa1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="67" width="100" height="12" uuid="ef2c8aa1-910f-4928-88d7-9564d5050192">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Contact:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="79" width="100" height="12" uuid="a3a9497a-500e-4e1d-aa87-7b09b7353aab">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Phone No.:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="92" width="100" height="12" uuid="738c2a45-380b-4290-a6ed-807611a6b784">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pick-up Date & Time:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="0" width="200" height="12" uuid="85f6a410-fee0-468b-b321-0c56394e2223">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Pick-up Location:          Ref.:
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="1" y="13" width="200" height="12" uuid="e4d9861b-39a2-46f3-b17c-b70e36872626"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("pickupLocationName","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="1" y="34" width="199" height="33" uuid="525533b2-757f-468c-89ce-023fb4cf912c">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("pickupLocation","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="107" y="92" width="174" height="12" uuid="48edc2ff-842f-468d-bd25-ed7b5668fba4"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeIn") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeIn").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm"))
+        : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="19" uuid="2e7b76ac-b5c1-4622-81b9-d00359c884b0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="0" width="80" height="15" forecolor="#000000" uuid="51c063a0-728a-47fb-aaa0-326bd8d9cd75">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<paragraph leftIndent="3"/>
+					</textElement>
+					<text><![CDATA[Marks and Numbers]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="80" y="0" width="90" height="15" forecolor="#000000" uuid="82d0bbea-d277-4e28-9a1b-add346d34ae3">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[No. & Kind of Pkg ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="480" y="0" width="72" height="15" forecolor="#000000" uuid="2f7901fb-dd02-4bd9-8a00-951219e29eff">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle"/>
+					<text><![CDATA[Volume]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="170" y="0" width="189" height="15" forecolor="#000000" uuid="9a45035f-46ea-4ff2-a074-f6909d7cf3d0">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[Description of goods said to contain]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="366" y="0" width="116" height="15" forecolor="#000000" uuid="63eeee82-d27f-411a-ad55-7f1a5c183140">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[Weight/C-Weight]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="25" uuid="141fd53d-bb54-4d7f-b847-998fbe28b93b"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<componentElement>
+					<reportElement stretchType="ElementGroupBottom" x="0" y="0" width="555" height="25" uuid="2ce9db81-714a-4e20-ab36-f58586266b6a">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					</reportElement>
+					<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="cargoLinesSet" uuid="a1dbd2c8-2c0f-4760-84e3-b8b03a8c7170">
+							<dataSourceExpression><![CDATA[$P{PARAM_INFO}.get("cargoLines")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:column width="80" uuid="73795318-b7d1-4bff-8e85-6381355b6f85">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+							<jr:detailCell height="30">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<box>
+									<leftPen lineWidth="1.0" lineStyle="Solid"/>
+								</box>
+								<textField>
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="80" height="30" uuid="40c0cadf-be06-431d-9cbc-e3612caa3e86">
+										<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+									</reportElement>
+									<box>
+										<leftPen lineWidth="1.0"/>
+									</box>
+									<textElement textAlignment="Center">
+										<font size="12"/>
+									</textElement>
+									<textFieldExpression><![CDATA[""]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="95" uuid="d48ede60-1662-4fed-aec9-f6595c53cceb">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+							<jr:detailCell height="30">
+								<property name="com.jaspersoft.studio.unit.width" value="px"/>
+								<textField>
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="95" height="30" uuid="9d37b608-697e-482d-b706-1d5f96def245"/>
+									<box>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Left"/>
+									<textFieldExpression><![CDATA[$F{quantity} != null ? $F{quantity} : ""]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="190" uuid="ca8d7cbf-8287-45ae-af47-91476dfa95f0">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+							<jr:detailCell height="30">
+								<textField>
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="190" height="30" uuid="d364a2a4-fd8f-4bb9-8761-3eb2e091bba0">
+										<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+									</reportElement>
+									<textElement textAlignment="Left">
+										<paragraph leftIndent="0"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{goodsDescription} != null ? $F{goodsDescription} : ""]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="90" uuid="e7b844f2-7206-4d62-a982-d9894299e991">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+							<jr:detailCell height="30">
+								<textField>
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" uuid="1915c877-d81c-43b3-800b-32631daac4a2">
+										<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+									</reportElement>
+									<box>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Left">
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[new StringBuilder()
+    .append($F{weight} != null ? $F{weight} : "")
+    .append($F{weight} != null && $F{cWeight} != null ? "/" : "")
+    .append($F{cWeight} != null ? $F{cWeight} : "")
+    .append(" KGS")
+    .toString()]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="100" uuid="7ffc4922-dd8e-4c3f-9791-16cea4455b4c">
+							<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+							<jr:detailCell height="30">
+								<box>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textField>
+									<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" uuid="2c7e6f2b-43fa-4298-b6d0-98f8d051268d">
+										<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+										<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+									</reportElement>
+									<box>
+										<pen lineWidth="1.0"/>
+										<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+										<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									</box>
+									<textElement textAlignment="Right">
+										<paragraph rightIndent="2"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{volume} != null ? $F{volume} + " CBM" : ""]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:table>
+				</componentElement>
+			</frame>
+		</band>
+		<band height="200">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="14" uuid="fa573c21-b7e3-41ee-9c43-ca55d8f05a51"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="70" height="13" uuid="d76b2292-9a99-49cd-afad-1faab388dec9">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<text><![CDATA[Totals]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="80" y="0" width="86" height="14" uuid="ddd77069-145a-4e14-9ee4-aabe27faccee">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("totalQty","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="368" y="0" width="96" height="14" uuid="15e72a5f-8aa8-4e9d-afc9-6e625b986c37">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("GROSS_WEIGHT","") + " KGS"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="481" y="0" width="74" height="14" uuid="9df79bdf-3b8f-4f41-9c02-60c7bfb393ce">
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Right">
+						<paragraph rightIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("totalVolume","") + " CBM"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="14" width="555" height="100" uuid="dea1f4ef-a69a-48a7-82aa-0ccad03cc66a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="206" y="9" width="314" height="14" uuid="2f057e2a-d1e7-457a-b230-f49841f0f043">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<text><![CDATA[/ Succeeding customs clearance (if any) will be performed in due course:]]></text>
+				</staticText>
+				<image>
+					<reportElement x="400" y="32" width="70" height="39" uuid="b5f75124-aaed-4cd6-aff0-098b5727773f"/>
+					<imageExpression><![CDATA[$P{PARAM_INFO}.get("signatureImage")]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="405" y="85" width="60" height="12" uuid="e3cdd1a6-b42d-47ed-8068-1573ae21b817"/>
+					<text><![CDATA[Signature]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="91" y="9" width="139" height="14" uuid="eb936aa4-d260-488a-bd5f-73be5537b8db"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cargo received in good order ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="261" y="84" width="60" height="12" uuid="5308124e-2d3e-4900-ae7d-1bc57b512d4c"/>
+					<text><![CDATA[Print Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="96" y="84" width="60" height="12" uuid="6ff31c56-0069-4c7c-b94f-34405d87904a"/>
+					<text><![CDATA[Date & Time]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="95" y="61" width="117" height="12" uuid="cca116b8-6dc0-437b-9cc1-0ee2e8ce7bcb"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm"))
+        : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="260" y="59" width="130" height="12" uuid="2f0b30e1-9114-44cf-8829-3c5ad5c8fc17"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("cargoRecipient","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="114" width="555" height="70" uuid="f18d9e74-9591-42ab-a114-8e7fada01349">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="412" y="40" width="132" height="20" uuid="ea81d6ba-351a-4925-83d8-b919048f3132"/>
+					<textFieldExpression><![CDATA["(H)AWB No.: " + $P{PARAM_INFO}.getOrDefault("HAWB","0")]]></textFieldExpression>
+				</textField>
+				<componentElement>
+					<reportElement x="410" y="10" width="132" height="30" uuid="b52bef1a-a869-44e9-b80c-1fbe48486b81">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					</reportElement>
+					<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="false" checksumRequired="false" barHeight="80">
+						<jr:codeExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("HAWB","0")]]></jr:codeExpression>
+					</jr:barbecue>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

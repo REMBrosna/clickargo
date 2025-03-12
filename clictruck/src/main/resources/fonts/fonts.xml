@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="CourierPrime">
+        <normal><![CDATA[fonts/CourierPrime/CourierPrime-Regular.ttf]]></normal>
+        <bold><![CDATA[fonts/CourierPrime/CourierPrime-Bold.ttf]]></bold>
+        <italic><![CDATA[fonts/CourierPrime/CourierPrime-Italic.ttf]]></italic>
+        <boldItalic><![CDATA[/fonts/CourierPrime/CourierPrime-BoldItalic.ttf]]></boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="CourierNew">
+        <normal><![CDATA[fonts/CourierNew/FontsFree-Net-cour.ttf]]></normal>
+        <boldItalic><![CDATA[fonts/CourierNew/Courier New Bold Italic font.ttf]]></boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="CourierNewBold">
+        <boldItalic><![CDATA[fonts/CourierNew/Courier New Bold Italic font.ttf]]></boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="SpaceMono">
+        <normal><![CDATA[fonts/SpaceMono/SpaceMono-Regular.ttf]]></normal>
+        <bold><![CDATA[fonts/SpaceMono/SpaceMono-Bold.ttf]]></bold>
+        <italic><![CDATA[fonts/SpaceMono/SpaceMono-Italic.ttf]]></italic>
+        <boldItalic><![CDATA[/fonts/SpaceMono/SpaceMono-BoldItalic.ttf]]></boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="NotoSansSC">
+        <normal><![CDATA[fonts/NotoSansSC/NotoSansSC-VariableFont_wght.ttf]]></normal>
+        <bold><![CDATA[fonts/NotoSansSC/NotoSansSC-Bold.ttf]]></bold>
+        <italic><![CDATA[fonts/NotoSansSC/NotoSansSC-VariableFont_wght.ttf]]></italic>
+        <boldItalic><![CDATA[/fonts/NotoSansSC/NotoSansSC-VariableFont_wght.ttf]]></boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+</fontFamilies>

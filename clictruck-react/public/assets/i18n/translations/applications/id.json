@@ -1,0 +1,688 @@
+{
+    "app": {
+        "vc": {
+          "list": {
+            "vcrNo": "Nomor VCR",
+            "shipName": "Nama Kapal",
+            "imoNo": "Nomor IMO",
+            "voyageType": "Jenis Pelayaran",
+            "eta": "ETA",
+            "etd": "ETD",
+            "submitDate": "Tanggal Submit",
+            "status": "Status"
+          },
+            "tabs": {
+              "clearance": {
+                "title": "Izin",
+                "fields": {}
+              },
+              "generalDetails": {
+                "title": "Detail Umum",
+                "fields": {
+                  "port": "Pelabuhan",
+                  "terminal": "Terminal Pemuatan/Bongkar Muat",
+                  "shippingLine": "Jalur Pengiriman",
+                  "ship": "Kapal",
+                  "shipType": "Jenis Kapal",
+                  "imoNo": "Nomor IMO",
+                  "callSign": "Call Sign",
+                  "countryOrigin": "Negara Asal",
+                  "voyageType": "Jenis Pelayaran",
+                  "eta": "ETA",
+                  "inwardVoyageNo": "Nomor Pelayaran Inward",
+                  "etd": "ETD",
+                  "atd": "ATD",
+                  "ata": "ATA",
+                  "ataAnchor": "ATA Anchor",
+                  "outwardVoyageNumber": "Nomor Pelayaran Outward"
+                }
+              },
+              "shipDetails": {
+                "title": "Detail Kapal",
+                "fields": {
+                  "netTonnage": "Tonase Bersih",
+                  "grossTonnage": "Tonase Kotor",
+                  "deadWeight": "Dead Weight",
+                  "lengthOverAll": "Length Over All",
+                  "selectUOM": "Pilih UOM",
+                  "breadthOverAll": "Breadth Over All",
+                  "arrivedPilotStation": "Arrived at pilot station",
+                  "pilotBoard": "Pilot On Boardl",
+                  "arrivalDraft": "Draf Kedatangan"
+                }
+              },
+              "cargoDetails": {
+                "title": "Detail Kargo",
+                "fields": {
+                  "popup": {
+                    "title": "Tambahkan Detail Kargo",
+                    "cargoType": "Jenis Kargo",
+                    "cargoName": "Nama Kargo",
+                    "empty": "Kosong",
+                    "laden": "Yang dimuat",
+                    "totalQty": "Jumlah Total",
+                    "qty": "Jumlah",
+                    "type": "Jenis",
+                    "selectCargoType": "Pilih Jenis Kargo"
+                  }
+                }
+              }
+            }
+        },
+        "dec": {
+          "ad": {
+            "title": "Deklarasi Kedatangan",
+            "list": {}
+          },
+          "dd": {
+            "title": "Deklarasi Keberangkatan",
+            "list": {}
+          },
+          "pan": {
+            "title": "Pemberitahuan Pra-Kedatangan",
+            "list": {}
+          },
+            "header": {
+                "title": "Header",
+                "tabs": {
+                  "voyage": {
+                    "title": "Detail Pelayaran",
+                    "fields": {
+                      "vesselCallRefNo": "Nomor Referensi Vessel Call",
+                      "voyageNo": "Nomor Pelayaran",
+                      "nameOfMaster": "Nama Pemilik",
+                      "poa": "Pelabuhan Kedatangan",
+                      "doa": "Tanggal Kedatangan",
+                      "toa": "Waktu Kedatangan",
+                      "lastpoc": "Country Last Port Of Call",
+                      "port": "Pelabuhan",
+                      "dutyPaidAt": "Bea Dibayar pada",
+                      "pod": "Pelabuhan Keberangkatan",
+                      "dod": "Tanggal keberangkatan",
+                      "tod": "Waktu Keberangkatan",
+                      "countrynextpoc": "Country Last Port Of Call",
+                      "nextpoc": "Next Port of Call",
+                      "mastersign": "Tanda tangan pemilik"
+                    }
+                  },
+                  "shipdetails": {
+                    "title": "Detail Kapal",
+                    "fields": {
+                      "imoNo": "Nomor IMO",
+                      "callSign": "Call Sign",
+                      "shipType": "Jenis Kapal",
+                      "flagState": "Bendera Negara",
+                      "applicantTin": "Applicant TIN",
+                      "country": "Negara"
+                    }
+                  }
+                }
+            },
+          "fal": {
+            "title": "Formulir FAL",
+            "tabs": {
+              "general": {
+                "title": "Deklarasi Umum",
+                "subtitle": "Deklarasi Umum",
+                "fields": {
+                  "cor": "7. Sertifikat Pendaftaran",
+                  "gt": "9. Tonase Kotor",
+                  "nt": "10. Tonase Bersih",
+                  "crew": "13. Jumlah Kru",
+                  "pob": "14. Jumlah Penumpang",
+                  "descVoy": "11. Deskripsi Singkat Perjalanan",
+                  "descCargo": "12. Deskripsi Singkat Kargo",
+                  "remark": "15. Catatan",
+                  "shpreq": "20. Persyaratan Kapal dalam hal Fasilitas Penerimaan Limbah dan Residu"
+                }
+              },
+              "cargoDeclaration": {
+                "title": "Deklarasi Kargo",
+                "fields": {
+                  "blNo": "Nomor BL",
+                  "marks": "Tanda & Nomor",
+                  "kindofpkg": "Jenis Paket",
+                  "pkgtype": "Jumlah dari Jenis paket",
+                  "grosswt": "Berat Kotor (kg)",
+                  "msmt": "Measurement (m)"
+                }
+              },
+              "shipstore": {
+                "title": "Deklarasi Gudang Kapal",
+                "fields": {
+                  "articlename": "Nama Artikel",
+                  "qty": "Kuantitas",
+                  "lob": "Lokasi OnBoard",
+                  "offUse": "Official Use"
+                }
+              },
+              "crewEffect": {
+                "title": "Deklarasi Kegunaan Kru",
+                "fields": {
+                  "fn": "Nama Keluarga",
+                  "gn": "Nama Panggilan",
+                  "ror": "Pangkat atau Peringkat",
+                  "eff": "Barang yang tidak layak untuk dibebaskan dari bea masuk dan pajak atau dikenakan larangan atau pembatasan",
+                  "sign": "Tanda tangan"
+                }
+              },
+              "crewList": {
+                "title": "Daftar Kru",
+                "fields": {
+                  "fn": "Nama keluarga",
+                  "gn": "Nama Panggilan",
+                  "ror": "Pangkat atau peringkat",
+                  "nat": "Kebangsaan",
+                  "dob": "Tanggal Lahir",
+                  "pob": "Tempat Lahir",
+                  "gender": "Jenis kelamin",
+                  "id": "Sifat dokumen identitas",
+                  "no": "Nomor dokumen identitas",
+                  "state": "Negara Penerbit Dokumen Identitas",
+                  "expdate": "Tanggal kedaluwarsa dokumen identitas",
+                  "iddoc": "Dokumen identitas"
+                }
+              },
+              "passangerList": {
+                "title": "Daftar Penumpang",
+                "fields": {
+                  "fn": "Nama keluarga",
+                  "gn": "Nama pemberian",
+                  "nat": "Kebangsaan",
+                  "dob": "Tanggal Lahir",
+                  "pob": "Tempat Lahir",
+                  "gender": "Jenis kelamin",
+                  "id": "Jenis Identitas atau Dokumen Perjalanan",
+                  "no": "Nomor seri Identitas atau dokumen perjalanan",
+                  "state": "Negara Penerbit Dokumen Identitas",
+                  "expdate": "Tanggal kedaluwarsa dokumen identitas atau dokumen perjalanan",
+                  "port": "Pelabuhan Keberangkatan",
+                  "visa": "Nomor Visa (jika sesuai)",
+                  "portde": "Pelabuhan Pemberangkatan",
+                  "transit": "Penumpang Transit atau Bukan",
+                  "iddoc": "Dokumen Identitas"
+                }
+              },
+              "dangerousGoods": {
+                "title": "Barang Berbahaya",
+                "fields": {
+                  "sp": "Posisi Penimbunan",
+                  "rn": "Nomor Referensi",
+                  "unno": "Nomor UN",
+                  "mn": "Tanda & Nomor",
+                  "fr": "Nomor Identifikasi Pengangkutan/Kendaraan",
+                  "shipname": "Nama Pengiriman yang Tepat",
+                  "class": "Kelas/ (Subsidiary Risk)",
+                  "pgp": "Grup Packing",
+                  "fp": "Informasi Tambahan/Polutan Laut/Flash Point",
+                  "no": "Jumlah dan jenis kemasan",
+                  "ems": "EmS",
+                  "mass": "Massa (kg) atau Volume (L)"
+                }
+              }
+            }
+          },
+          "manifest": {
+            "title": "Manifest",
+            "tabs": {
+              "header": {
+                "title": "Header",
+                "fields": {
+                  "manifestType": "Jenis Manifest",
+                  "manifestNo": "Nomor Manifest",
+                  "overdueTime": "Waktu Tunda",
+                  "customOffice": "Kantor Pabean",
+                  "totalNoBOL": "Jumlah total Master Bill of Lading",
+                  "totalNoPackages": "Total Jumlah Paket",
+                  "totalNoContainers": "Total Jumlah Kontainer",
+                  "totalGrossMass": "Total Massa Kotor (kg)"
+                }
+              },
+              "billOfLading": {
+                "title": "Bill of Lading",
+                "tableColumns": {
+                  "bolNo": "Nomor BL",
+                  "marksNo": "Tanda dan Nomor",
+                  "noKindPkg": "Nomor dan Jenis Paket.",
+                  "grossWt": "Berat kotor",
+                  "measurement": "Measurement"
+                },
+                "popup": {
+                  "title": "Manifest",
+                  "popupTabs": {
+                    "billInfo": {
+                      "title": "Info Tagihan",
+                      "subGroups": {
+                        "blAwbDetails": "Detail ​BL/AWB",
+                        "locationDetails": "Detail Lokasi"
+                      },
+                      "fields": {
+                        "blAwbNo": "Nomor BL/ AWB",
+                        "blAwbType": "Jenis BL/ AWB",
+                        "billNature": "Sifat Bill",
+                        "blAwbMasterNo": "Nomor induk BL/ AWB",
+                        "placeOfLoading": "Tempat Pemuatan",
+                        "placeofUnloading": "Tempat Bongkar Muat",
+                        "portOfLoading": "Pelabuhan Muat",
+                        "portOfUnloading": "Pelabuhan Bongkar"
+                      }
+                    },
+                    "traderInfo": {
+                      "title": "Info Pedagang",
+                      "subGroups": {
+                        "exporter": "Eksportir",
+                        "consignee": "Penerima barang",
+                        "notifyParty": "Notify Party"
+                      },
+                      "fields": {
+                        "exporterName": "Nama",
+                        "exporterAddress": "Alamat",
+                        "consigneeName": "Nama",
+                        "consigneeAddress": "Alamat",
+                        "consigneeCode": "Kode",
+                        "notifyPartyName": "Nama",
+                        "notifyPartyAddress": "Alamat",
+                        "notifyPartyCode": "Kode"
+                      }
+                    },
+                    "goodsInfo": {
+                      "title": "Info Barang",
+                      "subGroups": {
+                        "goodsDetails": "Detail Barang",
+                        "sealDetails": "Detail Seal"
+                      },
+                      "fields": {
+                        "goodsDescription": "Deskripsi Barang",
+                        "grossMass": "Massa Kotor (kg)",
+                        "noOfContainers": "Jumlah Kontainer",
+                        "volumeCM": "Volume dalam Meter Kubik",
+                        "noOfPkgs": "Jumlah paket",
+                        "pkgType": "Jenis Paket",
+                        "noOfSeals": "Jumlah Segel",
+                        "info": "Informasi",
+                        "sealPartyCode": "Kode Seal Party",
+                        "sealMarks": "Tanda Seal",
+                        "shippingMarks": "Tanda Pengiriman"
+                      }
+                    },
+                    "valueInfo": {
+                      "title": "Info Nilai",
+                      "subGroups": {
+                        "transpoDetails": "Detail Nilai Transport",
+                        "freightDetails": "Detail Nilai Freight",
+                        "customDetails": "Detail Nilai Kustom",
+                        "insuranceDetails": "Detail Nilai Asuransi"
+                      },
+                      "fields": {
+                        "transpoVal": "Nilai Transportasi",
+                        "transpoCurr": "Mata Uang Transportasi",
+                        "freightVal": "Nilai Freight",
+                        "freightCurr": "Mata Uang Kargo",
+                        "customVal": "Nilai Kustom",
+                        "customCurr": "Mata Uang Kustom",
+                        "insureVal": "Detail Asuransi",
+                        "insureCurr": "Mata Uang Asuransi"
+                      }
+                    },
+                    "containerInfo": {
+                      "title": "Info Kontainer",
+                      "tableColumns": {
+                        "containerNo": "Nomor kontainer",
+                        "containerType": "Jenis Kontainer",
+                        "emptyOrFull": "Kosong atau Penuh",
+                        "sealingPartyNameCode": "Nama / Kode Pihak Penyegel"
+                      },
+                      "popup": {
+                        "title": "Detail Kontainer",
+                        "subGroups": {
+                          "containerInfo": "Info Kontainer",
+                          "otherInfo": "Info lainnya"
+                        },
+                        "fields": {
+                          "containerInfo": "Info Kontainer",
+                          "containerType": "Jenis Kontainer",
+                          "goodsDesc": "Deskripsi Barang",
+                          "noOfPkg": "Jumlah Paket",
+                          "emptyOrFull": "Kosong atau Penuh",
+                          "grossMass": "Massa Kotor (kg)",
+                          "sealingParty": "Sealing Party",
+                          "marks1": "Tanda 1",
+                          "marks2": "Tanda 2",
+                          "marks3": "Tanda 3",
+                          "minTemp": "Suhu Minimal",
+                          "maxTemp": "Suhu Maksimum",
+                          "humidity": "Kelembaban",
+                          "dangerousGoods": "Benda berbahaya"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "others": {
+            "title": "Formulir Lainnya",
+            "tabs": {
+              "nillist": {
+                "title": "Daftar NIL",
+                "fields": {}
+              },
+              "healthdeclaration": {
+                "title": "Deklarasi Kesehatan Maritim",
+                "fields": {}
+              },
+              "report": {
+                "title": "Laporan Air yang Diambil Onboard",
+                "fields": {}
+              },
+              "narcotics": {
+                "title": "Daftar Obat",
+                "fields": {}
+              },
+              "portofcall": {
+                "title": "Daftar Port of Call",
+                "fields": {}
+              },
+              "wasteDelivery": {
+                "title": "Pemberitahuan Pengiriman Sampah",
+                "fields": {}
+              },
+              "vaccination": {
+                "title": "Daftar Vaksinasi",
+                "fields": {}
+              }
+            }
+          },
+          "docAudit": {
+            "title": "Dokumen & Audit",
+            "tabs": {
+              "suppDoc": {
+                "title": "Dokumen pendukung",
+                "fields": {}
+              },
+              "audit": {
+                "title": "Audit",
+                "fields": {}
+              }
+            }
+          },
+          "queryRemark": {
+            "title": "Pertanyaan & Catatan",
+            "tabs": {
+              "query": {
+                "title": "Pertanyaan",
+                "fields": {}
+              },
+              "remark": {
+                "title": "Catatan",
+                "fields": {}
+              }
+            }
+          }
+        }
+    },
+    "vp": {
+      "list": {
+        "vesselId": "ID Kapal",
+        "shipName": "Nama Kapal",
+        "imoNo": "Nomor IMO",
+        "vesselType": "Jenis Kapal",
+        "vesselNames": "Nama Kapal",
+        "vesselCountry": "Negara Kapal",
+        "createdBy": "Dibuat Oleh",
+        "createdDate": "Tanggal Dibuat",
+        "status": "Status"
+      },
+      "generalDetails": {
+        "label": "Detail Umum",
+        "details": {
+          "label": "Detail Umum",
+          "shipType": "Jenis Kapal",
+          "shippingLine": "Shipping Line",
+          "flag": "Bendera",
+          "originCountry": "Negara Asal",
+          "portOfReg": "Pelabuhan Pendaftaran",
+          "callSign": "Call Sign",
+          "imo": "IMO",
+          "shipMasterName": "Nama Nakhoda Kapal",
+          "mmsi": "MMSI",
+          "officialNo": "Nomor Resmi",
+          "dnvRegistry": "Registri DNV-GL",
+          "builtYear": "Tahun Dibangun",
+          "address1": "Alamat Bangun 1",
+          "address2": "Alamat Bangun 2",
+          "telephone": "Telepon Kantor",
+          "fax": "Fax",
+          "email": "Email"
+        },
+        "charterer": {
+          "label": "Penyewa",
+          "name": "Nama",
+          "regNo": "Nomor Pendaftaran",
+          "email": "Email",
+          "phoneNo": "Nomor Telepon​",
+          "address1": "Alamat 1",
+          "address2": "Alamat 2",
+          "country": "Negara"
+        },
+        "bareBoat": {
+          "label": "Penyewa BareBoat",
+          "name": "Nama",
+          "regNo": "Nomor Pendaftaran",
+          "email": "Email",
+          "phoneNo": "Nomor Telepon",
+          "address1": "Alamat 1",
+          "address2": "Alamat 2",
+          "country": "Negara"
+        },
+        "operator": {
+          "label": "Operator",
+          "name": "Nama",
+          "regNo": "Nomor Pendaftaran",
+          "email": "Email",
+          "phoneNo": "Nomor Telepon",
+          "address1": "Alamat 1",
+          "address2": "Alamat 2",
+          "country": "Negara"
+        }
+      },
+      "capacityAndMachine": {
+        "label": "Kapasitas & Mesin",
+        "loadLine": {
+          "label": "LoadLine",
+          "grossTonnage": "Tonase Kotor",
+          "netTonnage": "Tonase Bersih",
+          "lengthOverall": "Panjang Keseluruhan",
+          "perpendicular": "Panjang tegak lurus",
+          "breadth": "Breadth Moulded",
+          "draught": "Draught Moulded",
+          "depth": "Depth Moulded",
+          "airDraught": "Air Draught",
+          "airDraughtCrane": "Air Draught Crane"
+        },
+        "dimension": {
+          "label": "Dimensi",
+          "lightVessel": "Light Vessel",
+          "sDisplacement": "Summer Displacement",
+          "sDwt": "S DWT",
+          "sDraught": "S Draught",
+          "sFreeboard": "S Freeboard",
+          "fwAllowance": "FW Allowance",
+          "fwFreeboard": "FW Freeboard",
+          "wDraught": "W Draught",
+          "dDwt": "D DWT"
+        },
+        "engine": {
+          "label": "Mesin",
+          "mainEng": "Mesin utama",
+          "bowThruster": "Bow Thruster",
+          "tCapacity": "Kapasitas Thruster",
+          "rudderType": "Jenis Kemudi",
+          "propeller": "Baling-baling"
+        }
+      },
+      "safetyAndStructure": {
+        "label": "Keamanan & Struktur",
+        "scsf": {
+          "label": "Field Khusus kleas kapal",
+          "container": "Kontainer",
+          "seCount": "Jumlah Perlengkapan Keselamatan",
+          "cargoCrane": "Derek Kargo",
+          "cargoCraneDesc": "Deskripsi Derek Kargo"
+        },
+        "extraField": {
+          "label": "Field Tambahan",
+          "referSocket": "Refer Sockets",
+          "bollardPull": "Bollard Pull"
+        }
+      },
+      "docAndCert": {
+        "label": "Dokumen & Sertifikat"
+      },
+      "audit": {
+        "label": "Audit"
+      }
+    },
+    "sr": {
+      "list": {
+        "regNo": "Nomor Pendaftaran",
+        "regPort": "Pelabuhan Pendaftaran",
+        "imoNo": "Nomor IMO",
+        "vesselId": "ID Kapal",
+        "vesselType": "Jenis Kapal",
+        "vesselName": "Nama Kapal",
+        "createdBy": "Dibuat Oleh",
+        "expiryDate": "Tanggal kadaluarsa",
+        "status": "Status"
+      },
+        "tabs": {
+            "generalDetails": {
+                "title": "Detail Umum",
+                "generalDetails": {
+                    "title": "Detail Umum",
+                  "fields": {
+                    "shipType": "Jenis Kapal",
+                    "flag": "Bendera",
+                    "originCountry": "Negara Asal",
+                    "shippingLine": "Shipping Line",
+                    "portRegistry": "Pelabuhan Pendaftaran",
+                    "callSign": "Call Sign",
+                    "imo": "IMO",
+                    "mmsi": "MMSI",
+                    "officialNo": "Nomor Resmi",
+                    "registry": "Registri DNV-GL",
+                    "builtYear": "Tahun Dibangun",
+                    "builtAddress1": "Alamat Bangun 1",
+                    "builtAddress2": "Alamat Bangun 2",
+                    "officeTelephone": "Telepon Kantor",
+                    "fax": "Fax",
+                    "email": "Email"
+                  }
+                },
+              "charterer": {
+                "title": "Penyewa",
+                "fields": {
+                  "name": "Nama",
+                  "registrationNo": "Nomor Pendaftaran",
+                  "email": "Email",
+                  "phoneNo": "Nomor telepon",
+                  "address1": "Alamat 1",
+                  "address2": "Alamat 2",
+                  "country": "Negara"
+                }
+              },
+              "bareBoat": {
+                "title": "Penyewa BareBoat",
+                "fields": {
+                  "name": "Nama",
+                  "registrationNo": "Nomor Pendaftaran",
+                  "email": "Email",
+                  "phoneNo": "Nomor telepon",
+                  "address1": "Alamat 1",
+                  "address2": "Alamat 2",
+                  "country": "Negara"
+                }
+              },
+              "operator": {
+                "title": "Operator",
+                "fields": {
+                  "name": "Nama",
+                  "registrationNo": "Nomor Pendaftaran",
+                  "email": "Email",
+                  "phoneNo": "Nomor telepon",
+                  "address1": "Alamat 1",
+                  "address2": "Alamat 2",
+                  "country": "Negara"
+                }
+              }
+            },
+          "capacityMachinery": {
+            "title": "Kapasitas & Mesin",
+            "loadLine": {
+              "title": "LoadLine",
+              "fields": {
+                "grossTonnage": "Tonase Kotor",
+                "netTonnage": "Tonase Bersih",
+                "lengthOverall": "Panjang Keseluruhan",
+                "lengthBwperPerpendicular": "Panjang tegak lurus",
+                "bredthMoulded": "Breadth moulded",
+                "draughtMoulded": "Draf Dibentuk",
+                "depthMoulded": "Kedalaman Dibentuk",
+                "airDraught": "Aliran Udara",
+                "airDraughtCrane": "Derek Aliran Udara"
+              }
+            },
+            "dimensions": {
+              "title": "Dimensi",
+              "fields": {
+                "lightVessel": "Light Vessel",
+                "summerDisplacement": "Summer Displacement ",
+                "sDwt": "S DWT",
+                "sDraught": "S Draught",
+                "sFreeboard": "S Freeboard",
+                "fwAllowance": "F.W Allowance",
+                "fwFreeboard": "F.W Freeboard",
+                "wDraught": "W Draught",
+                "dDwt": "W DWT"
+              }
+            },
+            "engine": {
+              "title": "Mesin",
+              "fields": {
+                "mainEngine": "Mesin Utama",
+                "bowThruster": "Bow Thruster",
+                "thrusterCapacity": "Kapasitas Thruster",
+                "rudderType": "Jenis Kemudi",
+                "propeller": "Baling-baling"
+              }
+            }
+          },
+            "safetyStructure": {
+                "title": "Keselamatan & Struktur",
+                "shipClassSpecificFields": {
+                    "title": "Field Khusus Kelas kapal",
+                  "fields": {
+                    "containers": "Kontainer",
+                    "count": "Jumlah Perlengkapan Keselamatan",
+                    "cargoCranes": "Derek Kargo",
+                    "cargoCranesDesc": "Deskripsi Derek Kargo"
+                  }
+                },
+              "extraFields": {
+                "title": "Field Tambahan",
+                "fields": {
+                  "referSockets": "Refer Sockets",
+                  "bollardPull": "Bollard Pull"
+                }
+              }
+            },
+            "header": {
+              "fields": {
+                "ship": "Kapal",
+                "appliedPort": "Pelabuhan Registrasi Kapal"
+              }
+            }
+        }
+    }
+}

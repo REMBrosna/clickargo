@@ -1,0 +1,64 @@
+{
+  "title": {
+    "accnConfig": "Account Settings",
+    "sageTitle": "Sage Details",
+    "bankTitle": "Bank Account Details",
+    "staticVaTitle": "Static Virtual Account",
+    "financing": "Financing",
+    "images": "Images"
+  },
+  "bankList": {
+    "judul": "Daftar Rekening Bank",
+    "tambah": "Tambah Rekening Bank",
+    "accnId": "ID Akun",
+    "accnName": "Nama Akun",
+    "accnType": "Tipe Akun",
+    "bankCode": "Bank Account Code",
+    "bankNo": "Nomor Rekening Bank",
+    "bankName": "Nama Rekening Bank",
+    "acfgDtCreate": "Tanggal Pembuatan",
+    "acfgDtLupd": "Tanggal Pembaharuan",
+    "acfgStatus": "Status",
+    "action": "Action",
+    "comAccn": "Company Account"
+  },
+  "images": {
+    "loginBackgroundImage": "Gambar Latar Belakang Masuk",
+    "toggleHideImage": "Sembunyikan Gambar",
+    "toggeleShowImage": "Tampilkan Gambar",
+    "companyLogo": "Logo perusahaan",
+    "noImageAvailable": "Gambar tidak tersedia",
+    "bgImageText": "Ini akan digunakan untuk menyesuaikan gambar latar belakang login. Ukuran yang disarankan adalah 1440x1024 piksel.",
+    "errNonImage": "Only images allowed"
+  },
+  "accnInq": {
+    "listing": {
+      "title": "Permintaan Permintaan Rekening",
+      "accnName": "Nama akun",
+      "emailTo": "Permintaan Email Ke",
+      "processBy": "Proses Oleh",
+      "reqDt": "Tanggal yang diminta",
+      "updateDt": "Tanggal Diperbarui",
+      "state": "Status",
+      "action": "Tindakan"
+    },
+    "tabDetails": "Detail",
+    "bcList": "Daftar Permintaan Akun",
+    "title": "Detail Permintaan Akun",
+    "uploadDoc": "Document Upload",
+    "reqId": "Minta ID",
+    "compAccnId": "ID Akun Perusahaan",
+    "compAccnName": "Nama perusahaan",
+    "reqBy": "Diminta oleh",
+    "reqDt": "Tanggal yang diminta",
+    "remarks": "Perkataan",
+    "processedBy": "Diproses oleh",
+    "processDt": "Tanggal Diproses",
+    "docsReqList": "Dokumen Diminta",
+    "docsUploadSuccess": "Dokumen berhasil diunggah!",
+    "docsDeleteSuccess": "Dokumen berhasil dihapus!",
+    "btnSend": "Kirim Dokumen",
+    "reqSavedSuccess": "Berhasil disimpan!",
+    "reqResSuccess": "Respons pertanyaan akun terkirim!"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "new": "New",
+    "verified": "Verified",
+    "approved": "Approved",
+    "paid": "Paid",
+    "success": "Success",
+    "paying": "Paying",
+    "fail": "Fail",
+    "failed": "Failed",
+    "cancelled": "Cancelled",
+    "partialFail": "Partial Fail",
+    "verifiedBill": "Billing Verified",
+    "approvedBill": "Billing Approved"
+}

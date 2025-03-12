@@ -1,0 +1,63 @@
+{
+  "title": {
+    "accnConfig": "Account Settings",
+    "sageTitle": "Sage Details",
+    "bankTitle": "Bank Account Details",
+    "staticVaTitle": "Static Virtual Account",
+    "financing": "Financing",
+    "images": "Images"
+  },
+  "bankList": {
+    "judul": "Bank Account List",
+    "tambah": "New Bank Account",
+    "accnId": "Account ID",
+    "accnName": "Account Name",
+    "accnType": "Account Type",
+    "bankCode": "Bank Account Code",
+    "bankNo": "Bank Account Number",
+    "bankName": "Bank Account Name",
+    "acfgDtCreate": "Date Created",
+    "acfgDtLupd": "Date Updated",
+    "acfgStatus": "Status",
+    "action": "Action",
+    "comAccn": "Company Account"
+  },
+  "images": {
+    "loginBackgroundImage": "Login Background Image",
+    "toggleHideImage": "Hide Image",
+    "toggeleShowImage": "Show Image",
+    "companyLogo": "Company Logo",
+    "noImageAvailable": "No available image",
+    "bgImageText": "This will be use to customize the login background image. Recommended size is 1440x1024 pixels."
+  },
+  "accnInq": {
+    "listing": {
+      "title": "Account Inquiry Requests",
+      "accnName": "Account Name",
+      "emailTo": "Email Request To",
+      "processBy": "Process By",
+      "reqDt": "Requested Date",
+      "updateDt": "Updated Date",
+      "state": "Status",
+      "action": "Action"
+    },
+    "tabDetails": "Details",
+    "bcList": "Account Inquiry List",
+    "title": "Account Inquiry Details",
+    "uploadDoc": "Document Upload",
+    "reqId": "Request ID",
+    "compAccnId": "Company Account ID",
+    "compAccnName": "Company Name",
+    "reqBy": "Requested By",
+    "reqDt": "Requested Date",
+    "remarks": "Remarks",
+    "processedBy": "Processed By",
+    "processDt": "Processed Date",
+    "docsReqList": "Documents Requested",
+    "docsUploadSuccess": "Documents uploaded successfully",
+    "docsDeleteSuccess": "Documents deleted successfully!",
+    "btnSend": "Send Documents",
+    "reqSavedSuccess": "Saved succcessfully",
+    "reqResSuccess": "Account inquiry response sent"
+  }
+}

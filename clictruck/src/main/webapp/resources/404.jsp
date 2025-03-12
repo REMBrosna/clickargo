@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Error 404</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/portedi/resources/style.css">
+
+</head>
+<body>
+<main>
+	<a href="https://portedi.mpwt.gov.kh/"><span id="logo" aria-label="PortEDI" role="img"></span></a>
+	<p>
+		<b>404.</b>
+		<ins>That's an error.</ins>
+	</p>
+	<p>
+		The requested URL was not found on this server.
+	</p>
+	
+</main>
+</body>
+</html>

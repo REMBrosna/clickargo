@@ -1,0 +1,1119 @@
+{
+  "country": {
+    "list": {
+      "routeSegment": "Daftar Kode Negara",
+      "table": {
+        "title": "Daftar Kode Negara",
+        "headers": {
+          "ctryCode": "Kode negara",
+          "ctryName": "Nama negara",
+          "ctryStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kode Negara",
+        "sub": {
+          "edit": "Ubah Kode Negara",
+          "view": "Lihat Kode Negara",
+          "new": "Tambah Kode Negara"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "ctryCode": "Kode Negara",
+          "ctryDesc": "Deskripsi Negara"
+        }
+      }
+    },
+    "sms": {
+      "invalidCode": "Kode negara {{countryCode}} ini sudah ada."
+    }
+  },
+  "currency": {
+    "list": {
+      "routeSegment": "Daftar Kode Mata Uang",
+      "table": {
+        "title": "Daftar Kode Mata Uang",
+        "headers": {
+          "ccyCode": "Kode Mata Uang",
+          "ccyDescription": "Deskripsi",
+          "ccyDescriptionOth": "Keterangan Lainnya",
+          "ccyStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kode Mata Uang",
+        "sub": {
+          "edit": "Ubah Kode Mata Uang",
+          "view": "Lihat Kode Mata Uang",
+          "new": "Tambah Kode Mata Uang"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "ccyCode": "Kode Mata Uang",
+          "ccyDescription": "-Deskripsi mata uang",
+          "ccyDescriptionOth": "Keterangan Lainnya"
+        }
+      }
+    }
+  },
+  "hsCode": {
+    "list": {
+      "routeSegment": "Daftar Kode HS",
+      "table": {
+        "title": "Daftar Kode HS",
+        "headers": {
+          "hsCode": "Kode HS",
+          "hsDescription": "Deskripsi HS",
+          "hsStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kode HS",
+        "sub": {
+          "edit": "Ubah Kode HS",
+          "view": "Lihat Kode HS",
+          "new": "Tambah Kode HS"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "hsCode": "HS Code",
+          "hsDescription": "Deskripsi HS",
+          "controlled": {
+            "label": "LARTAS",
+            "hsImpControlled": "LARTAS Impor",
+            "hsExpControlled": "LARTAS Ekspor"
+          },
+          "hstypeCode": "Jenis Barang",
+          "hsDutyType": "Jenis Tarif",
+          "hsExciseDutyRate": "Tarif Cukai (%)",
+          "hsCustomsDutyRate": "Tarif Kepabeanan (%)",
+          "uomCode": "Satuan",
+          "TMstUomByHsExciseDutyUom": "Satuan Cukai",
+          "TMstUomByHsCustomsDutyUom": "Satuan Kepabeanan"
+        }
+      }
+    }
+  },
+  "ports": {
+    "list": {
+      "routeSegment": "Daftar Pelabuhan",
+      "table": {
+        "title": "Daftar Pelabuhan",
+        "headers": {
+          "portCode": "Kode Pelabuhan",
+          "portDescription": "Deskripsi Pelabuhan",
+          "portDescriptionOth": "Deskripsi Pelabuhan (Bahasa Indonesia)",
+          "TMstCountry": "Negara",
+          "TMstPortType": "Jenis Pelabuhan",
+          "portStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Pelabuhan",
+        "sub": {
+          "edit": "Ubah Pelabuhan",
+          "view": "Lihat Pelabuhan",
+          "new": "Tambah Pelabuhan"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "portCode": "Kode Pelabuhan",
+          "portDescription": "Deskripsi Pelabuhan",
+          "portDescriptionOth": "Deskripsi Pelabuhan (Bahasa Indonesia)",
+          "TMstCountry": "Negara",
+          "TMstPortType": "Tipe Pelabuhan"
+        }
+      }
+    }
+  },
+  "uom": {
+    "list": {
+      "routeSegment": "Daftar Kode Satuan",
+      "table": {
+        "title": "Daftar Kode Satuan",
+        "headers": {
+          "uomCode": "Kode Satuan",
+          "uomDescription": "Deskripsi Satuan",
+          "otherLangDesc": "Deskripsi Satuan (Bahasa lain)",
+          "uomStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kode Satuan",
+        "sub": {
+          "edit": "Ubah Satuan",
+          "view": "Lihat Satuan",
+          "new": "Tambah Satuan"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "uomCode": "Kode Satuan",
+          "uomDescription": "Deskripsi Satuan",
+          "otherLangDesc": "Deskripsi Satuan (Bahasa Lain)"
+        }
+      }
+    }
+  },
+  "dutyPaidAt": {
+    "list": {
+      "routeSegment": "Daftar Incoterms",
+      "table": {
+        "title": "Daftar Incoterms",
+        "headers": {
+          "dutyPaidId": "Kode Incoterms",
+          "dutyPaidPort": "Pelabuhan Induk",
+          "dutyPaidName": "Deskripsi Incoterms",
+          "dutyPaidDesc": "Deskripsi Incoterms",
+          "dutyPaidStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Bea Dibayar Pada Daftar",
+        "sub": {
+          "edit": "Ubah Bea Dibayar",
+          "view": "Lihat Bea Dibayar",
+          "new": "Tambah Bea Dibayar"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "dutyPaidId": "ID Kepabeanan",
+          "dutyPaidPort": "Pelabuhan Induk",
+          "dutyPaidName": "Nama Pembayaran Tugas",
+          "dutyPaidDesc": "Deskripsi Pembayaran Tugas"
+        }
+      }
+    }
+  },
+  "ministry": {
+    "list": {
+      "routeSegment": "Daftar Kementerian",
+      "table": {
+        "title": "Daftar Kementerian",
+        "headers": {
+          "minCode": "Kode Kementerian",
+          "minDesc": "Nama Kementerian (English)",
+          "minDescOth": "Nama Kementerian (Bahasa Indonesia)",
+          "minRegNo": "Nomor Pendaftaran"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kementerian",
+        "sub": {
+          "edit": "Ubah Kementerian",
+          "view": "Lihat Kementerian",
+          "new": "Tambah Kementerian"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "minCode": "Kode Kementerian",
+          "minDesc": "Nama Kementerian (English)",
+          "minDescOth": "Nama Kementerian (Bahasa Indonesia)",
+          "minRegNo": "Nomor pendaftaran"
+        }
+      }
+    }
+  },
+  "agency": {
+    "list": {
+      "routeSegment": "Daftar Lembaga",
+      "table": {
+        "title": "Daftar Lembaga",
+        "headers": {
+          "agyCode": "Kode Lembaga",
+          "agyDesc": "Nama Lembaga (English)",
+          "agyDescOth": "Nama Lembaga (Bahasa Indonesia)",
+          "agyRegNo": "Nomor Pendaftaran",
+          "TCoreMinistry": "Kode Kementerian"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Lembaga",
+        "sub": {
+          "edit": "Ubah Lembaga",
+          "view": "Lihat Lembaga",
+          "new": "Tambah Lembaga"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "agyCode": "Kode Lembaga",
+          "agyDesc": "Nama Lembaga (English)",
+          "agyDescOth": "Nama Lembaga (Bahasa Indonesia)",
+          "agyRegNo": "Nomor Pendaftaran",
+          "TCoreMinistry": "Kode Kementerian"
+        }
+      }
+    }
+  },
+  "agencyOffice": {
+    "list": {
+      "routeSegment": "Daftar Kantor Lembaga",
+      "table": {
+        "title": "Daftar Kantor Lembaga",
+        "headers": {
+          "agoCode": "Kode Kantor Lembaga",
+          "agoAgyCode": "Kode Lembaga",
+          "agoDesc": "Nama Kantor Lembaga (English)",
+          "agoDescOth": "Nama Kantor Lembaga (Bahasa Indonesia)",
+          "agoAddrList": "Daftar Alamat Kantor Instansi"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Kantor Lembaga",
+        "sub": {
+          "edit": "Ubah Kantor Lembaga",
+          "view": "Lihat Kantor Lembaga",
+          "new": "Tambah Kantor Lembaga"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "agoCode": "Kode Kantor Lembaga",
+          "agoAgyCode": "Kode Lembaga",
+          "agoDesc": "Nama Kantor Lembaga (English)",
+          "agoDescOth": "Nama Kantor Lembaga (Bahasa Indonesia)",
+          "addrType": "Tipe Alamat"
+        }
+      }
+    },
+    "dialog": {
+      "officeAddress": "Alamat Resmi"
+    }
+  },
+  "contract": {
+    "list": {
+      "routeSegment": "Daftar Surat Penetapan",
+      "table": {
+        "title": "Daftar Surat Penetapan",
+        "headers": {
+          "radio": "Radio",
+          "companyName": "Nama Perusahaan",
+          "aconSagName": "Nama Shipping Agent",
+          "phoneNumber": "Telepon",
+          "aconDtCreate": "Tanggal Surat Penetapan",
+          "status": "Status",
+          "recordStatus": "Catatan Status",
+          "email": "Email",
+          "fax": "Fax",
+          "accnExpiryDate": "Tanggal Kadaluarsa",
+          "address1": "Alamat 1",
+          "address2": "Alamat 2",
+          "address3": "Alamat 3",
+          "addressProvince": "Propinsi",
+          "cityCode": "Kode Kota",
+          "proCode": "Kode Propinsi",
+          "postCode": "Kode Pos"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Surat Penetapan",
+        "sub": {
+          "edit": "Ubah Surat Penetapan",
+          "view": "Lihat Surat Penetapan",
+          "new": "Tambah Surat Penetapan"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "radio": "Radio",
+          "companyName": "Nama Perusahaan",
+          "aconSagName": "Nama Shipping Agent",
+          "phoneNumber": "Telepon",
+          "aconDtCreate": "Tanggal Surat Penetapan",
+          "status": "Status",
+          "recordStatus": "Status Catatan",
+          "email": "Email",
+          "fax": "Fax",
+          "accnExpiryDate": "Tanggal Kadaluarsa",
+          "address1": "Alamat 1",
+          "address2": "Alamat 2",
+          "address3": "Alamat 3",
+          "cityCode": "Kode Kota",
+          "proCode": "Kode Propinsi",
+          "postCode": "Kode Pos"
+        }
+      }
+    },
+    "message": {
+      "action": "Apakah anda yakin untuk melakukan {{action}}?",
+      "success": {
+        "submitted": "Surat Penetapan telah dikirim.",
+        "save": "Surat Penetapan telah disimpan.",
+        "approved": "Surat Penetapan telah disetujui.",
+        "active": "Surat Penetapan telah aktif.",
+        "deactivated": "Surat Penetapan tidak aktif.",
+        "deleted": "File berhasil dihapus!"
+      }
+    },
+    "suppDocs": {
+      "no": "No",
+      "docType": "Jenis Dokumen",
+      "required": "Persyaratan",
+      "file": "File",
+      "action": "Aksi"
+    }
+  },
+  "attachType": {
+    "list": {
+      "routeSegment": "Daftar Jenis Lampiran",
+      "table": {
+        "title": "Daftar Jenis Lampiran",
+        "headers": {
+          "mattId": "ID Jenis Lampiran",
+          "mattName": "Nama Jenis Lampiran",
+          "mattDesc": "Deskripsi Jenis Lampiran",
+          "mattDescOth": "Deskripsi Jenis Lampiran(Bahasa Indonesia)",
+          "mattRefNo": "Nomor Referensi",
+          "mattExpiry": "Tanggal Kadaluarsa",
+          "mattStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Jenis Lampiran",
+        "sub": {
+          "edit": "Ubah Jenis Lampiran",
+          "view": "Lihat Jenis Lampiran",
+          "new": "Tambah Jenis Lampiran"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "mattId": "ID Jenis Lampiran",
+          "mattName": "Nama Jenis Lampiran",
+          "mattDesc": "Deskripsi Jenis Lampiran",
+          "mattDescOth": "Deskripsi Jenis Lampiran(Bahasa Indonesia)",
+          "mattStatus": "Status"
+        }
+      }
+    },
+    "field": {
+      "required": "Required",
+      "overLength": "Panjang isian maksimal {{max}} karakter",
+      "hasWhitespace": "Isian tidak boleh mengandung karakter spasi"
+    }
+  },
+  "feeConfig": {
+    "list": {
+      "routeSegment": "Konfigurasi Biaya",
+      "table": {
+        "title": "Daftar Konfigurasi Biaya",
+        "headers": {
+          "feeConfigId": "ID Konfigurasi Biaya",
+          "feeAppType": "Jenis Aplikasi",
+          "feeConfigFee": "Biaya Konfigurasi",
+          "feeParentAgency": "Agen",
+          "feeCurrency": "Mata Uang",
+          "feeStatus": "Status",
+          "feeType": "Jenis Biaya"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Konfigurasi Biaya",
+        "sub": {
+          "edit": "Ubah Konfigurasi Biaya",
+          "view": "Lihat Konfigurasi Biaya",
+          "new": "Tambah Konfigurasi Biaya"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "feeConfigId": "ID Konfigurasi Biaya",
+          "feeAppType": "Jenis Aplikasi",
+          "feeConfigFee": "Konfigurasi Biaya",
+          "feeParentAgency": "Agen",
+          "feeCurrency": "Konfigurasi Biaya",
+          "feeStatus": "Status",
+          "feeType": "Jenis Biaya"
+        }
+      }
+    }
+  },
+  "docAssociate": {
+    "list": {
+      "routeSegment": "Daftar Dokumen Pendukung",
+      "table": {
+        "title": "Daftar Dokumen Pendukung",
+        "headers": {
+          "id": "Dokumen Pendukung",
+          "supportName": "Jenis Dokumen Pendukung",
+          "appName": "Jenis Aplikasi",
+          "shipTypeName": "Jenis Pengiriman",
+          "parentPortName": "Nama Port",
+          "mandate": "Mandatory",
+          "status": "Status",
+          "yes": "Y",
+          "no": "T"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Dokumen Pendukung",
+        "sub": {
+          "edit": "Ubah Dokumen Pendukung",
+          "view": "Lihat Dokumen Pendukung",
+          "new": "Tambah Dokumen Pendukung"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "id": "Dokumen Pendukung",
+          "supportName": "Jenis Dokumen Pendukung",
+          "appName": "Jenis Aplikasi",
+          "shipTypeName": "Jenis Pengiriman",
+          "parentPortName": "Nama Port",
+          "mandate": "Mandatory",
+          "status": "Status",
+          "yes": "Ya",
+          "no": "Tidak"
+        }
+      }
+    }
+  },
+  "province": {
+    "list": {
+      "routeSegment": "Daftar Propinsi",
+      "table": {
+        "title": "Daftar Propinsi",
+        "headers": {
+          "provId": "ID Propinsi",
+          "provDesc": "Nama Propinsi",
+          "country": "Negara",
+          "province": "Propinsi",
+          "city": "Kota",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Propinsi",
+        "sub": {
+          "edit": "Ubah Propinsi",
+          "view": "Lihat Propinsi",
+          "new": "Tambah Propinsi"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "provId": "ID Propinsi",
+          "provDesc": "Nama Propinsi",
+          "country": "Negara"
+        }
+      }
+    },
+    "msg": {
+      "successMsg": "Propinsi berhasil ditambahkan.",
+      "successOperation": "Aksi Berhasil Dijalankan."
+    }
+  },
+  "portTerminal": {
+    "list": {
+      "routeSegment": "Daftar Terminal Pelabuhan",
+      "table": {
+        "title": "Daftar Terminal Pelabuhan",
+        "headers": {
+          "portTermId": "ID Terminal Pelabuhan",
+          "port": "Pelabuhan",
+          "portTermName": "Nama Terminal",
+          "portTermDesc": "Keterangan",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Terminal Pelabuhan",
+        "sub": {
+          "edit": "Ubah Data Terminal",
+          "view": "Lihat Data Terminal",
+          "new": "Tambah Data Terminal"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "portTermId": "ID Terminal Pelabuhan",
+          "port": "Pelabuhan",
+          "portTermName": "Nama Terminal Pelabuhan",
+          "portTermDesc": "Deskripsi"
+        }
+      }
+    }
+  },
+  "dosActivity": {
+    "list": {
+      "routeSegment": "Daftar DOS Activity",
+      "table": {
+        "title": "Daftar DOS Activity",
+        "headers": {
+          "dosActivityId": "ID DOS Activity",
+          "dosActivityName": "Nama DOS Activity",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar DOS Activity",
+        "sub": {
+          "edit": "Ubah DOS Activity",
+          "view": "Lihat DOS Activity",
+          "new": "Tambah DOS Activity"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "dosActivityId": "ID DOS Activity",
+          "dosActivityName": "Nama DOS Activity"
+        }
+      }
+    }
+  },
+  "areasInspected": {
+    "list": {
+      "routeSegment": "Daftar Area Inspeksi",
+      "table": {
+        "title": "Daftar Area Inspeksi",
+        "headers": {
+          "areaInsId": "ID Area Inspeksi",
+          "areaInsSeq": "Urutan",
+          "areaInsType": "Jenis Area Inspeksi",
+          "areaInsGrp": "Group Area Inspeksi",
+          "areaInsName": "Nama Area",
+          "areaInsDesc": "Deskripsi",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Area Inspeksi",
+        "sub": {
+          "edit": "Ubah Area Inspeksi",
+          "view": "View Area Inspeksi",
+          "new": "New Area Inspeksi"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "areaInsId": "ID Area Inspeksi",
+          "areaInsSeq": "Urutan Area Inspeksi",
+          "areaInsType": "Tipe Area Inspeksi",
+          "areaInsGrp": "Grup Area Inspeksi",
+          "areaInsName": "Nama Area Inspeksi",
+          "areaInsDesc": "Deskripsi Area Inspeksi"
+        }
+      }
+    },
+    "dropDown": {
+      "attachment": "Lampiran",
+      "certificate": "Sertifikat"
+    },
+    "field": {
+      "required": "Required",
+      "min": "Panjang isian minimal {{min}} karakter",
+      "maxDigits": "Panjang isian maksimal {{maxDigits}} digit",
+      "overLength": "Panjang isian maksimal {{max}} karakter",
+      "hasWhitespace": "Isian tidak boleh mengandung karakter spasi"
+    }
+  },
+  "notificationTemplate": {
+    "list": {
+      "routeSegment": "Daftar Template Notifikasi",
+      "table": {
+        "title": "Daftar Template Notifikasi",
+        "headers": {
+          "notifTemplateId": "ID Template",
+          "notifTemplateAppCode": "Kode Aplikasi",
+          "notifTemplateChannel": "Channel",
+          "notifTemplateSubject": "Subject",
+          "notifTemplateStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Template Notifikasi",
+        "sub": {
+          "edit": "Ubah Template Notifikasi",
+          "view": "Lihat Template Notifikasi",
+          "new": "Tambah Template Notifikasi"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "notifTemplateID": "ID Template",
+          "notifTemplateSeq": "Urutan",
+          "notifTmplAppCode": "Kode Aplikasi",
+          "notifTemplateChannel": "Channel",
+          "notifTemplateNotifContent": "Isi Notifikasi",
+          "notifTemplateDesc": "Template Deskirpsi",
+          "notifTemplateSubj": "Subject",
+          "notifTemplateContent": "Content"
+        }
+      }
+    }
+  },
+  "certificateConfig": {
+    "list": {
+      "routeSegment": "Daftar Konfigurasi Sertifikat",
+      "table": {
+        "title": "Daftar Konfigurasi Sertifikat",
+        "headers": {
+          "certId": "ID",
+          "certsId": "ID Sertifikat",
+          "certTemplateType": "Jenis Template",
+          "certSubReportKey": "Subreport Key",
+          "certJrxmlPath": "JRXML Path",
+          "certReportTitle": "Judul Laporan",
+          "certReportTitleKh": "Judul Laporan (Bahasa Indonesia)",
+          "certStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Konfigurasi Sertifikat",
+        "sub": {
+          "edit": "Ubah Konfigurasi Sertifikat",
+          "view": "Lihat Konfigurasi Sertifikat",
+          "new": "Tambah Konfigurasi Sertifikat"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "certId": "ID",
+          "certsId": "ID Sertifikat",
+          "certTemplateType": "Jenis Template",
+          "certSubReportKey": "Subreport Key",
+          "certLogoPath": "Logo Path",
+          "certWaterMarkPath": "Watermark Path",
+          "certJrxmlPath": "JRXML Path",
+          "certReportTitle": "Judul Laporan",
+          "certReportTitleKh": "Judul Laporan (Bahasa Indonesia)",
+          "certReportWebviewTitle": "Webview Title",
+          "certReportWebviewTitleKh": "Webview Title (Bahasa Indonesia)",
+          "certDepartment": "Departemen",
+          "certDepartmentKh": "Departemen (Bahasa Indonesia)",
+          "certInchargeTitle": "Jabatan",
+          "certInchargeTitleKh": "Jabatan (Bahasa Indonesia)",
+          "certMinistry": "Kementerian",
+          "certMinistryKh": "Kementerian (Bahasa Indonesia)",
+          "certStatus": "Status"
+        }
+      }
+    }
+  },
+  "certificateSvc": {
+    "list": {
+      "routeSegment": "Daftar Certificate Service",
+      "table": {
+        "title": "Daftar Certificate Service",
+        "headers": {
+          "certsId": "ID",
+          "certsVal": "Value",
+          "certsModuleService": "Module Service",
+          "certsDecs": "Description",
+          "certsStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Certificate Service",
+        "sub": {
+          "edit": "Ubah Certificate Service",
+          "view": "Lihat Certificate Service",
+          "new": "Tambah Certificate Service"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "certsId": "ID",
+          "certsVal": "Value",
+          "certsModuleService": "Module Service",
+          "certsDecs": "Description"
+        }
+      }
+    }
+  },
+  "shipTypeEF": {
+    "list": {
+      "table": {
+        "headers": {
+          "fieldName": "Nama Field",
+          "fieldNameOth": "Nama Field Lain",
+          "fieldInputType": "Tipe Inputan",
+          "mandatory": "Mandatory",
+          "shipType": "Jenis Pengiriman",
+          "createdBy": "Created By",
+          "createdDate": "Created Date"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Field Tambahan",
+        "shipTypeList": "Daftar Jenis Pengiriman",
+        "shipTypeExtraFields": "Daftar Jenis Pengiriman dan Isian Tambahan",
+        "sub": {
+          "edit": "Ubah Kolom Tambahan Jenis Pengiriman",
+          "view": "Lihat",
+          "viewShipType": "Lihat Jenis Pengiriman",
+          "new": "Tambah Jenis Pengiriman"
+        }
+      },
+      "tabs": {
+        "shipDetails": {
+          "shipType": "Jenis Pengiriman",
+          "shipTypeOthLang": "Jenis Pengiriman dalam bahasa lain",
+          "desc": "Deskripsi",
+          "extraFields": "Kolom Tambahan"
+        }
+      }
+    },
+    "msg": {
+      "successChange": "Perubahan berhasil disimpan!",
+      "errorChange": "Terjadi Error Pada Saat menyimpan perubahan data!"
+    },
+    "dropDown": {
+      "textBox": "Text Box",
+      "dropDown": "Drop Down"
+    }
+  },
+  "shipType": {
+    "list": {
+      "routeSegment": "Jenis Pengiriman",
+      "table": {
+        "headers": {
+          "shipTypeId": "ID Jenis Pengiriman",
+          "shipTypeName": "Nama Jenis Pengiriman",
+          "shipTypeDesc": "Deskripsi Jenis Pengiriman",
+          "shipTypeStatus": "Status",
+          "mandatory": "Mandatory",
+          "shipType": "Jenis Pengiriman",
+          "createdBy": "Dibuat Oleh",
+          "createdDate": "Tanggal Dibuat",
+          "updatedDate": "Tanggal Update"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Jenis Pengiriman",
+        "sub": {
+          "edit": "Ubah Jenis Pengiriman",
+          "view": "Lihat Jenis Pengiriman",
+          "new": "Tambah Jenis Pengiriman"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "shipTypeId": "Kode Jenis Pengiriman",
+          "shipTypeName": "Nama Jenis Pengiriman",
+          "shipTypeDesc": "Deskripsi Jenis Pengiriman"
+        }
+      }
+    },
+    "msg": {
+      "successCreate": "Berhasil menambahkan Jenis Pengiriman!",
+      "successChange": "Perubahan berhasil!",
+      "successOperation": "Perubahan Status Berhasil!",
+      "errorChange": "Terjadi Error Pada Saat menyimpan perubahan data!"
+    },
+    "dropDown": {
+      "textBox": "Text Box",
+      "dropDown": "Drop Down"
+    },
+    "validate": {
+      "required": "Wajib Diisi"
+    }
+  },
+  "thrusterType": {
+    "list": {
+      "routeSegment": "Thruster Type",
+      "table": {
+        "headers": {
+          "ttCode": "Kode Tipe Thruster",
+          "ttName": "Nama",
+          "ttDesc": "Deskripsi",
+          "ttStatus": "Status",
+          "mandatory": "Mandatory",
+          "thrusterType": "Jenis Pengiriman",
+          "createdBy": "Dibuat Oleh",
+          "createdDate": "Tanggal Dibuat",
+          "updatedDate": "Tanggal Upload"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Tipe Thruster",
+        "sub": {
+          "edit": "Ubah Jenis Pengiriman",
+          "view": "Lihat Tipe Thruster ",
+          "new": "Tambah Tipe Thruster"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "ttCode": "Kode Tipe Thruster",
+          "ttName": "Nama Tipe Thruster",
+          "ttDesc": "Deskripsi Tipe Thruster"
+        }
+      }
+    },
+    "msg": {
+      "successCreate": "Menambahkan Data Tipe Thruster berhasil!",
+      "successChange": "Perubahan berhasil disimpan!",
+      "successOperation": "Perubahan Status Berhasil!",
+      "errorChange": "Terjadi Error Pada Saat menyimpan perubahan data!"
+    },
+    "dropDown": {
+      "textBox": "Text Box",
+      "dropDown": "Drop Down"
+    },
+    "validate": {
+      "required": "Required"
+    }
+  },
+  "paymentType": {
+    "list": {
+      "routeSegment": "Jenis Pembayaran",
+      "table": {
+        "headers": {
+          "ptCode": "Kode Jenis Pembayaran",
+          "ptName": "Nama",
+          "ptDesc": "Deskripsi",
+          "ptStatus": "Status",
+          "mandatory": "Mandatory",
+          "paymentType": "Tipe Pembayaran",
+          "createdBy": "Dibuat Oleh",
+          "createdDate": "Tanggal Dibuat",
+          "updatedDate": "Tanggal Upload"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Jenis Pembayaran",
+        "sub": {
+          "edit": "Ubah Jenis Pembayaran",
+          "view": "Lihat Jenis Pembayaran",
+          "new": "Tambah Jenis Pembayaran"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "ptCode": "Kode Jenis Pembayaran",
+          "ptName": "Nama Jenis Pembayaran",
+          "ptDesc": "Deskripsi Jenis Pembayaran"
+        }
+      }
+    },
+    "msg": {
+      "successCreate": "Berhasil menambahkan Jenis Pembayaran!",
+      "successChange": "Perubahan berhasil disimpan!",
+      "successOperation": "Perubahan Status Berhasil!",
+      "errorChange": "Terjadi Kesalahan Sistem Pada Saat menyimpan perubahan data!"
+    },
+    "dropDown": {
+      "textBox": "Text Box",
+      "dropDown": "Drop Down"
+    },
+    "validate": {
+      "required": "Required"
+    }
+  },
+  "recoveryApplication": {
+    "list": {
+      "routeSegment": "Konfigurasi Recovery Application",
+      "table": {
+        "headers": {
+          "recId": "Kode Recovery Application",
+          "recAccnId": "ID Shipping Line/Agent",
+          "recAccnName": "Nama Shipping Line/Agent",
+          "recStartDate": "Tanggal Mulai Recovery",
+          "recExpiryDate": "Tanggal Kadaluarsa Recovery",
+          "recStatus": "Status",
+          "mandatory": "Mandatory",
+          "recoveryApplication": "Konfigurasi Recovery Application",
+          "createdBy": "Dibuat Oleh",
+          "createdDate": "Tanggal Dibuat",
+          "updatedDate": "Tanggal Update"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Konfigurasi Recovery Application",
+        "sub": {
+          "edit": "Ubah Konfigurasi Recovery Application",
+          "view": "Lihat Data Konfigurasi Recovery Application",
+          "new": "Tambah Konfigurasi Recovery Application"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "recAccnId": "Shipping Line/Agent",
+          "recStartDate": "Tanggal Mulai Recovery",
+          "recExpiryDate": "Tanggal Berakhir Recovery",
+          "recStatus": "Status"
+        }
+      }
+    },
+    "msg": {
+      "successCreate": "Berhasil Menambahkan Konfigurasi Recovery Application!",
+      "successChange": "Perubahan berhasil disimpan!",
+      "successOperation": "Perubahan Status Berhasil!",
+      "errorChange": "Terjadi Kesalahan Sistem Pada Saat menyimpan perubahan data!"
+    },
+    "dropDown": {
+      "textBox": "Text Box",
+      "dropDown": "Drop Down"
+    },
+    "validate": {
+      "required": "Required"
+    }
+  },
+  "numberEngine": {
+    "list": {
+      "routeSegment": "Daftar Nomor Mesin",
+      "table": {
+        "title": "Daftar Nomor Mesin",
+        "headers": {
+          "neCode": "ID Nomor Mesin",
+          "neName": "Nama Nomor Mesin",
+          "neDesc": "Deskripsi Nomor Mesin",
+          "numberEngine": "Nomor Mesin",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Nomor Mesin",
+        "sub": {
+          "edit": "Ubah Nomor Mesin",
+          "view": "Lihat Nomor Mesin",
+          "new": "Tambah Nomor Mesin"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "neCode": "Kode Nomor Mesin",
+          "neName": "Nama Nomor Mesin",
+          "neDesc": "Deskripsi Nomor Mesin",
+          "numberSequence": "Urutan Nomor Mesin"
+        }
+      }
+    },
+    "msg": {
+      "successMsg": "Data Nomor Mesin Berhasil Ditambahkan",
+      "successOperation": "Aksi Berhasil Dijalankan."
+    }
+  },
+  "articleCat": {
+    "list": {
+      "routeSegment": "Daftar Article Category",
+      "table": {
+        "title": "Daftar Article Category",
+        "headers": {
+          "arcCode": "ID Article Category",
+          "arcName": "Nama Article Category",
+          "arcDesc": "Deskripsi Article Category",
+          "articleCat": "Article Category",
+          "status": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Article Category",
+        "sub": {
+          "edit": "Ubah Article Category",
+          "view": "Lihat Data Article Category",
+          "new": "Tambah Article Category"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "arcCode": "Kode Article Category",
+          "arcName": "Nama Article Category",
+          "arcDesc": "Deskripsi Article Category"
+        }
+      }
+    },
+    "msg": {
+      "successMsg": "Berhasil Menambahkan Articel Category.",
+      "successOperation": "Aksi Berhasil Dijalankan."
+    }
+  },
+  "crewRank": {
+    "list": {
+      "routeSegment": "Daftar Crew Rank",
+      "table": {
+        "title": "Daftar Crew Rank",
+        "headers": {
+          "crewRankId": "ID Crew Rank",
+          "crewRankName": "Nama Crew Rank",
+          "crewRankDesc": "Deskripsi Crew Rank",
+          "crewRank": "Crew Rank",
+          "crewRankStatus": "Status"
+        }
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "Daftar Crew Rank",
+        "sub": {
+          "edit": "Ubah Data Crew Rank Engine",
+          "view": "Lihat Data Crew Rank Engine",
+          "new": "Tambah Data Crew Rank Engine"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "crewRankId": "Kode Crew Rank",
+          "crewRankName": "Nama Crew Rank",
+          "crewRankDesc": "Deskripsi Crew Rank"
+        }
+      }
+    },
+    "msg": {
+      "successMsg": "Berhasil Menambahkan Data Crew Rank.",
+      "successOperation": "Aksi Berhasil Dijalankan."
+    }
+  }
+}

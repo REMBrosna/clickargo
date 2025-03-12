@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:shipmentstatus="http://edi.dsv.com/XML/ShipmentStatus_v1.xsd" xmlns:sharedelements="http://edi.dsv.com/XML/SharedElements_v1.xsd" targetNamespace="http://edi.dsv.com/XML/ShipmentStatus_v1.xsd" elementFormDefault="qualified">
+   <xs:import namespace="http://edi.dsv.com/XML/SharedElements_v1.xsd" schemaLocation="SharedElements_v1.xsd"/>
+   <xs:complexType name="ShipmentStatus">
+      <xs:sequence>
+         <xs:element name="Dates" type="shipmentstatus:DateList" minOccurs="0"/>
+         <xs:element name="TransportServices" type="shipmentstatus:TransportServiceList" minOccurs="0"/>
+         <xs:element name="Parties" type="shipmentstatus:PartiesList" minOccurs="0"/>
+         <xs:element name="References" type="shipmentstatus:ReferenceGroupList" minOccurs="0"/>
+         <xs:element name="Locations" type="shipmentstatus:LocationList" minOccurs="0"/>
+         <xs:element name="EquipmentUnits" type="shipmentstatus:EquipmentUnitsList" minOccurs="0"/>
+         <xs:element name="Shipments" type="shipmentstatus:ShipmentList" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TransportServiceList">
+      <xs:sequence>
+         <xs:element name="TransportService" type="sharedelements:TransportService" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PartiesList">
+      <xs:sequence>
+         <xs:element name="Party" type="shipmentstatus:PartyList" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="LocationList">
+      <xs:sequence>
+         <xs:element name="Location" type="sharedelements:Location" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ShipmentList">
+      <xs:sequence>
+         <xs:element name="Shipment" type="shipmentstatus:Shipment" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PartyList">
+      <xs:sequence>
+         <xs:element name="PartyDetails" type="sharedelements:PartyDetails" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="Contact" type="sharedelements:Contact" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Shipment">
+      <xs:sequence>
+         <xs:element name="ShipmentId" type="shipmentstatus:ShipmentId" minOccurs="1"/>
+         <xs:element name="ControlTotals" type="shipmentstatus:ControlTotalList" minOccurs="0"/>
+         <xs:element name="StatusDetails" type="shipmentstatus:StatusDetailslist" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ShipmentId">
+      <xs:simpleContent>
+         <xs:extension base="xs:string">
+            <xs:attribute name="Type" type="xs:string" use="optional"/>
+            <xs:attribute name="Qualifier" type="xs:string" use="optional"/>
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+   <xs:complexType name="ControlTotalList">
+      <xs:sequence>
+         <xs:element name="ControlTotal" type="sharedelements:ControlTotal" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="StatusDetailslist">
+      <xs:sequence>
+         <xs:element name="Status" type="sharedelements:Status" minOccurs="0"/>
+         <xs:element name="References" type="shipmentstatus:ReferenceGroupList" minOccurs="0"/>
+         <xs:element name="Dates" type="shipmentstatus:DateList" minOccurs="0"/>
+         <xs:element name="FreeTextData" type="shipmentstatus:FreeTextList" minOccurs="0"/>
+         <xs:element name="Parties" type="shipmentstatus:PartiesList" minOccurs="0"/>
+         <xs:element name="Locations" type="shipmentstatus:LocationList" minOccurs="0"/>
+         <xs:element name="TransportStages" type="shipmentstatus:TransportStageList" minOccurs="0"/>
+         <xs:element name="GoodsItems" type="shipmentstatus:GoodsItemList" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ReferenceGroupList">
+      <xs:sequence>
+         <xs:element name="ReferenceGroup" type="shipmentstatus:ReferenceGroup" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ReferenceGroup">
+      <xs:sequence>
+         <xs:element name="Reference" type="sharedelements:Reference" minOccurs="0"/>
+         <xs:element name="Date" type="sharedelements:Date" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DateList">
+      <xs:sequence>
+         <xs:element name="Date" type="sharedelements:Date" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="FreeTextList">
+      <xs:sequence>
+         <xs:element name="FreeText" type="sharedelements:FreeText" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TransportStageList">
+      <xs:sequence>
+         <xs:element name="TransportStage" type="shipmentstatus:TransportStage" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EquipmentUnitsList">
+      <xs:sequence>
+         <xs:element name="EquipmentUnit" type="shipmentstatus:EquipmentUnit" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GoodsItemList">
+      <xs:sequence>
+         <xs:element name="GoodsItem" type="shipmentstatus:GoodsItem" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="TransportStage">
+      <xs:sequence>
+         <xs:element name="Stage" type="sharedelements:Stage" minOccurs="0"/>
+         <xs:element name="Dates" type="shipmentstatus:DateList" minOccurs="0"/>
+         <xs:element name="Locations" type="shipmentstatus:LocationList" minOccurs="0"/>
+         <xs:element name="References" type="shipmentstatus:ReferenceGroupList" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="EquipmentUnit">
+      <xs:sequence>
+         <xs:element name="EquipmentType" type="sharedelements:EquipmentType" minOccurs="0"/>
+         <xs:element name="NumberOfUnits" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="Measurements" type="shipmentstatus:MeasurementsList" minOccurs="0"/>
+         <xs:element name="Dimensions" type="shipmentstatus:DimensionsList" minOccurs="0"/>
+         <xs:element name="SealIds" type="shipmentstatus:SealList" minOccurs="0"/>
+         <xs:element name="FreeTextData" type="shipmentstatus:FreeTextList" minOccurs="0"/>
+         <xs:element name="References" type="shipmentstatus:ReferenceGroupList" minOccurs="0"/>
+         <xs:element name="Dates" type="shipmentstatus:DateList" minOccurs="0"/>
+         <xs:element name="TransportMovement" type="sharedelements:TransportMovement" minOccurs="0"/>
+         <xs:element name="TemperatureControl" type="sharedelements:TemperatureControl" minOccurs="0"/>
+         <xs:element name="RangeDetails" type="sharedelements:RangeDetails" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="GoodsItem">
+      <xs:sequence>
+         <xs:element name="Item" type="sharedelements:Item" minOccurs="0"/>
+         <xs:element name="HandlingInstructions" type="shipmentstatus:HandlingInstructions" minOccurs="0"/>
+         <xs:element name="TemperatureControl" type="sharedelements:TemperatureControl" minOccurs="0"/>
+         <xs:element name="RangeDetails" type="sharedelements:RangeDetails" minOccurs="0"/>
+         <xs:element name="Locations" type="shipmentstatus:LocationList" minOccurs="0"/>
+         <xs:element name="MonetaryAmounts" type="shipmentstatus:MonetaryAmountList" minOccurs="0"/>
+         <xs:element name="ProductIds" type="shipmentstatus:ProductIdsList" minOccurs="0"/>
+         <xs:element name="FreeTextData" type="shipmentstatus:FreeTextList" minOccurs="0"/>
+         <xs:element name="Measurements" type="shipmentstatus:MeasurementsList" minOccurs="0"/>
+         <xs:element name="Dimensions" type="shipmentstatus:DimensionsList" minOccurs="0"/>
+         <xs:element name="References" type="shipmentstatus:ReferenceGroupList" minOccurs="0"/>
+         <xs:element name="PackageIds" type="shipmentstatus:PackageIds" minOccurs="0"/>
+         <xs:element name="GoodsPlacementIds" type="sharedelements:GoodsPlacementIds" minOccurs="0"/>
+         <xs:element name="DangerousGoodsDetails" type="shipmentstatus:DangerousGoodsDetailList" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="ProductIdsList">
+      <xs:sequence>
+         <xs:element name="ProductId" type="sharedelements:ProductId" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MonetaryAmountList">
+      <xs:sequence>
+         <xs:element name="MonetaryAmount" type="sharedelements:MonetaryAmount" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DangerousGoodsDetailList">
+      <xs:sequence>
+         <xs:element name="DangerousGoodsDetail" type="shipmentstatus:DangerousGoodsDetail" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="HandlingInstructions">
+      <xs:sequence>
+         <xs:element name="HandlingInstruction" type="sharedelements:HandlingInstruction" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DangerousGoodsDetail">
+      <xs:sequence>
+         <xs:element name="DangerousGoods" type="sharedelements:DangerousGoods" minOccurs="0"/>
+         <xs:element name="FreeTextData" type="shipmentstatus:FreeTextList" minOccurs="0"/>
+         <xs:element name="Measurements" type="shipmentstatus:MeasurementsList" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="MeasurementsList">
+      <xs:sequence>
+         <xs:element name="Measurement" type="sharedelements:Measurement" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="DimensionsList">
+      <xs:sequence>
+         <xs:element name="Dimension" type="sharedelements:Dimension" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="SealList">
+      <xs:sequence>
+         <xs:element name="Seal" type="sharedelements:Seal" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="PackageIds">
+      <xs:sequence>
+         <xs:element name="PackageId" type="sharedelements:PackageId" minOccurs="0" maxOccurs="unbounded"/>
+         <xs:element name="GoodsIdentities" type="sharedelements:GoodsIdentity" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

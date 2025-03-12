@@ -1,0 +1,373 @@
+{
+    "audits": {
+        "title": "Audit",
+        "table": {
+            "headers": {
+                "event": "Event",
+                "timestamp": "Timestamp",
+                "remarks": "Catatan",
+                "usrUid": "ID User",
+                "usrName": "Nama User"
+            }
+        }
+    },
+    "common": {
+        "msg": {
+            "createSuccess": "Pembuatan {{item}} Berhasil!",
+            "deleteSuccess": "Delete {{item}} Berhasil!",
+            "fetchFail": "`Terjadi Error ketika mengambil record {{item}}!",
+            "resubmitted": "Aplikasi dikembalikan dan diajukan kembali.",
+            "submitted": "Aplikasi telah berhasil disubmit.",
+            "created": "Berhasil Dibuat",
+            "updated": "Berhasil Diupdate",
+            "approve": "Berhasil Disetujui",
+            "reject": "Berhasil Ditolak",
+            "deleted": "Berhasil dihapus",
+            "assignSuccess": "Assign Successfully!",
+            "canceled": "Cancel successfully",
+            "cloned": "Cloned successfully",
+            "generalAction": "{{action}} successfully!",
+            "nonImageNotAllowed": "File format not allowed, must be *.jpg, *.jpeg or *.png",
+            "noFileUploded": "No file is uploaded",
+            "fileTypeNotAllowed": "File type not allowed",
+            "rmbrsmntFileFormat": "File format not allowed, must be *.jpg, *.jpeg, *.png or *.pdf",
+            "allowedTruckPhoto": "File format not allowed, must be *.jpg, *.jpeg, *.png, *.pdf, *.doc or *.docx",
+            "noToInRateTable": "Please select Truck Operator in Job Details first!",
+            "invoceRequired": "Mohon isi data invoice terlebih dahulu!",
+            "truckTypeRequired": "Mohon pilih tipe truk terlebih dahulu!",
+            "confirmation": "Are you sure you want to {{action}}?",
+            "podRequired": "Proof of Delivery document is required.",
+            "invRequired": "Invoice invalid data.",
+            "drvTrckInc": "Driver & Truck invalid data.",
+            "trckInc": "Truck Type is required.",
+            "mobileRequired": "Truck Operator Mobile Number is required.",
+            "jobDetailsInc": "Job Details invalid data.",
+            "fmTripInc": "Trip - Cargo & Charges invalid data.",
+            "dropoffMissing": "Drop-off image does not exist.",
+            "pickupMissing": "Pick-up image does not exist.",
+            "dopuMissing": "Drop-off and Pick-up images do not exist."
+        },
+        "queriesRemarks": {
+            "title": "Pertanyaan & Catatan"
+        },
+        "dataTable": {
+            "department": "Departemen",
+            "docName": "Nama Dokumen",
+            "docRefNo": "No Referensi Dokumen.",
+            "docType": "Jenis Dokumen",
+            "borderStatus": "Status Border",
+            "fileName": "Nama File",
+            "number": "No.",
+            "portStatus": "Status Pelabuhan",
+            "required": "Required",
+            "docRefNoExceed": "Melebihi panjang maksimum - 256",
+            "action": "Aksi"
+        },
+        "label": {
+            "docType": "Jenis Dokumen",
+            "docRefNo": "No Referensi Dokumen.",
+            "uploadFile": "Upload File",
+            "createdBy": "Dibuat Oleh",
+            "createdDt": "Tanggal Dibuat",
+            "updatedBy": "Updated By",
+            "updatedDt": "Updated Date",
+            "mobileEnabled": "Mobile Job",
+            "financeOpt": "Finance Option"
+        },
+        "placeHolder": {
+            "contactTel": "e.g. +621234567890",
+            "contactMobile": "e.g. +621234567890",
+            "contactFax": "e.g. +621234567890",
+            "contactEmail": "e.g. john.doe@clictruck.com"
+        },
+        "guide": {
+            "tooltipQm": "Informasi Toggle Page",
+            "btnHide": "Sembunyikan"
+        },
+        "buttons": {
+            "reply": "Reply",
+            "send": "Kirim",
+            "close": "Close",
+            "approve": "Approve",
+            "reject": "Reject",
+            "pay": "Pembayaran"
+        }
+    },
+    "queries": {
+        "title": "Pertanyaan",
+        "altTitle": "Pertanyaan",
+        "replyTitle": "Balas Pertanyaan",
+        "viewQuery": "Lihat Pertanyaan dan Respon",
+        "msgs": {
+            "confirm": "Apakah anda yakin ingin bertanya?",
+            "replySuccess": "Balas Pertanyaan Sukses!",
+            "notAllowed": "Tidak Diizinkan untuk bertanya!"
+        },
+        "buttons": {
+            "reply": "Balas",
+            "send": "Kirim",
+            "close": "Tutup",
+            "approve": "Approve",
+            "reject": "Reject"
+        },
+        "list": {
+            "section": "Bagian",
+            "subSection": "Sub Bagian",
+            "id": "ID Pertanyaan",
+            "requester": "Peminta",
+            "query": "Pertanyaan",
+            "queryDate": "Tanggal Pertanyaan",
+            "responder": "Pemberi Jawaban",
+            "response": "Respon",
+            "responseDate": "Tanggal Jawaban",
+            "action": "Aksi"
+        },
+        "subGroup": {
+            "queryHistory": "Riwayat Pertanyaan"
+        },
+        "fields": {
+            "requester": "Peminta",
+            "dtQuery": "Tanggal Pertanyaan",
+            "query": "Pertanyaan",
+            "response": "Respon",
+            "responder": "Pemberi Jawaban",
+            "dtResponse": "Tanggal Respon"
+        }
+    },
+    "remarks": {
+        "title": "Catatan",
+        "altTitle": "Catatan",
+        "msgs": {
+            "confirm": "Apakah Anda yakin untuk memberikan catatan?"
+        },
+        "list": {
+            "section": "Bagian",
+            "subSection": "Sub Bagian",
+            "agency": "Agensi",
+            "userName": "User",
+            "remark": "Catatan",
+            "dateTime": "Tanggal",
+            "action": "Aksi"
+        },
+        "subGroup": {
+            "remarkHistory": "Riwayat Catatan"
+        },
+        "fields": {
+            "section": "Bagian",
+            "subSection": "Sub Bagian",
+            "agency": "Agensi",
+            "userName": "Nama User",
+            "dateTime": "Tanggal",
+            "remark": "Catatan"
+        }
+    },
+    "supportingDocs": {
+        "title": "Dokumen Pendukung",
+        "documentDetails": "Detail Dokumen",
+        "upload": "Upload",
+        "add": "Tambah",
+        "fields": {
+            "category": "Kategori",
+            "docType": "Jenis Dokumen",
+            "docRef": "No Referensi Dokumen.",
+            "expiryDate": "Tanggal Kadaluarsa",
+            "uploadFile": "File Dokumen"
+        },
+        "tableHdrs": {
+            "no": "No.",
+            "docType": "Jenis Dokumen",
+            "category": "Kategori",
+            "mandatory": "Mandatory",
+            "docName": "Nama Dokumen",
+            "docRefNo": "No Referensi Dokumen",
+            "expiredDate": "Tanggal Kadaluarsa",
+            "trip": "Perjalanan",
+            "atType": "Tipe Lampiran",
+            "atName": "Nama Lampiran",
+            "dtCreate": "Tanggal Dibuat",
+            "action": "Aksi"
+        },
+        "msg": {
+            "fileTooSmall": "Ukuran File Terlalu kecil",
+            "fileSizeTooBig": "Ukuran file tidak boleh lebih dari {{size}} MB",
+            "fileNameLen": "Nama FIle harus kurang dari 128 Karakter.",
+            "fileDuplicate": "Jangan Upload file dengan nama yang sama.",
+            "uploadSuccess": "File Berhasil diupload!",
+            "deleteSuccess": "File Berhasil dihapus!",
+            "extsNotAllowed": "File jenis ekstensi ini tidak diizinkan. Hanya Menerima file dengan Ekstensi PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT.",
+            "onlyPdf": "File jenis ekstensi ini tidak diizinkan. Hanya Menerima PDF",
+            "allowedExts": "Jenis File yang didukung - PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT",
+            "allowedPdf": "Jenis File yang didukung hanya PDF"
+        }
+    },
+    "recoveryDetails": {
+        "officialDetails": "Detail Resmi",
+        "tableHdrs": {
+            "event": "Event",
+            "actionDate": "Tanggal Aksi (Manual)",
+            "confirmMsg": "Konfirmasi Catatan",
+            "usrId": "ID User",
+            "usrName": "Nama User"
+        }
+    },
+    "recordDetails": "Detail Record",
+    "language": "Bahasa",
+    "properties": {
+        "title": "Properti",
+        "dtCreated": "Tanggal Dibuat",
+        "usrCreated": "User Dibuat",
+        "dtLupd": "Tanggal Terakhir diupdate",
+        "usrLupd": "User Terakhir Diupdate"
+    },
+    "register": {
+        "header": " Detail Registrasi Perusahaan",
+        "tabs": {
+            "details": {
+                "title": "Detail Perusahaan"
+            },
+            "admin": {
+                "title": "Detail Administrator"
+            },
+            "logo": {
+                "title": "Detail Logo Perusahaan"
+            },
+            "suppDocs": {
+                "title": "Dokumen Pendukung"
+            }
+        }
+    },
+    "pageHeaders": {
+        "edit": "Ubah {{appType}}",
+        "recovery": "Recovery {{appType}}",
+        "view": "Lihat {{appType}}",
+        "new": "Tambah {{appType}}"
+    },
+    "genericMsgs": {
+        "success": "Perubahan berhasil disubmit!",
+        "error": "Gagal untuk menyimpan perubahan. Silahkan periksa error dan coba lagi.",
+        "emptyTable": "Mohon Maaf, data yang anda cari tidak ditemukan"
+    },
+    "confirmMsgs": {
+        "delete": {
+            "title": "Hapus",
+            "content": "Apakah anda yakin ingin menghapus {{appnId}}?"
+        },
+        "confirm": {
+            "title": "Konfirmasi",
+            "content": "{{ftApprove}} Apakah anda yakin {{action}} {{type}} {{appnId}}? ",
+            "ftApproveNote": "Pelabuhan Custom akan mendapatkan persetujuan Otomatis."
+        },
+        "proceed": {
+            "title": "Melanjutkan",
+            "content": "Apakah anda yakin ingin {{action}} {{type}} {{paymentRefNo}}?"
+        },
+        "clone": {
+            "title": "Clone",
+            "content": "Apakah anda yakin ingin Clone {{appnId}}?"
+        },
+        "confirmDates": {
+            "title": "Konfirmasi",
+            "content": "Apakah anda yakin ingin menyimpan{{fields}}?"
+        },
+        "confirmRecovery": {
+            "title": "Konfirmasi",
+            "content": "Mode Recovery tidak dapat dikompromikan lagi nanti.\n Apakah anda yakin ingin mengaktifkannya sekarang?"
+        }
+    },
+    "template": {
+        "upload": "Upload Template"
+    },
+    "validationMsgs": {
+        "overLength": "Field ini hanya mengizinkan inputan hingga 10000 karakter",
+        "required": "Field ini dibutuhkan!",
+        "lengthValidation": "Panjang tidak boleh lebih dari {{length}} characters.",
+        "rangeValidation": "Nilai tidak boleh kurang dari {{minValue}} atau lebih dari {{maxValue}}.",
+        "precisionValidation": "Nilai harus lebih dari {{precision}} digits dan {{scale}} hanya desimal.",
+        "valueValidation": "Nilai tidak boleh melebihi{{length}}.",
+        "negationValidation": "Nilai tidak boleh negatif.",
+        "invalidTelFormat": "Tolong Sertakan Kode Negara dan Hapus Spasi.",
+        "minLength": "Office Telephone must contain at least 8 characters.",
+        "invalidEmailFormat": "Alamat Email tidak valid!",
+        "signSizeMax": "Ukuran file tanda tangan tidak boleh lebih dari 64KB",
+        "signExtNotAllowed": "Ekstensi File tidak diizinkan.",
+        "uploadTypeNotAllowed": "Jenis file yang diupload tidak diizinkan.",
+        "maxValidation": "value cannot be more than {{maxValue}}"
+    },
+    "uploadSignature": {
+        "msg": {
+            "uploadSuccess": "Berhasil Upload tanda tangan!",
+            "fetchError": "Terjadi error ketika mengambil data!",
+            "signatureRequired": "*Gambar tanda tangan dibutuhkan"
+        },
+        "fields": {
+            "uploadSignature": "Upload gambar tanda tangan",
+            "photoSpec": "Spesifikasi Foto",
+            "photoSpecDesc1": "* Harus .jpg, .jpeg, or .png",
+            "photoSpecDesc2": "* Ukuran Diantara 50 KB dan 1.5 MB .",
+            "previewSignature": "Preview Tanda Tangan"
+        }
+    },
+    "validationAlerts": {
+        "title": "Peringatan!",
+        "msgBody": "Mohon maaf, Kami tidak dapat menerima Aplikasi anda . Tolong submit Aplikasi anda {{validationErr}} beberapa jam kemudian.",
+        "certNoAvailable": "Sertifikat belum siap. Tolong coba lagi nanti.",
+        "certNotAvailable": "Sertifikat tidak dapat Dihasilkan. Penggunaan Resmi di Vessel Call harus diisi oleh Otoritas Pelabuhan terlebih dahulu."
+    },
+    "concurrentError": {
+        "title": "Peringatan!",
+        "alreadySubmitted": "Aplikasi anda sudah Disubmit Sebelumnya."
+    },
+    "status": {
+        "drf": "Draft",
+        "sub": "Disubmit",
+        "pen": "Pending Pembayaran",
+        "pay": "Sudah Dibayar",
+        "rej": "Ditolak",
+        "ret": "Dikembalikan",
+        "amn": "Amended",
+        "ver": "Terverifikasi",
+        "app": "Disetujui"
+    },
+    "tooltip": {
+        "viewChanges": "Klik Untuk melihat perubahan",
+        "changes": "Ubah",
+        "rejectBl": "Tolak BL",
+        "downloadBl": "Download BL",
+        "rmkAdd": "Tambah Catatan",
+        "rmkView": "Lihat Catatan",
+        "viewDtls": "Download Invoice"
+    },
+    "popup": {
+        "confirmation": "Confirmation",
+        "ok": "OK"
+    },
+    "msg": {
+        "saveSuccess": "Berhasil disave!",
+        "updateSuccess": "Berhasil diupdate!",
+        "submitSuccess": "Berhasil disubmit!",
+        "deleteSuccess": "Berhasil dihapus!",
+        "cancelSuccess": "Berhasil dibatalkan!",
+        "withdrawSuccess": "Withdrawn Successfully!",
+        "approveSuccess": "Approved Successfully!",
+        "rejectSuccess": "Rejected Successfully!",
+        "nonPDFNotAllowed": "Non PDF File type not allowed",
+        "noFileUploded": "No file is uploaded",
+        "confirmation": "Are you sure you want to {{action}}?",
+        "jobIdNotAvailable": "Job ID not yet available",
+        "allowedFileExtensions": "Allowed file types are pdf, doc, docx, jpeg, jpg, png",
+        "createAttSuccess": "Attachment uploaded successfully!",
+        "duplicate": "The document type you selected already exists!",
+        "deleteAttSuccess": "Attachment deleted successfully!",
+        "error": "Error",
+        "activeConfirm": "Are you sure you want to set Active?",
+        "inActiveConfirm": "Are you sure you want to set InActive?",
+        "saveConfirm": "Are you sure you want to Save?",
+        "deleteConfirm": "Are you sure you want to Delete?",
+        "updateConfirm": "Are you sure you want to Update?",
+        "deactivateConfirm": "Are you sure you want to set Deactivate?",
+        "submitConfirm": "Are you sure you want to Submit?",
+        "approveConfirm": "Are you sure you want to set Approve?",
+        "rejectConfirm": "Are you sure you want to set Reject?",
+        "nonTerminableMsg": "There are active jobs associated to this account. These jobs need to be terminated to approve termination of the account."
+    }
+}

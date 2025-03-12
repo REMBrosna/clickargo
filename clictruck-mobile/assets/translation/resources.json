@@ -1,0 +1,18 @@
+{
+    "en": {
+      "translation": {
+        "start": "Start",
+        "pickup": "Pick Up",
+        "dropoff": "Drop Off",
+        "new": "New",
+        "paused": "Paused"
+      }
+    },
+    "id": {
+      "translation": {
+        "start": "Mulai",
+        "pickup": "Ambil",
+        "dropoff": "Bongkar"
+      }
+    }
+  }

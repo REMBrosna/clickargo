@@ -1,0 +1,202 @@
+[
+    {
+        "field": "init_shipment_ref",
+        "label": "INIT_SHIPMENT_REF",
+        "default": "2",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location_name",
+        "label": "INIT_FROM_LOCATION_NAME",
+        "default": "8",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location",
+        "label": "INIT_FROM_LOCATION",
+        "default": "9",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location_name",
+        "label": "INIT_TO_LOCATION_NAME",
+        "default": "13",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location",
+        "label": "INIT_TO_LOCATION",
+        "default": "14",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "contract_id",
+        "label": "Contract",
+        "default": "DSVS-KFC"
+    },
+    {
+        "field": "Job_Sub_Type",
+        "label": "Job_Sub_Type",
+        "default": ""
+    },
+    {
+        "field": "shipment_ref",
+        "label": "Shipment_Ref",
+        "default": ""
+    },
+    {
+        "field": "customer_Ref",
+        "label": "Customer_Ref",
+        "default": ""
+    },
+    {
+        "field": "loading",
+        "label": "Loading",
+        "default": ""
+    },
+    {
+        "field": "booking_Date",
+        "label": "Booking_Date",
+        "default": ""
+    },
+    {
+        "field": "plan_date",
+        "label": "Plan_Date",
+        "default": ""
+    },
+    {
+        "field": "cargo_truck_type",
+        "label": "Truck_Type",
+        "default": ""
+    },
+    {
+        "field": "from_location_name",
+        "label": "From_Location_Name",
+        "default": ""
+    },
+	 {
+        "field": "From_Location_Details",
+        "label": "From_Location_Details",
+        "default": ""
+    },
+    {
+        "field": "from_location_date_time",
+        "label": "From_Location_Date_Time",
+        "default": ""
+    },
+    {
+        "field": "from_location_mobile_number",
+        "label": "From_Location_Mobile_Number",
+        "default": ""
+    },
+    {
+        "field": "from_location_remarks",
+        "label": "From_Location_Remarks",
+        "default": ""
+    },
+    {
+        "field": "to_location_name",
+        "label": "To_Location_Name",
+        "default": ""
+    },    
+	{
+        "field": "to_location_details",
+        "label": "To_Location_Details",
+        "default": ""
+    },
+    {
+        "field": "to_location_recipient_name",
+        "label": "To_Location_Recipient_Name",
+        "default": ""
+    },
+    {
+        "field": "to_location_date_time",
+        "label": "To_Location_Date_Time",
+        "default": ""
+    },
+    {
+        "field": "to_location_mobile_number",
+        "label": "To_Location_Mobile_Number",
+        "default": ""
+    },
+    {
+        "field": "to_location_remarks",
+        "label": "To_Location_Remarks",
+        "default": ""
+    },
+    {
+        "field": "cargo_type",
+        "label": "Cargo_Type",
+        "default": ""
+    },
+    {
+        "field": "cargo_qty",
+        "label": "Quantity",
+        "default": ""
+    },
+    {
+        "field": "cargo_qty_uom",
+        "label": "QTY_UOM",
+        "default": ""
+    },
+    {
+        "field": "cargo_makes_no",
+        "label": "Marks_and_No",
+        "default": ""
+    },
+    {
+        "field": "cargo_length",
+        "label": "Length",
+        "default": ""
+    },
+    {
+        "field": "cargo_width",
+        "label": "Width",
+        "default": ""
+    },
+    {
+        "field": "cargo_height",
+        "label": "Height",
+        "default": ""
+    },
+    {
+        "field": "cargo_size_uom",
+        "label": "Size_UOM",
+        "default": ""
+    },
+    {
+        "field": "cargo_weight",
+        "label": "Weight",
+        "default": ""
+    },
+    {
+        "field": "cargo_weight_uom",
+        "label": "Weight_UOM",
+        "default": ""
+    },
+    {
+        "field": "cargo_volume",
+        "label": "Volume",
+        "default": ""
+    },
+    {
+        "field": "cargo_volume_uom",
+        "label": "Volume_UOM",
+        "default": ""
+    },
+    {
+        "field": "description_default",
+        "label": "Description",
+        "default": ""
+    },
+    {
+        "field": "special_instruction",
+        "label": "Special_Instruction",
+        "default": ""
+    }
+]

@@ -1,0 +1,184 @@
+{
+  "register": {
+    "title": "Kelola Akun",
+    "list": "Daftar Onboarding Akun",
+    "header": "Registrasi Akun",
+    "save": "Pendaftaran berhasil disimpan!",
+    "submit": "Pendaftaran berhasil dikirim!",
+    "approved": "Pendaftaran Akun berhasil disetujui!",
+    "rejected": "Pendaftaran Akun berhasil ditolak!",
+    "required": "Bagian ini diperlukan.",
+    "error": {
+      "fileTooBig": "Berkas terlalu besar!",
+      "fileMustBe": "File harus dalam format jpg, jpeg atau png",
+      "compInitialMaxLength": "Tolong tuliskan perusahaan secara spesifik(maks. 5 karakter)",
+      "emptyNotAllowed": "ID Tidak terdaftar atau Spasi tidak diperbolehkan",
+      "accountExist": "ID Akun {{accnrCoIntial}} sudah ada"
+    },
+    "activate": {
+      "done": {
+        "header": "Akun Sudah Aktif!",
+        "msg": "Akun telah diaktifkan! Periksa email Anda untuk detail login."
+      },
+      "success": {
+        "header": "Akun Diaktifkan!",
+        "msg": "Akun Anda Berhasil Diaktifkan! Anda akan segera menerima Email untuk Username/Kata Sandi."
+      },
+      "notFound": {
+        "header": "Error"
+      }
+    },
+    "rejectRemarks": "Catatan",
+    "btnReject": "Tolak",
+    "table": {
+      "accountRegID": "ID Pendaftaran Akun",
+      "accountID": "ID Akun",
+      "companyName": "Nama Perusahaan",
+      "accountType": "Jenis akun",
+      "vatTin": "VAT/TIN",
+      "dateSubmitted": "Tanggal Submit",
+      "status": "Status"
+    }
+  },
+  "companyDetails": {
+    "title": "Detail Akun",
+    "generalDetails": "Detail Umum",
+    "contactDetails": "Detail Alamat Kontak",
+    "address": "Alamat Perusahaan",
+    "accnrCoIntial": "ID Akun",
+    "atypId": "Jenis akun",
+    "accnName": "Nama Perusahaan",
+    "accnCoyRegn": "Nomor Registrasi Perusahaan",
+    "sageAccpacId": "Sage Accpac ID",
+    "fnOpts": "Options",
+    "financer": "Financer",
+    "mobileEnabled": "Enable Mobile",
+    "accnDtExpire": "Tanggal kadaluarsa",
+    "contactTel": "Nomor kontak",
+    "contactFax": "Company Fax",
+    "contactTlgrm": "ID Telegram",
+    "contactEmail": "Alamat Email Perusahaan",
+    "addrLn1": "Baris Alamat 1",
+    "addrLn2": "Baris Alamat 2",
+    "addrLn3": "Baris Alamat 3",
+    "addrProv": "Propinsi",
+    "addrCity": "Kota/Distrik",
+    "addrPcode": "Kode Pos",
+    "ctyCode": "Negara"
+  },
+  "adminDetail": {
+    "title": "Administrator Details"
+  },
+  "configurations": {
+    "title": "Konfigurasi"
+  },
+  "permissions": {
+    "title": "Izin",
+    "heading": "Izin Aktifkan/Nonaktifkan",
+    "shipClearanceProcess": "Proses Izin Kapal"
+  },
+  "userDetails": {
+    "title": "Detail Administrator",
+    "usrName": "Nama pemohon",
+    "usrPassNid": "ID/Nomor Paspor",
+    "usrTitle": "Posisi",
+    "contactEmail": "ID email",
+    "contactTel": "Nomor kontak",
+    "addrLn1": "Alamat (Baris 1)",
+    "addrLn2": "Alamat (Baris 2)",
+    "addrLn3": "Alamat (Baris 3)",
+    "addrProv": "Propinsi",
+    "addrCity": "Kota/Distrik",
+    "addrPcode": "Kode Pos",
+    "ctyCode": "Negara"
+  },
+  "companyStamp": {
+    "title": "Detail Logo Perusahaan",
+    "btnUpload": "Unggah Gambar Stempel Agen/Ship Line",
+    "stampPhotoSpec1": "Spesifikasi Foto",
+    "stampPhotoSpec2": "Harus .jpg, .jpeg atau .png",
+    "stampPhotoSpec3": "Ukuran antara 50 KB dan 1.5 MB.",
+    "stampPhotoSpec4": "Ukuran antara 50 KB dan 1 MB.",
+    "preview": "Pratinjau stempel perusahaan"
+  },
+  "suppDocs": {
+    "newDoc": "Tambah Dokumen",
+    "newJobAtt": "New Job Document",
+    "title": "Dokumen pendukung",
+    "docs": "Dokumen",
+    "no": "Tidak",
+    "docType": "Jenis Dokumen",
+    "docName": "Nama Dokumen",
+    "required": "Required",
+    "file": "File",
+    "viewFile": "Lihat File",
+    "reference": "Referensi",
+    "yes": "Ya",
+    "not": "Tidak",
+    "type": "Type",
+    "mandatory": "Mandatory",
+    "dtValid": "Validity Date",
+    "uidLupd": "Last Updated By",
+    "dtLupd": "Last Updated Time",
+    "actions": "Aksi"
+  },
+  "remarks": {
+    "title": "Catatan"
+  },
+  "validations": {
+    "accnDetails": {
+      "accnId": "Account ID is required",
+      "accnName": "Nama Perusahaan diperlukan",
+      "accnNameDuplicate": "Company Name already exists",
+      "accnCoyRegn": "Nomor Registrasi Perusahaan dibutuhkan",
+      "sageAccpacId": "Sage AccpacId is required",
+      "financeOptions": "Finance Option is required",
+      "mobileEnabled": "Mobile Option is required",
+      "accnContact": {
+        "contactTel": "Company Phone is required",
+        "contactEmail": "Alamat Email Perusahaan diperlukan",
+        "emailInvalid": "Company Email Address is invalid",
+        "telInvalid": "Invalid Company Phone format. Harap sertakan +Kode Negara dan hapus spasi",
+        "minLength": "Company Phone must contain at least 8 characters",
+        "contactFaxMin": "Company Fax must contain at least 8 characters",
+        "faxInvalid": "Invalid Company Fax format. Please include +Country Code."
+      },
+      "accnAddr": {
+        "addrLn1": "Alamat (Baris 1) diperlukan",
+        "addrLn2": "Alamat (Baris 2) diperlukan",
+        "addrLn3": "Alamat (Baris 3) diperlukan.",
+        "addrPcode": "Kode Pos diperlukan",
+        "addrCity": "Kota/Kabupaten diperlukan",
+        "addrProv": "Provinsi diperlukan",
+        "addrCtry": {
+          "ctyCode": "Negara diperlukan"
+        }
+      },
+      "TMstAccnType": {
+        "atypId": "Account Type is required"
+      }
+    },
+    "usrDetails": {
+      "usrId": "User ID is required",
+      "usrName": "User Name is required",
+      "usrContact": {
+        "contactTel": "User Phone is required",
+        "contactEmail": "User Email Address is required",
+        "emailInvalid": "User Email Address is invalid",
+        "usrEmailDuplicate": "User Email Address already exists",
+        "telInvalid": "Please include +Country Code and remove space"
+      },
+      "usrAddr": {
+        "addrLn1": "Address (Line 1) is required",
+        "addrLn2": "Address (Line 2) is required",
+        "addrLn3": "Address (Line 3) is required.",
+        "addrPcode": "Postal Code is required",
+        "addrCity": "City/Distict is required",
+        "addrProv": "Province is required",
+        "addrCtry": {
+          "ctyCode": "Country is required"
+        }
+      }
+    }
+  }
+}

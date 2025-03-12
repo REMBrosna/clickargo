@@ -1,0 +1,212 @@
+[
+    {
+        "field": "init_shipment_ref",
+        "label": "INIT_SHIPMENT_REF",
+        "default": "5",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location_name",
+        "label": "INIT_FROM_LOCATION_NAME",
+        "default": "13",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location",
+        "label": "INIT_FROM_LOCATION",
+        "default": "13",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location_name",
+        "label": "INIT_TO_LOCATION_NAME",
+        "default": "14",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location",
+        "label": "INIT_TO_LOCATION",
+        "default": "14",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "job_date",
+        "label": "JOB_DATE",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "customer",
+        "label": "CUSTOMER",
+        "default": "SSA",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "shipper",
+        "label": "SHIPPER",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "consignee",
+        "label": "CONSIGNEE",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "mawb",
+        "label": "MAWB",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "hawb",
+        "label": "HAWB",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "shipment_no",
+        "label": "SHIPMENT_NO",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "model_name",
+        "label": "MODEL_NAME",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "desc",
+        "label": "DESCRIPTION",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "qty",
+        "label": "QUANTITY",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "weight",
+        "label": "WEIGHT",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "c_weight",
+        "label": "C_WEIGHT",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "volume",
+        "label": "VOLUME",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "po",
+        "label": "PO",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "pickup_address",
+        "label": "PICKUP_ADDRESS",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "dropoff_address",
+        "label": "DROPOFF_ADDRESS",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "type",
+        "label": "TYPE",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "gross_weight",
+        "label": "GROSS_WEIGHT",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "total_volume",
+        "label": "TOTAL_VOLUME",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "total_quantity",
+        "label": "TOTAL_QUANTITY",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "remark",
+        "label": "REMARK",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "TRUCK_TYPE",
+        "label": "TRUCK_TYPE",
+        "default": "24 FT",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "pickup_datetime",
+        "label": "PICKUP_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "dropoff_datetime",
+        "label": "DROPOFF_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "to_location_mobile",
+        "label": "TO_LOCATION_MOBILE",
+        "default": "65433414",
+        "hidden": "Y",
+        "type": ""
+    }
+]

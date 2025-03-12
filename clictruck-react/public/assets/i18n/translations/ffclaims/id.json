@@ -1,0 +1,89 @@
+{
+    "form": {
+        "bcTitle": "Detail ClicDO Claim Job",
+        "edit": "Ubah ClicDO Claim Job",
+        "view": "ClicDO Claim Job",
+        "new": "Tambah ClicDO Claim Job"
+    },
+    "genDetails": {
+        "header": "Detail Umum",
+        "id": "ID",
+        "shipmentType": "Jenis Pengiriman"
+    },
+    "jobDetails": {
+        "header": "Detail Job",
+        "startDate": "Tanggal Dimulai",
+        "expiryDate": "Tanggal Kadaluarsa"
+    },
+    "contDetails": {
+        "header": "Detail Kontainer",
+        "contClaimed": "Kontainer Diklaim",
+        "contReady": "Kontainer Siap",
+        "contUnReady": "Kontainer Tidak Siap"
+    },
+    "chargeDetails": {
+        "header": "Detail Biaya",
+        "usd": "Biaya Jasa (USD)",
+        "idr": "Biaya Jasa (IDR)"
+    },
+    "selectedBlsSubTitle": {
+        "header": "Bill of Lading yang dipilih",
+        "popUpAddTitle": "Tambah Bill of Lading",
+        "popUpManualAddTitle": "Tambah Manual Bill of Lading"
+    },
+    "taskDetails":{
+        "containersToClaim": "Kontainer yang Diklaim",
+        "noOfBl": "No. BL",
+        "dateCreated": "Tanggal Dibuat",
+        "dtLupd": "Tanggal Terakhir diupdate",
+        "dateComplete": "Tanggal Complete",
+        "status": "Status",
+        "viewTask": "Lihat Task",
+        "doId": "ID DO",
+        "doNo": "No. DO",
+        "bLNo": "No. BL",
+        "authoriser": "Authoriser",
+        "shippingLine": "Shiping Line",
+        "noOfContainers": "Jumlah Kontainer",
+        "viewContainers": "Lihat Kontainer",
+        "containerNo": "No. Kontainer",
+        "containerSize": "Ukuran Kontainer",
+        "containerType": "Jenis Kontainer",
+        "containerImdoCode": "Kode IMDO Kontainer",
+        "viewBl": "Lihat BL",
+        "downloadDO": "Download DO",
+        "downloadInvoice": "Download Invoice",
+        "notReady": "Tidak Siap",
+        "notReadyToClaimDo": "Tidak Siap untuk claim DO!",
+        "doNotReady": "DO Tidak Siap",
+        "pleaseSelestOneDo": "Tolong pilih setidaknya satu DO",
+        "noDoSelected": "Tidak ada DO yang dipilij",
+        "addTask": "Tambah Task",
+        "readyDos": "DO sudah siap",
+        "noReadyDo": "Tidak ada DO lagi yang sudah siap",
+        "assignToTask": "Assign to task",
+        "addReadyDohere": "Tambah DO yang sudah siap disini"
+    },
+    "tooltip": {
+        "add": "Tambah",
+        "slinvoice": "Invoice Shipping Line"
+    },
+    "msg": {
+        "error": "Error",
+        "confirmAsk": "Apakah Kamu yakin?",
+        "confirmTitle": "Konfirmasi",
+        "selectBl": "Tolong pilih setidaknya satu Bill of Lading!",
+        "noBlSelected": "Tidak ada Bill of Lading yang dipilih",
+        "alreadyAssignedBl": "BL Sudah di Assign",
+        "alreadyAssignedBlMsg": "1 atau lebih dari BL yang anda pilih sudah diambil oleh user lain. Tolong hapus BL tersebut dan coba lagi. {{blList}}",
+        "confirmSuccess": "Job berhasil dikonfirmasi!",
+        "createSuccess": "Job berhasil dibuat, Mengalihkan ke halaman edit.",
+        "rejectSuccess": "Job {{jobId}} Berhasil ditolak!",
+        "alreadyRejected": "Job sudah ditolak sebelumnya",
+        "alreadyRejectedMsg": "Job {{jobId}} sudah ditolak oleh FF Lain!",
+        "nonPDFNotAllowed": "Tidak mengizinkan file selain PDF",
+        "duplicate": "Jenis Dokumen yang kamu pilih sudah ada!",
+        "createAttSuccess": "Lampiran berhasil diupload!",
+        "deleteAttSuccess": "Lampiran berhasil dihapus!"
+    }
+}

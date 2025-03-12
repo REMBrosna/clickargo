@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlatformFee" pageWidth="600" pageHeight="941" columnWidth="500" leftMargin="50" rightMargin="50" topMargin="20" bottomMargin="20" uuid="bb669414-f35c-4e8b-bc7d-16ccf7bebe7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="PARAM_INFO" class="java.util.HashMap"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="invoiceLines" class="java.util.List">
+		<fieldDescription><![CDATA[invoiceLines]]></fieldDescription>
+	</field>
+	<title>
+		<band height="25" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="0" width="400" height="23" uuid="d9f9174d-8d49-4be3-ab12-b4f00126544e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Faktur Paja]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="269">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="1" width="501" height="22" uuid="7a9f3ff9-1ef9-4db9-ae56-d5d4b255d9d9"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Kode dan Nomor Seri Faktur Pajak : ".concat($P{PARAM_INFO}.get("gli_faktur").toString())]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="45" width="498" height="1" uuid="ebca2d91-31bf-4188-a796-c02155514d73"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="24" width="500" height="21" uuid="70fc2636-42b9-430f-b838-2c25828a28fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Pengusaha Kena Pajak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="10" y="46" width="50" height="22" uuid="2714cd54-f3ba-41ad-946f-77702022319e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="46" width="380" height="22" uuid="e1719ae8-f32f-4b5f-8325-ab85a7e8c143"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("gli_name")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="11" y="61" width="50" height="22" uuid="e6ac812e-3850-4b7d-bc15-5929c56886e1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="62" width="438" height="38" uuid="6b51db21-ab7d-4e47-80c7-20ebfe43ab65"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("gli_address")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="12" y="99" width="50" height="22" uuid="da8e6421-c1a4-4933-a0b5-d606172a7da5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NPWP : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="100" width="380" height="22" uuid="2440d1d8-a6c7-4644-8f69-112c2eb231e5"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("gli_registration")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="124" width="500" height="21" uuid="50c2845a-645c-4a5c-bcf3-9b11b16e29ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Pembeli Barang Kena Pajak / Penerima Jasa Kena Pajak]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="225" width="498" height="1" uuid="15b47e0c-38ab-49a9-9b50-b7a49bb548e8"/>
+			</line>
+			<textField>
+				<reportElement x="62" y="201" width="380" height="22" uuid="644058eb-86cc-4fdc-81e2-4a71ea8a2e8d"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("recipient_registration")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="13" y="200" width="50" height="22" uuid="d03e543b-cbe9-45e1-ab98-72c9552a2614">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NPWP : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="12" y="162" width="50" height="22" uuid="7b0f8dae-d009-4e1f-8af4-af23a4466fc6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="147" width="380" height="22" uuid="9e37dd3e-7610-440b-9fb9-3708e0c69ab6"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("recipient_name")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="11" y="147" width="50" height="22" uuid="f9bb43ec-3021-4c8a-9f86-e7ccb4d698f5">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="163" width="438" height="38" uuid="138fe725-d0b0-4410-98d3-dd2a0f8f9207"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("recipient_address")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="226" width="70" height="43" uuid="d991bb0f-4992-4b9e-968d-a5171ae8edcb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="71" y="225" width="269" height="44" uuid="691dbbb8-7346-4869-a7cc-d58cbcf55801">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Barang Kena Pajak / Jasa Kena Pajak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="340" y="226" width="160" height="43" uuid="cbb8f5e3-855b-4f27-a7d3-99fd0c381e97">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Harga Jual/Penggantian/Uang Muka/Termin]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="45" width="500" height="80" uuid="d7904b4f-10d2-4aae-97a6-fc53344a39f3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="145" width="500" height="80" uuid="115f3ea3-faf9-4c7c-9276-e5e417cb06d7"/>
+			</rectangle>
+		</band>
+		<band height="32">
+			<subreport>
+				<reportElement x="0" y="0" width="500" height="32" uuid="22308ac7-153b-45e4-8a8c-1468956133f0"/>
+				<parametersMapExpression><![CDATA[$P{PARAM_INFO}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{invoiceLines})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PARAM_INFO}.get("platformFeeSubPath")]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="222">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="1" width="339" height="22" uuid="f22c1d7f-49d3-4d03-a2aa-3ce780bde593">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph firstLineIndent="3"/>
+				</textElement>
+				<text><![CDATA[Harga Jual / Penggantian]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="0" width="160" height="22" uuid="b33319ca-2875-4d59-8ae0-24fa04bfbe07">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("invoice_amt")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="22" width="160" height="22" uuid="ef49797c-9a3f-4a3c-be49-6b13af6a00de"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("less_discount")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="22" width="339" height="22" uuid="e01b8ea4-e2e1-4977-a4c8-c3eab6fa8ff2">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Dikurangi Potongan Harga]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="44" width="160" height="22" uuid="4737be1e-26c6-4971-bb20-9ba3126d7dcf"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("less_downpayment")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="44" width="339" height="22" uuid="88dc5beb-fd4d-4f66-bc1e-a5c7f5f28109">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph firstLineIndent="3"/>
+				</textElement>
+				<text><![CDATA[Dikurangi Uang Muka]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="66" width="340" height="22" uuid="4a49bbba-a4f0-4758-9f2c-abcd45582894">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Dasar Pengenaan Pajak]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="66" width="160" height="22" uuid="e7c5278b-b0f4-4aab-8e6d-5b47f717325e"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("tax_base")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="89" width="340" height="22" uuid="2fc372e2-c318-4fa3-9439-b48bd4cc17a7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Total PPN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="88" width="160" height="23" uuid="5e8d8d59-98e1-419a-bcdf-1d95053f1fe6"/>
+				<box>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("total_ppn")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="111" width="159" height="22" uuid="bdb0144e-0802-4a64-a46f-01035815c815"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("total_ppnnbm")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="111" width="340" height="22" uuid="d288ac7a-907c-4699-9499-e09a1d7cd11b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<text><![CDATA[Total PPnBM (Pajak Penjualan Barang Mewah)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="133" width="499" height="22" uuid="2b0ee9e1-3239-4e53-9d6e-5b0448006fe1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sesuai dengan ketentuan yang berlaku, Direktorat Jenderal Pajak mengatur bahwa Faktur Pajak ini telah ditandatangani secara eletronik sehingga tidak diperlukan tanda tangan basah pada Faktur Pajak ini.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="243" y="180" width="256" height="20" uuid="26672e2c-cb23-40dc-ad6c-3db59871f21c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("inv_place_date")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ContainerLoan" pageWidth="600" pageHeight="941" columnWidth="500" leftMargin="50" rightMargin="50" topMargin="20" bottomMargin="20" uuid="bb669414-f35c-4e8b-bc7d-16ccf7bebe7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<parameter name="PARAM_INFO" class="java.util.HashMap"/>
+	<parameter name="LOGO_PATH" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="102" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="50" y="60" width="400" height="22" uuid="691576e1-b242-4754-9fd4-0c7753dfa8ef"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OFFICE: ".concat($P{PARAM_INFO}.get("ff_address").toString())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="80" width="200" height="22" uuid="3100c001-b990-46ad-b583-35829649f930"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Telp: ".concat($P{PARAM_INFO}.get("ff_contact_tel").toString())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="80" width="200" height="22" uuid="09c82e73-77e3-4619-87af-3761353da4b4"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fax: ".concat($P{PARAM_INFO}.get("ff_contact_fax").toString())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="30" width="400" height="30" uuid="9ce94925-dcd8-4267-a60c-9f18f422a906"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("ff_name")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="571">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="26" width="150" height="21" uuid="f6cad7e1-4371-4e67-9d3c-2de9f9ea9352">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Kepada Yth,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="154" width="100" height="21" uuid="c83f43b7-4ddb-4555-8268-7b68ba41a7de">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Dengan Hormat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="222" width="90" height="21" uuid="beec68e6-44f3-4c2b-b0ab-38a58bf8ff99">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Importer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="352" width="500" height="21" uuid="80ad8f71-a239-4f97-9315-7af09622c5f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Segala akibat dan kerusakan Container menjadi tanggung jawab kami.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="47" width="250" height="80" uuid="e1719ae8-f32f-4b5f-8325-ab85a7e8c143"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("sl_name")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="462" width="180" height="19" uuid="9360fd67-c59e-4e71-a6ed-f955a4cbde67"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("ff_name")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="127" width="500" height="21" uuid="7474d2d3-76b0-4c7d-83c0-0a179f3c5d10">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hal: Permohonan Peminjaman Container]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="175" width="500" height="47" uuid="fd168511-b21a-413c-800a-d0d8c2bf98b9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bersama ini kami mengajukan Permohonan Ijin Peminjaman Container kepada Bapak untuk pengurusan barang-barang Import dari relasi kami dengan data-data sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="243" width="90" height="21" uuid="a4924b57-4192-4836-bf38-a83cf2156c46">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[B/L No./Tgl]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="264" width="90" height="21" uuid="20246d5d-e1c6-4319-9bc5-76354dc394ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jenis Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="285" width="90" height="21" uuid="dd34fe46-11aa-40c1-8681-bef062a8ebc2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Party]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="50" y="306" width="90" height="21" uuid="c76e5ecd-9623-4472-bbb1-845fb68f995f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No. Container]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="140" y="222" width="20" height="21" uuid="6757bc68-1c53-4dbc-9e26-1c86ccb997c0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="140" y="243" width="20" height="21" uuid="2ab6d3fe-87af-4652-a72d-96fadc3b4660">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="140" y="264" width="20" height="21" uuid="9fd31b11-5809-4a55-8516-fa140325eee5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="140" y="285" width="20" height="21" uuid="a348650f-1263-438e-86bd-60958ce57411">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="140" y="306" width="20" height="21" uuid="267fb889-56a0-45cc-8e27-a8da860856e7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="223" width="340" height="20" uuid="3fbdb4cc-6b35-4ad9-b1fe-b80f76d659ab"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("co_name")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="243" width="180" height="21" uuid="f964ab2a-ba29-459f-91cc-e84f21badfc3"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("bl_no")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="243" width="160" height="21" uuid="1403a759-50f2-4df1-a2cd-063bf73fa308"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tgl.".concat($P{PARAM_INFO}.get("bl_date").toString())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="264" width="340" height="21" uuid="8ecd0843-b9ec-4bca-b90b-dc906cad64b5"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("types_of_goods")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="285" width="180" height="21" uuid="6e0c47b7-b2f7-452f-9306-4efe56236700"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("party")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="306" width="340" height="46" uuid="2e7f228c-d0b6-4d9b-ac60-f0b980f8264c"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("containers")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="392" width="500" height="28" uuid="ea894519-b158-44d9-967c-0ab1a9648e88">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Demikianlah permohonan ini, atas bantuan Bapak serta kerjasama yang baik kami ucapkan terima kasih.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="442" width="180" height="21" uuid="7159c4c9-8320-4557-9008-b5896c34525b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Hormat kami,]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="492" width="180" height="19" uuid="eecdc44f-47c0-443d-a0ed-8504efe5cff4"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("ff_auth_user")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="512" width="180" height="19" uuid="c74d112a-c773-40ca-90a5-22fd9e55ee03"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("ff_auth_user_position")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="200" height="22" uuid="b9258ba2-9b0f-4916-9c70-9bcbda3ddd0c"/>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("current_date")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,852 @@
+{
+  "audit": {
+    "list": {
+      "routeSegment": "Audit Logs List",
+      "table": {
+        "title": "Audit Logs List",
+        "headers": {
+          "audtId": "Reference",
+          "audtEvent": "Event",
+          "audtUid": "User ID",
+          "audtUname": "User Name",
+          "audtReckey": "Application Ref. No"
+        }
+      }
+    },
+    "details": {
+      "view": "View Audit Logs",
+      "tabs": {
+        "recordDetails": {
+          "audtId": "Reference",
+          "audtEvent": "Event",
+          "audtUid": "User ID",
+          "audtAccnid": "Account",
+          "audtTimestamp": "Date/Time Event",
+          "audtCreatedDate": "Created Date",
+          "audtRemoteIp": "Source IP",
+          "audtUname": "Record",
+          "audtParam1": "Param 1",
+          "audtParam2": "Param 2",
+          "audtParam3": "Param 3",
+          "audtRemarks": "Remarks"
+        }
+      }
+    }
+  },
+  "exception": {
+    "list": {
+      "routeSegment": "Exceptions List",
+      "table": {
+        "title": "Exceptions List",
+        "headers": {
+          "expToken": "Reference",
+          "expCode": "Application Code",
+          "expMsg": "Exception Message",
+          "expUid": "User ID"
+        }
+      }
+    },
+    "details": {
+      "view": "View Exception",
+      "tabs": {
+        "recordDetails": {
+          "expToken": "Reference",
+          "expCode": "Application Code",
+          "expMsg": "Exception Message",
+          "expUid": "User ID",
+          "expLevel": "Exception Level",
+          "expSvrAddr": "IP",
+          "expApp": "App Name",
+          "expAddinfo": "Exception Information",
+          "expDetails": "Exception Detail",
+          "expTimestamp": "Exception Date/Time",
+          "expCreatedDate": "Created Date"
+        }
+      }
+    }
+  },
+  "document": {
+    "list": {
+      "routeSegment": "Manage Documents",
+      "table": {
+        "title": "Manage Documents",
+        "subtitle": "Documents",
+        "headers": {
+          "appnId": "Application ID",
+          "appnAppType": "Application Type",
+          "attDtCreate": "Date",
+          "docType": "Document Type",
+          "refNo": "Document Ref. No.",
+          "attName": "Document Name",
+          "shipperName": "Shipping Line/Agent Name",
+          "shipName": "Vessel Name",
+          "voyageType": "Voyage Type",
+          "voyageNo": "Voyage No."
+        },
+        "button": {
+          "search": "Search",
+          "download": "Download"
+        }
+      }
+    },
+    "options": {
+      "appnId": "Application ID",
+      "appType": "Application Type",
+      "docType": "Document Type",
+      "shipperName": "Shipping Line/Agent Name",
+      "fromDate": "Date Start",
+      "toDate": "Date End"
+    }
+  },
+  "applicationAdvancedSearch": {
+    "list": {
+      "routeSegment": "Application Advanced Search",
+      "table": {
+        "title": "Application Advanced Search",
+        "subtitle": "Advanced Search List",
+        "headers": {
+          "appnId": "Application ID",
+          "appnParentId": "Parent ID",
+          "appnAppType": "Application Type",
+          "appnAppStatus": "Application Status",
+          "appnDtSubmit": "Submit Date",
+          "lastActionDate": "Approve/Acknowledge Date",
+          "docType": "Application Type",
+          "refNo": "Application Ref. No.",
+          "attName": "Application Name",
+          "shipperName": "Shipping Line/Agent Name",
+          "shipName": "Vessel Name",
+          "portName": "Port Name",
+          "voyageType": "Voyage Type",
+          "voyageNo": "Voyage No."
+        },
+        "button": {
+          "search": "Search",
+          "download": "Download",
+          "clear": "Clear"
+        }
+      }
+    },
+    "options": {
+      "appnId": "Dynamic Fields",
+      "appnParentId": "Parent ID",
+      "appType": "Application Type",
+      "docType": "Application Type",
+      "appnAppStatus": "Application Status",
+      "port": "Port",
+      "shipperName": "Shipping Line/Agent Name",
+      "fromDate": "{{status}} Date From",
+      "toDate": "{{status}} Till Date"
+    }
+  },
+  "report": {
+    "title": {
+      "reports": "Reports",
+      "report": "Report",
+      "reportFilters": "Report Filters",
+      "reportPreview": "Preview"
+    },
+    "list": {
+      "reportGroup": "Report Group",
+      "reportName": "Report Name",
+      "reportTitle": "Report Title"
+    },
+    "button": {
+      "search": "Search",
+      "generateReport": "Generate Report",
+      "generateExcel": "Generate Excel",
+      "cancel": "Cancel",
+      "previewReport": "Preview Report"
+    },
+    "msg": {
+      "generate": "Generate",
+      "confirmGenerate": "Are you sure you want to generate?"
+    }
+  },
+  "sysParam": {
+    "list": {
+      "routeSegment": "System Parameters List",
+      "table": {
+        "title": "System Parameters List",
+        "headers": {
+          "sysKey": "Key",
+          "sysVal": "Value",
+          "sysDesc": "Description",
+          "sysStatus": "Status"
+        },
+        "refreshBtn": "Refresh SysParam Cache"
+      }
+    },
+    "details": {
+      "breadCrumbs": {
+        "main": "System Parameters List",
+        "sub": {
+          "edit": "Edit System Parameters",
+          "view": "View System Parameters"
+        }
+      },
+      "tabs": {
+        "recordDetails": {
+          "sysKey": "Key",
+          "sysVal": "Value",
+          "sysDesc": "Description"
+        }
+      }
+    }
+  },
+  "truckManagement": {
+    "title": "Truck Management",
+    "tabs": {
+      "truckDetails": "Truck Details",
+      "audits": "Audits"
+    },
+    "truckDetails": {
+      "generalDetails": "General Details",
+      "chasisDetails": "Chasis Details (Optional)",
+      "truckMonitor": "Trucking & Monitoring",
+      "dwv": "Dimension, Weight and Volume",
+      "otherDetails": "Other Details",
+      "id": "Id",
+      "desc": "Description",
+      "properties": "Properties",
+      "name": "Name",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "type": "Type",
+      "platNo": "Plate Number",
+      "class": "Class",
+      "photo": "Photo (jpg, jpeg, png, pdf, doc, docx)",
+      "dimention": "Dimention (LWH)",
+      "maxWeight": "Max Weight (Kg)",
+      "volume": "Volume (CBM)",
+      "maintenance": "Maintenance",
+      "size": "Size",
+      "number": "Number",
+      "numberOth": "Number (Others)",
+      "noFileChosen": "No File Chosen",
+      "remark": "Remark",
+      "imei": "IMEI",
+      "odo": "Odometer",
+      "department": "Department"
+    },
+    "breadCrumbs": {
+      "createTruck": "New Truck",
+      "truckList": "Truck Management List",
+      "editTruckList": "Edit Truck",
+      "viewTruckList": "View Truck"
+    },
+    "form": {
+      "editTruckList": "Edit Truck",
+      "viewTruckList": "View Truck"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "driverManagement": {
+    "title": "Driver Management",
+    "tabs": {
+      "details": "Driver Details",
+      "audits": "Audits"
+    },
+    "driverDetails": {
+      "generalDetails": "General Details",
+      "licenseDetails": "License Details",
+      "id": "Id",
+      "desc": "Description",
+      "properties": "Properties",
+      "name": "Name",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "photo": "Photo (jpg, jpeg, png)",
+      "licenseNo": "License No",
+      "expiredDate": "Expired Date",
+      "userId": "User Id",
+      "password": "Password",
+      "accountDetails": "Account Details",
+      "contactDetails": "Contact Details",
+      "email": "Email",
+      "phone": "Phone",
+      "noFileChosen": "No File Chosen",
+      "browse": "Browse"
+    },
+    "breadCrumbs": {
+      "create": "New Driver",
+      "list": "Driver Management List",
+      "edit": "Edit Driver",
+      "view": "View Driver"
+    },
+    "form": {
+      "edit": "Edit Driver",
+      "view": "View Driver"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "locationManagement": {
+    "title": "Location Management",
+    "tabs": {
+      "details": "Location Details",
+      "audits": "Audits"
+    },
+    "locationDetails": {
+      "generalDetails": "General Details",
+      "valilidilityDetails": "Validity Details",
+      "coordinates": "Coordinates",
+      "id": "Id",
+      "desc": "Description",
+      "properties": "Properties",
+      "name": "Name",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "type": "Type",
+      "address": "Address",
+      "remarks": "Remarks",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "gps": "GPS"
+    },
+    "breadCrumbs": {
+      "create": "New Location",
+      "list": "Location Management List",
+      "edit": "Edit Location",
+      "view": "View Location"
+    },
+    "form": {
+      "edit": "Edit Location",
+      "view": "View Location"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "chassisManagement": {
+    "title": "Chassis Management",
+    "tabs": {
+      "details": "Chassis Details",
+      "audits": "Audits"
+    },
+    "chassisDetails": {
+      "generalDetails": "General Details",
+      "licenseDetails": "License Details",
+      "id": "Id",
+      "desc": "Description",
+      "properties": "Properties",
+      "name": "Name",
+      "english": "English",
+      "otherLang": "Other Lang",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "photo": "Photo",
+      "licenseNo": "License No",
+      "expiredDate": "Expired Date",
+      "userId": "User Id",
+      "password": "Password",
+      "chassisDetails": "Chassis Details",
+      "chsSize": "Size",
+      "chsNo": "No.",
+      "contactDetails": "Contact Details",
+      "email": "Email",
+      "phone": "Phone",
+      "noFileChosen": "No File Chosen",
+      "browse": "Browse"
+    },
+    "breadCrumbs": {
+      "create": "New Chassis",
+      "list": "Chassis Management List",
+      "edit": "Edit Chassis",
+      "view": "View Chassis"
+    },
+    "form": {
+      "edit": "Edit Chassis",
+      "view": "View Chassis"
+    }
+  },
+  "rentalManagement": {
+    "title": "Rental Management",
+    "popupTitle": "Truck Rental",
+    "tabs": {
+      "details": "Truck Rental Details",
+      "audits": "Audits"
+    },
+    "rentalDetails": {
+      "generalDetails": "General Details",
+      "valilidilityDetails": "Validity Details",
+      "partiesDetail": "Parties Detail",
+      "properties": "Properties",
+      "id": "Id",
+      "desc": "Description",
+      "name": "Name",
+      "currency": "Currency",
+      "truckOperator": "Truck Operator",
+      "coff": "CO/FF",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "startDate": "Start Date",
+      "expiredDate": "Expired Date",
+      "rentalList": "Rental List",
+      "truckType": "Truck Type",
+      "noOfTruck": "Number Of Trucks",
+      "rentalValue": "Rental Value",
+      "rentalRate": "Rental Rate",
+      "truckDetails": "Truck Details",
+      "rentalDetails": "Rental Details"
+    },
+    "breadCrumbs": {
+      "create": "New Rental Management",
+      "list": "Rental Management List",
+      "edit": "Edit Rental Management"
+    },
+    "form": {
+      "edit": "Edit Rental Management"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "contractManagement": {
+    "request": "Contract Management Request",
+    "title": "Contract Management",
+    "popupTitle": "Truck Contract",
+    "tabs": {
+      "details": "Contract Details",
+      "audits": "Audits"
+    },
+    "details": {
+      "generalDetails": "General Details",
+      "properties": "Properties",
+      "valilidilityDetails": "Validity Details",
+      "partiesDetail": "Parties Detail",
+      "requestorDetails": "Requestor",
+      "approverDetails": "Approver",
+      "truckOperatorDetails": "Truck Operator - Charges Details",
+      "rateTableDetails": "Rate Table Details",
+      "forwaderDetails": "CO/FF - Charges Details",
+      "cargoOwnerDetails": "Cargo Owner - Charges Details",
+      "payTerm": "Payment Term",
+      "id": "Id",
+      "desc": "Description",
+      "name": "Name",
+      "currency": "Currency",
+      "startDate": "Start Date",
+      "expiredDate": "Expired Date",
+      "truckOperator": "Truck Operator",
+      "forwader": "Forwader",
+      "cargoOwner": "Cargo Owner",
+      "platformFee": "Platform Fee",
+      "additionalTax": "Additional Tax",
+      "withHoldTax": "Withold Tax",
+      "rateTable": "Rate Table",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "toPayTerm": "Truck Operator (days)",
+      "coffPayTerm": "CO/FF (days)",
+      "username": "User Name",
+      "comments": "Comments",
+      "creationDt": "Creation Date",
+      "submittedDt": "Submitted Date",
+      "appRejDt": "Approved/Rejected Date",
+      "financing": "Financing",
+      "financingModel": "Model",
+      "bank": "Bank",
+      "bankCharges": "Bank Charges"
+    },
+    "breadCrumbs": {
+      "create": "New Contract Request",
+      "requestList": "Contract Management Requests List",
+      "list": "Contract Management Request List",
+      "edit": "Edit Contract Request",
+      "view": "View Contract Request",
+      "editContract": "Edit Contract",
+      "viewContract": "View Contract"
+    },
+    "form": {
+      "edit": "Edit Contract Request",
+      "view": "View Contract Request",
+      "viewContract": "View Contract"
+    },
+    "tooltip": {
+      "photo": "Upload Photo"
+    }
+  },
+  "rateTableManagement": {
+    "breadCrumbs": {
+      "title": "Rate Table",
+      "list": "Rate Table List",
+      "create": "New Rate Table",
+      "edit": "Edit Rate Table",
+      "view": "View Rate Table"
+    },
+    "tabs": {
+      "rateTable": "Rate Table",
+      "comments": "Comments",
+      "audit": "Audits"
+    },
+    "listing": {
+      "from": "From",
+      "to": "To",
+      "locationType": "Location Type",
+      "truckType": "Truck Type",
+      "rateType": "Rate Type",
+      "price": "Price",
+      "dateCreated": "Date Created",
+      "dateUpdated": "Date Updated",
+      "action": "Action",
+      "name": "Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "expiredDate": "Expired Date",
+      "coFfSelect": "Select Accounts",
+      "toAccn": "Trucking Operator",
+      "coFfAccn": "Freight Forwarder / Cargo Owner",
+      "status": "Status"
+    },
+    "details": {
+      "generalDetails": "General Details",
+      "properties": "Properties",
+      "partiesDetails": "Parties Details",
+      "validityDetails": "Validity Details",
+      "description": "Description",
+      "id": "Id",
+      "desc": "Description",
+      "name": "Name",
+      "currency": "Currency",
+      "accnTo": "Truck Operator",
+      "accnCoFf": "CO / FF",
+      "vehType": "Vehicle Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "expiredDate": "Expired Date",
+      "truckOperator": "Truck Operator",
+      "forwader": "Forwarder",
+      "cargoOwner": "Cargo Owner",
+      "platformFee": "Platform Fee",
+      "additionalTax": "Additional Tax",
+      "withHoldTax": "Withold Tax",
+      "rateTable": "Rate Table",
+      "createdBy": "Created By",
+      "createdAt": "Created At",
+      "createdDate": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDate": "Updated Date",
+      "toPayTerm": "Truck Operator (days)",
+      "coffPayTerm": "CO/FF (days)"
+    },
+    "tripRates": {
+      "title": "Trip Rate",
+      "location": "Location",
+      "charges": "Trip Type and Charges",
+      "properties": "Properties",
+      "truckType": "Truck Type",
+      "rateType": "Rate Type",
+      "charge": "Trip Charge (IDR)",
+      "locFrom": "From",
+      "locTo": "To",
+      "createdBy": "Created By",
+      "createdDt": "Created Date",
+      "updatedBy": "Updated By",
+      "updatedDt": "Updated Date"
+    },
+    "msg": {
+      "duplicate": "Existing rate trip {{rateTripDetails}} already exists.",
+      "minimum": "Please create at least two trip for MultiDrop"
+    },
+    "remark": {
+      "type": "Comment Type",
+      "comment": "Comment",
+      "dt": "Comment Date Time",
+      "by": "Commented By",
+      "id": "Id"
+    }
+  },
+  "liveTracking": {
+    "title": "Live Truck Tracking",
+    "details": "Tracking Details",
+    "truck": "Truck",
+    "trucks": "Trucks",
+    "history": "Historical Tracking",
+    "start": "Start Date Time",
+    "end": "End Date Time",
+    "location": "Truck Location"
+  },
+  "trucksRental": {
+    "title": "Trucks Rental",
+    "tabs": {
+      "rentals": "Rental Details",
+      "leaseApplications": "Lease Applications",
+      "audits": "Audits"
+    },
+    "rentals": {
+      "accId": "Account ID",
+      "name": "Account Name",
+      "generalDetails": "Rentals",
+      "licenseDetails": "License Details",
+      "provider": "Provider",
+      "description": "Description",
+      "features": "Features",
+      "leasePlans": "Lease Plans",
+      "quotation": "Quotation",
+      "months": "Months",
+      "price": "Price",
+      "trucks": "Trucks",
+      "numberTrucks": "Number of Trucks",
+      "dateSubmit": "Date Submitted",
+      "status": "Status",
+      "rfq": "RFQ"
+    },
+    "leaseApplication": {
+      "provider": "Provider",
+      "description": "Description",
+      "features": "Features",
+      "leasePlans": "Lease Plans",
+      "quotation": "Quotation",
+      "months": "Months",
+      "price": "Price",
+      "trucks": "Trucks",
+      "rfq": "RFQ"
+    },
+    "breadCrumbs": {
+      "create": "New Truck Rental",
+      "list": "Truck Rental",
+      "edit": "Edit Truck Rental",
+      "view": "View Truck Rental",
+      "leasingList": "Leasing Application List"
+    },
+    "form": {
+      "edit": "Edit Truck Rental",
+      "view": "View Truck Rental",
+      "popupTitle": "Lease Form",
+      "popupCategory": "Lease Application Details",
+      "listTitle": "Lease Application List",
+      "leasingList": "Truck Leasing",
+      "action": "Actions",
+      "popupField": {
+        "company": "Company",
+        "name": "Name",
+        "contact": "Contact",
+        "email": "Email",
+        "account": "Account"
+      }
+    },
+    "tooltip": {
+      "photo": "Upload Photo",
+      "rfqTips": "Request for Quotation"
+    }
+  },
+  "co2x": {
+    "listing": {
+      "title": "CO2x Monitoring",
+      "accnId": "Account ID",
+      "accnName": "Account Name",
+      "companyId": "Company ID",
+      "userEmail": "User Email",
+      "userPwd": "User Password",
+      "expiryDt": "Expiry Date",
+      "dtCreated": "Date Created",
+      "dtLupd": "Date Updated",
+      "status": "Status"
+    },
+    "form": {
+      "tab": {
+        "details": "CO2x Monitoring",
+        "audits": "Audits"
+      },
+      "edit": "Edit CO2x Monitoring",
+      "view": "View CO2x Monitoring",
+      "new": "New CO2x Monitoring",
+      "accnId": "Account ID",
+      "accnName": "Account Name",
+      "companyId": "Company ID",
+      "expiryDate": "Expiry Date",
+      "userId": "User ID",
+      "userPwd": "Password",
+      "catGeneralDetails": "General Details",
+      "catCredentials": "Credential Details",
+      "catProperties": "Properties"
+    }
+  },
+  "department": {
+    "listing": {
+      "title": "Manage Departments",
+      "id": "ID",
+      "name": "Name",
+      "desc": "Description",
+      "colorCode": "Color Code",
+      "dtCreated": "Date Created",
+      "dtLupd": "Date Update",
+      "status": "Status"
+    },
+    "form": {
+      "tab": {
+        "details": "Department Details",
+        "audits": "Audits"
+      },
+      "edit": "Edit Department",
+      "view": "View Department",
+      "new": "New Department",
+      "accn": "Account",
+      "name": "Name",
+      "desc": "Description",
+      "colorCode": "Color Code",
+      "available": "Available",
+      "selected": "Selected",
+      "catGeneralDetails": "General Details",
+      "catUsers": "Users",
+      "catVeh": "Trucks",
+      "catProperties": "Properties"
+    }
+  },
+  "truckInsurance": {
+    "title": "Application Insurance",
+    "details": "General Details",
+    "accountId": "Account ID",
+    "accountName": "Account Name",
+    "mobileNumber": "Mobile Number",
+    "email": "Email",
+    "trucks": "Trucks",
+    "usage": "Usage",
+    "plateNumber": "Plate Number",
+    "makeModel": "Make & Model",
+    "coverage": "Coverage",
+    "claims": "Claims",
+    "suspension": "Suspension",
+    "selectYesOrNo": "Select Yes or No",
+    "suspensionOfDriving": "Suspension of driving"
+  },
+  "truckTracking": {
+    "listing": {
+      "title": "Trucks",
+      "location": "Location"
+    }
+  },
+  "shell": {
+    "title": "Shell Card Management",
+    "list": {
+      "accId": "Account ID & Name",
+      "cardNo": "Card Number",
+      "truckPlateNo": "Truck & Plate Number",
+      "dateAssign": "Date Assigned",
+      "assignBy": "Assigned By",
+      "status": "Status",
+      "action": "Action"
+    },
+    "form": {
+      "title": "Form Detail",
+      "section": "Card Assignment",
+      "button": {
+        "assign": "Assign",
+        "newAssign": "New Assignment"
+      },
+      "control": {
+        "accId": "Account ID",
+        "name": "Account Name",
+        "cardNo": "Card Number",
+        "truckPlateNo": "Truck Plate Number"
+      }
+    },
+    "breadCrumbs": {
+      "listTitle": "Shell Card Management",
+      "list": "Shell Card Management",
+      "view": "View Assignment"
+    }
+  },
+  "shellCardInv": {
+    "title": "Shell Card & Invoicing",
+    "list": {
+      "accId": "Account ID & Name",
+      "cardNo": "Card Number",
+      "truckPlateNo": "Truck & Plate Number",
+      "dateAssign": "Date Assigned",
+      "assignBy": "Assigned By",
+      "status": "Status",
+      "action": "Action"
+    },
+    "section": {
+      "saving": {
+        "title": "Saving"
+      },
+      "invoice": {
+        "title": "Invoice",
+        "list": {
+          "invNo": "Invoice No",
+          "companyName": "Company Name",
+          "payInfo": "Payment Info",
+          "invAmount": "Invoice Amount($)",
+          "invDate": "Invoice Date",
+          "amount": "Amount",
+          "payDate": "Payment Date",
+          "status": "Status",
+          "select": "Select"
+        }
+      }
+    },
+    "popup": {
+      "title": "Invoice Details",
+      "section": {
+        "inv": {
+          "title": "Details",
+          "invNo": "Invoice No",
+          "companyName": "Company Name",
+          "payInfo": "Payment Info",
+          "invAmount": "Invoice Amount($)",
+          "invDate": "Invoice Date",
+          "amount": "Amount",
+          "payDate": "Payment Date",
+          "payAmount": "Payment Amount",
+          "balAmount": "Balance Amount",
+          "status": "Status",
+          "select": "Select"
+        },
+        "invItem": {
+          "title": "Invoice Items List",
+          "list": {
+            "vehNo": "Vehicle No",
+            "txnDateTime": "Date Time",
+            "kiosk": "Kiosk",
+            "fuelType": "Fuel Type",
+            "actCost": "Actual Cost",
+            "discount": "Discount",
+            "gtsAmt": "GTS Amount",
+            "co2Com": "CO2 Compensation Fee",
+            "totalAmt": "Inv. Total($)"
+          }
+        }
+      }
+    },
+    "button": {
+      "updatePay": "INVOICE PAY"
+    },
+    "breadCrumbs": {
+      "title": "Shell Cards",
+      "titleInv": "Update Payment Information",
+      "list": "Shell Card & Invoicing"
+    }
+  }
+}

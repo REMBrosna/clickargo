@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "Clictruck Mobile v2.0",
+    "description": "Clictruck Mobile App",
+    "slug": "clictruck-mobile",
+    "privacy": "unlisted",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/images/ios-icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/1dbb923c-7bb1-4f18-bc9c-cf9d7e988ae6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1.0.9",
+      "bundleIdentifier": "com.guudint.clictruck",
+      "icon": "./assets/images/ios-icon.png",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      "expo-localization",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-font",
+      "expo-secure-store"
+    ],
+    "android": {
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/android-icon.png"
+      },
+      "package": "com.guudint.clictruck"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1dbb923c-7bb1-4f18-bc9c-cf9d7e988ae6"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    }
+  }
+}

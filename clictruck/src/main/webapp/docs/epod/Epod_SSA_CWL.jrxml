@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InvoiceClictruck" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb669414-f35c-4e8b-bc7d-16ccf7bebe7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF"/>
+	<subDataset name="cargoLinesSet" uuid="9442406f-e911-48c3-87cb-d9cef83eca67">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="cargoType" class="java.lang.String"/>
+		<field name="quantity" class="java.lang.String"/>
+		<field name="truckType" class="java.lang.String"/>
+		<field name="size" class="java.lang.String"/>
+		<field name="goodsDescription" class="java.lang.String"/>
+		<field name="weight" class="java.lang.String"/>
+		<field name="volume" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PARAM_INFO" class="java.util.HashMap"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cargoLines" class="java.util.List">
+		<fieldDescription><![CDATA[cargoLines]]></fieldDescription>
+	</field>
+	<title>
+		<band height="77">
+			<staticText>
+				<reportElement x="171" y="0" width="220" height="18" uuid="2eea5701-2e88-4b52-bf29-a3b38fd621d3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Crane Worldwide Logistics S Pte Ltd
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="18" width="220" height="59" uuid="3995a66f-ee59-405b-9e62-d3773a3ed7dc"/>
+				<text><![CDATA[9 Tampines Grande, Asia Green #05-16
+Singapore 528735
+Co Reg 197501465R GST Reg M200223586
+TEL: 65-6542 6055 UEN:197501465R
+TEL: FAX:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="176">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="220" y="18" width="120" height="15" uuid="7de7c3ea-7e72-4d87-9c29-1c433d407e40">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Serif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DELIVERY NOTE]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="3" y="33" width="557" height="138" uuid="b02ce7ad-56ea-4721-8680-dfa812ce5aa5"/>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="33" width="128" height="15" uuid="36e2c2e5-f0c8-4887-a06a-8a7be5ba415b">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Date :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="50" width="128" height="15" uuid="9649d441-f9b1-4041-b2b4-f38b0402b126">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[MAWB NO :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="67" width="128" height="15" uuid="7cc18710-a6ad-4883-9c67-f56288165d6d">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[HAWB NO :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="33" width="176" height="15" uuid="c9100d3b-129e-4cda-8b08-7c5077b10952"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("issueDate") != null 
+    ? java.time.ZonedDateTime
+        // Parse the ZonedDateTime string
+        .parse($P{PARAM_INFO}.get("issueDate").toString())
+        // Ensure we're showing the time in UTC+8
+        .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+        // Format with a 12-hour clock and AM/PM
+        .format(java.time.format.DateTimeFormatter.ofPattern("MM-dd-yyyy hh:mm a"))
+    : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="381" y="50" width="169" height="15" uuid="aed78aa1-fdda-4948-b7ea-a06a3156d9a8"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("MAWB","")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="85" width="128" height="15" uuid="6bd9f65b-89aa-4668-8bc8-24838b3ca091">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[FLIGHT NO & DATE:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="67" width="169" height="15" uuid="bba50f26-92d2-4a96-a36b-a499f99341c6"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("HAWB","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="381" y="85" width="169" height="15" uuid="0c736221-2a08-47ab-b9ac-a0f2e976a564"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="16" width="128" height="15" uuid="97c7ef8d-5483-47cb-87e6-248d24a1ecd5">
+						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[DELIVERY ORDER NO :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="16" width="169" height="15" uuid="d21a3510-096a-4393-ac69-2b7a13764c12">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("doNO","")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="104" width="128" height="15" uuid="34d39eaf-ad16-4896-897d-53be024df3e1">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[FROM / TO :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="17" width="50" height="15" uuid="daf5e08c-e0c3-4b81-b400-7887a4c228c8">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TO :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="123" width="169" height="15" uuid="a02bc704-b0ff-4ff4-ab46-97330a7ccba7"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("shipmentRef","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="381" y="104" width="169" height="15" uuid="3311dedd-680f-4618-9852-e14c8c5fd9b9"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="254" y="123" width="128" height="15" uuid="76865216-8ce7-496a-b0ba-836100abc33e">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[JOB NO. :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="50" y="17" width="190" height="65" uuid="31598b58-5813-4329-90c5-78ba9f0c3767"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocationName","")
++ "\n" +
+$P{PARAM_INFO}.getOrDefault("dropoffLocation","")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="86" width="50" height="15" uuid="2bd8adfe-b2c8-439d-ba73-9f7a3fbef176">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[ATTN :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" mode="Transparent" x="0" y="105" width="50" height="15" uuid="4b23debb-6204-4d60-a783-ab638e4443ce">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<text><![CDATA[TEL :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="50" y="105" width="190" height="15" uuid="fd32c7dc-1b8d-4605-b307-9cccf63bebce"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("jobContactTelFf","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="86" width="190" height="15" uuid="0a159a7b-2bc7-4523-a2c6-f3666a200354"/>
+					<textElement textAlignment="Left">
+						<font fontName="DejaVu Serif" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="0" width="160" height="15" forecolor="#000000" uuid="51c063a0-728a-47fb-aaa0-326bd8d9cd75">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[NO OF PKGS/CTNS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="160" y="0" width="103" height="15" forecolor="#000000" uuid="82d0bbea-d277-4e28-9a1b-add346d34ae3">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[WEIGHT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="263" y="0" width="289" height="15" forecolor="#000000" uuid="2f7901fb-dd02-4bd9-8a00-951219e29eff">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="1" y="1" width="550" height="19" uuid="735b0970-8959-440f-ae68-76496490335d">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="cargoLinesSet" uuid="d4b2ef7c-fa72-4c10-b317-7911e767e14d">
+						<dataSourceExpression><![CDATA[$P{PARAM_INFO}.get("cargoLines")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="d4718769-1687-4fc1-877c-8577d3cd0836">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="120" height="30" uuid="148fcafb-4572-4b46-a42c-0d3116453b4f"/>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="d4718769-1687-4fc1-877c-8577d3cd0836">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="110" height="30" uuid="148fcafb-4572-4b46-a42c-0d3116453b4f">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="230" uuid="d4718769-1687-4fc1-877c-8577d3cd0836">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="230" height="30" uuid="148fcafb-4572-4b46-a42c-0d3116453b4f">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Left">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[""]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="324">
+			<staticText>
+				<reportElement x="0" y="0" width="243" height="15" uuid="1a657045-a2f9-4fa0-a728-3ae2d1ca0959">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[REMARK:
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="551" height="19" uuid="c5fa9031-3a8f-4c03-9d19-34575a982525"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[RECEIVED THE ABOVE GOODS IN GOOD ORDER AND CONDITION.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="3" y="190" width="130" height="73" uuid="38d35255-6464-4399-8e37-f34b54b21f1d"/>
+				<imageExpression><![CDATA[$P{PARAM_INFO}.get("signatureImage")]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="2" y="263" width="240" height="19" uuid="165ed0ab-157e-4e17-bf84-8a9cdbe07817"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[CONSIGNEE'S STAMP & SIGNATURE DATE/TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="282" width="67" height="18" uuid="e000d8f4-1906-4eaf-84b5-7e78ea5997b3"/>
+				<text><![CDATA[ISSUED BY:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="282" width="290" height="18" uuid="d24dff48-ba54-4507-9b95-4b71e1d9ebe8"/>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("cargoRecipient","")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="305" width="551" height="19" uuid="8cb07788-82fa-452b-917b-b180d78d0d98"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<text><![CDATA[ALL BUSINESS SUBJECT TO THE STANDARD TRADING CONDITIONS. COPY AVAILABLE ON APPLICATION.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="15" width="280" height="45" uuid="7b961c78-0791-42f8-993e-afa18c0d733c"/>
+				<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocationRemark","")]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>

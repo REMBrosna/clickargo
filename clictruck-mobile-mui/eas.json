@@ -1,0 +1,68 @@
+{
+  "cli": {
+    "version": ">= 5.9.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "node": "18.18.2"
+    },
+    "development": {
+      "extends": "base",
+      "developmentClient": false,
+      "channel": "development",
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_URL": "https://ct2-uat.clickargo.com/be/clictruck"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "extends": "base",
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_URL": "https://ct2-uat.clickargo.com/be/clictruck"
+      },
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "simulator": false
+      },
+      "channel": "preview"
+    },
+    "testflight": {
+      "extends": "base",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_URL": "https://ct2-uat.clickargo.com/be/clictruck",
+        "EXPO_APPLE_APP_SPECIFIC_PASSWORD": "ojsr-hlzz-lskk-qbpy"
+      },
+      "channel": "production",
+      "autoIncrement": true
+    },
+    "production": {
+      "extends": "base",
+      "env": {
+        "EXPO_PUBLIC_BACKEND_URL": "https://sg2.clickargo.com/be/clictruck"
+      },
+      "channel": "production",
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "testflight": {
+      "ios": {
+        "appleId": "nina.catudio@guud.company",
+        "ascAppId": "6476870715",
+        "appleTeamId": "VV2Q4725NG",
+        "bundleIdentifier": "com.guudint.clictruck"
+      }
+    },
+    "production": {}
+  }
+}

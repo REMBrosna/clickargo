@@ -1,0 +1,6 @@
+Using JAXB xjc tooling to generate JAXB classes from an XML schema file 
+
+xjc -XautoNameResolution -d ./tmp1 DSV_StatusMessage_v1.xsd
+xjc -XautoNameResolution -d ./tmp DSV_ShipmentMessage_v1.xsd
+
+xjc -p com.dsv.edi.xml.DSV_ShipmentMessage_v1 -XautoNameResolution -d ./tmp1 DSV_ShipmentMessage_v1.xsd

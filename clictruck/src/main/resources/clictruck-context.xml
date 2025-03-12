@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- ClicTruck Controller [START] -->
+	<bean id="clicTruckJobController" class="com.guudint.clickargo.clictruck.planexec.job.controller.TruckJobController">
+		<property name="entityServices" ref="enCkCtSvcMap" />
+		<property name="entityDTOs" ref="enCkCtDtoMap" />
+	</bean>
+	<util:map id="enCkCtDtoMap" map-class="java.util.HashMap">
+		<entry key="truck" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruck"/>
+		<entry key="jobTerm" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkCtJobTerm"/>
+		<entry key="jobTermReq" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkCtJobTermReq"/>
+		<entry key="trip" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTrip"/>
+	</util:map>
+	<util:map id="enCkCtSvcMap" map-class="java.util.HashMap">
+		<entry key="truck" value="ckJobTruckService"/>
+		<entry key="trip" value="ckCtTripService"/>
+		<entry key="jobTerm" value="ckCtJobTermService"/>
+		<entry key="jobTermReq" value="ckCtJobTermReqService"/>
+		<entry key="truckDownload" value="ckJobTruckDownloadService"/>
+	</util:map>
+
+	<bean id="clicTruckController" class="com.guudint.clickargo.clictruck.planexec.trip.controller.TruckController">
+		<property name="entityServices" ref="enCkCtTrkSvcMap" />
+		<property name="entityDTOs" ref="enCkCtTrkDtoMap" />
+	</bean>
+	<util:map id="enCkCtTrkSvcMap" map-class="java.util.HashMap">
+		<entry key="triplocation" value="ckCtTripLocationService"/>
+		<entry key="trip" value="ckCtTripService"/>
+		<entry key="cargoMm" value="ckCtTripCargoMmService"/>
+		<entry key="cargoFm" value="ckCtTripCargoFmService"/>
+		<entry key="reimburse" value="ckCtTripReimbursementService"/>
+		<entry key="invoice" value="ckCtToInvoiceService"/>
+	</util:map>
+	<util:map id="enCkCtTrkDtoMap" map-class="java.util.HashMap">
+		<entry key="triplocation" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripLocation"/>
+		<entry key="trip" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTrip"/>
+		<entry key="cargoMm" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripCargoMm"/>
+		<entry key="cargoFm" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripCargoFm"/>
+		<entry key="reimburse" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripReimbursement"/>
+		<entry key="invoice" value="com.guudint.clickargo.clictruck.finacing.dto.CkCtToInvoice"/>
+	</util:map>
+
+	<bean id="ckCtTripDoController" class="com.guudint.clickargo.clictruck.planexec.job.controller.CkCtTripDoController">
+		<property name="entityServices" ref="enCkCtSvcTdMap" />
+		<property name="entityDTOs" ref="enCkCtDtoTdMap" />
+	</bean>
+	<util:map id="enCkCtDtoTdMap" map-class="java.util.HashMap">
+		<entry key="tripDo" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripDo"/>
+		<entry key="tripDoAttach" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripDoAttach"/>
+		<entry key="tripAttach" value="com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtTripAttach"/>
+	</util:map>
+	<util:map id="enCkCtSvcTdMap" map-class="java.util.HashMap">
+		<entry key="tripDo" value="ckCtTripDoService"/>
+		<entry key="tripDoAttach" value="ckCtTripDoAttachService"/>
+		<entry key="tripAttach" value="ckCtTripAttachService"/>
+	</util:map>
+
+	<bean id="accountSuspendController" class="com.guudint.clickargo.clictruck.admin.account.controller.AccountSuspendController">
+		<property name="entityServices" ref="enCkAccountSuspendSvcMap" />
+		<property name="entityDTOs" ref="enCkCtAccountSuspendDtoMap" />
+	</bean>
+	<util:map id="enCkAccountSuspendSvcMap" map-class="java.util.HashMap">
+		<entry key="accnSuspend" value="ckAccountSuspendService"/>
+		<entry key="accnResumption" value="ckAccountResumptionService"/>
+	</util:map>
+	<util:map id="enCkCtAccountSuspendDtoMap" map-class="java.util.HashMap">
+		<entry key="accnSuspend" value="com.guudint.clickargo.clictruck.admin.account.dto.AccountSuspend"/>
+	</util:map>
+	
+	<bean id="clicTruckJobDownloadController" class="com.guudint.clickargo.clictruck.planexec.job.controller.JobDownloadController"/>
+	
+	<bean id="ckAccountSuspendService" class="com.guudint.clickargo.clictruck.admin.account.service.impl.AccountSuspendServiceImpl" />
+	<bean id="ckAccountResumptionService" class="com.guudint.clickargo.clictruck.admin.account.service.impl.AccountResumptionServiceImpl" />
+
+	<bean id="ckCtSageTaxDaoImpl" class="com.guudint.clickargo.clictruck.sage.dao.impl.CkCtSageTaxDaoImpl" />
+	<bean id="ckCtSageTaxService" class="com.guudint.clickargo.clictruck.sage.service.SageTaxService" />
+	<bean id="taxInvoiceService" class="com.guudint.clickargo.clictruck.tax.service.TaxInvoiceService" />
+	<bean id="taxReportService" class="com.guudint.clickargo.clictruck.tax.service.TaxReportService" />
+
+	<bean id="ckCtTripDoService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripDoService" />
+	<bean id="ckCtTripDoDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripDoDaoImpl" />
+	<bean id="ckCtTripDoAttachService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripDoAttachService" />
+	<bean id="ckCtTripAttachService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripAttachService" />
+	<bean id="ckCtTripDoAttachDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripDoAttachDaoImpl" />
+
+	<bean id="ckJobTruckService" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckService" />
+	<bean id="ckJobTruckDownloadService" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckDownloadService" />
+	<bean id="ckJobTruckDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkJobTruckDaoImpl" />
+	
+	<bean id="ckJobTruckAddAttrDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkJobTruckAddAttrDaoImpl" />
+	
+	<bean id="ckCtJobTermService" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTermService" />
+	<bean id="ckCtJobTermReqService" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTermReqService" />
+	<bean id="ckCtJobTermDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkCtJobTermDaoImpl" />
+	<bean id="ckCtJobTermReqDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkCtJobTermReqDaoImpl" />
+	<bean id="ckCtJobTripDelivery" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkCtJobTripDeliveryDaoImpl" />
+
+	<bean id="ckCtTripLocationService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripLocationService" />
+	<bean id="ckCtTripLocationDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripLocationDaoImpl" />
+
+	<bean id="ckCtTripService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripService" />
+	<bean id="ckCtTripDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripDaoImpl" />
+
+	<bean id="ckCtTripCargoFmService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripCargoFmService" />
+	<bean id="ckCtTripCargoFmDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripCargoFmDaoImpl" />
+
+	<bean id="ckCtTripCargoMmDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripCargoMmDaoImpl" />
+	<bean id="ckCtTripCargoMmService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripCargoMmService" />
+
+	<bean id="ckCtTripChargeDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripChargeDaoImpl"/>
+	<bean id="ckCtContactDetailDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkCtContactDetailDaoImpl" />
+
+	<bean id="ckCtTripReimbursementService" class="com.guudint.clickargo.clictruck.planexec.trip.service.impl.CkCtTripReimbursementService" />
+	<bean id="ckCtTripReimbursementDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripReimbursementDaoImpl" />
+
+	<bean id="ckCtToInvoiceService" class="com.guudint.clickargo.clictruck.finacing.service.impl.CkCtToInvoiceServiceImpl" />
+	<bean id="ckCtToInvoiceDao" class="com.guudint.clickargo.clictruck.finacing.dao.impl.CkCtToInvoiceDaoImpl" />
+	<bean id="ckCtDebitNoteDao" class="com.guudint.clickargo.clictruck.finacing.dao.impl.CkCtDebitNoteDaoImpl" />
+	<bean id="ckCtPlatformInvDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtPlatformInvoiceDaoImpl" />
+	<bean id="ckCtDebitNoteItemDao" class="com.guudint.clickargo.clictruck.finacing.dao.impl.CkCtDebitNoteItemDaoImpl" />
+	<bean id="ckCtPlatformInvItemDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtPlatformInvoiceItemDaoImpl" />
+	<bean id="ckCtToPaymentDao" class="com.guudint.clickargo.clictruck.finacing.dao.impl.CkCtToPaymentDaoImpl" />
+	<bean id="ckCtPaymentDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtPaymentDaoImpl" />
+	
+	<!-- 2.1.0 -->
+	<bean id="ckCtTripAttachDao" class="com.guudint.clickargo.clictruck.planexec.trip.dao.impl.CkCtTripAttachDaoImpl" />
+	<bean id="ckCtPartyDao" class="com.guudint.clickargo.clictruck.planexec.job.dao.impl.CkCtPartyDaoImpl" />
+	
+	<bean id="ckCtMstTripAttachTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstTripAttachTypeDaoImpl" />
+	<bean id="ckCtMstPartyTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstPartyTypeDaoImpl" />
+	
+	<bean id="ckCtEventService" class="com.guudint.clickargo.clictruck.common.service.impl.EventCallbackNotificationServiceImpl" />
+	<bean id="notificationEmailServiceImpl" class="com.guudint.clickargo.clictruck.common.service.impl.NotificationEmailServiceImpl" />
+	<!--<bean id="vehicleDistanceService" class="com.guudint.clickargo.clictruck.common.service.impl.VehicleDistanceServiceImpl" />
+	<bean id="vehicleExpiryService" class="com.guudint.clickargo.clictruck.common.service.impl.VehicleExpiryServiceImpl" />
+	<bean id="vpcExpiryService" class="com.guudint.clickargo.clictruck.common.service.impl.VPCExpiryServiceImpl" />
+	<bean id="driverLicenseService" class="com.guudint.clickargo.clictruck.common.service.impl.DriverLicenseServiceImpl" />
+	<bean id="insuranceService" class="com.guudint.clickargo.clictruck.common.service.impl.InsuranceServiceImpl" />-->
+	
+	<!-- ClicTruck Controller [END] -->
+	
+	
+	<!--  Sage Tax [START] -->
+	<bean id="sageTaxController" class="com.guudint.clickargo.clictruck.sage.controller.SageTaxController">
+		<property name="entityServices" ref="enCkCtSageSvcMap" />
+		<property name="entityDTOs" ref="enCkCtSageDtoMap" />
+	</bean>
+	<util:map id="enCkCtSageSvcMap" map-class="java.util.HashMap">
+		<entry key="sagetax" value="ckCtSageTaxService"/>
+		<entry key="taxinvoice" value="taxInvoiceService"/>
+		<entry key="taxreport" value="taxReportService"/>
+	</util:map>
+	<util:map id="enCkCtSageDtoMap" map-class="java.util.HashMap">
+		<entry key="sagetax" value="com.guudint.clickargo.clictruck.sage.dto.CkCtSageTax"/>
+		<entry key="taxinvoice" value="com.guudint.clickargo.tax.dto.CkTaxInvoice"/>
+		<entry key="taxreport" value="com.guudint.clickargo.tax.dto.CkTaxReport"/>
+	</util:map>
+	
+	<!--  Sage Tax [END] -->
+	
+	<!-- Mobile Truck Controller [START] -->
+	<bean id="mJobTruckService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkJobTruckMobileService" />
+	
+	<bean id="mobileJobController" class="com.guudint.clickargo.clictruck.planexec.job.mobile.controller.TruckJobMobileController">
+		<property name="entityServices" ref="mobileSvcMap" />
+		<property name="entityDTOs" ref="mobileDtoMap" />
+	</bean>
+	<util:map id="mobileDtoMap" map-class="java.util.HashMap">
+		<entry key="truck" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruck"/>
+	</util:map>
+	<util:map id="mobileSvcMap" map-class="java.util.HashMap">
+		<entry key="truck" value="mJobTruckService"/>
+		
+	</util:map>
+	
+	<!-- For mobile listing -->
+	<bean id="mJobTruckAsgListService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkJobTruckASGListService" />
+	<bean id="mJobTruckPauListService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkJobTruckPAUListService" />
+	<bean id="mobileAuthService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkJobTruckMobileAuthService" />
+	<bean id="mJobHistoryService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkTruckHistoryMobileService" />
+	<bean id="mJobLanguageService" class="com.guudint.clickargo.clictruck.planexec.job.mobile.service.impl.CkJobTruckMobileLangService" />
+	<bean id="mJobTripMobileService" class="com.guudint.clickargo.clictruck.planexec.trip.mobile.service.CkJobTruckTripMobileService"/>
+	
+	<bean id="mobileListJobController" class="com.guudint.clickargo.clictruck.planexec.job.mobile.controller.TruckJobMobileListController">
+		<property name="listServices" ref="mobileListServices" />
+		<property name="listDtos" ref="mobileListDtos" />
+	</bean>
+	<util:map id="mobileListServices" map-class="java.util.HashMap">
+		<entry key="assigned" value="mJobTruckAsgListService"/>
+		<entry key="paused" value="mJobTruckPauListService"/>
+		<entry key="drivMobile" value="mobileAuthService"/>
+		<entry key="mHistory" value="mJobHistoryService"/>
+		<entry key="mLanguage" value="mJobLanguageService"/>
+		<entry key="mtripDriver" value="mJobTripMobileService"/>
+	</util:map>
+	<util:map id="mobileListDtos" map-class="java.util.HashMap">
+		<entry key="assigned" value="com.guudint.clickargo.clictruck.planexec.job.mobile.dto.CkJobTruckAsgDto"/>
+		<entry key="paused" value="com.guudint.clickargo.clictruck.planexec.job.mobile.dto.CkJobTruckAsgDto"/>
+	</util:map>
+	
+	
+	<!-- Mobile Truck Controller [END] -->
+	
+
+	<!-- Admin Controller [START] -->
+	
+	<bean id="ckCtVehDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtVehDaoImpl"/>
+	<bean id="ckCtDrvDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtDrvDaoImpl"/>
+	<bean id="ckCtChassisDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtChassisDaoImpl"/>
+	<bean id="ckCtRentalAppDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtRentalAppDaoImpl"/>
+	<bean id="ckCtRateTableDao" class="com.guudint.clickargo.clictruck.admin.ratetable.dao.impl.CkCtRateTableDaoImpl" />
+	<bean id="ckCtRateTableRemarkDao" class="com.guudint.clickargo.clictruck.admin.ratetable.dao.impl.CkCtRateTableRemarkDaoImpl" />
+	<bean id="ckCtTripRateDao" class="com.guudint.clickargo.clictruck.admin.ratetable.dao.impl.CkCtTripRateDaoImpl" />
+	<bean id="ckCtLocationDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtLocationDaoImpl" />
+	<bean id="ckCtContractDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtContractDaoImpl" />
+	<bean id="ckCtContractChargeDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtContractChargeDaoImpl" />
+	<bean id="ckCtSageDao" class="com.guudint.clickargo.clictruck.sage.dao.impl.CkCtSageDaoImpl" />
+	<bean id="ckCtContractReqDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtContractReqDaoImpl" />
+	<bean id="ckCtMstContractReqStateDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtMstContractReqStateDaoImpl" />
+	<bean id="ckCtVehExtDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtVehExtDaoImpl"/>
+	<bean id="ckCtVehMlogDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtVehMlogDaoImpl"/>
+	<bean id="ckCtAccnInqReqDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtAccnInqReqDaoImpl"/>
+	<bean id="ckCtAccnInqReqDocsDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtAccnInqReqDocsDaoImpl"/>
+	<bean id="ckCtCo2xDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtCo2xDaoImpl"/>
+	<bean id="ckCtDeptDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtDeptDaoImpl"/>
+	<bean id="ckCtDeptUsrDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtDeptUsrDaoImpl"/>
+	<bean id="ckCtDeptVehDao" class="com.guudint.clickargo.clictruck.common.dao.impl.CkCtDeptVehDaoImpl"/>
+	
+	<bean id="ckCtAddAttrListDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtAddAttrListDaoImpl" />
+	<bean id="ckCtConAddAttrDao" class="com.guudint.clickargo.clictruck.admin.contract.dao.impl.CkCtConAddAttrDaoImpl" />
+	
+	<bean id="ckCtVehService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtVehServiceImpl"/>
+	<bean id="ckCtTrackDeviceService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtTrackDeviceServiceImpl"/>
+	<bean id="ckCtDrvService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtDrvServiceImpl"/>
+	<bean id="ckCtChassisService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtChassisServiceImpl"/>
+	<bean id="ckCtRateTableService" class="com.guudint.clickargo.clictruck.admin.ratetable.service.impl.CkCtRateTableServiceImpl" />
+	<bean id="ckCtRateTableSPService" class="com.guudint.clickargo.clictruck.admin.ratetable.service.impl.CkCtRateTableServiceSPImpl" />
+	<bean id="ckCtRateTableRemarkService" class="com.guudint.clickargo.clictruck.admin.ratetable.service.impl.CkCtRateTableRemarkServiceImpl" />
+	<bean id="ckCtTripRateService" class="com.guudint.clickargo.clictruck.admin.ratetable.service.impl.CkCtTripRateServiceImpl" />
+	<bean id="ckCtLocationService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtLocationServiceImpl" />
+	<bean id="ckCtContractService" class="com.guudint.clickargo.clictruck.admin.contract.service.impl.CkCtContractServiceImpl" />
+	<bean id="ckCtsageEntityService" class="com.guudint.clickargo.clictruck.sage.service.SageEntityServiceImpl" />
+	<!--  <bean id="ckCtsageIntegrationEntityService" class="com.guudint.clickargo.clictruck.sage.service.SageIntegrationEntityServiceImpl" />  -->
+	<bean id="ckCtsageIntegrationEntityService" class="com.guudint.clickargo.sage.service.CkSageIntegrationEntityServiceImpl" />
+	<bean id="ckCtContractRequestService" class="com.guudint.clickargo.clictruck.admin.contract.service.impl.CkCtContractRequestServiceImpl" />
+	<bean id="ckCtTrackTraceViewLocEntityService" class="com.guudint.clickargo.clictruck.track.service.CkCtTrackTraceViewLocEntityServiceImpl" />
+	<bean id="ckCtVehExtService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtVehExtServiceImpl" />
+	<bean id="ckCtVehMlogService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtVehMlogServiceImpl" />
+	<bean id="ckCtRentalAppService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtRentalAppServiceImpl" />
+	<bean id="ckAccountExtOpmService" class="com.guudint.clickargo.clictruck.admin.account.service.impl.CkAccountExtOpmServiceImpl" />
+	<bean id="ckCtCo2xService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtCo2xServiceImpl"/>
+	<bean id="ckCtDeptService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtDeptServiceImpl"/>
+	<bean id="trackingTrucksService" class="com.guudint.clickargo.clictruck.common.service.impl.TrackingTrucksCkCtVehServiceImpl"/>
+	<bean id="administratorController" class="com.guudint.clickargo.clictruck.admin.controller.AdministratorController">
+		<property name="entityServices" ref="enCkCtAdminSvcMap"/>
+		<property name="entityDTOs" ref="enCkCtAdminDtoMap"/>
+	</bean>
+	<util:map id="enCkCtAdminSvcMap" map-class="java.util.HashMap">
+		<entry key="vehicle" value="ckCtVehService"/>
+		<entry key="trackDevice" value="ckCtTrackDeviceService"/>
+		<entry key="driver" value="ckCtDrvService"/>
+		<entry key="chassis" value="ckCtChassisService"/>
+		<entry key="location" value="ckCtLocationService"/>
+		<entry key="ratetable" value="ckCtRateTableService"/>
+		<entry key="ratetableSp" value="ckCtRateTableSPService"/>
+		<entry key="ratetableRemark" value="ckCtRateTableRemarkService"/>
+		<entry key="triprate" value="ckCtTripRateService"/>
+		<entry key="contract" value="ckCtContractService"/>
+		<entry key="sage" value="ckCtsageEntityService"/>
+		<entry key="sageIntegrartion" value="ckCtsageIntegrationEntityService"/>
+		<entry key="contractReq" value="ckCtContractRequestService"/>
+		<entry key="vckctTrackLoc" value="ckCtTrackTraceViewLocEntityService"/>
+		<entry key="ffco" value="accnFfCoEntityService"/>
+		<entry key="vehExt" value="ckCtVehExtService"/>
+		<entry key="vehMlog" value="ckCtVehMlogService"/>
+		<entry key="ckAccountExtOpm" value="ckAccountExtOpmService"/>
+		<entry key="rentalApp" value="ckCtRentalAppService"/>
+		<entry key="co2x" value="ckCtCo2xService"/>
+		<entry key="department" value="ckCtDeptService"/>
+		<entry key="trackingTrucks" value="trackingTrucksService"/>
+		<entry key="shellCardTruck" value="ckCtShellCardTruckService"/>
+		<entry key="shellCardInvoice" value="ckCtShellInvoiceService"/>
+		<entry key="shellCardInvoiceItem" value="ckCtShellInvoiceItemService"/>
+	</util:map>
+	<util:map id="enCkCtAdminDtoMap" map-class="java.util.HashMap">
+		<entry key="vehicle" value="com.guudint.clickargo.clictruck.common.dto.CkCtVeh"/>
+		<entry key="trackDevice" value="com.guudint.clickargo.clictruck.common.dto.CkCtTrackDevice"/>
+		<entry key="driver" value="com.guudint.clickargo.clictruck.common.dto.CkCtDrv"/>
+		<entry key="chassis" value="com.guudint.clickargo.clictruck.common.dto.CkCtChassis"/>
+		<entry key="location" value="com.guudint.clickargo.clictruck.common.dto.CkCtLocation"/>
+		<entry key="ratetable" value="com.guudint.clickargo.clictruck.admin.ratetable.dto.CkCtRateTable"/>
+		<entry key="ratetableSp" value="com.guudint.clickargo.clictruck.admin.ratetable.dto.CkCtRateTable"/>
+		<entry key="ratetableRemark" value="com.guudint.clickargo.clictruck.admin.ratetable.dto.CkCtRateTableRemark"/>
+		<entry key="triprate" value="com.guudint.clickargo.clictruck.admin.ratetable.dto.CkCtTripRate"/>
+		<entry key="contract" value="com.guudint.clickargo.clictruck.admin.contract.dto.CkCtContract"/>
+		<entry key="sage" value="com.guudint.clickargo.clictruck.sage.dto.CkCtSage"/>
+		<entry key="sageIntegrartion" value="com.guudint.clickargo.clictruck.sage.dto.CkSageIntegrartion"/>
+		<entry key="contractReq" value="com.guudint.clickargo.clictruck.admin.contract.dto.CkCtContractReq"/>
+		<entry key="vckctTrackLoc" value="com.guudint.clickargo.clictruck.track.dto.CkCtTrackLocDto"/>
+		<entry key="ffco" value="com.guudint.clickargo.manageaccn.dto.CkCtFfCo"/>
+		<entry key="vehExt" value="com.guudint.clickargo.clictruck.common.dto.CkCtVehExt"/>
+		<entry key="vehMlog" value="com.guudint.clickargo.clictruck.common.dto.CkCtVehMlog"/>
+		<entry key="ckAccountExtOpm" value="com.guudint.clickargo.clictruck.admin.account.dto.AccountOpm"/>
+		<entry key="rentalApp" value="com.guudint.clickargo.clictruck.common.dto.CkCtRentalApp"/>
+		<entry key="co2x" value="com.guudint.clickargo.clictruck.common.dto.CkCtCo2x"/>
+		<entry key="department" value="com.guudint.clickargo.clictruck.common.dto.CkCtDept"/>
+		<entry key="trackingTrucks" value="com.guudint.clickargo.clictruck.common.dto.CkCtVeh"/>
+		<entry key="shellCardTruck" value="com.guudint.clickargo.clictruck.admin.shell.dto.CkCtShellCardTruck"/>
+		<entry key="shellCardInvoice" value="com.guudint.clickargo.clictruck.admin.shell.dto.CkCtShellInvoice"/>
+		<entry key="shellCardInvoiceItem" value="com.guudint.clickargo.clictruck.admin.shell.dto.CkCtShellInvoiceItem"/>
+	</util:map>
+	
+	<!-- Admin Controller [END] -->
+	
+	<!-- For new features to be added in enhanced dashboard (listing or details) [START]-->
+	<bean id="ckCtDrvAvailService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtDrvAvailabilityServiceImpl"/>
+	<bean id="driverAvailController" class="com.guudint.clicdo.common.controller.EdbController">
+		<property name="entityServices" ref="enCkCtDriverAvailSvcMap"/>
+		<property name="entityDTOs" ref="enCkCtDriverAvailDtoMap"/>
+	</bean>
+	<util:map id="enCkCtDriverAvailSvcMap" map-class="java.util.HashMap">
+		<entry key="driverAvail" value="ckCtDrvAvailService"/>
+	</util:map>
+	<util:map id="enCkCtDriverAvailDtoMap" map-class="java.util.HashMap">
+		<entry key="driverAvail" value="com.guudint.clickargo.clictruck.common.dto.CkCtDrvAvail"/>
+	</util:map>
+	<!-- For new features to be added in enhanced dashboard (listing or details) [END] -->
+	
+
+	<!-- Master Controller [START] -->
+	<bean id="ckCtMstVehTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstVehTypeDaoImpl" />
+	<bean id="ckCtMstChassisTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstChassisTypeDaoImpl" />
+	<bean id="ckCtMstLocationTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstLocationTypeDaoImpl" />
+	<bean id="accnDao" class="com.guudint.clickargo.clictruck.admin.dao.impl.AccnDaoImpl"/>
+	<bean id="ckCtMstCargoTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstCargoTypeDaoImpl"/>
+	<bean id="ckCtMstReimbursementTypeDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstReimbursementTypeDaoImpl"/>
+	<bean id="ckCtMstOpmRateDao" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstOpmRateDaoImpl"/>
+
+	<bean id="ckCtMstUomSizeService" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstUomSizeDaoImpl" />
+	<bean id="ckCtMstUomVolumeService" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstUomVolumeDaoImpl" />
+	<bean id="ckCtMstUomWeightService" class="com.guudint.clickargo.clictruck.master.dao.impl.CkCtMstUomWeightDaoImpl" />
+
+
+	<bean id="ckCtMstVehTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstVehTypeServiceImpl"/>
+	<bean id="ckCtMstChassisTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstChassisTypeServiceImpl"/>
+	<bean id="ckCtMstLocationTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstLocationTypeServiceImpl"/>
+	<bean id="accnService" class="com.guudint.clickargo.clictruck.admin.service.impl.AccnServiceImpl"/>
+	<bean id="ckCtMstCargoTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstCargoTypeServiceImpl"/>
+	<bean id="containerLoadService" class="com.guudint.clickargo.clictruck.master.service.impl.ContainerLoadServiceImpl"/>
+	<bean id="ckMstCntTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkMstCntTypeServiceImpl"/>
+	<bean id="ckCtMstReimbursementTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstReimbursementTypeServiceImpl"/>
+	<bean id="paymentTermsToService" class="com.guudint.clickargo.clictruck.master.service.impl.PaymentTermsTOServiceImpl"/>
+	<bean id="paymentTermsCoFfService" class="com.guudint.clickargo.clictruck.master.service.impl.PaymentTermsCOFFServiceImpl"/>
+	<bean id="ckCtMstAttachTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.CkCtMstTripAttachTypeServiceImpl"/>
+	<bean id="monitoringExpiryTypeService" class="com.guudint.clickargo.clictruck.master.service.impl.MonitoringExpiryTypeServiceImpl"/>
+
+	<bean id="masterController" class="com.guudint.clickargo.clictruck.master.controller.MasterController">
+		<property name="mapServices" ref="masterServiceMap"/>
+	</bean>
+	<util:map id="masterServiceMap" map-class="java.util.HashMap">
+		<entry key="veh-type" value="ckCtMstVehTypeService"/>
+		<entry key="chassis-type" value="ckCtMstChassisTypeService"/>
+		<entry key="location-type" value="ckCtMstLocationTypeService"/>
+		<entry key="good-type" value="ckCtMstCargoTypeService"/>
+		<entry key="container-load" value="containerLoadService"/>
+		<entry key="container-type" value="ckMstCntTypeService"/>
+		<entry key="reimburse-type" value="ckCtMstReimbursementTypeService"/>
+		<entry key="paymentTermsTo" value="paymentTermsToService"/>
+		<entry key="paymentTermsCoFf" value="paymentTermsCoFfService"/>
+		<entry key="tripAttType" value="ckCtMstAttachTypeService"/>
+		<entry key="monitoringExpiryType" value="monitoringExpiryTypeService"/>
+		<entry key="uomSize" value="ckCtMstUomSizeService"/>
+		<entry key="uomVolume" value="ckCtMstUomVolumeService"/>
+		<entry key="uomWeight" value="ckCtMstUomWeightService"/>
+	</util:map>
+	
+	<!-- Master Controller [END] -->
+
+	<!-- File Attachments -->
+	<bean id="ckInvoiceFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.InvoiceAttchServiceImpl"/>
+	<bean id="ckReimbursementFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.ReimbursementsAttchServiceImpl"/>
+	<bean id="ckPlatformInvoiceFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.PlatformInvoiceAttchServiceImpl"/>
+	<bean id="ckPlatformInvoiceByInvNoFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.PlatformInvoiceByInvNoAttchServiceImpl"/>
+	<bean id="ckToInvoiceFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.ToInvoiceAttchServiceImpl"/>
+	<bean id="ckDebitNoteFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.DebitNoteAttchServiceImpl"/>
+	<bean id="ckCtPaymentFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.CtPaymentAttchServiceImpl"/>
+	<bean id="ckCtDrvFileService" class="com.guudint.clickargo.clictruck.attachments.service.impl.DriverAttchServiceImpl"/>
+
+	<bean id="ctAttachController" class="com.guudint.clicdo.common.controller.ClicTruckAttchController">
+		<property name="attachServices" ref="enCtAttchServiceMap" />
+	</bean>
+	<util:map id="enCtAttchServiceMap" map-class="java.util.HashMap">
+		<entry key="invoice" value="ckInvoiceFileService" />
+		<entry key="reimbursement" value="ckReimbursementFileService" />
+		<entry key="platformInvoice" value="ckPlatformInvoiceFileService" />
+		<entry key="platformInvoiceByInvNo" value="ckPlatformInvoiceByInvNoFileService" />
+		<entry key="toInvoice" value="ckToInvoiceFileService" />
+		<entry key="debitNote" value="ckDebitNoteFileService" />
+		<entry key="ctPayment" value="ckCtPaymentFileService" />
+		<entry key="taxreport" value="taxReportService" />
+		<entry key="taxinvoice" value="taxInvoiceService" />
+		<entry key="driver" value="ckCtDrvFileService" />
+	</util:map>
+
+	<!-- Invoice Related Controllers -->
+	<bean id="verifiedTruckJobInvoice" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckVerifiedListService"/>
+	<bean id="approvedTruckJobInvoice" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckApprovedListService"/>
+	<bean id="acknowledgedTruckJobInvoice" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckAcknowledgedListService"/>
+	
+	<bean id="truckInvoiceController" class="com.guudint.clickargo.clictruck.planexec.job.controller.TruckJobPaymentListController">
+		<property name="listServices" ref="mapListServices" />
+		<property name="listDtos" ref="mapListDtos" />
+	</bean>
+	<util:map id="mapListServices" map-class="java.util.HashMap">
+		<entry key="verified" value="verifiedTruckJobInvoice"/>
+		<entry key="approved" value="approvedTruckJobInvoice"/>
+		<entry key="acknowledged" value="acknowledgedTruckJobInvoice"/>
+	</util:map>
+	<util:map id="mapListDtos" map-class="java.util.HashMap">
+		<entry key="verified" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruckVerified"/>
+		<entry key="approved" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruckApproved"/>
+		<entry key="acknowledged" value="com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruckAcknowledged"/>
+	</util:map>
+
+	<!--  Misc listing -->
+	<bean id="jobTruckJobRejectRemarks" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobRejectRemarksListService"/>
+	<bean id="jobTruckJobRemarks" class="com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobRemarksListService"/>
+	
+	<bean id="jobTruckList" class="com.guudint.clickargo.clictruck.planexec.job.controller.TruckJobMiscListController">
+		<property name="listServices" ref="miscListServices" />
+		<property name="listDtos" ref="miscListDtos" />
+	</bean>
+	<util:map id="miscListServices" map-class="java.util.HashMap">
+		<entry key="rejectRemarks" value="jobTruckJobRejectRemarks"/>
+		<entry key="remarks" value="jobTruckJobRemarks"/>
+	</util:map>
+	<util:map id="miscListDtos" map-class="java.util.HashMap">
+		<entry key="rejectRemarks" value="com.guudint.clickargo.job.dto.CkJobReject"/>
+		<entry key="remarks" value="com.guudint.clickargo.job.dto.CkJobRemarks"/>
+	</util:map>
+
+	<!-- CK EVENT LISTENERS -->
+	<!-- TODO: To move this to clickargo if clicdo will implement the notification -->
+	<bean id="truckJobEventListenerService" class="com.guudint.clickargo.clictruck.planexec.job.event.listener.TruckJobPostEventListenerService"/>
+	<bean id="clictruckEventListener" class="com.guudint.clickargo.clictruck.planexec.job.event.listener.ClictruckJobEventListener"/>
+
+	<bean id="paymentListenerService" class="com.guudint.clickargo.clictruck.finacing.listener.PaymentPostEventListenerService"/>
+	<bean id="paymentPostEventListener" class="com.guudint.clickargo.clictruck.finacing.listener.ClictruckPaymentEventListener"/>
+	
+	<bean id="notifyExpirePostListener" class="com.guudint.clickargo.clictruck.admin.contract.listener.NotifyExpirePostListener"/>
+	<bean id="accountSuspensionPostEventListener" class="com.guudint.clickargo.clictruck.finacing.listener.AccountSuspensionPostEventListener"/>
+	
+	<bean id="contractReqPostListener" class="com.guudint.clickargo.clictruck.admin.contract.listener.ContractRequestPostListenerService"/>
+	<bean id="rateTablePostListener" class="com.guudint.clickargo.clictruck.admin.ratetable.listener.RateTablePostListenerService"/>
+	<bean id="jobTerminatePostListener" class="com.guudint.clickargo.clictruck.planexec.job.event.listener.JobTermPostListenerService"/>
+	
+	<bean id="monitoringPostListener" class="com.guudint.clickargo.clictruck.common.listener.MonitoringPostListenerService"/>
+	
+	<bean id="clictruckListenersMap" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+    	<property name="targetObject" ref="listenersMap" />
+    	<property name="targetMethod" value="putAll" />
+    	<property name="arguments">
+        	<util:map>
+            	<!-- Add event listeners specific to clictruck here -->
+            	<entry key="CONTRACT_REQ" value="contractReqPostListener" />
+            	<entry key="RATE_TABLE" value="rateTablePostListener" />
+            	<entry key="JOB_TERM" value="jobTerminatePostListener" />
+            	<entry key="VEH_DISTANCE" value="monitoringPostListener" />
+            	<entry key="VEH_EXPIRY" value="monitoringPostListener" />
+            	<entry key="DRIVER_LICENSE" value="monitoringPostListener" />
+            	<entry key="VPC_EXPIRY" value="monitoringPostListener" />
+            	<entry key="INSURANCE" value="monitoringPostListener" />
+        	</util:map>
+    	</property>
+	</bean>
+	
+	<!-- Core Account Config -->
+	<bean id="accnConfigController" class="com.guudint.clickargo.clictruck.admin.config.controller.AccnConfigController">
+		<property name="entityServices" ref="accnConfigSvcMap" />
+		<property name="entityDTOs" ref="accnConfigDTOMap" />
+	</bean>
+	<util:map id="accnConfigSvcMap" map-class="java.util.HashMap">
+		<entry key="bankDetail" value="bankDetailService"/>
+		<entry key="staticVA" value="staticVaService"/>
+	</util:map>
+	<util:map id="accnConfigDTOMap" map-class="java.util.HashMap">
+		<entry key="bankDetail" value="com.vcc.camelone.ccm.dto.CoreAccnConfig"/>
+		<entry key="staticVA" value="com.vcc.camelone.ccm.dto.CoreAccnConfig"/>
+	</util:map>
+	<bean id="bankDetailService" class="com.guudint.clickargo.clictruck.admin.config.service.impl.CoreAccnConfigServiceImpl" />
+	<bean id="staticVaService" class="com.guudint.clickargo.clictruck.va.service.impl.VirtualAccountServiceImpl" />
+	
+	<bean id="accnController" class="com.guudint.clickargo.clictruck.admin.config.controller.AccnController">
+		<property name="entityServices" ref="accnSvcMap" />
+		<property name="entityDTOs" ref="accnDTOMap" />
+	</bean>
+	<util:map id="accnSvcMap" map-class="java.util.HashMap">
+		<entry key="coreAccn" value="coreAccnService"/>
+	</util:map>
+	<util:map id="accnDTOMap" map-class="java.util.HashMap">
+		<entry key="coreAccn" value="com.vcc.camelone.ccm.dto.CoreAccn"/>
+	</util:map>
+	<bean id="coreAccnService" class="com.guudint.clickargo.clictruck.admin.config.service.impl.CoreAccnServiceImpl" />
+	
+	<!-- Dashboard Statistics -->
+	<bean id="dashboardStatisticsService" class="com.guudint.clickargo.clictruck.dashboard.service.DashboardStatisticsServiceImpl">
+		<property name="statTypeService" ref="statTypeServiceMap" />
+	</bean>
+	<bean id="truckJobsDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.TruckJobsDashboardService"/>
+	<bean id="driverAvailabilityDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.DriverAvailabilityDashboardService"/>
+	<bean id="billedJobsDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.BilledJobsDashboardService"/>
+	<bean id="jobBillingDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.JobBillingDashboardService"/>
+	<bean id="jobPaymentsDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.JobPaymentsDashboardService"/>
+	<bean id="verifiedJobsDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.VerifiedJobsDashboardService"/>
+	<bean id="approvedJobsDbService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.ApprovedJobsDashboardService"/>
+	<bean id="truckTrackingService" class="com.guudint.clickargo.clictruck.dashboard.service.impl.TruckJobsDashboardService"/>
+
+	<util:map id="statTypeServiceMap" map-class="java.util.HashMap">
+		<entry key="TRUCK_JOBS" value="truckJobsDbService"/>
+		<entry key="DRIVER_AVAILABILITY" value="driverAvailabilityDbService"/>
+		<entry key="BILLED_JOBS" value="billedJobsDbService"/>
+		<entry key="JOB_BILLING" value="jobBillingDbService"/>
+		<entry key="JOB_PAYMENTS" value="jobPaymentsDbService"/>
+		<entry key="VERIFIED_JOBS" value="verifiedJobsDbService"/>
+		<entry key="APPROVED_JOBS" value="approvedJobsDbService"/>
+		<entry key="TRUCK_TRACKING" value="truckTrackingService"/>
+		<entry key="TRACKING" value="truckTrackingService"/>
+	</util:map>
+	
+	<!-- For template download/upload feature in table listing -->
+	<bean id="rateTableTmpltService" class="com.guudint.clickargo.clictruck.common.service.impl.template.RateTableTemplateServiceImpl"/>
+	<bean id="vehicleTemplateService" class="com.guudint.clickargo.clictruck.common.service.impl.template.VehicleTemplateServiceImpl"/>
+	<bean id="driverTemplateService" class="com.guudint.clickargo.clictruck.common.service.impl.template.DriverTemplateServiceImpl"/>
+	<bean id="locationTemplateService" class="com.guudint.clickargo.clictruck.common.service.impl.template.LocationTemplateServiceImpl"/>
+	<bean id="chassisTemplateService" class="com.guudint.clickargo.clictruck.common.service.impl.template.ChassisTemplateServiceImpl"/>
+	
+	<bean id="templateController" class="com.guudint.clickargo.clictruck.common.controller.TemplateController">
+		<property name="templateServices" ref="templateServiceMap" />
+	</bean>
+	<util:map id="templateServiceMap" map-class="java.util.HashMap">
+		<entry key="rateTable" value="rateTableTmpltService" />
+		<entry key="vehicle" value="vehicleTemplateService" />
+		<entry key="driver" value="driverTemplateService" />
+		<entry key="location" value="locationTemplateService" />
+		<entry key="chassis" value="chassisTemplateService" />
+	</util:map>
+	
+	<!-- Account Inquiry Related Controller -->
+	<bean id="ckCtAccnInqReqDocsService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtAccnInqReqDocsServiceImpl"/>
+	<bean id="ckCtAccnInqReqService" class="com.guudint.clickargo.clictruck.common.service.impl.CkCtAccnInqReqServiceImpl"/>
+	
+	<bean id="ckAccnInqReqController" class="com.guudint.clickargo.clictruck.common.controller.AccnInquiryController">
+		<property name="entityServices" ref="enCkAccnInqReqServiceMap" />
+		<property name="entityDTOs" ref="enCkAccnInqReqDtoMap" />
+	</bean>
+	<util:map id="enCkAccnInqReqServiceMap" map-class="java.util.HashMap">
+		<entry key="accn" value="ckCtAccnInqReqService" />
+		<entry key="docs" value="ckCtAccnInqReqDocsService" />
+	</util:map>
+	<util:map id="enCkAccnInqReqDtoMap" map-class="java.util.HashMap">
+		<entry key="accn" value="com.guudint.clickargo.clictruck.common.dto.CkCtAccnInqReq" />
+		<entry key="docs" value="com.guudint.clickargo.clictruck.common.dto.CkCtAccnInqReqDocs" />
+	</util:map>
+	
+	
+	<!-- Shell Integration -->
+	<bean id="ckCtShellCardDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellCardDaoImpl" />
+	<bean id="ckCtShellCardTruckDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellCardTruckDaoImpl" />
+	<bean id="ckCtShellInvoiceDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellInvoiceDaoImpl" />
+	<bean id="ckCtShellInvoiceItemDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellInvoiceItemDaoImpl" />
+	<bean id="ckCtShellKioskDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellKioskDaoImpl" />
+	<bean id="ckCtShellTxnDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellTxnDaoImpl" />
+	<bean id="ckCtShellBatchWindowDao" class="com.guudint.clickargo.clictruck.admin.shell.dao.impl.CkCtShellBatchWindowDaoImpl" />
+	<bean id="ckCtShellCardService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellCardServiceImpl" />
+	<bean id="ckCtShellKioskService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellKioskServiceImpl" />
+	<bean id="ckCtShellTxnService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellTxnServiceImpl" />
+	<bean id="ckCtShellCardTruckService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellCardTruckServiceImpl" />
+	<bean id="ckCtShellInvoiceService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellInvoiceServiceImpl" />
+	<bean id="ckCtShellInvoiceItemService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellInvoiceItemServiceImpl" />
+	<bean id="ckCtShellBatchWindowService" class="com.guudint.clickargo.clictruck.admin.shell.service.impl.CkCtShellBatchWindowServiceImpl" />
+
+	<!-- API GATEWAY Service -->
+	<bean id="contractService" class="com.guudint.clickargo.clictruck.apigateway.common.services.ContractServiceImpl" />
+	<bean id="driverService" class="com.guudint.clickargo.clictruck.apigateway.common.services.DriverServiceImpl" />
+	<bean id="truckService" class="com.guudint.clickargo.clictruck.apigateway.common.services.TruckServiceImpl" />
+	<bean id="truckTypeService" class="com.guudint.clickargo.clictruck.apigateway.common.services.TruckTypeServiceImpl" />
+	<bean id="cargoService" class="com.guudint.clickargo.clictruck.apigateway.common.services.CargoServiceImpl" />
+	<bean id="epodService" class="com.guudint.clickargo.clictruck.apigateway.common.services.EpodServiceImpl" />
+	<bean id="jobService" class="com.guudint.clickargo.clictruck.apigateway.common.services.JobServicesImpl" />
+
+	<!-- API GATEWAY Services Map -->
+	<util:map id="apiGatewayMap" map-class="java.util.HashMap">
+		<entry key="contract" value="contractService"/>
+		<entry key="driver" value="driverService"/>
+		<entry key="truck" value="truckService"/>
+		<entry key="truck-type" value="truckTypeService"/>
+		<entry key="cargo-type" value="cargoService"/>
+		<entry key="epod" value="epodService"/>
+		<entry key="job" value="jobService"/>
+		<!-- Add more entries as needed -->
+	</util:map>
+	<util:map id="apiGatewayDtosMap" map-class="java.util.HashMap">
+		<entry key="job" value="com.guudint.clickargo.clictruck.apigateway.dto.Job" />
+	</util:map>
+
+	<!-- API GATEWAY Controller -->
+	<bean id="apiGatewayController" class="com.guudint.clickargo.clictruck.apigateway.common.controller.ApiGatewayController">
+		<property name="apiGatewayService" ref="apiGatewayMap"/>
+		<property name="entityDTOs" ref="apiGatewayDtosMap" />
+	</bean>
+
+	<!-- Alert Controller START -->
+	<util:map id="enCkCtAlertMap" map-class="java.util.HashMap">
+		<entry key="ckCtAlert" value="ckCtAlertService"/>
+		<entry key="ckCtMstAlert" value="ckCtMstAlertService"/>
+	</util:map>
+	<util:map id="enCkCtAlertDtoMap" map-class="java.util.HashMap">
+		<entry key="ckCtAlert" value="com.guudint.clickargo.clictruck.notification.dto.CkCtAlert"/>
+		<entry key="ckCtMstAlertService" value="com.guudint.clickargo.clictruck.notification.dto.CkCtMstAlert"/>
+	</util:map>
+
+	<bean id="ckCtAlertService" class="com.guudint.clickargo.clictruck.notification.service.CkCtAlertService" />
+	<bean id="ckCtMstAlertService" class="com.guudint.clickargo.clictruck.notification.service.CkCtMstAlertService" />
+
+	<bean id="ckCtMstAlertDao" class="com.guudint.clickargo.clictruck.notification.dao.impl.CkCtMstAlertDaoImpl" />
+	<bean id="ckCtAlertDao" class="com.guudint.clickargo.clictruck.notification.dao.impl.CkCtAlertDaoImpl" />
+
+	<bean id="alertServiceController" class="com.guudint.clickargo.clictruck.notification.controller.AlertServiceController">
+		<property name="entityServices" ref="enCkCtAlertMap" />
+		<property name="entityDTOs" ref="enCkCtAlertDtoMap" />
+	</bean>
+	<!-- Alert Controller END -->
+</beans>

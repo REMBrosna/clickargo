@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReportDsvAir" pageWidth="555" pageHeight="16" columnWidth="360" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="709ce45f-68f7-4943-88a6-16587369757e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="qty" class="java.lang.String">
+		<fieldDescription><![CDATA[qty]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[type]]></fieldDescription>
+	</field>
+	<field name="weight" class="java.lang.String">
+		<fieldDescription><![CDATA[weight]]></fieldDescription>
+	</field>
+	<field name="weightUom" class="java.lang.String">
+		<fieldDescription><![CDATA[weightUom]]></fieldDescription>
+	</field>
+	<field name="volume" class="java.lang.String">
+		<fieldDescription><![CDATA[volume]]></fieldDescription>
+	</field>
+	<field name="volumeUom" class="java.lang.String">
+		<fieldDescription><![CDATA[volumeUom]]></fieldDescription>
+	</field>
+	<field name="length" class="java.lang.String">
+		<fieldDescription><![CDATA[length]]></fieldDescription>
+	</field>
+	<field name="width" class="java.lang.String">
+		<fieldDescription><![CDATA[width]]></fieldDescription>
+	</field>
+	<field name="height" class="java.lang.String">
+		<fieldDescription><![CDATA[height]]></fieldDescription>
+	</field>
+	<field name="heightUom" class="java.lang.String">
+		<fieldDescription><![CDATA[heightUom]]></fieldDescription>
+	</field>
+	<field name="undg" class="java.lang.String">
+		<fieldDescription><![CDATA[undg]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="2" y="0" width="85" height="14" uuid="fba09a65-9034-41a2-91c6-5b43e79da75d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{qty} == null ? " " : $F{qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="88" y="0" width="70" height="14" uuid="ab232ab4-8905-42dd-b87b-a6fd440e393f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{type} == null ? " " : $F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="0" width="76" height="14" uuid="413b3869-1429-456c-bcb6-45654ad6e698">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[($F{weight} == null) ? " " : ($F{weight} +" " + ( ($F{weightUom} == null) ? " " : $F{weightUom}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="0" width="78" height="14" uuid="6219afe4-1b9f-406d-8ad8-89ce9428d8b7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[($F{volume} == null) ? " " : ($F{volume} + " "+(($F{volumeUom} == null) ? " " : $F{volumeUom}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="55" height="14" uuid="a0261337-77ee-45db-8d60-780dfb819f10">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{length} == null ? " " : $F{length}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="55" height="14" uuid="cb8b168e-14c3-49b2-b051-80473c43cff9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{width} == null ? " " : $F{width}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="55" height="14" uuid="7938f694-d862-4f62-bc5b-c6e6faae1d05">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{height} == null ? " " : $F{height}+"  "+$F{heightUom} == null ? " " : $F{heightUom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="499" y="0" width="51" height="14" uuid="96b2df1c-7bc5-45b5-8414-45582037e4f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{undg} == null ? " " : $F{undg}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="16" uuid="dbfb211f-29ec-49ef-af78-13e6a7f0e431"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="16" uuid="5f2848ec-d65c-4b36-9421-f1c150b0528c"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

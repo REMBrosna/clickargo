@@ -1,0 +1,166 @@
+[
+    {
+        "field": "init_shipment_ref",
+        "label": "INIT_SHIPMENT_REF",
+        "default": "6",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location_name",
+        "label": "INIT_FROM_LOCATION_NAME",
+        "default": "14",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location",
+        "label": "INIT_FROM_LOCATION",
+        "default": "14",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location_name",
+        "label": "INIT_TO_LOCATION_NAME",
+        "default": "15",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location",
+        "label": "INIT_TO_LOCATION",
+        "default": "15",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "job_date",
+        "label": "JOB_DATE",
+        "default": ""
+    },
+    {
+        "field": "customer",
+        "label": "CUSTOMER",
+        "default": ""
+    },
+    {
+        "field": "shipper",
+        "label": "SHIPPER",
+        "default": ""
+    },
+    {
+        "field": "consignee",
+        "label": "CONSIGNEE",
+        "default": ""
+    },
+    {
+        "field": "mawb",
+        "label": "MAWB",
+        "default": ""
+    },
+    {
+        "field": "hawb",
+        "label": "HAWB",
+        "default": ""
+    },
+    {
+        "field": "shipment_no",
+        "label": "SHIPMENT_NO",
+        "default": ""
+    },
+    {
+        "field": "model_name",
+        "label": "MODEL_NAME",
+        "default": ""
+    },
+    {
+        "field": "desc",
+        "label": "DESCRIPTION",
+        "default": ""
+    },
+    {
+        "field": "qty",
+        "label": "QUANTITY",
+        "default": ""
+    },
+    {
+        "field": "weight",
+        "label": "WEIGHT",
+        "default": ""
+    },
+    {
+        "field": "c_weight",
+        "label": "C_WEIGHT",
+        "default": ""
+    },
+    {
+        "field": "volume",
+        "label": "VOLUME",
+        "default": ""
+    },
+    {
+        "field": "po",
+        "label": "PO",
+        "default": ""
+    },
+    {
+        "field": "pickup_address",
+        "label": "PICKUP_ADDRESS",
+        "default": ""
+    },
+    {
+        "field": "dropoff_address",
+        "label": "DROPOFF_ADDRESS",
+        "default": ""
+    },
+    {
+        "field": "type",
+        "label": "TYPE",
+        "default": ""
+    },
+    {
+        "field": "gross_weight",
+        "label": "GROSS_WEIGHT",
+        "default": ""
+    },
+    {
+        "field": "total_volume",
+        "label": "TOTAL_VOLUME",
+        "default": ""
+    },
+    {
+        "field": "total_quantity",
+        "label": "TOTAL_QUANTITY",
+        "default": ""
+    },
+    {
+        "field": "remark",
+        "label": "REMARK",
+        "default": ""
+    },
+    {
+        "field": "TRUCK_TYPE",
+        "label": "REMARK",
+        "default": "24 FT",
+        "hidden": "Y"
+    },
+    {
+        "field": "pickup_datetime",
+        "label": "PICKUP_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y"
+    },
+    {
+        "field": "dropoff_datetime",
+        "label": "DROPOFF_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y"
+    },
+    {
+        "field": "to_location_mobile",
+        "label": "TO_LOCATION_MOBILE",
+        "default": "65433414",
+        "hidden": "Y"
+    }
+]

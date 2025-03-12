@@ -1,0 +1,688 @@
+{
+    "app": {
+        "vc": {
+            "list": {
+                "vcrNo": "VCR No.",
+                "shipName": "Ship Name",
+                "imoNo": "IMO No.",
+                "voyageType": "Voyage Type",
+                "eta": "ETA",
+                "etd": "ETD",
+                "submitDate": "Submit Date",
+                "status": "Status"
+            },
+            "tabs": {
+                "clearance": {
+                    "title": "Clearance",
+                    "fields": {}
+                },
+                "generalDetails": {
+                    "title": "General Details",
+                    "fields": {
+                        "port": "Port",
+                        "terminal": "Loading / Unloading Terminal",
+                        "shippingLine": "Shipping Line",
+                        "ship": "Ship",
+                        "shipType": "Ship Type",
+                        "imoNo": "IMO Number",
+                        "callSign": "Call Sign",
+                        "countryOrigin": "Country of Origin",
+                        "voyageType": "Voyage Type",
+                        "eta": "ETA",
+                        "inwardVoyageNo": "Inward Voyage Number",
+                        "etd": "ETD",
+                        "atd": "ATD",
+                        "ata": "ATA",
+                        "ataAnchor": "ATA Anchor",
+                        "outwardVoyageNumber": "Outward Voyage Number"
+                    }
+                },
+                "shipDetails": {
+                    "title": "Ship Details",
+                    "fields": {
+                        "netTonnage": "Net Tonnage",
+                        "grossTonnage": "Gross Tonnage",
+                        "deadWeight": "Dead Weight",
+                        "lengthOverAll": "Length Over All",
+                        "selectUOM": "Select UOM",
+                        "breadthOverAll": "Breadth Over All",
+                        "arrivedPilotStation": "Arrived at pilot station",
+                        "pilotBoard": "Pilot On Board",
+                        "arrivalDraft": "Arrival Draft"
+                    }
+                },
+                "cargoDetails": {
+                    "title": "Cargo Details",
+                    "fields": {
+                        "popup": {
+                            "title": "Add Cargo Details",
+                            "cargoType": "Type of Cargo",
+                            "cargoName": "Name of Cargo",
+                            "empty": "Empty",
+                            "laden": "Laden",
+                            "totalQty": "Total Quantity",
+                            "qty": "Quantity",
+                            "type": "Type",
+                            "selectCargoType": "Select Cargo Type"
+                        }
+                    }
+                }
+            }
+        },
+        "dec": {
+            "ad": {
+                "title": "Arrival Declaration",
+                "list": {}
+            },
+            "dd": {
+                "title": "Departure Declaration",
+                "list": {}
+            },
+            "pan": {
+                "title": "Pre-Arrival Notice",
+                "list": {}
+            },
+            "header": {
+                "title": "Header",
+                "tabs": {
+                    "voyage": {
+                        "title": "Voyage Details",
+                        "fields": {
+                            "vesselCallRefNo": "Vessel Call Reference Number",
+                            "voyageNo": "Voyage Number",
+                            "nameOfMaster": "Name of Master",
+                            "poa": "Port Of Arrival",
+                            "doa": "Date Of Arrival",
+                            "toa": "Time Of Arrival",
+                            "lastpoc": "Country Last Port Of Call",
+                            "port": "Port",
+                            "dutyPaidAt": "Duty Paid At",
+                            "pod": "Port Of Departure",
+                            "dod": "Date Of Departure",
+                            "tod": "Time Of Departure",
+                            "countrynextpoc": "Country Next Port Of Call",
+                            "nextpoc": "Next Port of Call",
+                            "mastersign": "Master Signature"
+                        }
+                    },
+                    "shipdetails": {
+                        "title": "Ship Details",
+                        "fields": {
+                            "imoNo": "IMO Number",
+                            "callSign": "Call Sign",
+                            "shipType": "Ship Type",
+                            "flagState": "Flag State",
+                            "applicantTin": "Applicant TIN",
+                            "country": "Country"
+                        }
+                    }
+                }
+            },
+            "fal": {
+                "title": "FAL Forms",
+                "tabs": {
+                    "general": {
+                        "title": "General Declaration",
+                        "subtitle": "General Declaration",
+                        "fields": {
+                            "cor": "7. Certificate Of Registry",
+                            "gt": "9. Gross Tonnage",
+                            "nt": "10. Net Tonnage",
+                            "crew": "13. Number of Crew",
+                            "pob": "14. Number of Passengers",
+                            "descVoy": "11. Brief Description of Voyage",
+                            "descCargo": "12. Brief Description of Cargo",
+                            "remark": "15. Remarks",
+                            "shpreq": "20. Ship Req in terms of Waste and Residue Reception Facilities"
+                        }
+                    },
+                    "cargoDeclaration": {
+                        "title": "Cargo Declaration",
+                        "fields": {
+                            "blNo": "BL No.",
+                            "marks": "Marks & Numbers",
+                            "kindofpkg": "Kind of Packages",
+                            "pkgtype": "No. / Count of the Package type",
+                            "grosswt": "Gross Weight (kg)",
+                            "msmt": "Measurement (m)"
+                        }
+                    },
+                    "shipstore": {
+                        "title": "Ship's Store Declaration",
+                        "fields": {
+                            "articlename": "Name of Article",
+                            "qty": "Quantity",
+                            "lob": "Location OnBoard",
+                            "offUse": "Official Use"
+                        }
+                    },
+                    "crewEffect": {
+                        "title": "Crew Effect's Declaration",
+                        "fields": {
+                            "fn": "Family Name",
+                            "gn": "Given Name",
+                            "ror": "Rank or rating",
+                            "eff": "Effects ineligible for relief from customs duties and taxes or subject to prohibitions or restrictions",
+                            "sign": "Signature"
+                        }
+                    },
+                    "crewList": {
+                        "title": "Crew List",
+                        "fields": {
+                            "fn": "Family Name",
+                            "gn": "Given Name",
+                            "ror": "Rank or rating",
+                            "nat": "Nationality",
+                            "dob": "Date of Birth",
+                            "pob": "Place of Birth",
+                            "gender": "Gender",
+                            "id": "Nature of identity document",
+                            "no": "Number of identity document",
+                            "state": "Issuing State of identity document",
+                            "expdate": "Expiry date of identity document",
+                            "iddoc": "Identity Document"
+                        }
+                    },
+                    "passangerList": {
+                        "title": "Passenger List",
+                        "fields": {
+                            "fn": "Family Name",
+                            "gn": "Given Name",
+                            "nat": "Nationality",
+                            "dob": "Date of Birth",
+                            "pob": "Place of Birth",
+                            "gender": "Gender",
+                            "id": "Type of Identity or Travel Document",
+                            "no": "Serial Number of Identity or travel document",
+                            "state": "Issuing State of identity document",
+                            "expdate": "Expiry date of identity document or travel document",
+                            "port": "Port of Embarkation",
+                            "visa": "Visa Number (if appropriate)",
+                            "portde": "Port of Disembarkation",
+                            "transit": "Transit Passenger or Not",
+                            "iddoc": "Identity Document"
+                        }
+                    },
+                    "dangerousGoods": {
+                        "title": "Dangerous Goods",
+                        "fields": {
+                            "sp": "Stowage Position",
+                            "rn": "Reference Number",
+                            "unno": "UN Number",
+                            "mn": "Marks & Numbers",
+                            "fr": "Freight/Vehicle Identification No(s)",
+                            "shipname": "Proper Shipping Name",
+                            "class": "Class/ (Subsidiary Risk(s))",
+                            "pgp": "Packing Group",
+                            "fp": "Additional Information/Marine Pollutant/Flash point",
+                            "no": "Number and kind of packages",
+                            "ems": "EmS",
+                            "mass": "Mass (kg) or Volume (L)"
+                        }
+                    }
+                }
+            },
+            "manifest": {
+                "title": "Manifest",
+                "tabs": {
+                    "header": {
+                        "title": "Header",
+                        "fields": {
+                            "manifestType": "Manifest Type",
+                            "manifestNo": "Manifest No.",
+                            "overdueTime": "Overdue Time",
+                            "customOffice": "Custom Office",
+                            "totalNoBOL": "Total No. of Master Bill of Lading",
+                            "totalNoPackages": "Total No. of Packages",
+                            "totalNoContainers": "Total No. of Containers",
+                            "totalGrossMass": "Total Gross Mass (kg)"
+                        }
+                    },
+                    "billOfLading": {
+                        "title": "Bill of Lading",
+                        "tableColumns": {
+                            "bolNo": "BL No.",
+                            "marksNo": "Marks & No.",
+                            "noKindPkg": "No. & Kind of Pkg.",
+                            "grossWt": "Gross Weight",
+                            "measurement": "Measurement"
+                        },
+                        "popup": {
+                            "title": "Manifest",
+                            "popupTabs": {
+                                "billInfo": {
+                                    "title": "Bill Info",
+                                    "subGroups": {
+                                        "blAwbDetails": "BL/AWB Details",
+                                        "locationDetails": "Location Details"
+                                    },
+                                    "fields": {
+                                        "blAwbNo": "BL/AWB No.",
+                                        "blAwbType": "BL/AWB Type",
+                                        "billNature": "Bill Nature",
+                                        "blAwbMasterNo": "BL/AWB Master No.",
+                                        "placeOfLoading": "Place of Loading",
+                                        "placeofUnloading": "Place of Unloading",
+                                        "portOfLoading": "Port of Loading",
+                                        "portOfUnloading": "Port of Unloading"
+                                    }
+                                },
+                                "traderInfo": {
+                                    "title": "Trader Info",
+                                    "subGroups": {
+                                        "exporter": "Exporter",
+                                        "consignee": "Consignee",
+                                        "notifyParty": "Notify Party"
+                                    },
+                                    "fields": {
+                                        "exporterName": "Name",
+                                        "exporterAddress": "Address",
+                                        "consigneeName": "Name",
+                                        "consigneeAddress": "Address",
+                                        "consigneeCode": "Code",
+                                        "notifyPartyName": "Name",
+                                        "notifyPartyAddress": "Address",
+                                        "notifyPartyCode": "Code"
+                                    }
+                                },
+                                "goodsInfo": {
+                                    "title": "Goods Info",
+                                    "subGroups": {
+                                        "goodsDetails": "Goods Details",
+                                        "sealDetails": "Seal Details"
+                                    },
+                                    "fields": {
+                                        "goodsDescription": "Goods Description",
+                                        "grossMass": "Gross Mass (kg)",
+                                        "noOfContainers": "Number of Containers",
+                                        "volumeCM": "Volume in Cubic Meters",
+                                        "noOfPkgs": "Number of Packages",
+                                        "pkgType": "Package Type",
+                                        "noOfSeals": "Number of Seals",
+                                        "info": "Information",
+                                        "sealPartyCode": "Seal Party Code",
+                                        "sealMarks": "Seal Marks",
+                                        "shippingMarks": "Shipping Marks"
+                                    }
+                                },
+                                "valueInfo": {
+                                    "title": "Value Info",
+                                    "subGroups": {
+                                        "transpoDetails": "Transport Value Details",
+                                        "freightDetails": "Freight Value Details",
+                                        "customDetails": "Custom Value Details",
+                                        "insuranceDetails": "Insurance Value Details"
+                                    },
+                                    "fields": {
+                                        "transpoVal": "Transport Value",
+                                        "transpoCurr": "Transport Currency",
+                                        "freightVal": "Freight Value",
+                                        "freightCurr": "Freight Currency",
+                                        "customVal": "Custom Value",
+                                        "customCurr": "Custom Currency",
+                                        "insureVal": "Insurance Details",
+                                        "insureCurr": "Insurance Currency"
+                                    }
+                                },
+                                "containerInfo": {
+                                    "title": "Container Info",
+                                    "tableColumns": {
+                                        "containerNo": "Container No.",
+                                        "containerType": "Container Type",
+                                        "emptyOrFull": "Empty or Full",
+                                        "sealingPartyNameCode": "Sealing Party Name / Code"
+                                    },
+                                    "popup": {
+                                        "title": "Container Details",
+                                        "subGroups": {
+                                            "containerInfo": "Container Info",
+                                            "otherInfo": "Other Info"
+                                        },
+                                        "fields": {
+                                            "containerInfo": "Container Info",
+                                            "containerType": "Container Type",
+                                            "goodsDesc": "Goods Description",
+                                            "noOfPkg": "Number of Package",
+                                            "emptyOrFull": "Empty or Full",
+                                            "grossMass": "Gross Mass (kg)",
+                                            "sealingParty": "Sealing Party",
+                                            "marks1": "Marks 1",
+                                            "marks2": "Marks 2",
+                                            "marks3": "Marks 3",
+                                            "minTemp": "Minimum Temperature",
+                                            "maxTemp": "Maximum Temperature",
+                                            "humidity": "Humidity",
+                                            "dangerousGoods": "Dangerous Goods"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "others": {
+                "title": "Other Forms",
+                "tabs": {
+                    "nillist": {
+                        "title": "NIL List",
+                        "fields": {}
+                    },
+                    "healthdeclaration": {
+                        "title": "Maritime Declaration Of Health",
+                        "fields": {}
+                    },
+                    "report": {
+                        "title": "Report Of Water Taken Onboard",
+                        "fields": {}
+                    },
+                    "narcotics": {
+                        "title": "Narcotics Drugs List",
+                        "fields": {}
+                    },
+                    "portofcall": {
+                        "title": "Port Of Call List",
+                        "fields": {}
+                    },
+                    "wasteDelivery": {
+                        "title": "Waste Delivery Notification",
+                        "fields": {}
+                    },
+                    "vaccination": {
+                        "title": "Vaccination List",
+                        "fields": {}
+                    }
+                }
+            },
+            "docAudit": {
+                "title": "Docs & Audits",
+                "tabs": {
+                    "suppDoc": {
+                        "title": "Supporting Documents",
+                        "fields": {}
+                    },
+                    "audit": {
+                        "title": "Audits",
+                        "fields": {}
+                    }
+                }
+            },
+            "queryRemark": {
+                "title": "Queries & Remarks",
+                "tabs": {
+                    "query": {
+                        "title": "Queries",
+                        "fields": {}
+                    },
+                    "remark": {
+                        "title": "Remarks",
+                        "fields": {}
+                    }
+                }
+            }
+        }
+    },
+    "vp": {
+        "list": {
+            "vesselId": "Vessel ID",
+            "shipName": "Ship Names",
+            "imoNo": "IMO No.",
+            "vesselType": "Vessel Type",
+            "vesselNames": "Vessel Names",
+            "vesselCountry": "Vessel Country",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "status": "Status"
+        },
+        "generalDetails": {
+            "label": "General Details",
+            "details": {
+                "label": "General Details",
+                "shipType": "Ship Type",
+                "shippingLine": "Shipping Line",
+                "flag": "Flag",
+                "originCountry": "Origin Country",
+                "portOfReg": "Port of Registry",
+                "callSign": "Call Sign",
+                "imo": "IMO",
+                "shipMasterName": "ShipMaster Name",
+                "mmsi": "MMSI",
+                "officialNo": "Official No",
+                "dnvRegistry": "DNV-GL Registry",
+                "builtYear": "Built Year",
+                "address1": "Build Address 1",
+                "address2": "Build Address 2",
+                "telephone": "Office Telephone",
+                "fax": "Fax",
+                "email": "Email"
+            },
+            "charterer": {
+                "label": "Charterer",
+                "name": "Name",
+                "regNo": "Registration No",
+                "email": "Email",
+                "phoneNo": "Phone No",
+                "address1": "Address 1",
+                "address2": "Address 2",
+                "country": "Country"
+            },
+            "bareBoat": {
+                "label": "BareBoat Charterer",
+                "name": "Name",
+                "regNo": "Registration No",
+                "email": "Email",
+                "phoneNo": "Phone No",
+                "address1": "Address 1",
+                "address2": "Address 2",
+                "country": "Country"
+            },
+            "operator": {
+                "label": "Operator",
+                "name": "Name",
+                "regNo": "Registration No",
+                "email": "Email",
+                "phoneNo": "Phone No",
+                "address1": "Address 1",
+                "address2": "Address 2",
+                "country": "Country"
+            }
+        },
+        "capacityAndMachine": {
+            "label": "Capacity & Machinery",
+            "loadLine": {
+                "label": "LoadLine",
+                "grossTonnage": "Gross Tonnage",
+                "netTonnage": "Net Tonnage",
+                "lengthOverall": "Length Overall",
+                "perpendicular": "Length b/w Perpendicular",
+                "breadth": "Breadth Moulded",
+                "draught": "Draught Moulded",
+                "depth": "Depth Moulded",
+                "airDraught": "Air Draught",
+                "airDraughtCrane": "Air Draught Crane"
+            },
+            "dimension": {
+                "label": "Dimension",
+                "lightVessel": "Light Vessel",
+                "sDisplacement": "Summer Displacement",
+                "sDwt": "S DWT",
+                "sDraught": "S Draught",
+                "sFreeboard": "S Freeboard",
+                "fwAllowance": "FW Allowance",
+                "fwFreeboard": "FW Freeboard",
+                "wDraught": "W Draught",
+                "dDwt": "D DWT"
+            },
+            "engine": {
+                "label": "Engine",
+                "mainEng": "Main Engine",
+                "bowThruster": "Bow Thruster",
+                "tCapacity": "Thruster Capacity",
+                "rudderType": "Rudder Type",
+                "propeller": "Propeller"
+            }
+        },
+        "safetyAndStructure": {
+            "label": "Safety & Structure",
+            "scsf": {
+                "label": "Ship Class Specific Field",
+                "container": "Containers",
+                "seCount": "Safety Equipment Count",
+                "cargoCrane": "Cargo Crane",
+                "cargoCraneDesc": "Cargo Crane Desc"
+            },
+            "extraField": {
+                "label": "Extra Fields",
+                "referSocket": "Refer Sockets",
+                "bollardPull": "Bollard Pull"
+            }
+        },
+        "docAndCert": {
+            "label": "Docs & Certificates"
+        },
+        "audit": {
+            "label": "Audits"
+        }
+    },
+    "sr": {
+        "list": {
+            "regNo": "Reg No.",
+            "regPort": "Reg Port",
+            "imoNo": "IMO No",
+            "vesselId": "Vessel ID",
+            "vesselType": "Vessel Type",
+            "vesselName": "Vessel Names",
+            "createdBy": "Created By",
+            "expiryDate": "Expiry Date",
+            "status": "Status"
+        },
+        "tabs": {
+            "generalDetails": {
+                "title": "General Details",
+                "generalDetails": {
+                    "title": "General Details",
+                    "fields": {
+                        "shipType": "Ship Type",
+                        "flag": "Flag",
+                        "originCountry": "Origin Country",
+                        "shippingLine": "Shipping Line",
+                        "portRegistry": "Port Of Registry ",
+                        "callSign": "Call Sign",
+                        "imo": "IMO",
+                        "mmsi": "MMSI",
+                        "officialNo": "Official No",
+                        "registry": "DNV-GL Registry",
+                        "builtYear": "Built Year",
+                        "builtAddress1": "Built Address 1",
+                        "builtAddress2": "Built Address 2",
+                        "officeTelephone": "Office Telephone",
+                        "fax": "Fax",
+                        "email": "Email"
+                    }
+                },
+                "charterer": {
+                    "title": "Charterer",
+                    "fields": {
+                        "name": "Name",
+                        "registrationNo": "Registration No",
+                        "email": "Email",
+                        "phoneNo": "Phone No",
+                        "address1": "Address 1",
+                        "address2": "Address 2",
+                        "country": "Country"
+                    }
+                },
+                "bareBoat": {
+                    "title": "Bare Boat Charterer",
+                    "fields": {
+                        "name": "Name",
+                        "registrationNo": "Registration No",
+                        "email": "Email",
+                        "phoneNo": "Phone No",
+                        "address1": "Address 1",
+                        "address2": "Address 2",
+                        "country": "Country"
+                    }
+                },
+                "operator": {
+                    "title": "Operator",
+                    "fields": {
+                        "name": "Name",
+                        "registrationNo": "Registration No",
+                        "email": "Email",
+                        "phoneNo": "Phone No",
+                        "address1": "Address 1",
+                        "address2": "Address 2",
+                        "country": "Country"
+                    }
+                }
+            },
+            "capacityMachinery": {
+                "title": "Capacity & Machinery",
+                "loadLine": {
+                    "title": "LoadLine",
+                    "fields": {
+                        "grossTonnage": "Gross Tonnage",
+                        "netTonnage": "Nett Tonnage",
+                        "lengthOverall": "Length Overall",
+                        "lengthBwperPerpendicular": "Length b/w Perpendicular",
+                        "bredthMoulded": "Breadth moulded",
+                        "draughtMoulded": "Draught moulded",
+                        "depthMoulded": "Depth moulded",
+                        "airDraught": "Air Draught",
+                        "airDraughtCranes": "Air Draught Cranes"
+                    }
+                },
+                "dimensions": {
+                    "title": "Dimensions",
+                    "fields": {
+                        "lightVessel": "Light Vessel ",
+                        "summerDisplacement": "Summer Displacement ",
+                        "sdwt": "S DWT ",
+                        "sDraught": "S Draught ",
+                        "sFreeboard": "S Freeboard ",
+                        "fwAllowance": "F.W Allowance ",
+                        "fwFreeboard": "F.W Freeboard ",
+                        "wDraught": "W Draught ",
+                        "wdwt": "W DWT "
+                    }
+                },
+                "engine": {
+                    "title": "Engine",
+                    "fields": {
+                        "mainEngine": "Main Engine",
+                        "bowThruster": "Bow Thruster",
+                        "thrusterCapacity": "Thruster Capacity",
+                        "rudderType": "Rudder Type",
+                        "propeller": "Propeller"
+                    }
+                }
+            },
+            "safetyStructure": {
+                "title": "Safety & Structure",
+                "shipClassSpecificFields": {
+                    "title": "Ship Class Specific Fields",
+                    "fields": {
+                        "containers": "Containers",
+                        "count": "Safety Equipment Count",
+                        "cargoCranes": "Cargo Cranes",
+                        "cargoCranesDesc": "Cargo Crane Desc"
+                    }
+                },
+                "extraFields": {
+                    "title": "Extra Fields",
+                    "fields": {
+                        "referSockets": "Refer Sockets",
+                        "bollardPull": "Bollard Pull"
+                    }
+                }
+            },
+            "header": {
+                "fields": {
+                    "ship": "Ship",
+                    "appliedPort": "Ship Registration Port"
+                }
+            }
+        }
+    }
+}

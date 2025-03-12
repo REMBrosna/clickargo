@@ -1,0 +1,205 @@
+[
+    {
+        "field": "init_shipment_ref",
+        "label": "INIT_SHIPMENT_REF",
+        "default": "12",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location_name",
+        "label": "INIT_FROM_LOCATION_NAME",
+        "default": "3",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_from_location",
+        "label": "INIT_FROM_LOCATION",
+        "default": "3",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location_name",
+        "label": "INIT_TO_LOCATION_NAME",
+        "default": "8",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "init_to_location",
+        "label": "INIT_TO_LOCATION",
+        "default": "8",
+        "hidden": "Y",
+        "type": "init"
+    },
+    {
+        "field": "job_date",
+        "label": "Job Date",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "customer_name",
+        "label": "Customer Name",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "job_type",
+        "label": "Job Type",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "pick_up_address",
+        "label": "Pick-Up Address",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "deliver_to",
+        "label": "Deliver To",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "contact_person",
+        "label": "Contact Person",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "contact_number",
+        "label": "Contact Number",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "end_consignee_name",
+        "label": "End Consignee Name",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "delivery_address",
+        "label": "Delivery Address",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "postal_code",
+        "label": "Postal Code",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "additional_info",
+        "label": "Additional Info",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "invoice_number",
+        "label": "Invoice Number",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "item_description",
+        "label": "Item Description",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "quantity",
+        "label": "Quantity",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "item_unit",
+        "label": "Item Unit",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "item_weight",
+        "label": "Item Weight (KG)",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "length_cm",
+        "label": "L (CM)",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "width_cm",
+        "label": "W (CM)",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "height_cm",
+        "label": "H (CM)",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "remark_tvh",
+        "label": "Remarks",
+        "default": "",
+        "hidden": "N",
+        "type": ""
+    },
+    {
+        "field": "customer",
+        "label": "CUSTOMER",
+        "default": "SSA",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "TRUCK_TYPE",
+        "label": "TRUCK_TYPE",
+        "default": "24 FT",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "pickup_datetime",
+        "label": "PICKUP_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y",
+        "type": ""
+    },
+    {
+        "field": "dropoff_datetime",
+        "label": "DROPOFF_DATETIME",
+        "default": "%s 12:00:00",
+        "hidden": "Y",
+        "type": ""
+    }
+]

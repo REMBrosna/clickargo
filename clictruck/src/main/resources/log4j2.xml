@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+
+    <Properties>
+        <Property name="LOG_PATTERN">%d{ISO8601} %-5p [%C{1}.%M():%L] - %msg%n</Property>
+       <!-- <Property name="BASE_DIR">/Users/ninasilva/Documents/Project/applogs</Property> -->
+        <Property name="BASE_DIR">/home/vcc/applogs</Property>
+    </Properties>
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+        </Console>
+        <RollingFile name="LogToRollingFile" fileName="${BASE_DIR}/clictruck.log" filePattern="${BASE_DIR}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                Rollover is triggered when the log file size reach 10MB
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="LogToRollingFileInfo" fileName="${BASE_DIR}/clictruck_info.log" filePattern="${BASE_DIR}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i-info.log">
+            <LevelRangeFilter minLevel="INFO" maxLevel="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <!-- Rollover is triggered when the log file size reach 10MB -->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="LogToRollingFileWarn" fileName="${BASE_DIR}/clictruck_warn.log" filePattern="${BASE_DIR}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i-warn.log">
+            <LevelRangeFilter minLevel="WARN" maxLevel="WARN" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <!-- Rollover is triggered when the log file size reach 10MB -->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="LogToRollingFileError" fileName="${BASE_DIR}/clictruck_error.log" filePattern="${BASE_DIR}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i-error.log">
+            <LevelRangeFilter minLevel="ERROR" maxLevel="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <!-- Rollover is triggered when the log file size reach 10MB -->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="LogToRollingFileDebug" fileName="${BASE_DIR}/clictruck_debug.log" filePattern="${BASE_DIR}/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i-debug.log">
+            <LevelRangeFilter minLevel="DEBUG" maxLevel="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <!-- Rollover is triggered when the log file size reach 10MB -->
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.vcc.camelone" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="com.guudint" level="info" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToRollingFileInfo"/>
+            <AppenderRef ref="LogToRollingFile"/>
+            <AppenderRef ref="LogToRollingFileWarn"/>
+            <AppenderRef ref="LogToRollingFileError"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToRollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

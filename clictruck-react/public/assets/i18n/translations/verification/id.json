@@ -1,0 +1,56 @@
+{
+    "form": {
+        "bctitledocsver": "Verifikasi Dokumen ClicDO",
+        "bctitlepayver": "Verifikasi Pembayaran ClicDO"
+    },
+    "breadcrumb": {
+        "documents": "Dokumen",
+        "payments": "Pembayaran"
+    },
+    "tabs": {
+        "docsverification": "Verifikasi Dokumen",
+        "docsreturned": "Dokumen Dikembalikan",
+        "docsquery": "Pertanyaan"
+    },
+    "header": {
+        "popuptitle": "Pertanyaan/Respon",
+        "gendetails": "Detail Umum",
+        "jobpartydetails": "Detail Job/Party ",
+        "docslist": "Daftar Dokumen DO",
+        "docsreturnedlist": "Daftar Dokumen DO yang dikembalikan",
+        "blsearch": "Search Bill of Lading",
+        "querylist": "Daftar Pertanyaan"
+    },
+    "details": {
+        "date": "Tanggal",
+        "verifiedjobs": "Job yang Terverified",
+        "confirmedjobs": "Confirmed Jobs",
+        "authparty": "Authorized Party",
+        "blno": "No BL."
+    },
+    "tooltip": {
+        "search": "Search",
+        "query": "Pertanyaan",
+        "download": "Download",
+        "viewquery": "Lihat Pertanyaan",
+        "deletequery": "Hapus Pertanyaan",
+        "rmkAdd": "Tambah Catatan",
+        "rmkView": "Lihat Catatan",
+        "rmkDelete": "Hapus Catatan"
+    },
+    "msg": {
+        "confirmAsk": "Apakah Kamu yakin?",
+        "confirmTitle": "Konfirmasi",
+        "noselected": "Tolong pilih job yang ingin diverifikasi!",
+        "jobalreadyverified": "Job sudah diverifikasi sebelumnya!",
+        "nodocstoverify": "Tidak ada dokumen untuk diverifikasi!",
+        "noretdocstoverify": "Tidak ada dokumen yang dikembalikan untuk diverifikasi!",
+        "confirmverify": "Apakah kamu yakin ingin {{ action }} Dokumen untuk{{ jobId }}?",
+        "confirmretverify": "Apakah kamu yakin ingin {{ action }} Semua dokumen yang dikembalikan untuk {{ blNo }}?",
+        "docsverified": "Dokumen diverifikasi!",
+        "docsretverified": "Dokumen dikembalikan dan diverifikasi!",
+        "qryCreated": "Pertanyaan berhasil dibuat!",
+        "qryDeleted": "Pertanyaan berhasil dihapus!",
+        "rmkCreated": "Catatan berhasil dibuat!"
+    }
+}

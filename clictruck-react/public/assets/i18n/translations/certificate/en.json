@@ -1,0 +1,16 @@
+{
+    "certificate" : {
+        "title": "Enquiry of Certificate",
+        "fields": {
+            "certificateNo": "Certificate No.",
+            "vesselName": "Vessel Name",
+            "imoNo": "IMO No.",
+            "certificateType": "Certificate Type",
+            "search": "Search"
+        },
+        "message": {
+            "certificateNotFound": "Certificate not found.",
+            "required": "This field is required"
+        }
+    }
+}

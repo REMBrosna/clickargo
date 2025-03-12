@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReportDsvSea" pageWidth="555" pageHeight="200" columnWidth="360" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="709ce45f-68f7-4943-88a6-16587369757e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<field name="qty" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="weight" class="java.lang.String"/>
+	<field name="weightUom" class="java.lang.String"/>
+	<field name="volume" class="java.lang.String"/>
+	<field name="volumeUom" class="java.lang.String"/>
+	<field name="length" class="java.lang.String"/>
+	<field name="width" class="java.lang.String"/>
+	<field name="height" class="java.lang.String"/>
+	<field name="heightUom" class="java.lang.String"/>
+	<field name="undg" class="java.lang.String"/>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement mode="Opaque" x="326" y="2" width="55" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="83d92a74-aa9e-47af-9dac-d0e37cf23be4">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value length"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="45" height="14" uuid="0a7aed69-f416-4287-8fc2-a7e985c30b2b">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{weight}+" "+$F{weightUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="384" y="2" width="55" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="72a29076-8d4e-4cd4-8810-7b212295bbe6">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value WIDTH"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="45" height="14" uuid="98797bb1-e6d3-44ac-8c52-544d4f6978a4">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{weight}+" "+$F{weightUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="442" y="2" width="55" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="548d5ec4-caf4-4953-8dee-46b6eab52d7b">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value HEIGHT"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="45" height="14" uuid="0373b720-6d8c-4432-9a47-228cee664acc">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{volume}+" "+$F{volumeUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="500" y="2" width="55" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="e92418d4-7715-479d-b133-bf64bad0b5c2">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value UNDG"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="45" height="14" uuid="46a82766-2f20-4287-aa4b-34d94e3c9d7f">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{qty}+" "+$F{type}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="243" y="2" width="78" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="d0614704-7f3c-46e0-9783-0453c727f704">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value VOLUME"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="68" height="14" uuid="9001fb2f-8e71-4da0-8093-8aab3b9a9196">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{volume}+" "+$F{volumeUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="1" y="2" width="96" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="0da05983-e28f-4926-bc34-9cd4b124f52f">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value PACKAGES"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="78" height="14" uuid="db38616c-5737-47ce-9e1d-6ad5cad3a4e8">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{weight}+" "+$F{weightUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="100" y="2" width="140" height="14" backcolor="rgba(255, 255, 255, 0.8862745)" uuid="a48ea386-1e35-4b62-827e-0ffb1b42a49d">
+					<property name="com.jaspersoft.studio.element.name" value="Frame Value TYPE"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField>
+					<reportElement x="2" y="1" width="133" height="14" uuid="6dfe539a-d9af-46db-aa9e-ce36b4e1c6ab">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{weight}+" "+$F{weightUom}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,16 @@
+{
+  "certificate": {
+    "title": "Permintaan Sertifikat",
+    "fields": {
+      "certificateNo": "Nomor Sertifikat",
+      "vesselName": "Nama Kapal",
+      "imoNo": "Nomor IMO",
+      "certificateType": "Jenis Sertifikat",
+      "search": "Search"
+    },
+    "message": {
+      "certificateNotFound": "Sertifikat tidak ditemukan",
+      "required": "Field ini diperlukan"
+    }
+  }
+}

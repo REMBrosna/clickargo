@@ -1,0 +1,96 @@
+{
+    "form": {
+        "bcTitle": "ClicDO Claim Job Details",
+        "edit": "Edit ClicDO Claim Job",
+        "view": "ClicDO Claim Job",
+        "new": "New ClicDO Claim Job"
+    },
+    "tabs": {
+        "jobDetails": "Job Details",
+        "attachments": "Attachments",
+        "tasks": "DO Claim Task",
+        "query": "Query",
+        "audit": "Audit"
+    },
+    "genDetails": {
+        "header": "General Details",
+        "id": "Job ID",
+        "shipmentType": "Shipment Type"
+    },
+    "jobDetails": {
+        "header": "Job Date Details",
+        "startDate": "Start Date",
+        "expiryDate": "Expiry Date"
+    },
+    "contDetails": {
+        "header": "Container Details",
+        "contClaimed": "Containers Claimed",
+        "contReady": "Containers Ready",
+        "contUnReady": "Containers Unready"
+    },
+    "chargeDetails": {
+        "header": "Charges Details",
+        "usd": "Job Charge (USD)",
+        "idr": "Job Charge (IDR)"
+    },
+    "selectedBlsSubTitle": {
+        "header": "Selected Bill of Ladings",
+        "popUpAddTitle": "Add Bill of Lading",
+        "popUpManualAddTitle": "Manually Add Bill of Lading"
+    },
+    "taskDetails":{
+        "containersToClaim": "Containers to Claim",
+        "noOfBl": "No. of BL",
+        "dateCreated": "Date Created",
+        "dateLastUpdate": "Date Last Updated",
+        "dateComplete": "Date Completed",
+        "status": "Status",
+        "viewTask": "View Task",
+        "doId": "DO Id.",
+        "doNo": "DO No.",
+        "bLNo": "BL No.",
+        "authoriser": "Authoriser",
+        "shippingLine": "Shiping Line",
+        "noOfContainers": "No. of Containers",
+        "viewContainers": "View Containers",
+        "containerNo": "Container No.",
+        "containerSize": "Container Size",
+        "containerType": "Container Type",
+        "containerImdoCode": "Container IMDO Code",
+        "viewBl": "View BL",
+        "downloadDO": "Download DO",
+        "downloadInvoice": "Download Invoice",
+        "notReady": "Not ready",
+        "notReadyToClaimDo": "We are not ready to claim the do!",
+        "doNotReady": "DO not ready",
+        "pleaseSelestOneDo": "Please select at lease one DO",
+        "noDoSelected": "No DO selected",
+        "addTask": "Add Task",
+        "readyDos": "Ready DOs",
+        "noReadyDo": "No more ready DO",
+        "assignToTask": "Assign to task",
+        "addReadyDohere": "Add ready DO here"
+    },
+    "tooltip": {
+        "add": "Add",
+        "slinvoice": "Shipping Line Invoice"
+    },
+    "msg": {
+        "error": "Error",
+        "confirmAsk": "Are you sure?",
+        "confirmTitle": "Confirmation",
+        "selectBl": "Please select at least one Bill of Lading!",
+        "noBlSelected": "No Bill of Lading selected",
+        "alreadyAssignedBl": "BL Already Assigned",
+        "alreadyAssignedBlMsg": "One or more BLs you selected is already confirmed by another user. Please remove the BL in your list and try again. {{blList}}",
+        "confirmSuccess": "Job confirmed successfully!",
+        "createSuccess": "Job created successfully, redirecting to edit page.",
+        "rejectSuccess": "Job {{jobId}} rejected successfully!",
+        "alreadyRejected": "Job already Rejected",
+        "alreadyRejectedMsg": "Job {{jobId}} has already been rejected by another FF user!",
+        "nonPDFNotAllowed": "Non PDF File type not allowed",
+        "duplicate": "The document type you selected already exists!",
+        "createAttSuccess": "Attachment uploaded successfully!",
+        "deleteAttSuccess": "Attachment deleted successfully!"
+    }
+}

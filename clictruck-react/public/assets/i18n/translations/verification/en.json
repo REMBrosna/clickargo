@@ -1,0 +1,56 @@
+{
+    "form": {
+        "bctitledocsver": "ClicDo Document Verification",
+        "bctitlepayver": "ClicDo Payment Verification"
+    },
+    "breadcrumb": {
+        "documents": "Documents",
+        "payments": "Payments"
+    },
+    "tabs": {
+        "docsverification": "Documents Verification",
+        "docsreturned": "Documents Returned",
+        "docsquery": "Query"
+    },
+    "header": {
+        "popuptitle": "Query/Response",
+        "gendetails": "General Details",
+        "jobpartydetails": "Job/Party Details",
+        "docslist": "DO Document List",
+        "docsreturnedlist": "DO Document Returned List",
+        "blsearch": "Search Bill of Lading",
+        "querylist": "Query List"
+    },
+    "details": {
+        "date": "Date",
+        "verifiedjobs": "Verified Jobs",
+        "confirmedjobs": "Confirmed Jobs",
+        "authparty": "Authorized Party",
+        "blno": "BL No."
+    },
+    "tooltip": {
+        "search": "Search",
+        "query": "Query",
+        "download": "Download",
+        "viewquery": "View Query",
+        "deletequery": "Delete Query",
+        "rmkAdd": "Add Remark",
+        "rmkView": "View Remark",
+        "rmkDelete": "Delete Remark"
+    },
+    "msg": {
+        "confirmTitle": "Confirmation",
+        "confirmAsk": "Are you sure?",
+        "noselected": "Please select a job to verify!",
+        "jobalreadyverified": "Job is already verified!",
+        "nodocstoverify": "No document to verify!",
+        "noretdocstoverify": "No returned document to verify!",
+        "confirmverify": "Are you sure you want to {{ action }} documents for {{ jobId }}?",
+        "confirmretverify": "Are you sure you want to {{ action }} all returned documents for for {{ blNo }}?",
+        "docsverified": "Documents verified!",
+        "docsretverified": "Documents returned and verified!",
+        "qryCreated": "Query created successfully!",
+        "qryDeleted": "Query deleted successfully!",
+        "rmkCreated": "Remark created successfully!"
+    }
+}

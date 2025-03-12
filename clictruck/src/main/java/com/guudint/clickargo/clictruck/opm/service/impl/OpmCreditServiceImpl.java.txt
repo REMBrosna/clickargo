@@ -1,0 +1,457 @@
+package com.guudint.clickargo.clictruck.opm.service.impl;
+
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.guudint.clickargo.clictruck.admin.contract.dao.CkCtContractDao;
+import com.guudint.clickargo.clictruck.finacing.constant.FinancingConstants.FinancingTypes;
+import com.guudint.clickargo.clictruck.finacing.dto.JobPaymentStates;
+import com.guudint.clickargo.clictruck.finacing.service.IPlatformInvoiceService;
+import com.guudint.clickargo.clictruck.finacing.service.ITruckOperatorPayoutService;
+import com.guudint.clickargo.clictruck.opm.dao.CkOpmDao;
+import com.guudint.clickargo.clictruck.opm.dao.CkOpmSummaryDao;
+import com.guudint.clickargo.clictruck.opm.model.TCkOpm;
+import com.guudint.clickargo.clictruck.opm.model.TCkOpmSummary;
+import com.guudint.clickargo.clictruck.opm.service.IOpmCreditService;
+import com.guudint.clickargo.clictruck.opm.service.IOpmService;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditApprovalReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditDisbursementReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditRepaymentReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditTerminationReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUnSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUtilizationReq;
+import com.guudint.clickargo.clictruck.planexec.job.dto.CkJobTruck;
+import com.guudint.clickargo.clictruck.planexec.job.service.impl.CkJobTruckService;
+import com.guudint.clickargo.clictruck.planexec.trip.dao.CkCtPaymentDao;
+import com.guudint.clickargo.clictruck.planexec.trip.dao.CkCtPlatformInvoiceDao;
+import com.guudint.clickargo.clictruck.planexec.trip.dto.CkCtPayment;
+import com.guudint.clickargo.clictruck.planexec.trip.model.TCkCtPayment;
+import com.guudint.clickargo.clictruck.planexec.trip.model.TCkCtPlatformInvoice;
+import com.guudint.clickargo.common.CkUtil;
+import com.guudint.clickargo.common.RecordStatus;
+import com.guudint.clickargo.common.dao.CkAccnDao;
+import com.guudint.clickargo.common.dao.CkAccnOpmDao;
+import com.guudint.clickargo.common.model.TCkAccn;
+import com.guudint.clickargo.common.model.TCkAccnOpm;
+import com.guudint.clickargo.master.dao.CoreAccnDao;
+import com.guudint.clickargo.master.enums.AccountTypes;
+import com.guudint.clickargo.master.enums.CreditState;
+import com.guudint.clickargo.master.enums.Currencies;
+import com.guudint.clickargo.master.enums.JournalTxnType;
+import com.guudint.clickargo.master.enums.ServiceTypes;
+import com.guudint.clickargo.master.model.TCkMstCreditState;
+import com.guudint.clickargo.master.model.TCkMstPaymentType;
+import com.guudint.clickargo.master.model.TCkMstServiceType;
+import com.guudint.clickargo.payment.dao.CkPaymentTxnDao;
+import com.guudint.clickargo.payment.enums.PaymentTypes;
+import com.guudint.clickargo.payment.model.TCkPaymentTxn;
+import com.guudint.clickargo.payment.service.impl.CkPaymentTxnService;
+import com.vcc.camelone.ccm.model.TCoreAccn;
+import com.vcc.camelone.common.exception.ParameterException;
+import com.vcc.camelone.master.model.TMstCurrency;
+
+@Service
+public class OpmCreditServiceImpl implements IOpmCreditService {
+
+	private static Logger log = Logger.getLogger(OpmCreditServiceImpl.class);
+
+	@Autowired
+	CoreAccnDao coreAccnDao;
+
+	@Autowired
+	CkCtContractDao ckCtContractDao;
+
+	@Autowired
+	CkAccnOpmDao ckCtAccnOpmDao;
+
+	@Autowired
+	CkAccnDao ckCtAccnDao;
+
+	@Autowired
+	CkOpmDao ckOpmDao;
+
+	@Autowired
+	CkOpmSummaryDao ckOpmSummaryDao;
+
+	@Autowired
+	IOpmService opmService;
+
+	@Autowired
+	private CkJobTruckService ckJobTruckService;
+
+	@Autowired
+	private ITruckOperatorPayoutService toPayoutService;
+
+	@Autowired
+	private CkPaymentTxnDao ckPaymentTxnDao;
+
+	@Autowired
+	private CkCtPaymentDao ckCtPaymentDao;
+
+	@Autowired
+	private  CkCtPlatformInvoiceDao ckCtPlatformInvoiceDao;
+
+	@Override
+	@Transactional
+	public void creditApprove(OpmCreditApprovalReq approvalReq, String financer) throws Exception {
+
+		if (null == approvalReq)
+			throw new ParameterException("approvalReq is null");
+
+		if (StringUtils.isBlank(approvalReq.getTax_no()))
+			throw new ParameterException("approvalReq.taxNo is null");
+
+		try {
+			// insert or update T_CK_CT_CONTRACT_FINANCE
+			// 1: find account by tax_no
+			TCoreAccn accn = this.findTCoreAccn(approvalReq.getTax_no());
+
+			// 2: check T_CK_ACCN
+			this.findTckAccn(accn.getAccnId(), approvalReq.getTax_no(), financer);
+
+			// 3: insert or update TCkAccnOpm
+			TCkAccnOpm accnOpm = ckCtAccnOpmDao.find(accn.getAccnId());
+			if (null == accnOpm) {
+				accnOpm = new TCkAccnOpm(accn.getAccnId());
+
+				accnOpm.setCaoType(FinancingTypes.OT.name());
+				accnOpm.setCaoFinancer(financer);
+
+				accnOpm.setCaoStatus(RecordStatus.ACTIVE.getCode());
+				accnOpm.setCaoDtCreate(new Date());
+				accnOpm.setCaoUidCreate("sys");
+			} else {
+				accnOpm.setCaoDtLupd(new Date());
+				accnOpm.setCaoUidLupd("sys");
+			}
+
+			accnOpm.setCaoDtApprove(approvalReq.getApproval_date());
+			accnOpm.setCaoCreditLimit(BigDecimal.valueOf(approvalReq.getFacility_limit()));
+			accnOpm.setCaoDtClose(approvalReq.getExpiry_date());
+
+			ckCtAccnOpmDao.saveOrUpdate(accnOpm);
+
+			// 4: insert or update T_CK_OPM table
+			TCkOpm ckOpm = ckOpmDao.findByAccnId(accn.getAccnId());
+			if (null == ckOpm) {
+				ckOpm = new TCkOpm(CkUtil.generateId(TCkOpm.PREFIX_ID));
+
+				ckOpm.setTCoreAccn(accn);
+				ckOpm.setTCkMstCreditState(new TCkMstCreditState(CreditState.APPROVED.name(), null));
+				ckOpm.setTCkMstServiceType(new TCkMstServiceType(ServiceTypes.CLICTRUCK.name()));
+				ckOpm.setTMstCurrency(new TMstCurrency(Currencies.IDR.getCode(), "", ' '));
+
+				ckOpm.setOpmFinancer(financer);
+
+				ckOpm.setOpmStatus(RecordStatus.ACTIVE.getCode());
+				ckOpm.setOpmDtCreate(new Date());
+				ckOpm.setOpmUidCreate("sys");
+			} else {
+
+				ckOpm.setOpmDtLupd(new Date());
+				ckOpm.setOpmUidLupd("sys");
+			}
+			ckOpm.setOpmDtStart(approvalReq.getApproval_date());
+			ckOpm.setOpmDtApprove(approvalReq.getApproval_date());
+			ckOpm.setOpmAmt(BigDecimal.valueOf(approvalReq.getFacility_limit()));
+			ckOpm.setOpmDtEnd(approvalReq.getExpiry_date());
+
+			ckOpmDao.saveOrUpdate(ckOpm);
+
+			// 5: insert or update T_CK_OPM_SUMMARY table
+			TCkOpmSummary opmSummary = ckOpmSummaryDao.findByAccnId(accn.getAccnId());
+			if (null == opmSummary) {
+				opmSummary = new TCkOpmSummary(CkUtil.generateId(TCkOpmSummary.PREFIX_ID));
+
+				opmSummary.setTCoreAccn(accn);
+				opmSummary.setTCkMstServiceType(new TCkMstServiceType(ServiceTypes.CLICTRUCK.name()));
+				opmSummary.setTMstCurrency(new TMstCurrency(Currencies.IDR.getCode(), "", ' '));
+
+				opmSummary.setOpmsReserve(BigDecimal.ZERO);
+				opmSummary.setOpmsUtilized(BigDecimal.ZERO);
+				opmSummary.setOpmsBalance(BigDecimal.valueOf(approvalReq.getFacility_limit()));
+
+				opmSummary.setOpmsStatus(RecordStatus.ACTIVE.getCode());
+				opmSummary.setOpmsDtCreate(new Date());
+				opmSummary.setOpmsUidCreate("sys");
+			} else {
+				opmSummary.setOpmsDtLupd(new Date());
+				opmSummary.setOpmsUidLupd("sys");
+			}
+
+			opmSummary.setOpmsAmt(BigDecimal.valueOf(approvalReq.getFacility_limit()));
+
+			ckOpmSummaryDao.saveOrUpdate(opmSummary);
+
+		} catch (Exception e) {
+			log.error("Fail to process OPM Credit Approve. ", e);
+			throw e;
+		}
+	}
+
+	@Override
+	@Transactional
+	@Deprecated
+	public void creditUtilize(OpmCreditUtilizationReq utilizationReq, String financer) throws Exception {
+
+		// Implement logic in OpmUtilizeService
+		throw new Exception("Implement logic in OpmUtilizeService class");
+	}
+
+	/**
+	 * Bank paid to TO
+	 */
+	@Override
+	@Transactional
+	public void creditDisbursement(OpmCreditDisbursementReq disbursementReq, String financer) throws Exception {
+
+		// 1: find account by tax_no
+		TCoreAccn accn = this.findTCoreAccn(disbursementReq.getTax_no());
+
+		// 2: check T_CK_ACCN
+		this.findTckAccn(accn.getAccnId(), disbursementReq.getTax_no(), financer);
+
+		// update T_CK_CREDIT_FINANCE_JOURNAL and T_CK_CREDIT_FINANCE_SUMMARY
+		CkJobTruck jobTruck = ckJobTruckService.findById(disbursementReq.getReference_number());
+
+		if (null == jobTruck) {
+			// TODO
+			// do something.
+			throw new Exception("Fail to find: " + disbursementReq.getReference_number());
+		}
+		opmService.convertResever2utilizeOpmJobTruckCredit(JournalTxnType.JOB_PAYMENT_APPROVE, jobTruck,
+				FinancingTypes.OT);
+
+		this.processJobAfterDisbursement(Arrays.asList(jobTruck.getJobId()), accn, new Date());
+	}
+
+	/**
+	 * TO repay to Bank
+	 */
+	@Override
+	@Transactional
+	public void creditRepayment(OpmCreditRepaymentReq repaymentReq, String financer) throws Exception {
+
+		// 1: find account by tax_no
+		TCoreAccn accn = this.findTCoreAccn(repaymentReq.getTax_no());
+
+		// 2: check T_CK_ACCN
+		this.findTckAccn(accn.getAccnId(), repaymentReq.getTax_no(), financer);
+
+		// reset Credit limit
+		CkJobTruck jobTruck = ckJobTruckService.findById(repaymentReq.getReference_number());
+
+		if (null == jobTruck) {
+			// TODO
+			// do something.
+			throw new Exception("Fail to find: " + repaymentReq.getReference_number());
+		}
+		opmService.reverseOpmUtilized(JournalTxnType.JOB_PAYMENT, jobTruck, FinancingTypes.OT, null);
+	}
+
+	@Override
+	@Transactional
+	public void creditTermination(OpmCreditTerminationReq terminationReq, String financer) throws Exception {
+
+		if (null == terminationReq)
+			throw new ParameterException("terminationReq is null");
+
+		if (StringUtils.isBlank(terminationReq.getTax_no()))
+			throw new ParameterException("terminationReq.taxNo is null");
+
+		// 1: find account by tax_no
+		TCoreAccn accn = this.findTCoreAccn(terminationReq.getTax_no());
+
+		// 2: check T_CK_ACCN
+		this.findTckAccn(accn.getAccnId(), terminationReq.getTax_no(), financer);
+
+		// 2: update TCkAccn
+		TCkAccnOpm accnOpm = ckCtAccnOpmDao.find(accn.getAccnId());
+		if (accnOpm != null) {
+			accnOpm.setCaoDtClose(terminationReq.getClose_date());
+			accnOpm.setCaoStatus(RecordStatus.INACTIVE.getCode());
+
+			accnOpm.setCaoDtLupd(new Date());
+			accnOpm.setCaoUidLupd("sys");
+
+			ckCtAccnOpmDao.saveOrUpdate(accnOpm);
+		} else {
+			throw new Exception("Fail to find Account OPM : " + accn.getAccnId());
+		}
+
+	}
+
+	@Override
+	@Transactional
+	public void creditSuspension(OpmCreditSuspensionReq suspensionReq, String financer) throws Exception {
+
+		if (null == suspensionReq)
+			throw new ParameterException("suspensionReq is null");
+
+		if (StringUtils.isBlank(suspensionReq.getTax_no()))
+			throw new ParameterException("suspensionReq.taxNo is null");
+
+		// insert or update T_CK_CT_CONTRACT_FINANCE
+		// 1: find account by tax_no
+		TCoreAccn accn = coreAccnDao.findAccnByUen(suspensionReq.getTax_no());
+		if (null == accn) {
+			throw new ParameterException("Fail to find account by uen: " + suspensionReq.getTax_no());
+		}
+		// 2: update TCkAccnOpm
+		TCkAccnOpm accnOpm = ckCtAccnOpmDao.find(accn.getAccnId());
+		if (accnOpm != null) {
+
+			accnOpm.setCaoDtSuspend(suspensionReq.getSuspend_date());
+			accnOpm.setCaoStatus(RecordStatus.SUSPENDED.getCode());
+
+			accnOpm.setCaoDtLupd(new Date());
+			accnOpm.setCaoUidLupd("sys");
+
+			ckCtAccnOpmDao.saveOrUpdate(accnOpm);
+		} else {
+			throw new Exception("Fail to find Account OPM : " + accn.getAccnId());
+		}
+	}
+
+	@Override
+	@Transactional
+	public void creditUnSuspension(OpmCreditUnSuspensionReq unsuspensionReq, String financer) throws Exception {
+
+		if (null == unsuspensionReq)
+			throw new ParameterException("unsuspensionReq is null");
+
+		if (StringUtils.isBlank(unsuspensionReq.getTax_no()))
+			throw new ParameterException("unsuspensionReq.taxNo is null");
+
+		//
+		// 1: find account by tax_no
+		TCoreAccn accn = coreAccnDao.findAccnByUen(unsuspensionReq.getTax_no());
+		if (null == accn) {
+			throw new ParameterException("Fail to find account by uen: " + unsuspensionReq.getTax_no());
+		}
+
+		// 2: update TCkAccnOpm
+		TCkAccnOpm accnOpm = ckCtAccnOpmDao.find(accn.getAccnId());
+		if (accnOpm != null) {
+
+			accnOpm.setCaoDtUnsuspend(unsuspensionReq.getUnsuspend_date());
+			accnOpm.setCaoStatus(RecordStatus.ACTIVE.getCode());
+
+			accnOpm.setCaoDtLupd(new Date());
+			accnOpm.setCaoUidLupd("sys");
+
+			ckCtAccnOpmDao.saveOrUpdate(accnOpm);
+		} else {
+			throw new Exception("Fail to find Account OPM : " + accn.getAccnId());
+		}
+	}
+
+	/////////////
+	private TCoreAccn findTCoreAccn(String uen) throws Exception {
+
+		TCoreAccn accn = coreAccnDao.findAccnByUen(uen);
+		if (null == accn) {
+			throw new ParameterException("Fail to find account by uen: " + uen);
+		}
+		return accn;
+	}
+
+	private TCkAccn findTckAccn(String accnId, String uen, String financer) throws Exception {
+
+		TCkAccn ckAccn = ckCtAccnDao.find(accnId);
+		if (null == ckAccn) {
+			throw new ParameterException("Fail to find CT2 account by uen: " + uen);
+		}
+
+		if (!"OPM".equalsIgnoreCase(ckAccn.getCaccnFinancingType())
+				|| !financer.equalsIgnoreCase(ckAccn.getCaccnFinancer())) {
+			throw new ParameterException("financer type is not correct for uen: " + uen);
+		}
+		return ckAccn;
+	}
+
+	/**
+	 * Process job after paid to TO
+	 * 
+	 * @throws Exception
+	 */
+	private void processJobAfterDisbursement(List<String> jobIds, TCoreAccn toAccn, Date paidDate) throws Exception {
+		//
+		TCkPaymentTxn paymentTxn = this.createPaymentTxn4OPM(jobIds, toAccn, paidDate);
+		//
+		toPayoutService.updateFundsTransferResultSuccessfulByPaymentTxn(paymentTxn, paidDate);
+	}
+
+	private TCkPaymentTxn createPaymentTxn4OPM(List<String> jobIds, TCoreAccn toAccn, Date payDate) throws Exception {
+		
+		Date now = new Date();
+		
+		TMstCurrency currency = new TMstCurrency(Currencies.IDR.getCode(), "", ' ');
+		
+		
+		TCkPaymentTxn txn = new TCkPaymentTxn();
+		txn.setPtxId(CkUtil.generateIdSynch(CkPaymentTxnService.PREFIX_DO_TXN));
+		txn.setPtxSvcRef(StringUtils.join(jobIds, ","));
+
+		txn.setTMstCurrency(currency);
+		txn.setTCkMstPaymentType(new TCkMstPaymentType(PaymentTypes.OPM.getId()));
+		txn.setTCkMstServiceType(new TCkMstServiceType(ServiceTypes.CLICTRUCK.getId()));
+
+		// payer is the one who executes the pay
+		txn.setTCoreAccnByPtxPayer(new TCoreAccn("GLI", null, ' ', null));
+		txn.setTCoreAccnByPtxPayee(toAccn);
+		
+		txn.setPtxDtCreate(now);
+		txn.setPtxPaymentState(JobPaymentStates.PAID.name());
+
+		txn.setPtxMerchantBank("-");
+		txn.setPtxPayeeBankAccn("-");
+		txn.setPtxPayeeBankAccnName("-");
+		
+		txn.setPtxStatus(RecordStatus.ACTIVE.getCode());
+		txn.setPtxUidCreate("sys");
+		txn.setPtxDtLupd(now);
+		txn.setPtxUidLupd("sys");
+		txn.setPtxDtDue(payDate);
+
+		ckPaymentTxnDao.add(txn);
+		
+		for(String jobId: jobIds) {
+			TCkCtPayment ctPymnt = new TCkCtPayment(CkUtil.generateIdSynch(CkCtPayment.PREFIX_SP_CT_PYMNT));
+			
+			List<TCkCtPlatformInvoice> invList = ckCtPlatformInvoiceDao.findByJobId(jobId, AccountTypes.ACC_TYPE_SP.name());
+			TCkCtPlatformInvoice inv = invList.get(0);
+	
+			ctPymnt.setTCkPaymentTxn(txn);
+	
+			ctPymnt.setTMstCurrency(currency);
+			ctPymnt.setCtpRef(inv.getInvId());
+			ctPymnt.setCtpJob(jobId);
+			ctPymnt.setCtpItem(String.format(IPlatformInvoiceService.PF_ITEM_DESC, jobId));
+			ctPymnt.setCtpAttach(inv.getInvLoc());
+			ctPymnt.setCtpQty((short) 1);
+			// just added tax in the calculation in case later it will be added, although
+			// this one is always 0 for now as it is included in the inv amount already.
+			ctPymnt.setCtpAmount(inv.getInvAmt());
+	
+			ctPymnt.setCtpStatus(RecordStatus.ACTIVE.getCode());
+			ctPymnt.setCtpState(JobPaymentStates.PAID.name());
+			ctPymnt.setCtpDtCreate(now);
+			ctPymnt.setCtpUidCreate("sys");
+
+			ckCtPaymentDao.add(ctPymnt);
+		}
+
+		return txn;
+	}
+}

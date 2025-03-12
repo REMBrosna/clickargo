@@ -1,0 +1,17 @@
+{
+  "statistics": {
+    "draft": "Draf",
+    "pAck": "Pending Acknowledgement",
+    "ack": "Acknowledged",
+    "pVer": "Menunggu Verifikasi",
+    "pReVer": "Menunggu Verifikasi Ulang",
+    "pApp": "Menunggu Persetujuan",
+    "pReApp": "Menunggu Persetujuan Ulang",
+    "pPay": "Pembayaran Tertunda",
+    "pInv": "Faktur Dihasilkan",
+    "app": "Disetujui",
+    "rej": "Ditolak",
+    "sub": "Dikirim",
+    "paid": "Dibayar"
+  }
+}

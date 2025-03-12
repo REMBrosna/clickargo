@@ -1,0 +1,57 @@
+import Mock from "../mock";
+
+const data = [
+  {
+    otherLangDesc: null,
+    coreMstLocale: null,
+    bbraId: "82875180687750",
+    bbraStatus: "A",
+    bbraSwift: "",
+    bbraDescription: "Bishan Branch",
+    bbraDescriptionOth: null,
+    bbraAddr1: "9 Bishan Place",
+    bbraAddr2: "#01-14 Junction 8 Shopping Centre",
+    bbraAddr3: "Singapore 579837",
+    bbraPcode: "579837",
+    bbraCity: "Singapore",
+    bbraProv: "",
+    bbraCtycode: "SG",
+    bbraTel: "6566888888",
+    bbraFax: "",
+    bbraEmail: "support@bishan.dbs.com.sg",
+    bbraDtCreate: 1543593600000,
+    bbraUidCreate: "SYS",
+    bbraDtLupd: 1543593600000,
+    bbraUidLupd: "SYS",
+    tmstBank: {
+      otherLangDesc: null,
+      coreMstLocale: null,
+      bankId: "DBS",
+      bankStatus: "A",
+      bankDescription: "DBS Bank",
+      bankDescriptionOth: null,
+      bankAddr1: "Marina Bay Financial Centre",
+      bankAddr2: "Tower 3 ",
+      bankAddr3: "Marina Bay",
+      bankPcode: "018987",
+      bankCity: "Singapore",
+      bankProv: "",
+      bankCtycode: null,
+      bankTel: "6566888888",
+      bankFax: "",
+      bankEmail: "support@dbs.com.sg",
+      bankDtCreate: 1543593600000,
+      bankUidCreate: "SYS",
+      bankDtLupd: 1543593600000,
+      bankUidLupd: "SYS",
+      bankIsOnline: "N",
+      bankLogoFileData: null,
+      logo: null,
+      logoByteStr: null,
+    },
+  },
+];
+
+Mock.onGet("/api/co/master/entity/bankbr").reply((config) => {
+    return [200, data];
+  });

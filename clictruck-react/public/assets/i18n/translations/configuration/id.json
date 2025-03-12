@@ -1,0 +1,122 @@
+{
+    "announcementType": {
+        "list": {
+            "routeSegment": "Daftar Jenis Pengumuman",
+            "table": {
+                "title": "Daftar Jenis Pengumuman",
+              "headers": {
+                "anypId": "ID Jenis Pengumuman",
+                "anypDescription": "Nama Jenis Pengumuman",
+                "anypStatus": "Status",
+                "anypIconName": "Nama Kelas CSS"
+              }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Daftar Jenis Pengumuman",
+              "sub": {
+                "edit": "Edit Jenis Pengumuman",
+                "view": "Lihat Jenis Pengumuman",
+                "new": "Jenis Pengumuman Baru"
+              }
+            },
+            "tabs": {
+              "recordDetails": {
+                "anypId": "ID Jenis Pengumuman",
+                "anypDescription": "Nama Jenis Pengumuman",
+                "anypStatus": "Status",
+                "anypColor": "Warna",
+                "anypIconName": "Nama Kelas CSS"
+              }
+            }
+        },
+      "messages": {
+        "updateSuccess": "Berhasil diperbarui",
+        "failedSubmit": "Gagal Submit"
+      }
+    },
+    "announcement": {
+      "list": {
+        "routeSegment": "Setup Pengumuman",
+        "table": {
+          "title": "Daftar Setup Pengumuman",
+          "headers": {
+            "id": "ID pengumuman",
+            "application": "Aplikasi",
+            "announceType": "Jenis Pengumuman",
+            "subject": "Subjek",
+            "public": "Publik",
+            "status": "Status"
+          }
+        }
+      },
+        "details": {
+            "breadCrumbs": {
+                "main": "Daftar Setup Pengumuman",
+              "sub": {
+                "edit": "Edit Penyiapan Pengumuman",
+                "view": "Lihat Pengaturan Pengumuman",
+                "new": "Setup Pengumuman Baru"
+              }
+            },
+            "tabs": {
+              "recordDetails": {
+                "id": "ID Pengumuman",
+                "application": "Aplikasi",
+                "announceType": "Jenis Pengumuman",
+                "subject": "Subjek",
+                "public": "Publik",
+                "status": "Status",
+                "name": "Nama Pengumuman/Deskripsi",
+                "content": "Konten",
+                "url": "URL",
+                "accountType": "Jenis Akun",
+                "fromDate": "Dari tanggal",
+                "display": "Tanggal Tampilan",
+                "endDate": "Tanggal Berakhir",
+                "all": "Semua",
+                "non": "Non"
+              }
+            }
+        }
+    },
+    "notificationPreferences": {
+      "messages": {
+        "noAppTypeAction": "Tolong Pilih Jenis Aplikasi dan Aksi sebelum memilih templat.",
+        "noSelectedError": "Silakan pilih Template terlebih dahulu.",
+        "selectSuccess": "Template berhasil dipilih.",
+        "saveSuccess": "Perubahan template berhasil dikirim.",
+        "confirmOnExit": "Ada perubahan yang belum disimpan pada data template. Apakah Anda yakin ingin keluar dari layar ini?",
+        "required": "Required",
+        "viewAllNotif": "Lihat Semua Notifikasi",
+        "projectName": "Nama Proyek",
+        "ago": "ago",
+        "notifications": "Notifikasi"
+      },
+        "details": {
+            "breadCrumbs": {
+                "main": "Preferensi Notifikasi",
+                "sub": {
+                    "view": "Lihat Preferensi Notifikasi"
+                }
+            },
+          "tabs": {
+            "subTitle1": "Pemilihan Templat",
+            "subTitle2": "Templat",
+            "recordDetails": {
+              "appType": "Jenis Aplikasi",
+              "action": "Aksi",
+              "id": "ID Preferensi Notifikasi",
+              "emailNotifTemplSubject": "Subjek Templat Email",
+              "emailNotifTemplContent": "Konten Templat Email",
+              "smsNotifTemplSubject": "Subjek Templat SMS",
+              "smsNotifTemplContent": "Konten Templat SMS",
+              "telegramNotifTemplSubject": "Subjek Templat Telegram",
+              "telegramNotifTemplContent": "Konten Templat Telegram",
+              "selectTemplate": "Pilih Templat"
+            }
+          }
+        }
+    }
+}

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InvoiceClictruck" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb669414-f35c-4e8b-bc7d-16ccf7bebe7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="defaultStyle" isDefault="true" fontSize="8">
+		<paragraph leftIndent="3"/>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF"/>
+	<subDataset name="cargoLinesSet" uuid="9442406f-e911-48c3-87cb-d9cef83eca67">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="cargoType" class="java.lang.String"/>
+		<field name="quantity" class="java.lang.String"/>
+		<field name="truckType" class="java.lang.String"/>
+		<field name="size" class="java.lang.String"/>
+		<field name="goodsDescription" class="java.lang.String"/>
+		<field name="weight" class="java.lang.String"/>
+		<field name="volume" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PARAM_INFO" class="java.util.HashMap"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cargoDetails" class="java.util.List">
+		<fieldDescription><![CDATA[cargoDetails]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="249">
+			<frame>
+				<reportElement x="1" y="0" width="280" height="108" uuid="1b5dafe1-482a-430a-b17f-90a6a68a7b5b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<image>
+					<reportElement x="7" y="5" width="153" height="25" uuid="c34465d3-2def-4f44-b757-87634678cad3"/>
+					<imageExpression><![CDATA[$P{PARAM_INFO}.get("logo")]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="9" y="49" width="252" height="58" uuid="5c1e558d-8c41-4e8a-9fe6-b718ef8bf86f"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{PARAM_INFO}.get("accnNameFf") != null ? $P{PARAM_INFO}.get("accnNameFf") : "")
++ "\n\n" 
++ ($P{PARAM_INFO}.get("accnAddressFf") != null ? $P{PARAM_INFO}.get("accnAddressFf") : "")
++ ($P{PARAM_INFO}.get("fFcity") != null ? $P{PARAM_INFO}.get("fFcity") : "") + " " 
++ ($P{PARAM_INFO}.get("fFPostalCode") != null ? $P{PARAM_INFO}.get("fFPostalCode") : "")  
++ "\nPhone No.: " + ($P{PARAM_INFO}.get("jobContactTelFf") != null ? $P{PARAM_INFO}.get("jobContactTelFf") : "") 
++ "\nFax No.: " + ($P{PARAM_INFO}.get("fFContactFax") != null ? $P{PARAM_INFO}.get("fFContactFax") : "") 
++ "\nE-mail: " + ($P{PARAM_INFO}.get("fFAccntEmail") != null ? $P{PARAM_INFO}.get("fFAccntEmail") : "")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="281" y="0" width="278" height="108" uuid="72cb8471-a13e-4070-8abe-c867d0ecaee6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="10" y="47" width="100" height="12" uuid="dcad114c-5b13-4984-b87d-fa74a46ec7dc"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DO Number]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="61" width="100" height="12" uuid="01c87685-3d1e-4791-8ab1-a00d78e27458"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[DO Receipt Date & Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="75" width="100" height="12" uuid="68fd371d-32b6-4e41-91f0-6e6dbe2736bb"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Delivery Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="89" width="100" height="12" uuid="f77032c0-7878-466a-929f-685571077871"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Printing Date & Time]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="128" y="47" width="136" height="12" uuid="cb12055c-35f0-4bdd-ba7a-7180d9755f8d"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("doNO","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="128" y="61" width="136" height="12" uuid="06aa8de9-5f53-4501-9b02-fe7c5ffb1ea6"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"))
+        : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="128" y="75" width="136" height="12" uuid="a9c0933a-e284-4214-a190-cb5d7f4727b8"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"))
+        : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="128" y="89" width="136" height="12" uuid="72e1eb98-9079-401e-9100-67a9083e62ab"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[java.time.ZonedDateTime
+        // Get current date/time in UTC+8
+        .now(java.time.ZoneId.of("UTC+08:00"))
+        // Format as "dd-MMM-yyyy HH:mm"
+        .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"))]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="109" width="558" height="118" uuid="ee2b3ba6-8595-464c-8544-1d312d8c5cd0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="9" y="12" width="60" height="18" uuid="dba1b955-47bc-4eda-ba63-95a5a74ea921"/>
+					<text><![CDATA[Ship To:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="90" y="11" width="100" height="18" uuid="2766e36a-09b9-4bd4-984c-146f01886356"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="38" width="248" height="12" uuid="54e0d892-22ed-4a01-9c2b-91a4327e42fb"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocationName","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="60" width="248" height="26" uuid="449f96ef-0540-4e4f-b25f-fd42d4e3efb9"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocation","")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="227" width="558" height="22" uuid="5929d38e-178c-4fb7-82a2-fc31a30732cb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="11" y="1" width="48" height="20" uuid="19001716-87bb-494b-bbfa-3c77e1a70f5c"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<text><![CDATA[Remark:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="61" y="1" width="378" height="20" uuid="2824d83c-bb68-4a09-bf9d-2c1c2f9c43cc"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("dropoffLocationRemark","")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="0" width="61" height="15" forecolor="#000000" uuid="51c063a0-728a-47fb-aaa0-326bd8d9cd75">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ITEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="500" y="0" width="59" height="15" forecolor="#000000" uuid="2f7901fb-dd02-4bd9-8a00-951219e29eff">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[VOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="15" width="61" height="15" forecolor="#000000" uuid="dc5ce5cd-c401-4caf-bc47-f993082634b6">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="62" y="15" width="188" height="15" forecolor="#000000" uuid="26000849-6ca4-4d7b-8722-8f0b7626e2fb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="500" y="15" width="59" height="15" forecolor="#000000" uuid="2597ac30-f938-44c1-b713-0047c157a31d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[P.O.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="62" y="0" width="188" height="15" forecolor="#000000" uuid="230c8a82-9366-4ca4-bebf-a3c508f1bcaa">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MODEL NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="250" y="0" width="100" height="15" forecolor="#000000" uuid="9060a5a5-0863-4f64-bb82-59f65546edf1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[LOCATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="350" y="0" width="150" height="15" forecolor="#000000" uuid="41dc15f2-83ab-4cff-807c-fa924b36893b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[QUANTITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="250" y="15" width="250" height="15" forecolor="#000000" uuid="84a78e25-3ce9-4adc-b16b-09eb97a5ddad">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="DejaVu Serif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REMARK]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18">
+			<subreport>
+				<reportElement x="0" y="0" width="553" height="18" uuid="8a870640-dbf8-430f-9aef-a0190d0fb129"/>
+				<parametersMapExpression><![CDATA[$P{PARAM_INFO}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[$P{PARAM_INFO}.get("cargoLines")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{PARAM_INFO}.get("subReport")]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="216">
+			<frame>
+				<reportElement x="1" y="0" width="280" height="190" uuid="878c0eb8-31a6-47fd-867c-f48709abc4e7"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="5" y="4" width="264" height="26" uuid="18865d9f-3650-4aef-a1aa-c4ca69715308"/>
+					<text><![CDATA[RECEIVED THE ABOVE IN GOOD ORDER AND CONDITION PLEASE
+REFER TO CONDITIONS ON REVERSE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="41" width="52" height="16" uuid="26db7cc8-f336-46ed-8857-1a8f642c2403"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[DATE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="68" width="52" height="16" uuid="9eb84f6d-e30c-4014-aefc-83670cd466c2"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[TIME]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="9" y="98" width="170" height="12" uuid="fc8f7d75-65b8-464b-a28d-4a2bcb48bb6f"/>
+					<text><![CDATA[RECIPIENTS SIGNATURE AND STAMP]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="9" y="110" width="250" height="39" uuid="9ac5d078-9ed2-45aa-baaa-f1cfb5e80ac9"/>
+					<box>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="81" y="111" width="39" height="39" uuid="6644b31f-a47d-4f9d-a3ac-cb81ba254691"/>
+					<imageExpression><![CDATA[$P{PARAM_INFO}.get("signatureImage")]]></imageExpression>
+				</image>
+				<textField>
+					<reportElement x="61" y="41" width="179" height="16" uuid="f3820032-9d40-4ed0-8860-b97abf178f97"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+        : ""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="61" y="68" width="179" height="16" uuid="d4a6d1ee-5c02-4850-9bf1-77248231a626">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.get("truckTimeOut") != null 
+        ? java.time.ZonedDateTime
+            // Parse the ZonedDateTime string
+            .parse($P{PARAM_INFO}.get("truckTimeOut").toString())
+            // Ensure we're showing the time in UTC+8
+            .withZoneSameInstant(java.time.ZoneId.of("UTC+08:00"))
+            // Format as "dd-MMM-yyyy HH:mm"
+            .format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss"))
+        : ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="281" y="0" width="278" height="190" uuid="7f624251-ff11-4d93-bc10-dd563fbd6944"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="1" y="1" width="276" height="30" uuid="feeeb5df-27b5-403f-8578-cf1b8d4ae572"/>
+					<box>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[       FOR WAREHOUSE USE ONLY]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="69" width="70" height="16" uuid="27877e98-90c4-41a1-aac3-840ff57c2f18"/>
+					<text><![CDATA[Gross Weight :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="86" width="70" height="16" uuid="3652950f-a097-4c79-ae70-be2bfa57d196"/>
+					<text><![CDATA[Total Vol :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="101" y="86" width="158" height="16" uuid="5d8e4bb4-645c-44ff-a072-3cefb6462c5b"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("totalVolume", "") + " CBM"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="101" y="104" width="158" height="16" uuid="6a6e76e7-73dc-41b6-afdf-dcd26161f7d7"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("totalQty","")]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="101" y="69" width="158" height="16" uuid="8b97149e-7b3c-40b7-a046-a8ca7005f703"/>
+					<textFieldExpression><![CDATA[$P{PARAM_INFO}.getOrDefault("totalWeight", "") + " KG"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="31" y="104" width="70" height="16" uuid="1c0fb911-637f-4d30-91ed-11dfdb9fa6ca"/>
+					<text><![CDATA[Total Qty :]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

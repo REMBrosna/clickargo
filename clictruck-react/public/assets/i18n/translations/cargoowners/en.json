@@ -1,0 +1,70 @@
+{
+    "form": {
+        "newJob": "New Job",
+        "viewJob": "View Job",
+        "editJob": "Edit Job",
+        "clicDoJobList": "ClicDO Job List",
+        "jobDetails": "Job Details",
+        "newJobDetails": "New Job Details",
+        "viewJobDetails": "View Job Details",
+        "editJobDetails": "Edit Job Details"
+    },
+    "tabs": {
+        "jobDetails": "Job Details",
+        "attachments": "Attachments",
+        "tripCharges": "Trip - Cargo and Charges",
+        "documents": "Documents",
+        "audit": "Audit"
+    },
+    "jobDetails": {
+        "generalDetails": "General Details",
+        "jobId": "Job ID",
+        "shipmentType": "Shipment Type",
+        "shipmentVesselNo": "Shipment Vessel No.",
+        "voyageNo": "Voyage No.",
+        "shippingLine": "Shipping Line",
+        "partyDetails": "Party Details",
+        "authoriserUsername": "Authoriser Username",
+        "party": "Party",
+        "authorized": "Authorized",
+        "unauthorized": "Unauthorized",
+        "documentDetails": "Document Details",
+        "documentNo": "Document No.",
+        "documentType": "Document Type",
+        "documentFile": "Document File",
+        "blDetails": "BL Details",
+        "blNo": "BL No.",
+        "doiContainerNo": "Container No.",
+        "blType": "BL Type",
+        "blDocumentType": "BL Document Type",
+        "blFile": "BL File",
+        "noFileChosen": "No file chosen",
+        "jobDateDetails": "Job Date Details",
+        "startDate": "Start Date",
+        "expiryDate": "Expiry Date",
+        "remarks": "Remarks"
+    },
+    "tooltip": {
+        "download": "Download"
+    },
+    "popup": {
+        "confirmation": "Confirmation",
+        "ok": "OK"
+    },
+    "msg": {
+        "saveSuccess": "Saved successfully!",
+        "updateSuccess": "Updated successfully!",
+        "submitSuccess": "Submitted successfully!",
+        "deleteSuccess": "Deleted Successfully!",
+        "cancelSuccess": "Cancelled Successfully!",
+        "nonPDFNotAllowed": "Non PDF File type not allowed",
+        "noFileUploded": "No file is uploaded",
+        "confirmation": "Are you sure you want to {{action}}?",
+        "jobIdNotAvailable": "Job ID not yet available",
+        "allowedFileExtensions": "Allowed file types are pdf, doc, docx, jpeg, jpg, png",
+        "createAttSuccess": "Attachment uploaded successfully!",
+        "duplicate": "The document type you selected already exists!",
+        "deleteAttSuccess": "Attachment deleted successfully!",
+        "error": "Error"
+    }
+}

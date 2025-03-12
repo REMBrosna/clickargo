@@ -1,0 +1,132 @@
+[
+ {
+  "field": "init_shipment_ref",
+  "label": "INIT_SHIPMENT_REF",
+  "default": "18",
+  "hidden": "Y",
+  "type": "init"
+ },
+ {
+  "field": "init_from_location_name",
+  "label": "INIT_FROM_LOCATION_NAME",
+  "default": "2",
+  "hidden": "Y",
+  "type": "init"
+ },
+ {
+  "field": "init_from_location",
+  "label": "INIT_FROM_LOCATION",
+  "default": "2",
+  "hidden": "Y",
+  "type": "init"
+ },
+ {
+  "field": "init_to_location_name",
+  "label": "INIT_TO_LOCATION_NAME",
+  "default": "3",
+  "hidden": "Y",
+  "type": "init"
+ },
+ {
+  "field": "init_to_location",
+  "label": "INIT_TO_LOCATION",
+  "default": "3",
+  "hidden": "Y",
+  "type": "init"
+ },
+ {
+  "field": "contract_id",
+  "label": "contract_id",
+  "default": "DSVS-WEITAO-BSH"
+ },
+ {
+  "field": "country",
+  "label": "country",
+  "default": ""
+ },
+ {
+  "field": "start_location",
+  "label": "start_location",
+  "default": ""
+ },
+ {
+  "field": "end_location",
+  "label": "end_location",
+  "default": ""
+ },
+ {
+  "field": "date_of_delivery",
+  "label": "date_of_delivery",
+  "default": ""
+ },
+ {
+  "field": "time_of_delivery",
+  "label": "time_of_delivery",
+  "default": ""
+ },
+ {
+  "field": "plan_date",
+  "label": "plan_date",
+  "default": ""
+ },
+ {
+  "field": "booking_date",
+  "label": "booking_date",
+  "default": ""
+ },
+ {
+  "field": "loading",
+  "label": "loading",
+  "default": ""
+ },
+ {
+  "field": "email_notification",
+  "label": "email_notification",
+  "default": ""
+ },
+ {
+  "field": "description",
+  "label": "description",
+  "default": ""
+ },
+ {
+  "field": "payment_method",
+  "label": "payment_method",
+  "default": ""
+ },
+ {
+  "field": "cargo_type",
+  "label": "cargo_type",
+  "default": ""
+ },
+ {
+  "field": "cargo_weight",
+  "label": "cargo_weight",
+  "default": ""
+ },
+ {
+  "field": "cargo_truck_type",
+  "label": "cargo_truck_type",
+  "default": ""
+ },
+ {
+  "field": "driver_username",
+  "label": "driver_username",
+  "default": ""
+ },
+ {
+  "field": "truck_license_plate_number",
+  "label": "truck_license_plate_number",
+  "default": ""
+ },
+ {
+  "field": "dropoff_remark",
+  "label": "dropoff_remark",
+  "default": ""
+ },
+ {
+  "field": "shipment_ref_no",
+  "label": "job_number",
+  "default": ""
+ }
+]

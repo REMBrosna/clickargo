@@ -1,0 +1,347 @@
+package com.guudint.clickargo.clictruck.opm.service.impl;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.guudint.clicdo.common.service.CkCtCommonService;
+import com.guudint.clickargo.clictruck.opm.OpmConstants;
+import com.guudint.clickargo.clictruck.opm.service.IOpmExelService;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditApprovalReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditDisbursementReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditRepaymentReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditTerminationReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUnSuspensionReq;
+import com.guudint.clickargo.clictruck.planexec.job.model.TCkJobTruck;
+import com.vcc.camelone.common.exception.ParameterException;
+
+@Service
+public class OpmExcelServiceImpl implements IOpmExelService {
+
+	private static Logger log = Logger.getLogger(OpmExcelServiceImpl.class);
+	SimpleDateFormat yyyyMMddSDF = new SimpleDateFormat("yyyyMMdd");
+
+	@Autowired
+	private CkCtCommonService ckCtCommonService;
+
+	@Override
+	public List<OpmCreditApprovalReq> parseApproveFile(String approveFile) throws Exception {
+
+		List<OpmCreditApprovalReq> crList = new ArrayList<OpmCreditApprovalReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(approveFile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				Row row = sheet.getRow(n);
+				OpmCreditApprovalReq cr = new OpmCreditApprovalReq();
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setFacility_limit(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setExpiry_date((row.getCell(++i).getDateCellValue()));
+				cr.setApproval_date((row.getCell(++i).getDateCellValue()));
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	@Override
+	public String generateUtilizeFile(List<TCkJobTruck> jobTruckList) throws Exception {
+
+		try {
+
+			TCkJobTruck jobTruck1 = jobTruckList.get(0);
+
+			String filePath = this.getOpsAbsoluteFileName(jobTruck1.getJobFinancer(),
+					OpmConstants.OPM_CSVFILE_PREFIX_UTILIZATION, null);
+
+			// workbook object
+			XSSFWorkbook workbook = new XSSFWorkbook();
+
+			// spreadsheet object
+			XSSFSheet spreadsheet = workbook.createSheet(" Student Data ");
+
+			// creating a row object
+			XSSFRow row;
+			int rowid = 0;
+			row = spreadsheet.createRow(rowid++);
+
+			int cellid = 0;
+			row.createCell(cellid++).setCellValue("tax_no");
+			row.createCell(cellid++).setCellValue("total"); // job total amount
+			row.createCell(cellid++).setCellValue("tenor");
+			row.createCell(cellid++).setCellValue("platform_fee");
+			row.createCell(cellid++).setCellValue("cargo_owner");
+			row.createCell(cellid++).setCellValue("remark");
+
+			row.createCell(cellid++).setCellValue("debitNote.no");
+			row.createCell(cellid++).setCellValue("debitNote.issue_date");
+			row.createCell(cellid++).setCellValue("debitNote.amt");
+			row.createCell(cellid++).setCellValue("debitNote.document");
+
+			row.createCell(cellid++).setCellValue("invoice.no");
+			row.createCell(cellid++).setCellValue("invoice.issue_date");
+			row.createCell(cellid++).setCellValue("invoice.amt");
+			row.createCell(cellid++).setCellValue("invoice.document");
+
+			row.createCell(cellid++).setCellValue("pod.no");
+			row.createCell(cellid++).setCellValue("pod.document");
+
+			row.createCell(cellid++).setCellValue("gps[0].resolution");
+			row.createCell(cellid++).setCellValue("gps[0].timestamp");
+			row.createCell(cellid++).setCellValue("gps[1].resolution");
+			row.createCell(cellid++).setCellValue("gps[1].timestamp");
+
+			row.createCell(cellid++).setCellValue("status");
+
+			// writing the data into the sheets...
+
+			for (TCkJobTruck jobTruck : jobTruckList) {
+
+				// fetch invoice;
+				// fetch PO
+				row = spreadsheet.createRow(rowid++);
+
+				cellid = 0;
+
+				row.createCell(cellid++).setCellValue(jobTruck.getTCoreAccnByJobPartyTo().getAccnCoyRegn());
+				row.createCell(cellid++).setCellValue(jobTruck.computeTotalAmt().toString());
+				row.createCell(cellid++).setCellValue(30); // payment term
+				row.createCell(cellid++).setCellValue(10.1); // compute amount from OCBC
+				row.createCell(cellid++).setCellValue(jobTruck.getTCoreAccnByJobPartyCoFf().getAccnName());
+				row.createCell(cellid++).setCellValue(jobTruck.getJobId());
+
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+
+				row.createCell(cellid++).setCellValue(30);
+				row.createCell(cellid++).setCellValue(30);
+				row.createCell(cellid++).setCellValue(jobTruck.getJobTotalCharge().toString());
+				row.createCell(cellid++);
+
+				row.createCell(cellid++).setCellValue("");
+				row.createCell(cellid++);
+
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+				row.createCell(cellid++);
+
+				row.createCell(cellid++).setCellValue(jobTruck.getTCkJob().getTCkMstJobState().getJbstId());
+
+			}
+
+			// .xlsx is the format for Excel Sheets...
+			// writing the workbook into the file...
+			FileOutputStream out;
+			out = new FileOutputStream(new File(filePath));
+
+			workbook.write(out);
+			workbook.close();
+			out.close();
+
+			return filePath;
+
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+
+	}
+
+	@Override
+	public List<OpmCreditDisbursementReq> parseDisbursementFile(String disburesementFile) throws Exception {
+
+		List<OpmCreditDisbursementReq> crList = new ArrayList<OpmCreditDisbursementReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(disburesementFile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				Row row = sheet.getRow(n);
+				OpmCreditDisbursementReq cr = new OpmCreditDisbursementReq();
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setReference_number(row.getCell(++i).getStringCellValue());
+				cr.setLoan_approved(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setProvision_fee_amt(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setDisbursement_amt(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setLoan_due_date((row.getCell(++i).getDateCellValue()));
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	@Override
+	public List<OpmCreditRepaymentReq> parseRepaymentFile(String repaymentFile) throws Exception {
+
+		List<OpmCreditRepaymentReq> crList = new ArrayList<OpmCreditRepaymentReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(repaymentFile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				Row row = sheet.getRow(n);
+				OpmCreditRepaymentReq cr = new OpmCreditRepaymentReq();
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setReference_number(row.getCell(++i).getStringCellValue());
+				/*-
+				cr.setLoan_approved(Double.valueOf(row.getCell(i).getNumericCellValue()).longValue() );
+				cr.setProvision_fee_amt(Double.valueOf(row.getCell(i).getNumericCellValue()).longValue() );
+				cr.setDisbursement_amt(Double.valueOf(row.getCell(i).getNumericCellValue()).longValue() );
+				cr.setLoan_due_date((row.getCell(++i).getDateCellValue()));
+				*/
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	@Override
+	public List<OpmCreditTerminationReq> parseTerminationFile(String terminationFile) throws Exception {
+
+		List<OpmCreditTerminationReq> crList = new ArrayList<OpmCreditTerminationReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(terminationFile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				Row row = sheet.getRow(n);
+				OpmCreditTerminationReq cr = new OpmCreditTerminationReq();
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setFacility_limit(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setClose_date((row.getCell(++i).getDateCellValue()));
+				// cr.setAction(terminationFile);
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	@Override
+	public List<OpmCreditSuspensionReq> parseSuspensionFile(String suspensionFile) throws Exception {
+
+		List<OpmCreditSuspensionReq> crList = new ArrayList<OpmCreditSuspensionReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(suspensionFile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				
+				OpmCreditSuspensionReq cr = new OpmCreditSuspensionReq();
+				
+				Row row = sheet.getRow(n);
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setFacility_limit(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setSuspend_date((row.getCell(++i).getDateCellValue()));
+				// cr.setAction(terminationFile);
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	@Override
+	public List<OpmCreditUnSuspensionReq> parseUnsuspensionFile(String unSuspensionfile) throws Exception {
+
+		List<OpmCreditUnSuspensionReq> crList = new ArrayList<OpmCreditUnSuspensionReq>();
+
+		try (FileInputStream file = new FileInputStream(new File(unSuspensionfile));
+				Workbook workbook = new XSSFWorkbook(file);) {
+
+			Sheet sheet = workbook.getSheetAt(0);
+			// DataFormatter dataFormatter = new DataFormatter();
+			for (int n = 1; n < sheet.getPhysicalNumberOfRows(); n++) {
+				
+				OpmCreditUnSuspensionReq cr = new OpmCreditUnSuspensionReq();
+				
+				Row row = sheet.getRow(n);
+				int i = row.getFirstCellNum();
+
+				cr.setTax_no(row.getCell(i).getStringCellValue());
+				cr.setFacility_limit(Double.valueOf(row.getCell(++i).getNumericCellValue()).longValue());
+				cr.setUnsuspend_date((row.getCell(++i).getDateCellValue()));
+				// cr.setAction(terminationFile);
+
+				crList.add(cr);
+			}
+		} catch (Exception e) {
+			log.error("", e);
+			throw e;
+		}
+		return crList;
+	}
+
+	///////////// /////////////////////////////////////////
+
+	private String getOpsAbsoluteFileName(String bankId, String fileType, Date date) throws ParameterException {
+
+		if (null == date) {
+			date = new Date();
+		}
+
+		String parentPath = ckCtCommonService.getCkCtAttachmentPathJob(bankId, true);
+
+		// CA_20240312.xls
+		String fileName = String.format("%s_%s.xlsx", fileType, yyyyMMddSDF.format(date));
+
+		return parentPath + File.separator + fileName;
+	}
+}

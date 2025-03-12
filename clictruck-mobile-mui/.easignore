@@ -1,0 +1,7 @@
+# ignore file when running eas build
+
+.env
+
+screens\
+components\Product.js
+components\Header.js

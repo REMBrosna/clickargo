@@ -1,0 +1,184 @@
+{
+  "register": {
+    "title": "Manage Account",
+    "list": "Account Onboarding List",
+    "header": "Account Registration",
+    "save": "Registration save successfully!",
+    "submit": "Registration submitted successfully!",
+    "approved": "Account Registration successfully approved!",
+    "rejected": "Account Registration successfully rejected!",
+    "required": "This field is required.",
+    "error": {
+      "fileTooBig": "File too big!",
+      "fileMustBe": "File must be in jpg, jpeg or png",
+      "compInitialMaxLength": "Please specify company initial (max. 5 characters)",
+      "emptyNotAllowed": "Empty Account ID or Spaces are not allowed",
+      "accountExist": "Account ID {{accnrCoIntial}} already exists!"
+    },
+    "activate": {
+      "done": {
+        "header": "Account Already Active!",
+        "msg": "Account has already been activated! Check your email for the login details."
+      },
+      "success": {
+        "header": "Account Activated!",
+        "msg": "Your Account is Successfully Activated! You will receive an Email for Username/Password shortly."
+      },
+      "notFound": {
+        "header": "Error"
+      }
+    },
+    "rejectRemarks": "Remarks",
+    "btnReject": "Reject",
+    "table": {
+      "accountRegID": "Account Reg ID",
+      "accountID": "Account ID",
+      "companyName": "Company Name",
+      "accountType": "Account Type",
+      "vatTin": "VAT/TIN",
+      "dateSubmitted": "Date Submitted",
+      "status": "Status"
+    }
+  },
+  "companyDetails": {
+    "title": "Account Details",
+    "generalDetails": "General Details",
+    "contactDetails": "Company Contact Details",
+    "address": "Company Address",
+    "accnrCoIntial": "Account ID",
+    "atypId": "Account Type",
+    "accnName": "Company Name",
+    "accnCoyRegn": "Tax Registration No",
+    "sageAccpacId": "Sage Accpac ID",
+    "fnOpts": "Options",
+    "financer": "Financer",
+    "mobileEnabled": "Enable Mobile",
+    "accnDtExpire": "Expiry Date",
+    "contactTel": "Company Phone",
+    "contactFax": "Company Fax",
+    "contactTlgrm": "Telegram Chat ID",
+    "contactEmail": "Company Email",
+    "addrLn1": "Address Line 1",
+    "addrLn2": "Address Line 2",
+    "addrLn3": "Address Line 3",
+    "addrProv": "Province",
+    "addrCity": "City/Distict",
+    "addrPcode": "Postal Code",
+    "ctyCode": "Country"
+  },
+  "adminDetail": {
+    "title": "Administrator Details"
+  },
+  "configurations": {
+    "title": "Configurations"
+  },
+  "permissions": {
+    "title": "Permissions",
+    "heading": "Enable/Disable Permissions",
+    "shipClearanceProcess": "Ship Clearance Process"
+  },
+  "userDetails": {
+    "title": "Administrator Details",
+    "usrName": "Applicant Name",
+    "usrPassNid": "ID/Passport No.",
+    "usrTitle": "Position",
+    "contactEmail": "Email ID",
+    "contactTel": "Contact No.",
+    "addrLn1": "Address (Line 1)",
+    "addrLn2": "Address (Line 2)",
+    "addrLn3": "Address (Line 3)",
+    "addrProv": "Province",
+    "addrCity": "City/District",
+    "addrPcode": "Postal Code",
+    "ctyCode": "Country"
+  },
+  "companyStamp": {
+    "title": "Company Logo Details",
+    "btnUpload": "Upload Agent/Ship Line Stamp Image",
+    "stampPhotoSpec1": "Photo Specification",
+    "stampPhotoSpec2": "Must be .jpg, .jpeg or .png",
+    "stampPhotoSpec3": "Between 50 KB and 1.5 MB in size.",
+    "stampPhotoSpec4": "Between 50 KB and 1 MB in size.",
+    "preview": "Company stamp preview"
+  },
+  "suppDocs": {
+    "newDoc": "New Document",
+    "newJobAtt": "New Job Document",
+    "title": "Supporting Documents",
+    "docs": "Documents",
+    "no": "No.",
+    "docType": "Document Type",
+    "docName": "Document Name",
+    "required": "Required",
+    "file": "File",
+    "viewFile": "View File",
+    "reference": "Reference",
+    "yes": "Yes",
+    "not": "No",
+    "type": "Type",
+    "mandatory": "Mandatory",
+    "dtValid": "Validity Date",
+    "uidLupd": "Last Updated By",
+    "dtLupd": "Last Updated Time",
+    "actions": "Actions"
+  },
+  "remarks": {
+    "title": "Remarks"
+  },
+  "validations": {
+    "accnDetails": {
+      "accnId": "Account ID is required",
+      "accnName": "Company Name is required",
+      "accnNameDuplicate": "Company Name already exists",
+      "accnCoyRegn": "Tax Registration No. is required",
+      "sageAccpacId": "Sage AccpacId is required",
+      "financeOptions": "Finance Option is required",
+      "mobileEnabled": "Mobile Option is required",
+      "accnContact": {
+        "contactTel": "Company Phone is required",
+        "contactEmail": "Company Email Address is required",
+        "emailInvalid": "Company Email Address is invalid",
+        "telInvalid": "Invalid Company Phone format. Please include +Country Code.",
+        "minLength": "Company Phone must contain at least 8 characters",
+        "contactFaxMin": "Company Fax must contain at least 8 characters",
+        "faxInvalid": "Invalid Company Fax format. Please include +Country Code."
+      },
+      "accnAddr": {
+        "addrLn1": "Address (Line 1) is required",
+        "addrLn2": "Address (Line 2) is required",
+        "addrLn3": "Address (Line 3) is required.",
+        "addrPcode": "Postal Code is required",
+        "addrCity": "City/Distict is required",
+        "addrProv": "Province is required",
+        "addrCtry": {
+          "ctyCode": "Country is required"
+        }
+      },
+      "TMstAccnType": {
+        "atypId": "Account Type is required"
+      }
+    },
+    "usrDetails": {
+      "usrId": "User ID is required",
+      "usrName": "User Name is required",
+      "usrContact": {
+        "contactTel": "User Phone is required",
+        "contactEmail": "User Email Address is required",
+        "emailInvalid": "User Email Address is invalid",
+        "usrEmailDuplicate": "User Email Address already exists",
+        "telInvalid": "Please include +Country Code and remove space"
+      },
+      "usrAddr": {
+        "addrLn1": "Address (Line 1) is required",
+        "addrLn2": "Address (Line 2) is required",
+        "addrLn3": "Address (Line 3) is required.",
+        "addrPcode": "Postal Code is required",
+        "addrCity": "City/Distict is required",
+        "addrProv": "Province is required",
+        "addrCtry": {
+          "ctyCode": "Country is required"
+        }
+      }
+    }
+  }
+}

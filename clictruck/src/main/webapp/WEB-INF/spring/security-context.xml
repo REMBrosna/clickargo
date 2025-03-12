@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+	<!-- Spring security -->
+	<security:global-method-security pre-post-annotations="enabled" />
+
+	<security:http pattern="/api/login" security="none" />
+	<security:http pattern="/api/pedi/login" security="none" />
+	<security:http pattern="/api/logout" security="none" />
+	<security:http pattern="/api/signup" security="none" />
+	<security:http pattern="/api/daily/activity/**" security="none" />
+	<!--
+	<security:http pattern="/api/co/cac/auth/**" security="none" />
+	<security:http pattern="/api/co/cac/entity/uri/**" security="none" />
+	<security:http pattern="/api/co/cac/entity/uriType/**" security="none" />
+	<security:http pattern="/api/co/cac/entity/permission/**" security="none" />
+	<security:http pattern="/api/co/cac/entity/permissionType/**" security="none" />
+	 -->
+	<security:http pattern="/api/ossp/**" security="none" />
+	<security:http pattern="/api/qrcode/**" security="none" />
+
+	<beans:bean id="restAuthenticationEntryPoint" class="com.vcc.camelone.coas.security.authentication.RestAuthenticationEntryPoint" />
+	<!-- <security:http pattern="/api/**" entry-point-ref="restAuthenticationEntryPoint"	create-session="stateless">
+		<security:csrf disabled="true" />
+		<security:custom-filter	before="FORM_LOGIN_FILTER" ref="jwtAuthenticationFilter" />
+		<security:custom-filter	after="BASIC_AUTH_FILTER" ref="jwtAuthorizationFilter" />
+	</security:http> -->
+
+	<beans:bean id="jwtAuthenticationProvider" class="com.vcc.camelone.coas.security.authentication.JwtAuthenticationProvider" />
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider ref="jwtAuthenticationProvider" />
+	</security:authentication-manager>
+
+	<beans:bean id="jwtAuthenticationSuccessHandler" class="com.vcc.camelone.coas.security.authentication.JwtAuthenticationSuccessHandler" />
+	<beans:bean id="jwtAuthenticationFilter" class="com.vcc.camelone.coas.security.authentication.filter.JwtAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+		<beans:property name="authenticationSuccessHandler" ref="jwtAuthenticationSuccessHandler" />
+	</beans:bean>
+
+	<beans:bean id="jwtAuthorizationFilter" class="com.vcc.camelone.coas.security.authorization.filter.JwtAuthorizationFilter" />
+
+	<beans:bean id="jwtUtil" class="com.vcc.camelone.coas.security.authentication.utils.JwtUtil" />
+
+	<!--  base authentication for MPWT payment and qrCode
+
+    <security:http auto-config="true" use-expressions="true">
+        <security:intercept-url pattern="/api/ossp/v1.0.0/**" access="hasAuthority('MPWT_QSSP_USER')" />
+        <security:intercept-url pattern="/api/qrcode/v2.0.0/certificate-information" access="hasAuthority('MPWT_QRCODE_USER')" />
+        <security:http-basic />
+        <security:csrf disabled="true"/>
+    </security:http>
+
+    <security:authentication-manager alias="baseAuthenticationManager">
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="mpwtOssp" password="@kcsts!9592" authorities="MPWT_QSSP_USER" />
+                <security:user name="mpwtQrcode" password="?digxr#1267" authorities="MPWT_QRCODE_USER" />
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+-->
+</beans:beans>

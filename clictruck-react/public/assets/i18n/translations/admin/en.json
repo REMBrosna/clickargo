@@ -1,0 +1,165 @@
+{
+    "user": {
+        "type": "User Details",
+        "list": {
+            "title": "Manage Users",
+            "titleAll": "Manage All Users",
+            "addTitle": "New User",
+            "usrUid": "User ID",
+            "usrName": "Name",
+            "usrEmail": "Email",
+            "usrRoles": "Roles",
+            "usrAccnId": "Account ID",
+            "usrAccn": "Account",
+            "usrAccnName": "Account Name",
+            "usrAccnType": "Account Type",
+            "usrDtCreate": "Date Created",
+            "usrDtModified": "Date Modified",
+            "usrStatus": "Status",
+            "header": "Manage Users",
+            "headerAll": "Manage All Users",
+            "bulkDownload": "Download User Registration Template",
+            "bulkAccnLabel": "Accounts",
+            "bulkNumRecLabel": "No. of Users to register",
+            "bulkUpload": "Upload Template",
+            "btnDownload": "Download",
+            "btnUpload": "Upload"
+        },
+        "details": {
+            "tabs": {
+                "profile": "Profile",
+                "notifPref": "Notification Preference",
+                "roles": "Roles"
+            },
+            "profile": {
+                "usrUid": "User ID",
+                "accnId": "Account ID",
+                "usrPassNid": "Identify Document Number",
+                "usrName": "Name",
+                "usrTitle": "Designation",
+                "usrGroup": "Group",
+                "usrDept": "Department",
+                "usrFax": "Fax No.",
+                "contactTel": "Office Telephone",
+                "mobileNo": "Mobile number",
+                "usetTelegramChatId": "Telegram Chat ID",
+                "contactEmail": "Email",
+                "addrLn1": "Address (Line 1)",
+                "addrLn2": "Address (Line 2)",
+                "addrLn3": "Address (Line 3)",
+                "addrCity": "City",
+                "addrPcode": "Postal Code",
+                "addrProv": "Province",
+                "ctyCode": "Country"
+            },
+            "roles": {
+                "availableRoles": "Available Roles",
+                "selectedRoles": "Selected Roles",
+                "text1": "To add roles, drag a role from the Available Roles to the Selected Role",
+                "text2": "To remove roles, drag a role from the Selected Role to the Available Roles"
+            },
+            "notifPref": {
+                "heading": "Please specify how you would want to receive notifications from PortEDI.",
+                "email": "Email",
+                "tlg": "Telegram",
+                "sms": "SMS"
+            },
+            "query": {
+                "title": "Reply Query",
+                "usrId": "User ID",
+                "email": "Email",
+                "btnClose": "Close",
+                "btnReset": "Reset"
+            }
+        },
+        "msg": {
+            "resetPasswordSuccess": "Password successfully reset!",
+            "activatedSuccess": "User is activated successfully",
+            "deactivatedSuccess": "User is deactivated successfully",
+            "errorRoles": "Please select at least one role.",
+            "userLoggedInRoleErr": "{{userId}} is currently logged in. Unable to update roles.",
+            "userLoggedInDeactiveErr": "{{userId}} is currently logged in. Unable to deactivate.",
+            "newUserCreated": "New User Created successfully",
+            "suspended": "User is suspended successfully",
+            "unsuspended": "User is reactivated successfully"
+        },
+        "deactivate": {
+            "title": "Deactivate User",
+            "content": "User {{userId}} is currently log in. Do you still want to make the changes?"
+        },
+        "suspend": {
+            "title": "Suspend User",
+            "content": "User {{userId}} is currently log in. Do you still want to make the changes?"
+        },
+        "roleChange": {
+            "title": "Update User",
+            "content": "User {{userId}} is currently log in. Do you still want to make the changes?"
+        },
+        "resetPwd": {
+            "title": "Reset Password"
+        },
+        "changePassword": {
+            "title": "Change Password",
+            "fields": {
+                "currentPassword": "Current Password",
+                "newPassword": "New Password",
+                "confirmPassword": "Confirm Password",
+                "passwordFormat": "Password must be 8-20 characters long. Passwords are case sensitive."
+            },
+            "errors": {
+                "length": "Password should be more than or equal to 8 characters",
+                "notMatch": "New Password and Confirm Password does not match",
+                "required": "Required"
+            }
+        },
+        "field": {
+            "overLength": "Input must be {{max}} characters or less",
+            "hasWhitespace": "Input should not contain space",
+            "alreadyExists": "User ID already exist",
+            "emailNa": "Email already exists"
+        }
+    },
+    "account": {
+        "list": {
+            "newAccn": "New Account",
+            "headerAll": "Manage All Accounts",
+            "accnDtCreate": "Date Created",
+            "accnUidCreate": "Created By",
+            "accnDtSubmitted": "Date Submitted",
+            "accnUidSubmitted": "Submitted By",
+            "accnName": "Account Name",
+            "accnCoyRegn": "Tax Regn",
+            "sageAccpacId": "Sage Accpac ID",
+            "accnPhone": "Phone",
+            "accnFax": "Fax",
+            "accnEmail": "Email",
+            "accnType": "Account Type",
+            "accnTypeFF": "Freight Forward",
+            "accnTypeCO": "Cargo Owner",
+            "accnId": "Account ID",
+            "accnStatus": "Status",
+            "headerSuspended": "Manage Suspended Account",
+            "active": "Active Account",
+            "suspended": "Suspended Account",
+            "sspdt": "Suspended Date",
+            "regdt": "Registration Date",
+            "rsmdt": "Resumption Date"
+        },
+        "msg": {
+            "activatedSuccess": "Account is activated successfully",
+            "deactivatedSuccess": "Account is deactivated successfully",
+            "accnSuspended": "Account is submitted for suspension!",
+            "accnTerminate": "Account is submitted for termination!",
+            "deleted": "Account is deleted successfully"
+        },
+        "info": {
+            "config": "The value(s) in this section can be configured on the Operations Adminstration menu."
+        }
+    },
+    "CargoOwners":{
+        "breadCrumbs": {
+            "main": "Manage Cargo Owners"
+
+        }
+    }
+}

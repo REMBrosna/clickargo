@@ -1,0 +1,29 @@
+package com.guudint.clickargo.clictruck.opm.service;
+
+import java.util.List;
+
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditApprovalReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditDisbursementReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditRepaymentReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditTerminationReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUnSuspensionReq;
+import com.guudint.clickargo.clictruck.planexec.job.model.TCkJobTruck;
+
+public interface IOpmExelService {
+	
+	public List<OpmCreditApprovalReq> parseApproveFile(String approveFile) throws Exception;
+	
+	public String generateUtilizeFile(List<TCkJobTruck> jobTruckList) throws Exception;
+	
+	public List<OpmCreditDisbursementReq> parseDisbursementFile(String disburesementFile) throws Exception;
+	
+	public List<OpmCreditRepaymentReq> parseRepaymentFile(String approveFile) throws Exception;
+	
+	public List<OpmCreditTerminationReq> parseTerminationFile(String approveFile) throws Exception;
+	
+	public List<OpmCreditSuspensionReq> parseSuspensionFile(String approveFile) throws Exception;
+	
+	public List<OpmCreditUnSuspensionReq> parseUnsuspensionFile(String approveFile) throws Exception;
+
+}

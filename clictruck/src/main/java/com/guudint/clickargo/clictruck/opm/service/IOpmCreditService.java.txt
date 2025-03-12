@@ -1,0 +1,28 @@
+package com.guudint.clickargo.clictruck.opm.service;
+
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditApprovalReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditDisbursementReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditRepaymentReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditTerminationReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUnSuspensionReq;
+import com.guudint.clickargo.clictruck.opm.third.dto.OpmCreditUtilizationReq;
+
+public interface IOpmCreditService {
+
+	public void creditApprove(OpmCreditApprovalReq approvalReq, String financer) throws Exception;
+
+	@Deprecated
+	public void creditUtilize(OpmCreditUtilizationReq utilizationReq, String financer) throws Exception;
+
+	public void creditDisbursement(OpmCreditDisbursementReq disbursementReq, String financer) throws Exception;
+
+	public void creditRepayment(OpmCreditRepaymentReq repaymentReq, String financer) throws Exception;
+
+	public void creditTermination(OpmCreditTerminationReq terminationReq, String financer) throws Exception;
+
+	public void creditSuspension(OpmCreditSuspensionReq suspensionReq, String financer) throws Exception;
+
+	public void creditUnSuspension(OpmCreditUnSuspensionReq unsuspensionReq, String financer) throws Exception;
+
+}

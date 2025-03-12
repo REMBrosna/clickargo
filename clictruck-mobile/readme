@@ -1,0 +1,12 @@
+This folder is for clictruck mobile build using react native expo.
+
+This application was build using following node version:
+	node version 18.18.2
+	npm version 10.2.0 (npm install -g npm@10.2.1)
+
+	
+This application was created using expo-router template with following script:
+	npx create-expo-app@2.1.1 --template tabs@49
+	
+This application can be started using following command:
+	npm start

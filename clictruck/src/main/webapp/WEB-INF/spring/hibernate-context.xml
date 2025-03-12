@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close"> <property name="driverClassName" value="com.mysql.jdbc.Driver"
+		/> <property name="url" value="jdbc:mysql://localhost:3306/camelone" /> <property
+		name="username" value="root" /> <property name="password" value="password"
+		/> </bean> -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/clickargo2" />
+	</bean>
+
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<bean id="hibernate4AnnotatedSessionFactory"
+		  class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+
+			<list>
+				<value>com.vcc.camelone.com.model</value>
+				<value>com.vcc.camelone.core.model</value>
+				<value>com.vcc.camelone.doc.model</value>
+				<value>com.vcc.camelone.ccm.model</value>
+				<value>com.vcc.camelone.msg.model</value>
+				<value>com.vcc.camelone.master.model</value>
+				<value>com.vcc.camelone.cac.model</value>
+				<value>com.vcc.camelone.can.model</value>
+				<value>com.vcc.camelone.locale.model</value>
+				<value>com.vcc.camelone.config.model</value>
+				<value>com.vcc.camelone.common.audit.model</value>
+				<value>com.vcc.camelone.common.exception.model</value>
+				<value>com.vcc.camelone.common.attach.model</value>
+				<value>com.vcc.camelone.announcement.model</value>
+				<value>com.vcc.camelone.reports.model</value>
+				<value>com.vcc.camelone.menu.model</value>
+				<value>com.vcc.camelone.menu.model</value>
+				<value>com.vcc.camelone.scheduler.model</value>
+				<value>com.guudint</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.default_schema">clickargo2</prop>
+				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+	<bean id="transactionManager"
+		  class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+	</bean>
+</beans>

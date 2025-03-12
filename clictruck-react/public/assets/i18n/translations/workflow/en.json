@@ -1,0 +1,17 @@
+{
+    "statistics": {
+        "draft": "Draft",
+        "pAck": "Pending Acknowledgement",
+        "ack": "Acknowledged",
+        "pVer": "Pending Verification",
+        "pReVer": "Pending ReVerification",
+        "pApp": "Pending Approval",
+        "pReApp": "Pending ReApproval",
+        "pPay": "Pending Payment",
+        "pInv": "Invoice Generated",
+        "app": "Approved",
+        "rej": "Rejected",
+        "sub": "Submitted",
+        "paid": "Paid"
+    }
+}

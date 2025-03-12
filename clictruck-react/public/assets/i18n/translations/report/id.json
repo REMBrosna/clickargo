@@ -1,0 +1,11 @@
+{
+  "vc": {
+    "section": {
+      "timePeriod": "Periode Waktu"
+    }
+  },
+  "rpt": {
+    "generate": "Generate",
+    "choose": "Choose Report Format"
+  }
+}

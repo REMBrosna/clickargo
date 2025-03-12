@@ -1,0 +1,170 @@
+{
+    "paymentAdvice": {
+        "list": {
+            "routeSegment": "Daftar Payment & Payment Advice",
+            "table": {
+                "title": "Payment & Payment Advice",
+                "title_db": "Payment Collection",
+                "headers": {
+                    "payAdvRefNo": "Nomor Referensi Pembayaran",
+                    "payInvRefNo": "Nomor Referensi Invoice",
+                    "payAdvAppNo": "Nomor Referensi Aplikasi",
+                    "payAdvAppType": "Jenis Aplikasi",
+                    "payAdvPayDate": "Tanggal Pembayaran",
+                    "payAdvPayAmt": "Jumlah Pembayaran",
+                    "payAdvStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "title": "Payment & Payment Advice",
+            "viewAdvLabel": "Lihat Pembuatan Payment Advice",
+            "payAdvLabel": "Pembuatan Payment Advice",
+            "table": {
+                "title": "Pembayaran & Pembuatan Payment Advice",
+                "detailsTitle": "Rincian Pembayaran",
+                "headers": {
+                    "payAdvRefNo": "Referensi Pembayaran Nomor",
+                    "payAdvAppNo": "Referensi Aplikasi Nomor",
+                    "payAdvAppType": "Jenis Aplikasi",
+                    "payAdvPayDate": "Tanggal Aplikasi",
+                    "payAdvPayAmt": "Jumlah pembayaran",
+                    "payAdvStatus": "Status"
+                },
+                "fields": {
+                    "balanceAmount": "Jumlah Saldo",
+                    "totalAmount": "Jumlah total",
+                    "paidAmount": "Jumlah pembayaran",
+                    "outstandingBalanceAmount": "Jumlah Saldo Terutang ",
+                    "importantText": "Catatan Penting: Referensi saran pembayaran akan disimpan setelah memilih Lanjutkan ke Pembayaran.",
+                    "btnProceedText": "Lanjutkan ke pembayaran",
+                    "btnOk": "Oke"
+                }
+            },
+            "msg": {
+                "refNoIs": "Nomor Referensi Faktur Pembayaran adalah {{payInvRefNo}}",
+                "notice": "Harap catat nomor Referensi Faktur Pembayaran dan gunakan Payment Gateway untuk melanjutkan pembayaran."
+            },
+            "bank": "Bank Pembayaran",
+            "paymentDate": "Tanggal pembayaran",
+            "uploadReceipt": "Unggah Tanda Terima",
+            "transactionNo": "Nomor Transaksi Bank",
+            "paymentAdvDate": "Tanggal Pemberitahuan Pembayaran",
+            "remarks": "Catatan",
+            "officerRemarks": "Catatan Petugas",
+            "paymentType": "Jenis pembayaran",
+            "paymentExemption": "Pembayaran Pembebasan"
+        }
+    },
+    "paymentDetails": {
+        "label": {
+            "payments": "Pembayaran",
+            "paymentDet": "Detail Pembayaran",
+            "paymentHistory": "Riwayat Pembayaran",
+            "paymentActive": "Pembayaran yang Aktif",
+            "history": "Riwayat",
+            "active": "Aktif",
+            "paymentRef": "Referensi Pembayaran",
+            "transactions": "Transaksi",
+            "listDo": "Daftar DO",
+            "viewListDo": "Lihat Daftar DO",
+            "payDo": "Bayar DO",
+            "payDos": "Bayar DO",
+            "confirmPay": "Konfirmasi Pembayaran",
+            "billingDate": "Tanggal Penagihan",
+            "paidDate": "Tanggal Terbayar",
+            "error": "Error",
+            "genDetails": "Detail Umum",
+            "listInvoices": "Daftar Invoice",
+            "total": "Total",
+            "fields": {
+                "totalIdr": "Total IDR",
+                "totalUsd": "Total USD",
+                "viaIdrVa": "Via IDR VA",
+                "viaUsdVa": "Via USD VA",
+                "viaBiFast": "Via BI Fast",
+                "bankAccnName": "Bank Account Name"
+            },
+            "confirmAction": "Konfirmasi"
+        },
+        "list": {
+            "table": {
+                "headers": {
+                    "paymentId": "ID Pembayaran",
+                    "jobId": "ID Job",
+                    "bLNo": "No BL",
+                    "paymentDate": "Tanggal Pembuatan Pembayaran",
+                    "dueDate": "Tanggal Jatuh Tempo Pembayaran",
+                    "details": "Detail",
+                    "paidDate": "Tanggal Dibayar",
+                    "invoices": "Invoice",
+                    "invoiceNo": "No. Invoice",
+                    "currency": "Mata Uang",
+                    "amount": "Jumlah",
+                    "slNo": "S/No",
+                    "itemDescription": "Deskripsi Barang",
+                    "quantity": "Kuantitas",
+                    "status": "Status",
+                    "txnStatus": "Transaction Status"
+                }
+            }
+        },
+        "msg": {
+            "selectJob": "Tolong pilih setidaknya 1 job untuk melakukan pembayaran!",
+            "noJobSelected": "Tidak ada job yang dipilih!",
+            "confirmPay": "Apakah kamu yakin ingin melakukan pembayaran {{selectedRowIds}}",
+            "confirmAction": "Are you sure you want to {{action}}?"
+        }
+    },
+    "paymentVerification": {
+        "tabs": {
+            "doPayments": "Pembayaran DO"
+        },
+        "label": {
+            "sections": {
+                "genDet": "Detail Umum",
+                "countDet": "Hitung Detail ({{date}})",
+                "totalChrgs": "Biaya Total ({{date}})",
+                "consignRegionPayList": "Daftar Pembayaran berdasarkan Wilayah Consignee ",
+                "amount": "Total"
+            },
+            "clicDoPaymentVerification": "Verifikasi Pembayaran ClicDo",
+            "payments": "Pembayaran",
+            "confirmation": "Konfirmasi",
+            "ok": "Ok",
+            "error": "Error",
+            "fields": {
+                "date": "Tanggal",
+                "totalDo": "Total DO",
+                "totalCo": "Total CO",
+                "totalClmChrgIdr": "Total Biaya Claim (IDR)",
+                "totalClmChrgUsd": "Total Biaya Claim (USD)",
+                "authriserPayDet": "Detail Pembayaran Authoriser",
+                "region": "Wilayah",
+                "amountIdr": "Amount (IDR)",
+                "amountUsd": "Amount (USD)"
+            }
+        },
+        "list": {
+            "table": {
+                "headers": {
+                    "doNo": "No DO.",
+                    "bLNo": "No BL.",
+                    "invoiceNo": "Nomor Invoice",
+                    "invoiceAmt": "Jumlah Tagihan",
+                    "currency": "Mata Uang"
+                }
+            }
+        },
+        "msg": {
+            "paymentsVerified": "Pembayaran Diverifikasi",
+            "noPaymentToVerify": "Tidak ada pembayaran yang diverifikasi!",
+            "confirmation": "Apakah kamu yakin ingin {{action}} melakukan pembayaran pada tanggal {{date}}?"
+        }
+    },
+    "errors": {
+        "jobInPayProcessing": "Following jobs {{jobIds}} already processed for payment. Please try again!",
+        "existingNewTxn": "There is already an existing NEW payment transaction. Please settle this first before doing another one.",
+        "jobNotOutPayYet": "Unable to proceed. Following jobs {{jobIds}} not paid yet to TO. Please try again."
+    }
+}

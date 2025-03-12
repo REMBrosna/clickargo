@@ -1,0 +1,374 @@
+{
+    "audits": {
+        "title": "Audits",
+        "table": {
+            "headers": {
+                "event": "Event",
+                "timestamp": "Timestamp",
+                "remarks": "Remarks",
+                "usrUid": "User ID",
+                "usrName": "User Name"
+            }
+        }
+    },
+    "common": {
+        "msg": {
+            "createSuccess": "Created {{item}} successfully!",
+            "deleteSuccess": "Deleted {{item}} successfully!",
+            "fetchFail": "`Error encountered while trying to fetch {{item}} records!",
+            "resubmitted": "Application was returned and resubmitted.",
+            "submitted": "Application has been submitted.",
+            "created": "Created successfully",
+            "assignSuccess": "Assign Successfully!",
+            "updated": "Updated successfully",
+            "approve": "Approved successfully",
+            "reject": "Rejected successfully",
+            "deleted": "Deleted successfully",
+            "canceled": "Cancel successfully",
+            "cloned": "Cloned successfully",
+            "generalAction": "{{action}} successfully!",
+            "nonImageNotAllowed": "File format not allowed, must be *.jpg, *.jpeg or *.png",
+            "noFileUploded": "No file is uploaded",
+            "fileTypeNotAllowed": "File type not allowed",
+            "rmbrsmntFileFormat": "File format not allowed, must be *.jpg, *.jpeg, *.png or *.pdf",
+            "allowedTruckPhoto": "File format not allowed, must be *.jpg, *.jpeg, *.png, *.pdf, *.doc or *.docx",
+            "noToInRateTable": "Please select Truck Operator in Job Details first!",
+            "invoceRequired": "Please input invoice data first!",
+            "truckTypeRequired": "Please select Truck Type first!",
+            "confirmation": "Are you sure you want to {{action}}?",
+            "podRequired": "Proof of Delivery document is required.",
+            "invRequired": "Invoice invalid data.",
+            "drvTrckInc": "Driver & Truck invalid data.",
+            "trckInc": "Truck Type is required.",
+            "mobileRequired": "Truck Operator Mobile Number is required.",
+            "jobDetailsInc": "Job Details invalid data.",
+            "fmTripInc": "Trip - Cargo & Charges invalid data.",
+            "dropoffMissing": "Drop-off image does not exist.",
+            "pickupMissing": "Pick-up image does not exist.",
+            "dopuMissing": "Drop-off and Pick-up images do not exist."
+        },
+        "queriesRemarks": {
+            "title": "Queries & Remarks"
+        },
+        "dataTable": {
+            "department": "Department",
+            "docName": "Document Name",
+            "docRefNo": "Document Ref. No.",
+            "docType": "Document Type",
+            "borderStatus": "Border Status",
+            "fileName": "File Name",
+            "number": "No.",
+            "portStatus": "Port status",
+            "required": "Required",
+            "docRefNoExceed": "Exceeds maximum length - 256",
+            "action": "Action"
+        },
+        "label": {
+            "docType": "Doc Type",
+            "docRefNo": "Doc Ref No.",
+            "uploadFile": "Upload File",
+            "createdBy": "Created By",
+            "createdDt": "Created Date",
+            "updatedBy": "Updated By",
+            "updatedDt": "Updated Date",
+            "mobileEnabled": "Mobile Job",
+            "financeOpt": "Finance Option"
+        },
+        "placeHolder": {
+            "contactTel": "e.g. +65 67796218",
+            "contactMobile": "e.g. +65 67796218",
+            "contactFax": "e.g. +65 67796218",
+            "contactEmail": "e.g. john.doe@clictruck.com"
+        },
+        "guide": {
+            "tooltipQm": "Toggle Page Information",
+            "btnHide": "Hide"
+        },
+        "buttons": {
+            "reply": "Reply",
+            "send": "Send",
+            "close": "Close",
+            "approve": "Approve",
+            "reject": "Reject",
+            "pay": "Pay"
+        }
+    },
+    "queries": {
+        "title": "Queries",
+        "altTitle": "Query",
+        "replyTitle": "Reply Query",
+        "viewQuery": "View Query and Response",
+        "msgs": {
+            "confirm": "Are you sure to QUERY?",
+            "replySuccess": "Replied query successfully!",
+            "notAllowed": "Not allowed to query!"
+        },
+        "buttons": {
+            "reply": "Reply",
+            "send": "Send",
+            "close": "Close",
+            "approve": "Approve",
+            "reject": "Reject"
+        },
+        "list": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "id": "Query ID",
+            "requester": "Requester",
+            "query": "Query",
+            "queryDate": "Query Date",
+            "responder": "Responder",
+            "response": "Response",
+            "responseDate": "Response Date",
+            "action": "Action"
+        },
+        "subGroup": {
+            "queryHistory": "Query History"
+        },
+        "fields": {
+            "requester": "Requester",
+            "dtQuery": "Query Date",
+            "query": "Query",
+            "response": "Response",
+            "responder": "Responder",
+            "dtResponse": "Response Date"
+        }
+    },
+    "remarks": {
+        "title": "Remarks",
+        "altTitle": "Remark",
+        "msgs": {
+            "confirm": "Are you sure to REMARK?"
+        },
+        "list": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User",
+            "remark": "Remark",
+            "dateTime": "Date Time",
+            "action": "Action"
+        },
+        "subGroup": {
+            "remarkHistory": "Remark History"
+        },
+        "fields": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User Name",
+            "dateTime": "Date Time",
+            "remark": "Remark"
+        }
+    },
+    "supportingDocs": {
+        "title": "Supporting Documents",
+        "documentDetails": "Document Details",
+        "upload": "Upload",
+        "add": "Add",
+        "fields": {
+            "category": "Category",
+            "docType": "Doc Type",
+            "docRef": "Doc Ref No.",
+            "expiryDate": "Expire Date",
+            "uploadFile": "Document File"
+        },
+        "tableHdrs": {
+            "no": "No.",
+            "docType": "Document Type",
+            "category": "Category",
+            "mandatory": "Mandatory",
+            "docName": "Document Name",
+            "docRefNo": "Document Ref No",
+            "expiredDate": "Expiry Date",
+            "trip": "Trip",
+            "atType": "Attachment Type",
+            "atName": "Attachment Name",
+            "dtCreate": "Created At",
+            "action": "Action"
+        },
+        "msg": {
+            "fileTooSmall": "File size is too small",
+            "fileSizeTooBig": "File size can't greater than {{size}} MB",
+            "fileNameLen": "File name should be less than 128 characters.",
+            "fileDuplicate": "Don't upload duplicate file name.",
+            "uploadSuccess": "Upload file successfully!",
+            "deleteSuccess": "Delete file successfully!",
+            "extsNotAllowed": "Filename extension is not allowed. Only accepting files in PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT.",
+            "onlyPdf": "Filename extension is not allowed. PDF only",
+            "allowedExts": "Supported file types - PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT",
+            "allowedPdf": "Supported file types only PDF"
+        }
+    },
+    "recoveryDetails": {
+        "officialDetails": "Official Details",
+        "tableHdrs": {
+            "event": "Event",
+            "actionDate": "Action Date (Manual)",
+            "confirmMsg": "Confirmation Remark",
+            "usrId": "User ID",
+            "usrName": "User Name"
+        }
+    },
+    "recordDetails": "Record Details",
+    "language": "Language",
+    "properties": {
+        "title": "Properties",
+        "dtCreated": "Date Created",
+        "usrCreated": "User Created",
+        "dtLupd": "Date Last Updated",
+        "usrLupd": "User Last Updated"
+    },
+    "register": {
+        "header": " Company Registration Details",
+        "tabs": {
+            "details": {
+                "title": "Company Details"
+            },
+            "admin": {
+                "title": "Administrator Details"
+            },
+            "logo": {
+                "title": "Company Logo Details"
+            },
+            "suppDocs": {
+                "title": "Supporting Documents"
+            }
+        }
+    },
+    "pageHeaders": {
+        "edit": "Edit {{appType}}",
+        "recovery": "Recovery {{appType}}",
+        "view": "View {{appType}}",
+        "new": "New {{appType}}"
+    },
+    "genericMsgs": {
+        "success": "Changes submitted successfully!",
+        "error": "Failed to save changes. Please check for errors and try again.",
+        "emptyTable": "Sorry, no matching records found"
+    },
+    "confirmMsgs": {
+        "delete": {
+            "title": "Delete",
+            "content": "Are you sure you want to DELETE {{appnId}}?"
+        },
+        "confirm": {
+            "title": "Confirm",
+            "content": "{{ftApprove}} Are you sure you want to {{action}} {{type}} {{appnId}}? ",
+            "ftApproveNote": "Custom Port will get auto Approve."
+        },
+        "proceed": {
+            "title": "Proceed",
+            "content": "Are you sure you want to {{action}} {{type}} {{paymentRefNo}}?"
+        },
+        "clone": {
+            "title": "Clone",
+            "content": "Are you sure you want to clone {{appnId}}?"
+        },
+        "confirmDates": {
+            "title": "Confirm",
+            "content": "Are you sure you want to Save {{fields}}?"
+        },
+        "confirmRecovery": {
+            "title": "Confirm",
+            "content": "Recovery Mode will not able to compromise again later.\n Are you sure want to enable it now?"
+        }
+    },
+    "template": {
+        "upload": "Upload Template"
+    },
+    "validationMsgs": {
+        "overLength": "This field allow input 10000 characters only",
+        "required": "This field is required!",
+        "lengthValidation": "Length should not be more than {{length}} characters.",
+        "rangeValidation": "Value should not be less than {{minValue}} or more than {{maxValue}}.",
+        "precisionValidation": "Value should be up to {{precision}} digits and {{scale}} decimals only.",
+        "valueValidation": "Value should not exceed {{length}}.",
+        "negationValidation": "Value should not be negative.",
+        "invalidTelFormat": "Invalid Mobile Number format. Please include +Country Code.",
+        "minLength": "Office Telephone must contain at least 8 characters.",
+        "invalidEmailFormat": "Invalid Email address!",
+        "signSizeMax": "Signature size can't be greater than 64 KB",
+        "signExtNotAllowed": "Filename extension is not allowed.",
+        "uploadTypeNotAllowed": "Upload file type not allowed.",
+        "maxValidation": "value cannot be more than {{maxValue}}"
+    },
+    "uploadSignature": {
+        "msg": {
+            "uploadSuccess": "Upload signature successful!",
+            "fetchError": "Error encountered whilte trying to fetch data!",
+            "signatureRequired": "*Signature Image Required"
+        },
+        "fields": {
+            "uploadSignature": "Upload Signature Image",
+            "photoSpec": "Photo Specification",
+            "photoSpecDesc1": "* Must be .jpg, .jpeg, or .png",
+            "photoSpecDesc2": "* Between 50 KB and 1.5 MB in size.",
+            "previewSignature": "Preview Signature"
+        }
+    },
+    "validationAlerts": {
+        "title": "Warning!",
+        "msgBody": "Sorry, we cannot accept your application. Please submit your application {{validationErr}} hours in advance.",
+        "certNoAvailable": "The certificate is not yet ready. Please try again later.",
+        "certNotAvailable": "The certificate cannot be generated. Official Use in Vessel Call must be filled in by Port Authority first."
+    },
+    "concurrentError": {
+        "title": "Warning!",
+        "alreadySubmitted": "Your application has already been submitted previously."
+    },
+    "status": {
+        "drf": "Draft",
+        "sub": "Submitted",
+        "pen": "Pending Payment",
+        "pay": "Paid",
+        "rej": "Rejected",
+        "ret": "Returned",
+        "amn": "Amended",
+        "ver": "Verified",
+        "app": "Approved"
+    },
+    "tooltip": {
+        "viewChanges": "Click to view the changes",
+        "changes": "Changes",
+        "rejectBl": "Reject BL",
+        "downloadBl": "Download BL",
+        "rmkAdd": "Add Remark",
+        "rmkView": "View Remark",
+        "viewDtls": "Download Invoice",
+        "droppedOff": "Dropped Off"
+    },
+    "popup": {
+        "confirmation": "Confirmation",
+        "ok": "OK"
+    },
+    "msg": {
+        "saveSuccess": "Saved successfully!",
+        "updateSuccess": "Updated successfully!",
+        "submitSuccess": "Submitted successfully!",
+        "deleteSuccess": "Deleted Successfully!",
+        "cancelSuccess": "Cancelled Successfully!",
+        "approveSuccess": "Approved Successfully!",
+        "rejectSuccess": "Rejected Successfully!",
+        "withdrawSuccess": "Withdrawn Successfully!",
+        "nonPDFNotAllowed": "Non PDF File type not allowed!",
+        "noFileUploded": "No file is uploaded",
+        "confirmation": "Are you sure you want to {{action}}?",
+        "jobIdNotAvailable": "Job ID not yet available",
+        "allowedFileExtensions": "Allowed file types are pdf, doc, docx, jpeg, jpg, png",
+        "createAttSuccess": "Attachment uploaded successfully!",
+        "duplicate": "The document type you selected already exists!",
+        "deleteAttSuccess": "Attachment deleted successfully!",
+        "error": "Error",
+        "activeConfirm": "Are you sure you want to set Active?",
+        "inActiveConfirm": "Are you sure you want to set InActive?",
+        "approveConfirm": "Are you sure you want to set Approve?",
+        "rejectConfirm": "Are you sure you want to set Reject?",
+        "saveConfirm": "Are you sure you want to Save?",
+        "deleteConfirm": "Are you sure you want to Delete?",
+        "updateConfirm": "Are you sure you want to Update?",
+        "deactivateConfirm": "Are you sure you want to set Deactivate?",
+        "submitConfirm": "Are you sure you want to Submit?",
+        "nonTerminableMsg": "There are active jobs associated to this account. These jobs need to be terminated to approve termination of the account."
+    }
+}

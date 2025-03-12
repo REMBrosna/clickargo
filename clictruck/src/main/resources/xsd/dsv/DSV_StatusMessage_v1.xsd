@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dsv_statusmessage="http://edi.dsv.com/XML/DSV_StatusMessage_v1.xsd" xmlns:shipmentstatus="http://edi.dsv.com/XML/ShipmentStatus_v1.xsd" xmlns:sharedelements="http://edi.dsv.com/XML/SharedElements_v1.xsd" targetNamespace="http://edi.dsv.com/XML/DSV_StatusMessage_v1.xsd" elementFormDefault="qualified">
+   <xs:import namespace="http://edi.dsv.com/XML/ShipmentStatus_v1.xsd" schemaLocation="ShipmentStatus_v1.xsd"/>
+   <xs:import namespace="http://edi.dsv.com/XML/SharedElements_v1.xsd" schemaLocation="SharedElements_v1.xsd"/>
+   <xs:element name="DSV_StatusMessage" type="dsv_statusmessage:DSV_StatusMessage"/>
+   <xs:complexType name="DSV_StatusMessage">
+      <xs:sequence>
+         <xs:element name="Header" type="sharedelements:Header"/>
+         <xs:element name="ShipmentStatus" type="shipmentstatus:ShipmentStatus"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>
