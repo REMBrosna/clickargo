@@ -1,0 +1,25 @@
+.ModalPaper {
+    position: 'absolute';
+    width: 600;
+    background-Color: #fff;
+    border: '1px solid #fff';
+        box-shadow: 1px 1px 1px #fff;
+    padding: 2px;
+}
+
+.gridContainer {
+        padding-left: 10;
+        padding-right: 10;
+}
+
+.ModalStyle {
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    z-index: 1300;
+    width: 70%;
+    left: 15%;
+    top: 30%;
+}
+
+

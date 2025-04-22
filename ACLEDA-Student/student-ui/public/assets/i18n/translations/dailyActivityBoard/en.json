@@ -1,0 +1,71 @@
+{
+    "mpwt": {
+        "title": "Daily Activity Board",
+        "header": "Daily Activity Board: MPWT",
+        "fields": {
+            "applicationId": "Entry Permit ID",
+            "shipName": "Ship Name",
+            "voyageNumber": "Voyage Number",
+            "flag": "Flag State",
+            "vesselType": "Vessel Type",
+            "eta": "ETA",
+            "etd": "ETD",
+            "ata": "ATA",
+            "atd": "ATD",
+            "shippingCompany": "Shipping Company",
+            "port": "Port Call",
+            "status": "Status"
+        }
+    },
+    "pas": {
+        "title": "Daily Activity Board",
+        "header": "Daily Activity Board: PAS",
+        "voyageType": "Voyage Type",
+        "fields": {
+            "applicationId": "Applicant ID",
+            "shipName": "Ship Name",
+            "voyageType": "Voyage Type",
+            "flag": "Flag",
+            "vesselType": "Vessel Type",
+            "loa": "LOA",
+            "draft": "Draft",
+            "lastPort": "Last Port",
+            "eta": "ETA",
+            "etd": "ETD",
+            "ata": "ATA",
+            "atd": "ATD",
+            "atAnchor": "AT Anchor",
+            "nextPort": "Next Port",
+            "shippingCompany": "Shipping Company",
+            "port": "Port",
+            "terminal": "Terminal",
+            "status": "Status"
+        }
+    },
+    "ppap": {
+        "title": "Daily Activity Board",
+        "header": "Daily Activity Board: PPAP",
+        "voyageType": "Voyage Type",
+        "fields": {
+            "applicationId": "Applicant ID",
+            "shipName": "Ship Name",
+            "voyageNumber": "Voyage Number",
+            "voyageType": "Voyage Type",
+            "flag": "Flag",
+            "eta": "ETA",
+            "ata": "ATA",
+            "etd": "ETD",
+            "atd": "ATD",
+            "airDraft": "Air Draft",
+            "draftFwd": "FWD",
+            "draftAfd": "AFD",
+            "terminal": "Terminal",
+            "tod": "Terminal of Departure",
+            "nextPortCall": "Next Port of Call",
+            "destination": "Destination",
+            "shippingCompany": "Shipping Company",
+            "remark": "Remark",
+            "port": "Port"
+        }
+    }
+}

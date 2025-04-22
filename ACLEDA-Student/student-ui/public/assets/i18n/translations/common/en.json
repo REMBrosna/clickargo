@@ -1,0 +1,268 @@
+{
+    "audits": {
+        "title": "Audits",
+        "table": {
+            "headers": {
+                "event": "Event",
+                "timestamp": "Timestamp",
+                "remarks": "Remarks",
+                "usrUid": "User ID",
+                "usrName": "User Name"
+            }
+        }
+    },
+    "common": {
+        "msg": {
+            "createSuccess": "Created {{item}} successfully!",
+            "deleteSuccess": "Deleted {{item}} successfully!",
+            "fetchFail": "`Error encountered while trying to fetch {{item}} records!",
+            "resubmitted": "Application was returned and resubmitted.",
+            "submitted": "Application has been submitted.",
+            "created": "Created successfully",
+            "updated": "Updated successfully",
+            "approve": "Approved successfully",
+            "reject": "Rejected successfully",
+            "deleted": "Deleted successfully"
+        },
+        "queriesRemarks": {
+            "title": "Queries & Remarks"
+        },
+        "dataTable": {
+            "department": "Department",
+            "docName": "Document Name",
+            "docRefNo": "Document Ref. No.",
+            "docType": "Document Type",
+            "borderStatus": "Border Status",
+            "fileName": "File Name",
+            "number": "No.",
+            "portStatus": "Port status",
+            "required": "Required",
+            "docRefNoExceed": "Exceeds maximum length - 256",
+            "action": "Action"
+        },
+        "label": {
+            "docType": "Doc Type",
+            "docRefNo": "Doc Ref No.",
+            "uploadFile": "Upload File"
+        },
+        "placeHolder": {
+            "contactTel": "+8551234567",
+            "contactMobile": "+85512345678",
+            "contactFax": "+85512345678"
+        }
+    },
+    "queries": {
+        "title": "Queries",
+        "altTitle": "Query",
+        "replyTitle": "Reply Query",
+        "msgs": {
+            "confirm": "Are you sure to QUERY?",
+            "replySuccess": "Replied query successfully!"
+        },
+        "buttons": {
+            "reply": "Reply",
+            "close": "Close"
+        },
+        "list": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User",
+            "query": "Query",
+            "queryDate": "Query Date",
+            "responseDate": "Reply Date",
+            "replyMsg": "Reply",
+            "action": "Action"
+        },
+        "subGroup": {
+            "queryHistory": "Query History"
+        },
+        "fields": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User Name",
+            "dateTime": "Date Time",
+            "replyDateTime": "Reply Date Time",
+            "query": "Query",
+            "replyQuery": "Reply Query"
+        }
+    },
+    "remarks": {
+        "title": "Remarks",
+        "altTitle": "Remark",
+        "msgs": {
+            "confirm": "Are you sure to REMARK?"
+        },
+        "list": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User",
+            "remark": "Remark",
+            "dateTime": "Date Time",
+            "action": "Action"
+        },
+        "subGroup": {
+            "remarkHistory": "Remark History"
+        },
+        "fields": {
+            "section": "Section",
+            "subSection": "Sub Section",
+            "agency": "Agency",
+            "userName": "User Name",
+            "dateTime": "Date Time",
+            "remark": "Remark"
+        }
+    },
+    "supportingDocs": {
+        "title": "Supporting Documents",
+        "documentDetails": "Document Details",
+        "documentReference": "Referenced Documents",
+        "upload": "Upload",
+        "add": "Add",
+        "fields": {
+            "category": "Category",
+            "docType": "Doc Type",
+            "docRef": "Doc Ref No.",
+            "expiryDate": "Expire Date",
+            "uploadFile": "Document File"
+        },
+        "tableHdrs": {
+            "no": "No.",
+            "docType": "Document Type",
+            "category": "Category",
+            "mandatory": "Mandatory",
+            "docName": "Document Name",
+            "docRefNo": "Document Ref No",
+            "expiredDate": "Expiry Date"
+        },
+        "msg": {
+            "fileTooSmall": "File size is too small",
+            "fileSizeTooBig": "File size can't greater than {{size}} MB",
+            "fileNameLen": "File name should be less than 128 characters.",
+            "fileDuplicate": "Don't upload duplicate file name.",
+            "uploadSuccess": "Upload file successfully!",
+            "deleteSuccess": "Delete file successfully!",
+            "extsNotAllowed": "Filename extension is not allowed. Only accepting files in PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT.",
+            "onlyPdf": "Filename extension is not allowed. PDF only",
+            "allowedExts": "Supported file types - PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT",
+            "allowedPdf": "Supported file types only PDF"
+        }
+    },
+    "recoveryDetails": {
+        "officialDetails": "Official Details",
+        "tableHdrs": {
+            "event": "Event",
+            "actionDate": "Action Date (Manual)",
+            "confirmMsg": "Confirmation Remark",
+            "usrId": "User ID",
+            "usrName": "User Name"
+        }
+    },
+    "recordDetails": "Record Details",
+    "language": "Language",
+    "properties": {
+        "title": "Properties",
+        "dtCreated": "Date Created",
+        "usrCreated": "User Created",
+        "dtLupd": "Date Last Updated",
+        "usrLupd": "User Last Updated"
+    },
+    "register": {
+        "header": " Company Registration Details",
+        "tabs": {
+            "details": {
+                "title": "Company Details"
+            },
+            "admin": {
+                "title": "User Details"
+            },
+            "logo": {
+                "title": "Company Logo Details"
+            },
+            "suppDocs": {
+                "title": "Supporting Documents"
+            }
+        }
+    },
+    "pageHeaders": {
+        "edit": "Edit {{appType}}",
+        "recovery": "Recovery {{appType}}",
+        "view": "View {{appType}}",
+        "new": "New {{appType}}"
+    },
+    "genericMsgs": {
+        "success": "Changes submitted successfully!",
+        "error": "Failed to save changes. Please check for errors and try again.",
+        "emptyTable": "Sorry, no matching records found"
+    },
+    "confirmMsgs": {
+        "confirm": {
+            "title": "Confirm",
+            "content": "Are you sure you want to {{action}} {{type}} {{id}}?",
+            "ftApproveNote": "Custom Port will get auto Approve."
+        }
+    },
+    "template": {
+        "upload": "Upload Template"
+    },
+    "validationMsgs": {
+        "overLength": "This field allow input 10000 characters only",
+        "required": "This field is required!",
+        "lengthValidation": "Length should not be more than {{length}} characters.",
+        "rangeValidation": "Value should not be less than {{minValue}} or more than {{maxValue}}.",
+        "precisionValidation": "Value should be up to {{precision}} digits and {{scale}} decimals only.",
+        "valueValidation": "Value should not exceed {{length}}.",
+        "negationValidation": "Value should not be negative.",
+        "invalidTelFormat": "Please include +Country Code and remove space.",
+        "invalidEmailFormat": "Invalid Email address!",
+        "signSizeMax": "Signature size can't be greater than 64 KB",
+        "signExtNotAllowed": "Filename extension is not allowed.",
+        "uploadTypeNotAllowed": "Upload file type not allowed.",
+        "officeCode": "Please select office code"
+    },
+    "uploadSignature": {
+        "msg": {
+            "uploadSuccess": "Upload signature successful!",
+            "fetchError": "Error encountered whilte trying to fetch data!",
+            "signatureRequired": "*Signature Image Required"
+        },
+        "fields": {
+            "uploadSignature": "Upload Signature Image",
+            "photoSpec": "Photo Specification",
+            "photoSpecDesc1": "* Must be .jpg, .jpeg, or .png",
+            "photoSpecDesc2": "* Between 50 KB and 1.5 MB in size.",
+            "previewSignature": "Preview Signature"
+        }
+    },
+    "validationAlerts": {
+        "title": "Warning!",
+        "msgBody": "Sorry, we cannot accept your application. Please submit your application {{validationErr}} hours in advance.",
+        "certNoAvailable": "The certificate is not yet ready. Please try again later.",
+        "certNotAvailable": "The certificate cannot be generated. Official Use in Vessel Call must be filled in by Port Authority first."
+    },
+    "concurrentError": {
+        "title": "Warning!",
+        "alreadySubmitted": "Your application has already been submitted previously."
+    },
+    "status": {
+        "drf": "Draft",
+        "sub": "Submitted",
+        "pen": "Pending Payment",
+        "pay": "Paid",
+        "rej": "Rejected",
+        "ret": "Returned",
+        "amn": "Amended",
+        "ver": "Verified",
+        "app": "Approved"
+    },
+    "tooltip": {
+        "viewChanges": "Click to view the changes",
+        "changes": "Changes",
+        "appLock": "The application may already be proccessed by someone"
+    },
+    "appLock": {
+        "text": "Locked by {{who}} - {{when}}"
+    }
+}

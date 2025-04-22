@@ -1,0 +1,1200 @@
+{
+    "country": {
+        "list": {
+            "routeSegment": "បញ្ជីលេខកូដប្រទេស",
+            "table": {
+                "title": "បញ្ចីលេខកូដប្រទេស",
+                "headers": {
+                    "ctryCode": "លេខកូដប្រទេស",
+                    "ctryName": "ឈ្មោះប្រទេស",
+                    "ctryStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីលេខកូដប្រទេស",
+                "sub": {
+                    "edit": "កែប្រែលេខកូដប្រទេស",
+                    "view": "មើលលេខកូដប្រទេស",
+                    "new": "បង្កើតលេខកូដប្រទេស"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ctryCode": "លេខកូដប្រទេស",
+                    "ctryDesc": "ពិពណ៌នាប្រទេស"
+                }
+            }
+        },
+        "sms": {
+            "invalidCode": "លេខកូដប្រទេសនេះមានរួចហើយ {{countryCode}}."
+        }
+    },
+    "currency": {
+        "list": {
+            "routeSegment": "បញ្ជីលេខកូដរូបិយប័ណ្ណ",
+            "table": {
+                "title": "បញ្ជីលេខកូដរូបិយប័ណ្ណ",
+                "headers": {
+                    "ccyCode": "លេខកូដរូបិយប័ណ្ណ",
+                    "ccyDescription": "ការពិពណ៌នារូបិយប័ណ្ណ",
+                    "ccyDescriptionOth": "ការពិពណ៌នា ផ្សេងៗទៀត",
+                    "ccyStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ចីលេខកូដរូបិយប័ណ្ណ",
+                "sub": {
+                    "edit": "កែប្រែលេខកូដរូបិយប័ណ្ណ",
+                    "view": "មើលលេខកូដរូបិយប័ណ្ណ",
+                    "new": "បង្កើតលេខកូដរូបិយប័ណ្ណ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ccyCode": "លេខកូដរូបិយប័ណ្ណ",
+                    "ccyDescription": "ការពិពណ៌នារូបិយប័ណ្ណ",
+                    "ccyDescriptionOth": "ការពិពណ៌នា ផ្សេងៗទៀត"
+                }
+            }
+        }
+    },
+    "hsCode": {
+        "list": {
+            "routeSegment": "បញ្ជី Harmonized System Code",
+            "table": {
+                "title": "បញ្ជី Harmonized System Code",
+                "headers": {
+                    "hsCode": "Harmonized Code",
+                    "hsDescription": "ពិពណ៌នាប្រភេទ Harmonized",
+                    "hsStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជី Harmonized System Code",
+                "sub": {
+                    "edit": "កែប្រែ Harmonized System Code",
+                    "view": "មើល Harmonized System Code",
+                    "new": "បង្កើត Harmonized System Code"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "hsCode": "Harmonized Code",
+                    "hsDescription": "ពិពណ៌នាប្រភេទ Harmonized",
+                    "controlled": {
+                        "label": "គ្រប់គ្រង",
+                        "hsImpControlled": "គ្រប់គ្រងលើការនាំចូល",
+                        "hsExpControlled": "គ្រប់គ្រងលើការនាំចេញ"
+                    },
+                    "hstypeCode": "ប្រភេទទំនិញ",
+                    "hsDutyType": "ប្រភេទពន្ធ",
+                    "hsExciseDutyRate": "អត្រាពន្ធរដ្ឋាករ (%)",
+                    "hsCustomsDutyRate": "អត្រាពន្ធគយ (%)",
+                    "uomCode": "UOM",
+                    "TMstUomByHsExciseDutyUom": "Excise Duty UOM",
+                    "TMstUomByHsCustomsDutyUom": "Custom Duty UOM"
+                }
+            }
+        }
+    },
+    "ports": {
+        "list": {
+            "routeSegment": "បញ្ជីកំពង់ផែ",
+            "table": {
+                "title": "បញ្ជីកំពង់ផែ",
+                "headers": {
+                    "portCode": "លេខកូដផែ",
+                    "portDescription": "ពណ៌នាអំពីផែ",
+                    "portDescriptionOth": "ពណ៌នាអំពីផែ (ខ្មែរ)",
+                    "TMstCountry": "ប្រទេស",
+                    "TMstPortType": "ប្រភេទផែ",
+                    "portStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីកំពង់ផែ",
+                "sub": {
+                    "edit": "កែប្រែកំពង់ផែ",
+                    "view": "មើលកំពង់ផែ",
+                    "new": "បង្កើតកំពង់ផែថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "portCode": "លេខកូដកំពង់ផែ",
+                    "portDescription": "ពណ៌នាអំពីផែ",
+                    "portDescriptionOth": "ពណ៌នាអំពីផែ (ខ្មែរ)",
+                    "TMstCountry": "ប្រទេស",
+                    "TMstPortType": "ប្រភេទផែ"
+                }
+            }
+        }
+    },
+    "uom": {
+        "list": {
+            "routeSegment": "បញ្ជី UOM Codes",
+            "table": {
+                "title": "បញ្ជី UOM Codes",
+                "headers": {
+                    "uomCode": "UOM Code",
+                    "uomDescription": "ពិពណ៌នា UOM",
+                    "otherLangDesc": "ពិពណ៌នា UOM (ភាសាផ្សេង)",
+                    "uomStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជី UOM Codes",
+                "sub": {
+                    "edit": "កែប្រែ UOM",
+                    "view": "មើល UOM",
+                    "new": "បង្កើត UOM"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "uomCode": "UOM Code",
+                    "uomDescription": "ពិពណ៌នា UOM",
+                    "otherLangDesc": "ពិពណ៌នា UOM (ភាសាផ្សេង)"
+                }
+            }
+        }
+    },
+    "dutyPaidAt": {
+        "list": {
+            "routeSegment": "បញ្ជីទីកន្លែងបង់ប្រាក់",
+            "table": {
+                "title": "បញ្ជីទីកន្លែងបង់ប្រាក់",
+                "headers": {
+                    "dutyPaidId": "លេខសម្គាល់ទីកន្លែងបង់ប្រាក់",
+                    "dutyPaidPort": "កំពង់ផែ",
+                    "dutyPaidName": "ឈ្មោះទីកន្លែងបង់ប្រាក់",
+                    "dutyPaidDesc": "ពណ៌នាទីកន្លែងបង់ប្រាក់",
+                    "dutyPaidStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីទីកន្លែងបង់ប្រាក់",
+                "sub": {
+                    "edit": "កែប្រែទីកន្លែងបង់ប្រាក់",
+                    "view": "មើលទីកន្លែងបង់ប្រាក់",
+                    "new": "បង្កើតទីកន្លែងបង់ប្រាក់"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "dutyPaidId": "លេខសម្គាល់ទីកន្លែងបង់ប្រាក់",
+                    "dutyPaidPort": "កំពង់ផែ",
+                    "dutyPaidName": "ឈ្មោះទីកន្លែងបង់ប្រាក់",
+                    "dutyPaidDesc": "ពណ៌នាទីកន្លែងបង់ប្រាក់"
+                }
+            }
+        }
+    },
+    "ministry": {
+        "list": {
+            "routeSegment": "បញ្ជីក្រសួង",
+            "table": {
+                "title": "បញ្ជីក្រសួង",
+                "headers": {
+                    "minCode": "លេខកូដក្រសួង",
+                    "minDesc": "ឈ្មោះក្រសួង (ភាសាអង់គ្លេស)",
+                    "minDescOth": "ឈ្មោះក្រសួង (ភាសាខ្មែរ)",
+                    "minRegNo": "លេខចុះបញ្ជី"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីក្រសួង",
+                "sub": {
+                    "edit": "កែប្រែក្រសួង",
+                    "view": "មើលក្រសួង",
+                    "new": "បង្កើតក្រសួង"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "minCode": "លេខកូដក្រសួង",
+                    "minDesc": "ឈ្មោះក្រសួង (ភាសាអង់គ្លេស)",
+                    "minDescOth": "ឈ្មោះក្រសួង (ភាសាខ្មែរ)",
+                    "minRegNo": "លេខចុះបញ្ជី"
+                }
+            }
+        }
+    },
+    "agency": {
+        "list": {
+            "routeSegment": "បញ្ជីភ្នាក់ងារ",
+            "table": {
+                "title": "បញ្ជីភ្នាក់ងារ",
+                "headers": {
+                    "agyCode": "លេខកូដភ្នាក់ងារ",
+                    "agyDesc": "ឈ្មោះភ្នាក់ងារ (ភាសាអង់គ្លេស)",
+                    "agyDescOth": "ឈ្មោះភ្នាក់ងារ (ភាសាខ្មែរ)",
+                    "agyRegNo": "លេខចុះបញ្ជី",
+                    "TCoreMinistry": "លេខកូដក្រសួង"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីភ្នាក់ងារ",
+                "sub": {
+                    "edit": "កែប្រែភ្នាក់ងារ",
+                    "view": "មើលភ្នាក់ងារ",
+                    "new": "បង្កើតភ្នាក់ងារ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "agyCode": "លេខកូដភ្នាក់ងារ",
+                    "agyDesc": "ឈ្មោះភ្នាក់ងារ (ភាសាអង់គ្លេស)",
+                    "agyDescOth": "ឈ្មោះភ្នាក់ងារ (ភាសាខ្មែរ)",
+                    "agyRegNo": "លេខចុះបញ្ជី",
+                    "TCoreMinistry": "លេខកូដក្រសួង"
+                }
+            }
+        }
+    },
+    "agencyOffice": {
+        "list": {
+            "routeSegment": "បញ្ជីការិយាល័យភ្នាក់ងារ",
+            "table": {
+                "title": "បញ្ជីការិយាល័យភ្នាក់ងារ",
+                "headers": {
+                    "agoCode": "លេខកូដការិយាល័យភ្នាក់ងារ",
+                    "agoAgyCode": "លេខកូដភ្នាក់ងារ",
+                    "agoDesc": "ឈ្មោះការិយាល័យភ្នាក់ងារ (ភាសាអង់គ្លេស)",
+                    "agoDescOth": "ឈ្មោះការិយាល័យភ្នាក់ងារ (ភាសាខ្មែរ)",
+                    "agoAddrList": "បញ្ជីអាសយដ្ឋានការិយាល័យអង្គភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីការិយាល័យភ្នាក់ងារ",
+                "sub": {
+                    "edit": "កែប្រែការិយាល័យភ្នាក់ងារ",
+                    "view": "មើលការិយាល័យភ្នាក់ងារ",
+                    "new": "បង្កើតការិយាល័យភ្នាក់ងារ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "agoCode": "លេខកូដការិយាល័យភ្នាក់ងារ",
+                    "agoAgyCode": "លេខកូដភ្នាក់ងារ",
+                    "agoDesc": "ឈ្មោះការិយាល័យភ្នាក់ងារ (ភាសាអង់គ្លេស)",
+                    "agoDescOth": "ឈ្មោះការិយាល័យភ្នាក់ងារ (ភាសាខ្មែរ)",
+                    "addrType": "ប្រភេទ​អាសយដ្ឋាន"
+                }
+            }
+        },
+        "dialog": {
+            "officeAddress": "អាស័យដ្ឋានការិយាល័យ"
+        }
+    },
+    "clearanceFlag": {
+        "list": {
+            "routeSegment": "Country Exemption",
+            "table": {
+                "title": "Country Exemption",
+                "headers": {
+                    "cfCountryCode": "លេខកូដប្រទេស",
+                    "cfStatus": "ស្ថានភាព",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Country Exemption List",
+                "sub": {
+                    "edit": "Edit Country Exemption",
+                    "view": "View Country Exemption",
+                    "new": "New Country Exemption"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "cfCountryCode": "លេខកូដប្រទេស"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Country Exemption successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "amendmentApplications": {
+        "list": {
+            "routeSegment": "Amendment Applications",
+            "table": {
+                "title": "Amendment Applications",
+                "headers": {
+                    "ammID": "Amendment ID",
+                    "ammAppType": "Amendment Applications Type",
+                    "ammAppDescription": "Amendment Application Descriptions",
+                    "ammStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Amendment Applications List",
+                "sub": {
+                    "edit": "Edit Amendment Applications",
+                    "view": "View Amendment Applications",
+                    "new": "New Amendment Applications"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ammAppType": "Amendment Applications Type",
+                    "ammAppDescription": "Amendment Application Description"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Amendment Applications successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "amendmentFields": {
+        "list": {
+            "routeSegment": "Amendment Fields",
+            "table": {
+                "title": "Amendment Fields",
+                "headers": {
+                    "amfID": "Amendment ID",
+                    "amfLabel": "Field Label",
+                    "amfFieldType": "Field Type",
+                    "amfQRParams": "QR Parameter",
+                    "amfOptionProperty": "Option Property",
+                    "amfAppType": "Amendment Applications Type",
+                    "amfFieldsName": "Field Name",
+                    "amfFieldsRequired": "Certificate Required",
+                    "yes": "Yes",
+                    "no": "No",
+                    "amfStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Amendment Applications List",
+                "sub": {
+                    "edit": "Edit Amendment Fields",
+                    "view": "View Amendment Fields",
+                    "new": "New Amendment Fields"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "amfID": "Amendment ID",
+                    "amfLabel": "Field Label",
+                    "amfFieldType": "Field Type",
+                    "amfQRParams": "QR Parameter",
+                    "amfOptionProperty": "Option Property",
+                    "amfAppType": "Amendment Applications Type",
+                    "amfFieldsName": "Field Name",
+                    "amfFieldsRequired": "Is Certificate Required?",
+                    "yes": "Yes",
+                    "no": "No"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Amendment Fields successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "contract": {
+        "list": {
+            "routeSegment": "បញ្ជី Nomination Letter",
+            "table": {
+                "title": "បញ្ជី Nomination Letter",
+                "headers": {
+                    "radio": "វិទ្យុ",
+                    "companyName": "ឈ្មោះក្រុមហ៊ុន",
+                    "aconSagName": "ឈ្មោះភ្នាក់ងារកប៉ាល់",
+                    "phoneNumber": "លេខទូរស័ព្ទ",
+                    "aconDtCreate": "កាលបរិច្ឆេទកិច្ចសន្យា",
+                    "status": "ស្ថានភាព",
+                    "recordStatus": "កំណត់ត្រាស្ថានភាព",
+                    "email": "សារអេឡិចត្រូនិច",
+                    "fax": "ទូរសារ",
+                    "accnExpiryDate": "កាលបរិច្ឆេទផុតកំណត់",
+                    "address1": "អាសយដ្ឋានទី១",
+                    "address2": "អាសយដ្ឋានទី២",
+                    "address3": "អាសយដ្ឋានទី៣",
+                    "addressProvince": "អាសយដ្ឋានខេត្ត",
+                    "cityCode": "លេខកូដទីក្រុង",
+                    "proCode": "លេខកូដខេត្ត",
+                    "postCode": "លេខ​កូដ​ប្រៃ​ស​ណី​យ"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជី Nomination Letter",
+                "sub": {
+                    "edit": "កែប្រែក Nomination Letter",
+                    "view": "មើល Nomination Letter",
+                    "new": "បង្កើត Nomination Letter"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "radio": "វិទ្យុ",
+                    "companyName": "ឈ្មោះក្រុមហ៊ុន",
+                    "aconSagName": "ឈ្មោះភ្នាក់ងារកប៉ាល់",
+                    "phoneNumber": "លេខទូរស័ព្ទ",
+                    "aconDtCreate": "កាលបរិច្ឆេទកិច្ចសន្យា",
+                    "status": "ស្ថានភាព",
+                    "recordStatus": "កំណត់ត្រាស្ថានភាព",
+                    "email": "សារអេឡិចត្រូនិច",
+                    "fax": "ទូរសារ",
+                    "accnExpiryDate": "កាលបរិច្ឆេទផុតកំណត់",
+                    "address1": "អាសយដ្ឋានទី១",
+                    "address2": "អាសយដ្ឋានទី២",
+                    "address3": "អាសយដ្ឋានទី៣",
+                    "cityCode": "លេខកូដទីក្រុង",
+                    "proCode": "លេខកូដខេត្ត",
+                    "postCode": "លេខកូដប្រៃសណីយ"
+                }
+            }
+        },
+        "message": {
+            "action": "តើអ្នកប្រកដថានឹង {{action}}ដែររឺទេ?",
+            "success": {
+                "submitted": "Nomination Letter ត្រូវបានដាក់ស្នើរ",
+                "approved": "Nomination Letter ត្រូវបានអនុម័ត",
+                "save": "Nomination Letter ត្រូវបានរក្សាទុក",
+                "active": "Nomination Letter ត្រូវបានធ្វើអោយសកម្ម",
+                "deactivated": "Nomination Letter ត្រូវបានធ្វើអោយអសកម្ម",
+                "deleted": "បានលុបឯកសារដោយជោគជ័យ!"
+            }
+        },
+        "suppDocs": {
+            "no": "ទេ",
+            "docType": "ប្រភេទឯកសារ",
+            "required": "ទាមទារ",
+            "file": "ឯកសារ",
+            "action": "សកម្មភាព"
+        }
+    },
+    "attachType": {
+        "list": {
+            "routeSegment": "បញ្ជីប្រភេទឯកសារភ្ជាប់",
+            "table": {
+                "title": "បញ្ជីប្រភេទឯកសារភ្ជាប់",
+                "headers": {
+                    "mattId": "លេខសំគាល់ប្រភេទឯកសារភ្ជាប់",
+                    "mattName": "ឈ្មោះប្រភេទឯកសារភ្ជាប់",
+                    "mattDesc": "ការពិពណ៌នាអំពីប្រភេទឯកសារភ្ជាប់",
+                    "mattDescOth": "ការពិពណ៌នាអំពីប្រភេទឯកសារភ្ជាប់(ភាសាខ្មែរ)",
+                    "mattRefNo": "ត្រូវការឯកសារយោង",
+                    "mattExpiry": "កាលបរិច្ឆេទផុតកំណត់ដែលត្រូវការ",
+                    "mattStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីប្រភេទឯកសារភ្ជាប់",
+                "sub": {
+                    "edit": "កែប្រែប្រភេទឯកសារភ្ជាប់",
+                    "view": "មើលប្រភេទឯកសារភ្ជាប់",
+                    "new": "បង្កើតប្រភេទឯកសារភ្ជាប់"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "mattId": "លេខសំគាល់ប្រភេទឯកសារភ្ជាប់",
+                    "mattName": "ឈ្មោះប្រភេទឯកសារភ្ជាប់",
+                    "mattDesc": "ការពិពណ៌នាអំពីប្រភេទឯកសារភ្ជាប់",
+                    "mattDescOth": "ការពិពណ៌នាអំពីប្រភេទឯកសារភ្ជាប់(ភាសាខ្មែរ)",
+                    "mattStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "field": {
+            "required": "តម្រូវ",
+            "overLength": "ការបញ្ចូលត្រូវតែមាន {{max}} តួអក្សរ ឬតិចជាងនេះ",
+            "hasWhitespace": "ការបញ្ចូលមិនគួរមានកន្លែងទំនេរទេ"
+        }
+    },
+    "feeConfig": {
+        "list": {
+            "routeSegment": "បញ្ជីកំណត់កម្រៃសេវាបង់ប្រាក់",
+            "table": {
+                "title": "បញ្ជីកំណត់កម្រៃសេវាបង់ប្រាក់់",
+                "headers": {
+                    "feeConfigId": "លេខសំគាល់សេវាបង់ប្រាក់",
+                    "feeAppType": "ប្រភេទពាក្យស្នើសុំ",
+                    "feeConfigFee": "កម្រៃសេវា",
+                    "feeParentAgency": "ភ្នាក់ងារអាណាព្យាបាល",
+                    "feeCurrency": "រូបិយប័ណ្ណថ្លៃសេវា",
+                    "feeStatus": "ស្ថានភាព",
+                    "feeType": "ប្រភេទកម្រៃ"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីកំណត់កម្រៃសេវាបង់ប្រាក់",
+                "sub": {
+                    "edit": "កែប្រែកម្រៃសេវាបង់ប្រាក់",
+                    "view": "មើលកម្រៃសេវាបង់ប្រាក់",
+                    "new": "បង្កើតកម្រៃសេវាបង់ប្រាក់"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "feeConfigId": "លេខសំគាល់សេវាបង់ប្រាក់",
+                    "feeAppType": "ប្រភេទពាក្យស្នើសុំ",
+                    "feeConfigFee": "កម្រៃសេវា",
+                    "feeParentAgency": "ភ្នាក់ងារអាណាព្យាបាល",
+                    "feeCurrency": "រូបិយប័ណ្ណថ្លៃសេវា",
+                    "feeStatus": "ស្ថានភាព",
+                    "feeType": "ប្រភេទកម្រៃ"
+                }
+            }
+        }
+    },
+    "docAssociate": {
+        "list": {
+            "routeSegment": "បញ្ជីឯកសារពាក់ព័ន្ធ",
+            "table": {
+                "title": "បញ្ជីឯកសារពាក់ព័ន្ធ",
+                "headers": {
+                    "id": "ឯកសារពាក់ព័ន្ធ",
+                    "supportName": "ប្រភេទឯកសារយោង",
+                    "appName": "ប្រភេទពាក្យស្នើសុំ",
+                    "shipTypeName": "ប្រភេទនាវា",
+                    "parentPortName": "កំពង់ផែអាណាព្យាបាល",
+                    "mandate": "តម្រូវ",
+                    "status": "ស្ថានភាព",
+                    "clearance": "Ship Clearance",
+                    "terminalName": "Port Terminal",
+                    "yes": "យល់ព្រម",
+                    "no": "ទេ"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីឯកសារពាក់ព័ន្ធ",
+                "sub": {
+                    "edit": "កែប្រែឯកសារពាក់ព័ន្ធ",
+                    "view": "មើលឯកសារពាក់ព័ន្ធ",
+                    "new": "បង្កើតឯកសារពាក់ព័ន្ធ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "id": "ឯកសារពាក់ព័ន្ធ",
+                    "supportName": "ប្រភេទឯកសារយោង",
+                    "appName": "ប្រភេទពាក្យស្នើសុំ",
+                    "shipTypeName": "ប្រភេទនាវា",
+                    "parentPortName": "កំពង់ផែអាណាព្យាបាល",
+                    "mandate": "តម្រូវ",
+                    "status": "ស្ថានភាព",
+                    "clearance": "Ship Clearance",
+                    "terminalName": "Port Terminal",
+                    "yes": "បាទ/ចាស",
+                    "no": "ទេ"
+                }
+            }
+        }
+    },
+    "province": {
+        "list": {
+            "routeSegment": "បញ្ជីខេត្ត",
+            "table": {
+                "title": "បញ្ជីខេត្ត",
+                "headers": {
+                    "provId": "លេខសម្គាល់ខេត្ត",
+                    "provDesc": "ការពិពណ៌នាពីខេត្ត",
+                    "country": "ប្រទេស",
+                    "province": "ខេត្ត",
+                    "city": "ទីក្រុង",
+                    "status": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីខេត្ត",
+                "sub": {
+                    "edit": "កែប្រែខេត្ត",
+                    "view": "មើលខេត្ត",
+                    "new": "បង្កើតខេត្តថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "provId": "លេខសម្គាល់ខេត្ត",
+                    "provDesc": "ការពិពណ៌នាពីខេត្ត",
+                    "country": "ប្រទេស"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "ខេត្តត្រូវបានបន្ថែមដោយជោគជ័យ.",
+            "successOperation": "ប្រតិបត្តិការដោយជោគជ័យ."
+        }
+    },
+    "portTerminal": {
+        "list": {
+            "routeSegment": "បញ្ជីស្ថានីយកប៉ាល់",
+            "table": {
+                "title": "បញ្ជីស្ថានីយកប៉ាល់",
+                "headers": {
+                    "portTermId": "លេខសម្គាល់ស្ថានីយកប៉ាល់",
+                    "port": "Port",
+                    "portTermName": "ឈ្មោះស្ថានីយកប៉ាល់",
+                    "portTermDesc": "ពិពណ៌នាអំពីស្ថានីយកប៉ាល់",
+                    "status": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "លេខសម្គាល់ស្ថានីយកប៉ាល់",
+                "sub": {
+                    "edit": "កែប្រែស្ថានីយកប៉ាល់",
+                    "view": "មើលស្ថានីយកប៉ាល់",
+                    "new": "បង្កើតស្ថានីយកប៉ាល់ថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "portTermId": "លេខសម្គាល់ស្ថានីយកប៉ាល់",
+                    "port": "កំពង់ផែ",
+                    "portTermName": "ឈ្មោះស្ថានីយកប៉ាល់",
+                    "portTermDesc": "ពិពណ៌នាអំពីស្ថានីយកប៉ាល់"
+                }
+            }
+        }
+    },
+    "dosActivity": {
+        "list": {
+            "routeSegment": "បញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+            "table": {
+                "title": "បញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                "headers": {
+                    "dosActivityId": "លេខសម្គាល់បញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                    "dosActivityName": "ឈ្មោះបញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                    "status": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                "sub": {
+                    "edit": "កែប្រែបញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                    "view": "មើលបញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                    "new": "បង្កើតបញ្ជីសកម្មភាពផ្នែកសន្តិសុខ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "dosActivityId": "លេខសម្គាល់​​បញ្ជីសកម្មភាពផ្នែកសន្តិសុខ",
+                    "dosActivityName": "ឈ្មោះបញ្ជីសកម្មភាពផ្នែកសន្តិសុខ"
+                }
+            }
+        }
+    },
+    "areasInspected": {
+        "list": {
+            "routeSegment": "បញ្ជីត្រួតពិនិត្យតំបន់",
+            "table": {
+                "title": "បញ្ជីត្រួតពិនិត្យតំបន់",
+                "headers": {
+                    "areaInsId": "លេខសម្គាល់តំបន់ត្រួតពិនិត្យ",
+                    "areaInsSeq": "លេខរៀង",
+                    "areaInsType": "ប្រភេទតំបន់ត្រួតពិនិត្យ",
+                    "areaInsGrp": "ក្រុមតំបន់ត្រួតពិនិត្យ",
+                    "areaInsName": "ឈ្មោះតំបន់ត្រួតពិនិត្យ",
+                    "areaInsDesc": "ពិពណ៌នាពីតំបន់ត្រួតពិនិត្យ",
+                    "status": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីត្រួតពិនិត្យតំបន់",
+                "sub": {
+                    "edit": "កែប្រែតំបន់ត្រួតពិនិត្យ",
+                    "view": "មើលតំបន់ត្រួតពិនិត្យ",
+                    "new": "បង្កើតតំបន់ត្រួតពិនត្យថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "areaInsId": "លេខសម្គាល់តំបន់ត្រួតពិនិត្យ",
+                    "areaInsSeq": "លេខរៀងតំបន់ត្រួតពិនិត្យ",
+                    "areaInsType": "ប្រភេទតំបន់ត្រួតពិនិត្យ",
+                    "areaInsGrp": "ក្រុមតំបន់ត្រួតពិនិត្យ",
+                    "areaInsName": "ឈ្មោះតំបន់ត្រួតពិនិត្យ",
+                    "areaInsDesc": "ពិពណ៌នាពីតំបន់ត្រួតពិនិត្យ"
+                }
+            }
+        },
+        "dropDown": {
+            "attachment": "ឯកសារ​ភ្ជាប់",
+            "certificate": "វិញ្ញាបនបត្រ"
+        },
+        "field": {
+            "required": "ទាមទារ",
+            "min": "ការបញ្ចូលត្រូវតែធំជាង ឬស្មើនឹង {{min}}",
+            "maxDigits": "ការបញ្ចូលត្រូវតែតិចជាង ឬស្មើនឹង {{maxDigits}} ខ្ទង់",
+            "overLength": "ការបញ្ចូលត្រូវតែមាន {{max}} តួអក្សរ ឬតិចជាងនេះ",
+            "hasWhitespace": "ការបញ្ចូលមិនគួរមានកន្លែងទំនេរទេ"
+        }
+    },
+    "notificationTemplate": {
+        "list": {
+            "routeSegment": "បញ្ជីគំរូនៃការជូនដំណឹង",
+            "table": {
+                "title": "បញ្ជីគំរូនៃការជូនដំណឹង",
+                "headers": {
+                    "notifTemplateId": "លេខសម្គាល់គំរូ",
+                    "notifTemplateAppCode": "លេខកូដពាក្យស្នើសុំ",
+                    "notifTemplateChannel": "សេចក្តីជូនដំណឹង",
+                    "notifTemplateSubject": "ប្រធានបទ",
+                    "notifTemplateStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីគំរូនៃការជូនដំណឹង",
+                "sub": {
+                    "edit": "កែប្រែគំរូនៃការជូនដំណឹង",
+                    "view": "មើលគំរូនៃការជូនដំណឹង",
+                    "new": "បង្កើតគំរូនៃការជូនដំណឹងថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "notifTemplateID": "លេខសម្គាល់គំរូ",
+                    "notifTemplateSeq": "លេខរៀង",
+                    "notifTmplAppCode": "លេខកូដពាក្យស្នើសុំ",
+                    "notifTemplateChannel": "សេចក្តីជូនដំណឹងអំពីប្រឡាយ/ឃ្លងនាវាចរណ៍",
+                    "notifTemplateNotifContent": "ខ្លឹមសារនៃគំរូ",
+                    "notifTemplateDesc": "ការពិពណ៌នាពីគំរូ",
+                    "notifTemplateSubj": "ប្រធានបទ",
+                    "notifTemplateContent": "ខ្លឹមសារ"
+                }
+            }
+        }
+    },
+    "certificateConfig": {
+        "list": {
+            "routeSegment": "បញ្ជីកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រ",
+            "table": {
+                "title": "បញ្ជីកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រ",
+                "headers": {
+                    "certId": "លេខសម្គាល់",
+                    "certsId": "លេខសម្គាល់វិញ្ញាបនបត្រ",
+                    "certTemplateType": "ប្រភេទគំរូ",
+                    "certSubReportKey": "ចំណុចសំខាន់ៗនៃរបាយការណ៍រង",
+                    "certJrxmlPath": "កន្លែងJRXML",
+                    "certReportTitle": "ចំណងជើងរបាយការណ៍",
+                    "certReportTitleKh": "ចំណងជើងរបាយការណ៍ (ភាសាខ្មែរ)",
+                    "certStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រ",
+                "sub": {
+                    "edit": "កែប្រែការកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រ",
+                    "view": "មើលការកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រ",
+                    "new": "បង្កើតការកំណត់រចនាសម្ព័ន្ធវិញ្ញាបនបត្រថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "certId": "លេខសម្គាល់",
+                    "certsId": "លេខសម្គាល់វិញ្ញាបនបត្រ",
+                    "certTemplateType": "ប្រភេទគំរូ",
+                    "certSubReportKey": "ចំណុចសំខាន់ៗនៃរបាយការណ៍រង",
+                    "certLogoPath": "និមិត្តសញ្ញា",
+                    "certWaterMarkPath": "Watermark Path",
+                    "certJrxmlPath": "កន្លែងJRXML",
+                    "certReportTitle": "ចំណងជើងរបាយការណ៍",
+                    "certReportTitleKh": "ចំណងជើងរបាយការណ៍ (ភាសាខ្មែរ)",
+                    "certReportWebviewTitle": "ចំណងជើង Webview",
+                    "certReportWebviewTitleKh": "ចំណងជើង Webview (ភាសាខ្មែរ)",
+                    "certDepartment": "នាយកដ្ឋាន",
+                    "certDepartmentKh": "នាយកដ្ឋាន (នាយកដ្ឋាន)",
+                    "certInchargeTitle": "តួនាទីអ្នកទទួលបន្ទុក",
+                    "certInchargeTitleKh": "តួនាទីអ្នកទទួលបន្ទុក (ខ្មែរ)",
+                    "certMinistry": "ក្រសួង",
+                    "certMinistryKh": "ក្រសួង (ភាសាខ្មែរ)",
+                    "certStatus": "ស្ថានភាព"
+                }
+            }
+        }
+    },
+    "certificateSvc": {
+        "list": {
+            "routeSegment": "បញ្ជីសេវាកម្មវិញ្ញាបនបត្រ",
+            "table": {
+                "title": "បញ្ជីសេវាកម្មវិញ្ញាបនបត្រ",
+                "headers": {
+                    "certsId": "លេខកូដ",
+                    "certsVal": "តម្លៃ",
+                    "certsModuleService": "សេវាម៉ូឌុល",
+                    "certsDecs": "ពិពណ៌នា",
+                    "certsStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីសេវាកម្មវិញ្ញាបនបត្រ",
+                "sub": {
+                    "edit": "កែប្រែសេវាកម្មវិញ្ញាបនបត្រ",
+                    "view": "មើលសេវាកម្មវិញ្ញាបនបត្រ",
+                    "new": "បង្កើតបញ្ជីសេវាកម្មវិញ្ញាបនបត្រថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "certsId": "លេខសម្គាល់",
+                    "certsVal": "តម្លៃ",
+                    "certsModuleService": "សេវា​​ម៉ូឌុល",
+                    "certsDecs": "ពិពណ៌នា"
+                }
+            }
+        }
+    },
+    "shipTypeEF": {
+        "list": {
+            "table": {
+                "headers": {
+                    "fieldName": "ឈ្មោះឯកសារ",
+                    "fieldNameOth": "ឈ្មោះឯកសារផ្សេងទៀត",
+                    "fieldInputType": "ប្រភេទបញ្ចូលឯកសារ",
+                    "mandatory": "ចំាបាច់",
+                    "shipType": "ប្រភេទនាវា",
+                    "createdBy": "បង្កើត​ឡើង​ដោយ",
+                    "createdDate": "កាលបរិច្ឆេទបង្កើត"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីវាលបន្ថែម",
+                "shipTypeList": "បញ្ជីប្រភេទនាវា",
+                "shipTypeExtraFields": "ប្រភេទនាវា និងបញ្ជីវាលបន្ថែម",
+                "sub": {
+                    "edit": "កែសម្រួលប្រភេទនាវាបន្ថែមវាល",
+                    "view": "មើល",
+                    "viewShipType": "មើលប្រភេទនាវា",
+                    "new": "មើលប្រភេទនាវា"
+                }
+            },
+            "tabs": {
+                "shipDetails": {
+                    "shipType": "ប្រភេទនាវា",
+                    "shipTypeOthLang": "ប្រភេទនាវាផ្សេងទៀត",
+                    "desc": "ការពិពណ៌នា",
+                    "extraFields": "វាលបន្ថែម"
+                }
+            }
+        },
+        "msg": {
+            "successChange": "ការផ្លាស់ប្តូរត្រូវបានដាក់ស្នើដោយជោគជ័យ!",
+            "errorChange": "កំហុសបានជួបប្រទះ ខណៈពេលព្យាយាមបញ្ជូនការផ្លាស់ប្តូរ!"
+        },
+        "dropDown": {
+            "textBox": "ប្រអប់អត្ថបទ",
+            "dropDown": "ទម្លាក់​ចុះ"
+        }
+    },
+    "thrusterType": {
+        "list": {
+            "routeSegment": "បញ្ជីប្រភេទស្លាបចក្រ",
+            "table": {
+                "headers": {
+                    "ttCode": "លេខកូដប្រភេទស្លាបចក្រ",
+                    "ttName": "ឈ្មោះប្រភេទស្លាបចក្រ",
+                    "ttDesc": "ការពិពណ៌នាប្រភេទស្លាបចក្រ",
+                    "ttStatus": "ស្ថានភាពប្រភេទស្លាបចក្រ",
+                    "thrusterType": "ប្រភេទស្លាបចក្រ",
+                    "createdBy": "បង្កើតដោយ"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីប្រភេទស្លាបចក្រ",
+                "sub": {
+                    "edit": "កែប្រែប្រភេទស្លាបចក្រ",
+                    "view": "មើលប្រភេទស្លាបចក្រ",
+                    "new": "បង្កើតប្រភេទស្លាបចក្រថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ttCode": "លេខកូដប្រភេទស្លាបចក្រ",
+                    "ttName": "ឈ្មោះប្រភេទស្លាបចក្រ",
+                    "ttDesc": "ការពិពណ៌នាប្រភេទស្លាបចក្រ"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "ប្រភេទស្លាបចក្រត្រូវបានបង្កើតដោយជោគជ័យ",
+            "successChange": "ប្រភេទស្លាបចក្រត្រូវបានកែប្រែដោយជោគជ័យ"
+        },
+        "validate": {
+            "required": "តម្រូវអោយបញ្ចូល"
+        }
+    },
+    "paymentType": {
+        "list": {
+            "routeSegment": "បញ្ជីប្រភេទនៃការទូទាត់",
+            "table": {
+                "headers": {
+                    "ptCode": "លេខកូដប្រភេទនៃការទូទាត់",
+                    "ptName": "ឈ្មោះប្រភេទនៃការទូទាត់",
+                    "ptDesc": "ការពិពណ៌នាប្រភេទនៃការទូទាត់",
+                    "ptStatus": "ស្ថានភាពប្រភេទនៃការទូទាត់",
+                    "paymentType": "ប្រភេទនៃការទូទាត់",
+                    "createdBy": "បង្កើតដោយ"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីប្រភេទនៃការទូទាត់",
+                "sub": {
+                    "edit": "កែប្រែប្រភេទនៃការទូទាត់",
+                    "view": "មើលប្រភេទនៃការទូទាត់",
+                    "new": "បង្កើតប្រភេទនៃការទូទាត់ថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ptCode": "លេខកូដប្រភេទនៃការទូទាត់",
+                    "ptName": "ឈ្មោះប្រភេទនៃការទូទាត់",
+                    "ptDesc": "ការពិពណ៌នាប្រភេទនៃការទូទាត់"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "ប្រភេទនៃការទូទាត់ត្រូវបានបង្កើតដោយជោគជ័យ",
+            "successChange": "ប្រភេទនៃការទូទាត់ត្រូវបានកែប្រែដោយជោគជ័យ"
+        },
+        "validate": {
+            "required": "តម្រូវអោយបញ្ចូល"
+        }
+    },
+    "numberEngine": {
+        "list": {
+            "routeSegment": "បញ្ជីចំនួនម៉ាស៊ីន",
+            "table": {
+                "title": "បញ្ជីចំនួនម៉ាស៊ីន",
+                "headers": {
+                    "neCode": "លេខកូដចំនួនម៉ាស៊ីន",
+                    "neName": "ឈ្មោះចំនួនម៉ាស៊ីន",
+                    "neDesc": "ការពិពណ៌នាពីចំនួនម៉ាស៊ីន",
+                    "numberEngine": "ចំនួនម៉ាស៊ីន",
+                    "status": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "ចំនួនម៉ាស៊ីនបញ្ជី",
+                "sub": {
+                    "edit": "កែប្រែចំនួនម៉ាស៊ីន",
+                    "view": "មើលចំនួនម៉ាស៊ីន",
+                    "new": "បង្កើតចំនួនម៉ាស៊ីនថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "neCode": "លេខចំនួនម៉ាស៊ីន",
+                    "neName": "ឈ្មោះចំនួនម៉ាស៊ីន",
+                    "neDesc": "ការពិពណ៌នាពីចំនួនម៉ាស៊ីន",
+                    "numberSequence": "Number Engine Sequence"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "ចំនួនម៉ាស៊ីនត្រូវបានបន្ថែមដោយជោគជ័យ",
+            "successOperation": "ប្រតិបត្តិការដោយជោគជ័យ"
+        }
+    },
+    "articleCat": {
+        "list": {
+            "routeSegment": "Article Category List",
+            "table": {
+                "title": "Article Category List",
+                "headers": {
+                    "arcCode": "Article Category ID",
+                    "arcName": "Article Category Name",
+                    "arcDesc": "Article Category Description",
+                    "articleCat": "Article Category",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Article Category List",
+                "sub": {
+                    "edit": "Edit Article Category",
+                    "view": "View Article Category",
+                    "new": "New Article Category"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "arcCode": "Article Category Code",
+                    "arcName": "Article Category Name",
+                    "arcDesc": "Article Category Description"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Article Category has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "crewRank": {
+        "list": {
+            "routeSegment": "បញ្ជីចំណាត់ថ្នាក់នាវិក",
+            "table": {
+                "title": "បញ្ជីចំណាត់ថ្នាក់នាវិក",
+                "headers": {
+                    "crewRankId": "លេខចំណាត់ថ្នាក់នាវិក",
+                    "crewRankName": "ឈ្មោះចំណាត់ថ្នាក់នាវិក",
+                    "crewRankDesc": "ការពិពណ៌នាពីចំណាត់ថ្នាក់នាវិក",
+                    "crewRank": "ចំណាត់ថ្នាក់នាវិក",
+                    "crewRankStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីចំណាត់ថ្នាក់នាវិក",
+                "sub": {
+                    "edit": "កែប្រែចំណាត់ថ្នាក់នាវិក",
+                    "view": "មើលចំណាត់ថ្នាក់នាវិក",
+                    "new": "បង្កើតចំណាត់ថ្នាក់នាវិកថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "crewRankId": "លេខចំណាត់ថ្នាក់នាវិក",
+                    "crewRankName": "ឈ្មោះចំណាត់ថ្នាក់នាវិក",
+                    "crewRankDesc": "ការពិពណ៌នាពីចំណាត់ថ្នាក់នាវិក"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "ចំណាត់ថ្នាក់នាវិក្រូវបានបន្ថែមដោយជោគជ័យ",
+            "successOperation": "ប្រតិបត្តិការដោយជោគជ័យ"
+        }
+    },
+    "shipType": {
+        "list": {
+            "routeSegment": "ប្រភេទនាវា",
+            "table": {
+                "headers": {
+                    "shipTypeId": "លេខកូដប្រភេទនាវា",
+                    "shipTypeName": "ឈ្មោះប្រភេទនាវា",
+                    "shipTypeDesc": "ការពិពណ៌នាប្រភេទនាវា",
+                    "shipTypeStatus": "ស្ថានភាព",
+                    "shipType": "ប្រភេទនាវា",
+                    "createdBy": "បង្កើតដោយ",
+                    "createdDate": "កាលបរិច្ចេទបង្កើតប្រភេទនាវា",
+                    "updatedDate": "កាលបរិច្ចេទកែតម្រូវប្រភេទនាវា"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "បញ្ជីប្រភេទនាវា",
+                "sub": {
+                    "edit": "កែប្រែប្រភេទនាវា",
+                    "view": "មើលប្រភេទនាវា",
+                    "new": "បង្កើតប្រភេទនាវាថ្មី"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "shipTypeId": "លេខកូដប្រភេទនាវា",
+                    "shipTypeName": "ឈ្មោះប្រភេទនាវា",
+                    "shipTypeDesc": "ការពិពណ៌នាប្រភេទនាវា"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "ប្រភេទនាវាត្រូវបានបង្កើតដោយជោគជ័យ",
+            "successChange": "ប្រភេទនាវាត្រូវបានកែតម្រូវដោយជោគជ័យ"
+        },
+        "validate": {
+            "required": "តម្រូវអោយបញ្ចូល"
+        }
+    }
+}

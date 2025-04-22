@@ -1,0 +1,66 @@
+{
+    "app": {
+        "type": "Pilot Order",
+        "msgs": {
+            "createSuccess": "Pilot Order {{appnId}} has been created. You will be redirected to edit page.",
+            "updateSuccess": "Pilot Order {{appnId}} has been updated.",
+            "submitSuccess": "Pilot Order {{appnId}} has been SUBMITTED successfully.",
+            "submitError": "Pilot Order {{appnId}} cannot be submitted.",
+            "action": "Pilot Order {{appnId}} has been {{action}}.",
+            "poApproveFail": "Pilot Order {{appnId}} can not be Approved. To proceed, make sure Entry Permit is Approved."
+        },
+        "po": {
+            "list": {
+                "appNo": "Application No.",
+                "status": "Status",
+                "submitDate": "Submit Date",
+                "port": "Port",
+                "voyageType": "Voyage Type",
+                "voyageNo": "Voyage No.",
+                "shipName": "Ship Name",
+                "reSubmitted": "Resubmitted",
+                "createBy": "Create By",
+                "applicant": "Applicant",
+                "accountType": "SL/SA"
+            },
+            "tabs": {
+                "headerDetails": {
+                    "title": "Header Details",
+                    "subGroups": {
+                        "ship": "Ship",
+                        "voyage": "Voyage",
+                        "request": "Request"
+                    },
+                    "fields": {
+                        "shipName": "Ship Name",
+                        "flag": "Flag",
+                        "portOfArrv": "Port of Arrival / Dept",
+                        "portOfDest": "Port of Destination",
+                        "dateOfArrv": "Estimated Date of Arrival",
+                        "dateOfDept": "Estimated Date of Departure",
+                        "time": "Time",
+                        "reqPilotOnBoard": "Pilot on Board Date",
+                        "reqPilotOnBoardTime": "Time",
+                        "reqCommOnBoard": "Committee on Board Date",
+                        "reqCommOnBoardTime": "Time",
+                        "loa": "Length Over All (m)",
+                        "draft": "Arrival Draft (m)",
+                        "arrDraft": "Arrival Draft (m)",
+                        "depDraft": "Departure Draft (m)",
+                        "breadth": "Breadth",
+                        "arrDraftFrwrd": "Arrival Draft (F)",
+                        "arrDraftAftr": "Arrival Draft (A)",
+                        "depDraftFrwrd": "Departure Draft (F)",
+                        "depDraftAftr": "Departure Draft (A)",
+                        "airDraft": "Air Draft",
+                        "maxSpeed": "Max Speed (kt)",
+                        "nextpoc": "Next Port of Call",
+                        "lastPoc": "Last Port Of Call",
+                        "voyageNo": "Voyage No",
+                        "piorReqMsg": "Message"
+                    }
+                }
+            }
+        }
+    }
+}

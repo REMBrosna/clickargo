@@ -1,0 +1,62 @@
+{
+    "paymentAdvice": {
+        "list": {
+            "routeSegment": "Payment & Generate Payment Advice list",
+            "table": {
+                "title": "Payment & Generate Advice",
+                "title_db": "Payment Collection",
+                "headers": {
+                    "payAdvRefNo": "Payment Ref. No.",
+                    "payInvRefNo": "Invoice Ref. No.",
+                    "payAdvAppNo": "Application Ref. No.",
+                    "payAdvAppType": "Application Type",
+                    "payAdvPayDate": "Payment Date",
+                    "payAdvPayAmt": "Payment Amount",
+                    "payAdvStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "title": "Payment & Generate Advice",
+            "viewAdvLabel": "View Payment Advice Generation",
+            "payAdvLabel": "Payment Advice Generation",
+            "table": {
+                "title": "Payment & Generate Advice",
+                "detailsTitle": "Payment Details",
+                "headers": {
+                    "payAdvRefNo": "Payment Ref. No.",
+                    "payAdvAppNo": "Application Ref. No.",
+                    "payAdvAppType": "Application Type",
+                    "payAdvPayDate": "Payment Date",
+                    "payAdvPayAmt": "Payment Amount",
+                    "payAdvStatus": "Status"
+                },
+                "fields": {
+                    "balanceAmount": "Balance Amount ",
+                    "totalAmount": "Total Amount ",
+                    "paidAmount": "Paid Amount ",
+                    "outstandingBalanceAmount": "Outstanding Balance Amount ",
+                    "importantText": " Important : Payment advice reference will be saved upon selecting Proceed to Payment.",
+                    "btnProceedText": "Proceed to Payment",
+                    "btnOk": "Ok"
+
+
+                }
+            },
+            "msg": {
+                "refNoIs": "Payment Invoice Ref. No. is {{payInvRefNo}}",
+                "notice": "Please take note of the Payment Invoice Ref. No. and use MPWT Payment Gateway to proceed to payment."
+            },
+            "bank": "Payment Bank",
+            "paymentDate": "Payment Date",
+            "uploadReceipt": "Upload Receipt",
+            "transactionNo": "Bank Transaction no.",
+            "refNo": "Ref. No.",
+            "paymentAdvDate": "Payment Advice Date",
+            "remarks": "Remarks",
+            "officerRemarks": "Officer Remarks",
+            "paymentType": "Payment Type",
+            "paymentExemption": "Exemption Payment"
+        }
+    }
+}

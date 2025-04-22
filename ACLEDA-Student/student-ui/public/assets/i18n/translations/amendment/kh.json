@@ -1,0 +1,62 @@
+{
+    "app": {
+        "type": "Amendment",
+        "workbench": "Workbench",
+        "msgs": {
+            "createSuccess": "Amendment has been created {{appnId}}. You will be redirected to edit page.",
+            "updateSuccess": "Amendment {{appnId}} has been updated.",
+            "submitSuccess": "Amendment {{appnId}} has been submitted successfully.",
+            "submitError": "Amendment {{appnId}} cannot be submitted.",
+            "deleteSuccess": "Deleted successfully!",
+            "action": "Amendment {{appnId}} has been {{action}}."
+        },
+        "amend": {
+            "list": {
+                "amdId": "AMD No.",
+                "appId": "App No.",
+                "port": "Port Name",
+                "shipName": "Ship Name",
+                "shipType": "Ship Type",
+                "application": "Application Name",
+                "imoNo": "IMO No.",
+                "callSign": "Call Sign",
+                "submitDate": "Submit Date",
+                "createdDate": "Created Date",
+                "createdBy": "Created By",
+                "status": "Status"
+            },
+            "workbench": {
+                "list": {
+                    "applicationNo": "Application No.",
+                    "status": "Status"
+                }
+            },
+            "tabs": {
+                "header": {
+                    "title": "Header",
+                    "fields": {
+                        "port": "Port",
+                        "ship": "Ship",
+                        "imo": "IMO",
+                        "selectedApp": "Selected Application",
+                        "imoNo": "IMO Number",
+                        "callSign": "Call Sign",
+                        "shipType": "Ship Type"
+                    }
+                },
+                "general": {
+                    "title": "General Info",
+                    "fields": {
+                        "amendField": "Amend Field",
+                        "amendType": "Field Type",
+                        "originValue": "Original Value",
+                        "requestChange": "Request Change Value"
+                    }
+                },
+                "other": {
+                    "title": "Other"
+                }
+            }
+        }
+    }
+}

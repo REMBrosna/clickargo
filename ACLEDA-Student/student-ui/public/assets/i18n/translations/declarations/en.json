@@ -1,0 +1,733 @@
+{
+    "app": {
+        "workbench": "Workbench",
+        "dec": {
+            "msgs": {
+                "createSuccess": "{{module}} has been created {{appnId}}. You will be redirected to edit page.",
+                "updateSuccess": "{{module}} {{appnId}} has been updated.",
+                "submitSuccess": "{{module}} {{appnId}} has been submitted successfully.",
+                "validateSuccess": "{{module}} {{appnId}} has been validated",
+                "submitFail": "Please fill required Details",
+                "action": "{{module}} {{appnId}} has been {{action}}.",
+                "unequalBLs": "{{moduleDesc}} can not be submitted. 'Total No of Master Bill of Lading' in manifest header should be equal to size of 'Bill of Lading' tab List.",
+                "unequualNoCntPkgGrossMass": "{{moduleDesc}} can not be submitted. 'Total No of Packages/Gross Mass/Containers' in manifest header should be equal to sum of respective fields in each 'bill of lading' goodsInfo tab.",
+                "unequualNoPkgGrossMassCont": "{{moduleDesc}} can not be submitted. 'Total No of Packages/Gross Mass' in GoodsInfo tab in each bill of Lading should be equal to sum of respective fields in respective containers tab list.",
+                "adSubmitFail": "{{moduleDesc}} can not be submitted. To proceed make sure Entry Permit is Approved And Pre-Arrival Notice is Acknowledged.",
+                "adApproveFail": "{{moduleDesc}} can not be Approved. To Proceed make sure Pilot Order is Approved.",
+                "panAckFail": "Pre-Arrival Notice can not be Acknowledged. To proceed make sure Entry Permit is Approved.",
+                "adPOUnapproveFail": "Arrival Declaration can not be Approved. To proceed make sure Pilot Order is Approved.",
+                "cargoDecRequired": "*Please Add at least one Cargo Declaration Detail",
+                "atanoset": "Please specify Actual Date/Time of Arrival (ATA) in Vessel Call - Official Use",
+                "atdnoset": "Please specify Actual Date/Time of Departure (ATD) in Vessel Call - Official Use"
+            },
+            "ad": {
+                "dashboard": "Process Arrival Declaration",
+                "title": "Arrival Declaration",
+                "list": {
+                    "appNo": "Application No.",
+                    "shipName": "Ship Name",
+                    "voyageNo": "Voyage No.",
+                    "terminal": "Terminal",
+                    "officeCode": "Office Code",
+                    "subAppNo": "Sub Application No.",
+                    "arrPort": "Arrival Port",
+                    "imoNo": "IMO No.",
+                    "createDt": "Create Date",
+                    "submitDt": "Submit Date",
+                    "createBy": "Create By",
+                    "applicant": "Applicant",
+                    "accountType": "SL/SA",
+                    "overallStatus": "Overall Status",
+                    "status": "Status",
+                    "brdrClearance": "Border Clearance",
+                    "portClearance": "Inward Clearance",
+                    "eta": "ETA"
+                }
+            },
+            "dd": {
+                "dashboard": "Process Departure Declaration",
+                "title": "Departure Declaration",
+                "list": {
+                    "appNo": "Application No.",
+                    "shipName": "Ship Name",
+                    "voyageNo": "Voyage No.",
+                    "terminal": "Terminal",
+                    "officeCode": "Office Code",
+                    "subAppNo": "Sub Application No.",
+                    "arrPort": "Arrival Port",
+                    "imoNo": "IMO No.",
+                    "createDt": "Create Date",
+                    "submitDt": "Submit Date",
+                    "createBy": "Create By",
+                    "applicant": "Applicant",
+                    "accountType": "SL/SA",
+                    "overallStatus": "Overall Status",
+                    "status": "Status",
+                    "brdrClearance": "Border Clearance",
+                    "portClearance": "Outward Clearance",
+                    "eta": "ETA"
+                }
+            },
+            "pan": {
+                "dashboard": "Process Pre-Arrival Notice",
+                "title": "Pre Arrival Notice",
+                "list": {
+                    "appNo": "Application No.",
+                    "shipName": "Ship Name",
+                    "voyageNo": "Voyage No.",
+                    "terminal": "Terminal",
+                    "arrPort": "Arrival Port",
+                    "imoNo": "IMO No.",
+                    "submitDt": "Submit Date",
+                    "createBy": "Create By",
+                    "applicant": "Applicant",
+                    "accountType": "SL/SA",
+                    "status": "Status",
+                    "eta": "ETA"
+                }
+            },
+            "preview": "Master Signature Preview",
+            "header": {
+                "title": "Header",
+                "tabs": {
+                    "voyage": {
+                        "title": "Voyage Details",
+                        "arrivalSubTitle": "Arrival Details",
+                        "departureSubTitle": "Departure Details",
+                        "otherDetails": "Other Details",
+                        "signatureSubTitle": "Signature",
+                        "fields": {
+                            "vesselCallRefNo": "Vessel Call Reference Number",
+                            "shippingLine": "Shipping Line",
+                            "voyageNo": "Voyage Number",
+                            "nameOfMaster": "Name of Master",
+                            "poa": "Port of Arrival",
+                            "doa": "Estimate Date of Arrival",
+                            "toa": "Estimate Time of Arrival",
+                            "countryLastPoc": "Country Last Port of Call",
+                            "lastPoc": "Last Port of Call",
+                            "dutyPaidAt": "Duty Paid At",
+                            "pod": "Port of Departure",
+                            "dod": "Date of Departure",
+                            "tod": "Time of Departure",
+                            "countrynextpoc": "Country Next Port of Call",
+                            "nextpoc": "Next Port of Call",
+                            "mastersign": "Master Signature(*.jpeg,*.png only)",
+                            "dlMasterSign": "Download Master Signature",
+                            "removeMasterSign": "Remove Master Signature",
+                            "altSignature": "signature",
+                            "borderGate": "Border Gate",
+                            "clearanceOnBorder": "Custom Clearance on Border",
+                            "reqPilotOnBoard": "Date of Request Pilot on Board",
+                            "reqPilotOnBoardTime": "Time",
+                            "reqCommOnBoard": "Date of Request Committee on Board",
+                            "reqCommOnBoardTime": "Time",
+                            "terminal": "Terminal",
+                            "inwardCargo": "Inward Cargo",
+                            "outwardCargo": "Outward Cargo",
+                            "cargoInTransit": "Cargo in Transit",
+                            "dgCargo": "Dangerous Cargo",
+                            "suppliesRequested": "Supplies Requested",
+                            "petroleumUseInVessel": "Petroleum for using in the Vessel"
+                        }
+                    },
+                    "shipdetails": {
+                        "title": "Ship Details",
+                        "partSubtitle": " Shipping Line Particulars",
+                        "fields": {
+                            "imoNo": "IMO Number",
+                            "callSign": "Call Sign",
+                            "shipType": "Ship Type",
+                            "flagState": "Flag State",
+                            "applicantTin": "Applicant TIN",
+                            "country": "Country",
+                            "loa": "Length Over All (m)",
+                            "draft": "Arrival Draft (m)",
+                            "arrDraftFrwrd": "Arrival Draft (F)",
+                            "arrDraftAftr": "Arrival Draft (A)",
+                            "depDraftFrwrd": "Departure Draft (F)",
+                            "depDraftAftr": "Departure Draft (A)",
+                            "airDrft": "Air Draft",
+                            "gt": "Gross Tonnage"
+                        }
+                    }
+                }
+            },
+            "fal": {
+                "title": "FAL Forms",
+                "tabs": {
+                    "cargoDeclarationYN": "Does your vessel carry any cargoes? If yes, please specify: ",
+                    "passengerListYN": "Does your vessel carry any passengers? If yes, please specify: ",
+                    "dangerousGoodsYN": "Does your vessel carry any dangerous goods? If yes, please specify: ",
+                    "header": {
+                        "shipName": "Name of Ship",
+                        "callSign": "Call Sign",
+                        "imoNo": "IMO Number",
+                        "voyageNo": "Voyage Number",
+                        "portOf": "Port of {{forDecl}}",
+                        "departureDate": "Date of {{forDecl}}",
+                        "estimateDepartureDate": "Estimate Date of {{forDecl}}",
+                        "flagState": "Flag State of Ship",
+                        "portOfCall": "Last Port of Call/Next Port of Call",
+                        "time": "Time of {{forDecl}}",
+                        "estimateTime": "Estimate Time of {{forDecl}}",
+                        "arrival": "Arrival",
+                        "nameOfShip": "1.1 Name of Ship",
+                        "vesselCode": "Vessel Code",
+                        "imoNumber": "1.2 IMO Number",
+                        "callSn": "1.3 Call Sign",
+                        "voyageNumber": "1.4 Voyage Number",
+                        "portOfArrDept": "2. Port of Arrival/Departure",
+                        "ata": "ATA",
+                        "eta": "3. Estimated Date of Arrival",
+                        "atd": "ATD",
+                        "etd": "3. Estimated Date of Departure",
+                        "estTime": "Time",
+                        "flagStateOfShip": "4. Flag State of Ship",
+                        "nameOfMaster": "5. Name of Master",
+                        "lastPoc": "6. Last Port of Call",
+                        "nextPoc": "6. Next Port of Call",
+                        "nationality": "Nationality",
+                        "masterName": "Master's Name",
+                        "dateOfDeparture": "Date of Departure",
+                        "timeOfDeparture": "Time",
+                        "netTonnage": "Net Registered Tonnage",
+                        "noOfCrew": "Number of Crew",
+                        "noOfPassengers": "Number of Passengers",
+                        "noOfCargo": "Number of Cargo",
+                        "boundFor": "Bound for",
+                        "dateOfArrv": "Estimated Date of Arrival",
+                        "dateOfDept": "Estimated Date of Departure",
+                        "timeOfArrv": "Estimated Time of Arrival",
+                        "timeOfDept": "Estimated TIme of Departure",
+                        "portOfArr": "Port of Arrival",
+                        "portOfDept": "Port of Departure"
+                    },
+                    "general": {
+                        "title": "General Declaration",
+                        "subtitle": "General Declaration",
+                        "fields": {
+                            "cor": "7.1 Certificate of Registry Port",
+                            "corDate": "7.2 Certificate of Registry Date",
+                            "corNumber": "7.3 Certificate of Registry Number",
+                            "corName": "7.4 Certificate of Registry Name",
+                            "rcd": "11. Brief particulars of voyage (previous and subsequent ports of call; underline where remaining cargo will be discharged)",
+                            "gt": "9. Gross Tonnage",
+                            "nt": "10. Net Tonnage",
+                            "crew": "13. Number of Crew",
+                            "pob": "14. Number of Passengers",
+                            "descVoy": "11. Brief Description of Voyage",
+                            "descCargo": "12. Brief Description of Cargo",
+                            "remark": "15. Remarks",
+                            "attCargoDec": "16. Cargo Declaration",
+                            "attShipStore": "17. Ship's Store Declaration",
+                            "attCrewList": "18. Crew List",
+                            "attPssngrList": "19. Passenger List",
+                            "attCrewEffct": "21. Crew's Effects Declaration (only on arrival)",
+                            "attMaritimeDec": "22. Maritime Declaration of Health (only on arrival)",
+                            "shpreq": "20. Ship Req in Terms of Waste and Residue Reception Facilities",
+                            "agentContactName": "8.1 Agent Contact Name",
+                            "agentEmail": "8.2 Agent Email",
+                            "agentCountryCode": "8.3 Agent Country Code",
+                            "agentName": "8.4 Agent Name",
+                            "agentMobileNo": "8.5 Agent Mobile Number",
+                            "agentPostalCode": "8.6 Agent Postal Code",
+                            "agentIdNo": "8.7 Agent Identification Number",
+                            "agentLandlineNo": "8.8 Agent Land Line Number",
+                            "poBox": "8.9 Street Number P.O.Box",
+                            "subdivisionName": "8.10 Sub Division Name",
+                            "agentCity": "8.11 Agent City"
+                        }
+                    },
+                    "cargoDeclaration": {
+                        "title": "Cargo Declaration",
+                        "subTitle": "Cargo Declaration Details",
+                        "hsPopup": {
+                            "title": "HS Code Details",
+                            "headers": {
+                                "hsCode": "HS Code",
+                                "hsDesc": "HS Description"
+                            }
+                        },
+                        "fields": {
+                            "blNo": "B/L No.",
+                            "marks": "Marks & Numbers",
+                            "kindofpkg": "Kind of Packages",
+                            "pkgtype": "No. / Count of the Package Type",
+                            "grosswt": "Gross Weight (kg)",
+                            "msmt": "Measurement (m)",
+                            "mn": "6. Marks and Numbers",
+                            "transEqmtId": "6.1 Transport Equipment ID",
+                            "cgItemMNos": "6.2 Cargo Item Marks and Numbers",
+                            "noAndKop": "7. Number and kind of packages; description of goods or, if available, the HS Code",
+                            "cgiPkgTypeCode": "7.2 Cargo Item Package Type Code",
+                            "cgiHSCode": "7.4 HS Code",
+                            "cgiDescGood": "7.3 Cargo Description of Goods",
+                            "cgiNoOfPkgs": "7.1 Cargo Item Number of Package",
+                            "cgiGrossWt": "8. Cargo Item Gross Weight in KG",
+                            "cgiGrossVol": "8. Cargo Item Gross Volume in MTQ",
+                            "gw": "8. Gross Weight",
+                            "msmnt": "9. Measurement",
+                            "aap": "10.1 Agent at Port",
+                            "aapIdNo": "10.2 Agent at Port Identification Number",
+                            "contactName": "10.3 Agent 's Employee Contact Name",
+                            "authName": "10.4 Authenticator Name",
+                            "authCode": "10.5 Authentication Role Code",
+                            "authDate": "10.6 Authentication Date",
+                            "voyageNo": "1.3 Voyage Number",
+                            "port": "2. Port Where Report is Made",
+                            "flagStateOfShip": "3. Flag State of Ship",
+                            "nameOfMaster": "4. Name of Master",
+                            "portOfDsch": "5. Port of Loading/Port of Discharge"
+                        },
+                        "validationMsgs": {
+                            "rangeValidationGrsWt": "Value should not be less than 0 or more than 9999999999999999.999999.",
+                            "decimalAllowedGrsWt": "Only allows up to 6 decimal places",
+                            "rangeValidationGrsVol": "Value should not be less than 0.0 or more than 9999999999999999.999999.",
+                            "decimalAllowedGrsVol": "Only allows up to 6 decimal places"
+                        }
+                    },
+                    "shipstore": {
+                        "title": "Ship's Store Declaration",
+                        "fields": {
+                            "lastPoc": "5.1 Last Port of Call",
+                            "nextPoc": "5.2 Next Port of Call",
+                            "noOfPerOnb": "6. No of Persons OnBoard",
+                            "prdOfStay": "7. Period of Stay in days",
+                            "articlename": "8.2 Name of Article",
+                            "qty": "9. Quantity",
+                            "lob": "10. Location OnBoard",
+                            "offUse": "11. Official Use",
+                            "articlecode": "8.1 Article Category",
+                            "nameOfArticle": "8. Name of Article",
+                            "uom": "UOM"
+                        }
+                    },
+                    "crewEffect": {
+                        "title": "Crew Effect's Declaration",
+                        "subTitle": "Crew Effect's Details",
+                        "fields": {
+                            "seqNo": "3. No.",
+                            "fn": "Family Name",
+                            "gn": "Given Name",
+                            "ror": "Rank or Rating",
+                            "eff": "Effects Ineligible For Relief From Customs Duties and Taxes or Subject to Prohibitions or Restrictions",
+                            "sign": "Signature(*.jpeg,*.png only)",
+                            "flagStateOfShip": "2. Flag State of Ship",
+                            "type": "Type",
+                            "qty": "Quantity",
+                            "uom": "UOM",
+                            "desc": "Description",
+                            "fName": "4. Family Name",
+                            "gName": "5. Given Name",
+                            "roRt": "6. Rank or Rating",
+                            "inEff": "7. Ineligible Effects",
+                            "signature": "8. Signature",
+                            "effInfo": "Effects Info",
+                            "effType": "Crew Effect Type"
+                        }
+                    },
+                    "crewList": {
+                        "title": "Crew List",
+                        "subTitle": "Crew Details",
+                        "fields": {
+                            "seqNo": "6. No.",
+                            "fn": "7. Family Name",
+                            "gn": "8. Given Name",
+                            "ror": "9. Rank or Rating",
+                            "nat": "10. Nationality",
+                            "dob": "11. Date of Birth",
+                            "pob": "12.1 Country of Birth",
+                            "pobp": "12.2 Place of Birth",
+                            "gender": "13. Gender",
+                            "id": "14. Nature of Identity Document",
+                            "no": "15. Number of Identity Document",
+                            "state": "16. Issuing State of Identity Document",
+                            "expdate": "17. Expiry Date of Identity Document",
+                            "iddoc": "18. Identity Document",
+                            "departureDate": "3.1 Date of {{forDecl}}",
+                            "time": "3.2 Time of {{forDecl}}",
+                            "lastPoc": "5. Last Port of Call",
+                            "idDoc": "Identity Document"
+                        }
+                    },
+                    "passangerList": {
+                        "title": "Passenger List",
+                        "fields": {
+                            "seqNo": "No.",
+                            "fn": "5. Family Name",
+                            "gn": "6. Given Name",
+                            "nat": "7. Nationality",
+                            "dob": "8. Date of Birth",
+                            "pob": "9.1 Country of Birth",
+                            "pobp": "9.2 Place of Birth",
+                            "gender": "10. Gender",
+                            "id": "11. Type of Identity or Travel Document",
+                            "no": "12. Serial Number of Identity or Travel Document",
+                            "state": "13. Issuing State of Identity Document",
+                            "expdate": "14. Expiry Date of Identity Document",
+                            "country": "Country of Embarkation",
+                            "port": "15. Port of Embarkation",
+                            "visa": "16. Visa Number (if appropriate)",
+                            "countryde": "Country of Disembarkation",
+                            "portde": "17. Port of Disembarkation",
+                            "transit": "18. Transit Passenger or Not",
+                            "iddoc": "Identity Document",
+                            "idDoc": "10. Identity Document"
+                        }
+                    },
+                    "dangerousGoods": {
+                        "title": "Dangerous Goods",
+                        "fields": {
+                            "sp": "5. Stowage Position",
+                            "rn": "6. Reference Number",
+                            "unno": "8. UN Number",
+                            "mn": "7.1 Marks & Numbers",
+                            "fr": "7.2 Freight Container Identification No(s)",
+                            "vr": "7.3 Vehicle Registration No(s)",
+                            "shipname": "9.1 Proper Shipping Name",
+                            "ts": "9.2 Technical Specifications",
+                            "class": "10.1 Class",
+                            "sr": "10.2 Subsidiary Risk(s)",
+                            "pgp": "11. Packing Group",
+                            "fp": "12.3 Flash Point",
+                            "ai": "12.1 Additional Information",
+                            "mp": "12.2 Marine Pollutant",
+                            "code": "13.1 No ",
+                            "uom": "13.2 UOM",
+                            "no": "13.3 Kind of Packages",
+                            "ems": "15. EmS",
+                            "mass": "14.1 Mass (kg) ",
+                            "vol": "14.2  Volume (L)",
+                            "voyageNo": "1.4 Voyage Number",
+                            "flagStateOfShip": "2. Flag State of Ship",
+                            "portOfLoading": "3. Port of Loading",
+                            "portOfDischarge": "4. Port of Discharge"
+                        }
+                    }
+                }
+            },
+            "manifest": {
+                "title": "Manifest",
+                "tabs": {
+                    "header": {
+                        "title": "Header",
+                        "fields": {
+                            "manifestType": "Manifest Type",
+                            "transportMode": "Transport Mode",
+                            "manifestNo": "Manifest No.",
+                            "overdueTime": "Overdue Time",
+                            "customOffice": "Custom Office",
+                            "totalNoBOL": "Total No. of Master Bill of Lading",
+                            "totalNoPackages": "Total No. of Packages",
+                            "totalNoContainers": "Total No. of Containers",
+                            "totalGrossMass": "Total Gross Mass (kg)",
+                            "sendManifest": "Send Manifest Information",
+                            "yes": "Yes",
+                            "no": "No"
+                        }
+                    },
+                    "billOfLading": {
+                        "title": "Bill of Lading",
+                        "tableColumns": {
+                            "bolNo": "BL No.",
+                            "marksNo": "Marks & No.",
+                            "noKindPkg": "No. & Kind of Pkg.",
+                            "grossWt": "Gross Weight",
+                            "measurement": "Measurement",
+                            "grossMass": "Gross Mass (kg)",
+                            "noOfContainers": "Number of Containers",
+                            "volumeCM": "Volume in Cubic Meters",
+                            "noOfPkgs": "Number of Packages",
+                            "pkgType": "Package Type"
+                        },
+                        "popup": {
+                            "title": "Manifest",
+                            "popupTabs": {
+                                "billInfo": {
+                                    "title": "Bill Info",
+                                    "subGroups": {
+                                        "blAwbDetails": "BL/AWB Details",
+                                        "locationDetails": "Location Details"
+                                    },
+                                    "fields": {
+                                        "blAwbNo": "BL/AWB No.",
+                                        "blAwbType": "BL/AWB Type",
+                                        "billNature": "Bill Nature",
+                                        "blAwbMasterNo": "BL/AWB Master No.",
+                                        "placeOfLoading": "Place of Loading",
+                                        "placeofUnloading": "Place of Unloading",
+                                        "portOfLoading": "Port of Loading",
+                                        "portOfUnloading": "Port of Unloading"
+                                    }
+                                },
+                                "traderInfo": {
+                                    "title": "Trader Info",
+                                    "subGroups": {
+                                        "exporter": "Exporter",
+                                        "consignee": "Consignee",
+                                        "notifyParty": "Notify Party"
+                                    },
+                                    "fields": {
+                                        "exporterName": "Name",
+                                        "exporterAddress": "Address",
+                                        "consigneeName": "Name",
+                                        "consigneeAddress": "Address",
+                                        "consigneeCode": "Code",
+                                        "notifyPartyName": "Name",
+                                        "notifyPartyAddress": "Address",
+                                        "notifyPartyCode": "Code"
+                                    }
+                                },
+                                "goodsInfo": {
+                                    "title": "Goods Info",
+                                    "subGroups": {
+                                        "goodsDetails": "Goods Details",
+                                        "sealDetails": "Seal Details"
+                                    },
+                                    "fields": {
+                                        "goodsDescription": "Goods Description",
+                                        "grossMass": "Gross Mass (kg)",
+                                        "noOfContainers": "Number of Containers",
+                                        "volumeCM": "Volume in Cubic Meters",
+                                        "noOfPkgs": "Number of Packages",
+                                        "pkgType": "Package Type",
+                                        "noOfSeals": "Number of Seals",
+                                        "info": "Information",
+                                        "sealPartyCode": "Seal Party Code",
+                                        "sealMarks": "Seal Marks",
+                                        "shippingMarks": "Shipping Marks"
+                                    }
+                                },
+                                "valueInfo": {
+                                    "title": "Value Info",
+                                    "subGroups": {
+                                        "transpoDetails": "Transport Value Details",
+                                        "freightDetails": "Freight Value Details",
+                                        "customDetails": "Custom Value Details",
+                                        "insuranceDetails": "Insurance Value Details"
+                                    },
+                                    "fields": {
+                                        "transpoVal": "Transport Value",
+                                        "transpoCurr": "Transport Currency",
+                                        "freightVal": "Freight Value",
+                                        "freightCurr": "Freight Currency",
+                                        "customVal": "Custom Value",
+                                        "customCurr": "Custom Currency",
+                                        "insureVal": "Insurance Details",
+                                        "insureCurr": "Insurance Currency"
+                                    }
+                                },
+                                "containerInfo": {
+                                    "title": "Container Info",
+                                    "tableColumns": {
+                                        "containerNo": "Container No.",
+                                        "containerType": "Container Type",
+                                        "emptyOrFull": "Empty or Full",
+                                        "sealingPartyNameCode": "Sealing Party Name / Code"
+                                    },
+                                    "popup": {
+                                        "title": "Container Details",
+                                        "subGroups": {
+                                            "containerInfo": "Container Info",
+                                            "otherInfo": "Other Info"
+                                        },
+                                        "fields": {
+                                            "containerInfo": "Container No",
+                                            "containerType": "Container Type",
+                                            "goodsDesc": "Goods Description",
+                                            "noOfPkg": "Number of Package",
+                                            "emptyOrFull": "Empty or Full",
+                                            "grossMass": "Gross Mass (kg)",
+                                            "sealingParty": "Sealing Party",
+                                            "marks1": "Marks 1",
+                                            "marks2": "Marks 2",
+                                            "marks3": "Marks 3",
+                                            "minTemp": "Minimum Temperature",
+                                            "maxTemp": "Maximum Temperature",
+                                            "humidity": "Humidity",
+                                            "dangerousGoods": "Dangerous Goods"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "others": {
+                "title": "Other Forms",
+                "tabs": {
+                    "containerInfo": {
+                        "title": "Container Info",
+                        "fields": {
+                            "contType": "Type",
+                            "contCat": "Category",
+                            "contCatOthr": "Others",
+                            "contSize": "Size",
+                            "contQty": "Quantity",
+                            "contGw": "Gross Weight",
+                            "contTotalWeight": "Total Weight (KGM)",
+                            "total": "Total: "
+                        },
+                        "buttons": {
+                            "addContainerInfo": "Add Container Info"
+                        },
+                        "info": {
+                            "totalGw": "If new row is added, it will be auto-calculated. But this can also be changed manually."
+                        }
+                    },
+                    "nillist": {
+                        "title": "NIL List",
+                        "subGroups": {
+                            "radioPanel": "We confirm that the following List of Items are not found in the Ship"
+                        },
+                        "fields": {
+                            "stowaways": "Stowaways",
+                            "animalPlants": "Animal / Plants",
+                            "parcelPackage": "Parcel / Package",
+                            "armsAmmo": "Arms / Ammunitions",
+                            "drugs": "Illegal Drugs",
+                            "passengers": "Passengers",
+                            "livestocks": "Livestocks"
+                        }
+                    },
+                    "healthdeclaration": {
+                        "title": "Maritime Declaration Of Health",
+                        "subGroups": {
+                            "questions": "Questions"
+                        },
+                        "fields": {
+                            "yes": "YES",
+                            "no": "NO"
+                        }
+                    },
+                    "declarationOfHealth": {
+                        "title": "Declaration of Health for Out Bound Vessel",
+                        "isSSCEC": {
+                            "title": "Does the ship have a valid Sanitation Control Exemption/Control carried on board (SSCEC)?",
+                            "yes": "YES",
+                            "no": "NO",
+                            "place": "Place of issue",
+                            "date": "Issue date"
+                        },
+                        "reinspection": "Re-inspection required?",
+                        "aft": {
+                            "title": "Has ship/vessel visited an affected area identified by the World Health Organization?",
+                            "country": "Visited Country",
+                            "port": "Visited Port",
+                            "date": "Date visit"
+                        },
+                        "commencement": "List port of call from commencement of voyage with dates of departure, or within past thirty day, whichever is shorter.",
+                        "commencementBox": "Commencement",
+                        "subGroups": {
+                            "questions": "The following questions answered by captain or ship's surgeon"
+                        }
+                    },
+                    "report": {
+                        "title": "Report of Water Taken Onboard",
+                        "popup": {
+                            "title": "Water on Board Form"
+                        },
+                        "fields": {
+                            "hold": "Hold",
+                            "kow": "Kind of Water",
+                            "qty": "Quantity",
+                            "country": "Country",
+                            "port": "Port where Water was Taken on Board",
+                            "rem": "Remaining",
+                            "date": "Date of Taking Water",
+                            "remarks": "Remarks"
+                        }
+                    },
+                    "narcotics": {
+                        "title": "Narcotic Drugs List",
+                        "popup": {
+                            "title": "Narcotic Drugs Details"
+                        },
+                        "fields": {
+                            "seqNo": "No.",
+                            "kom": "Kind of Medicine",
+                            "qty": "Quantity",
+                            "uom": "UOM",
+                            "expDate": "Expiry Date"
+                        }
+                    },
+                    "portofcall": {
+                        "title": "Port Of Call List",
+                        "subTitlePoc": "Last 10 Ports of Call",
+                        "popup": {
+                            "title": "Port of Call"
+                        },
+                        "fields": {
+                            "country": "Country",
+                            "poc": "Port of Call",
+                            "berth": "Berth/Anchorage/Transit",
+                            "unCode": "UNCODE (if Available)",
+                            "arrDate": "Arrival Date",
+                            "depDate": "Departure Date",
+                            "pSeclevel": "Port Security Level",
+                            "sSeclevel": "Ship Security Level",
+                            "remarks": "Remarks"
+                        }
+                    },
+                    "wasteDelivery": {
+                        "title": "Waste Delivery Notification",
+                        "subGroups": {
+                            "type": "Type and Amount Of Wastes/Residues for Discharge to Facility"
+                        },
+                        "fields": {}
+                    },
+                    "vaccination": {
+                        "title": "Vaccination List",
+                        "popup": {
+                            "title": "Vaccination Details"
+                        },
+                        "fields": {
+                            "seqNo": "No.",
+                            "fName": "Family Name",
+                            "gName": "Given Name",
+                            "ror": "Rank or Rating",
+                            "nat": "Nationality",
+                            "expDate": "Vaccination Expiry Date",
+                            "yBook": "Yellow Book",
+                            "yfExpDate": "Yellow Fever Vaccination Expiry",
+                            "upload": "Upload International Vaccination Certificate (Yellow Book)(*.pdf, *.png, *.jpg, *.jpeg only)",
+                            "cert": "International Vaccination Certificate (Yellow Book)"
+                        }
+                    }
+                }
+            },
+            "docAudit": {
+                "title": "Docs & Audits",
+                "tabs": {
+                    "suppDoc": {
+                        "title": "Supporting Documents",
+                        "fields": {}
+                    },
+                    "audit": {
+                        "title": "Audits",
+                        "fields": {}
+                    }
+                }
+            },
+            "queryRemark": {
+                "title": "Queries & Remarks",
+                "tabs": {
+                    "query": {
+                        "title": "Queries",
+                        "fields": {}
+                    },
+                    "remark": {
+                        "title": "Remarks",
+                        "fields": {}
+                    }
+                }
+            },
+            "certificates": {
+                "poc": "Port Clearance Certificate ",
+                "qfd": "Quarantine for Departure"
+            }
+        }
+    }
+}

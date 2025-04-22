@@ -1,0 +1,117 @@
+{
+    "user": {
+        "profile": {
+            "userProfile": "User Profile"
+        },
+        "details": {
+            "username": "Username",
+            "dateOfBirth": "Date of Birth",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email" : "Email",
+            "gender": "Gender",
+            "address" : "Address",
+            "conNumber": "Phone Number"
+
+        },
+        "list": {
+            "reportGroup": "Report Group",
+            "reportName": "Report Name",
+            "reportTitle": "Report Title"
+        },
+        "button": {
+            "search": "Search",
+            "generateReport": "Generate Report",
+            "generateExcel": "Generate Excel",
+            "cancel": "Cancel",
+            "previewReport": "Preview Report"
+        },
+        "msg": {
+            "generate": "Generate",
+            "confirmGenerate": "Are you sure you want to generate?"
+        },
+        "resetPwd": {
+            "title": "Reset Password"
+        },
+        "changePassword": {
+            "title": "Change Password",
+            "fields": {
+                "currentPassword": "Current Password",
+                "newPassword": "New Password",
+                "confirmPassword": "Confirm Password",
+                "passwordFormat": "Password must be 8-20 characters long. Passwords are case sensitive."
+            },
+            "errors": {
+                "length": "Password should be more than or equal to 8 characters",
+                "notMatch": "New Password and Confirm Password does not match",
+                "required": "Required"
+            }
+        }
+    },
+
+    "sysParam": {
+        "list": {
+            "routeSegment": "System Parameters List",
+            "table": {
+                "title": "System Parameters List",
+                "headers": {
+                    "sysKey": "System Parameter Key",
+                    "sysVal": "System Parameter Value",
+                    "sysDesc": "Description",
+                    "sysStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "System Parameters List",
+                "sub": {
+                    "edit": "Edit System Parameters",
+                    "view": "View System Parameters"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "sysKey": "System Parameter Key",
+                    "sysVal": "System Parameter Value",
+                    "sysDesc": "Description"
+                }
+            }
+        }
+    },
+    "certificate": {
+        "list": {
+            "routeSegment": "Application Certificate List",
+            "table": {
+                "title": "Application Certificate List",
+                "headers": {
+                    "appId": "Application ID",
+                    "certType": "Certificate Type",
+                    "certStatus": "Certificate Status",
+                    "qrRetry": "QR Retry",
+                    "dgRetry": "Digital Certificate Retry",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Application Certificate List",
+                "sub": {
+                    "edit": "View Application Certificate",
+                    "view": "View Application Certificate"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "appId": "Application ID",
+                    "certType": "Certificate Type",
+                    "certStatus": "Certificate Status",
+                    "qrRetry": "QR Retry",
+                    "dgRetry": "Digital Certificate Retry",
+                    "printParent": "Print Parent"
+                }
+            }
+        }
+    }
+}

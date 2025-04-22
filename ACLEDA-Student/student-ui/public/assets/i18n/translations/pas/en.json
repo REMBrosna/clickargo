@@ -1,0 +1,101 @@
+{
+    "title": "Ship Pre-Arrival Security Information Notice",
+    "message": {
+        "success": {
+            "create": "Ship Pre-Arrival Security has been created.",
+            "update": "Ship Pre-Arrival Security has been updated.",
+            "submit": "Ship Pre-Arrival Security has been submitted."
+        },
+        "error": "Error encountered while trying to fetch Ship Pre-Arrival Security.",
+        "action": "Ship Pre-Arrival Security {{appnId}} has been {{action}}.",
+        "pasAckFail": "Ship Pre-Arrival Security {{appnId}} can not be Acknowledged. To proceed, make sure Entry Permit is Approved.",
+        "errorSubmit": "Ship Pre-Arrival Security {{appnId}} cannot be submitted."
+    },
+    "list": {
+        "title": "Pre-Arrival Security List",
+        "appNo": "Application No.",
+        "port": "Port",
+        "voyageNo": "Voyage No.",
+        "shipName": "Ship Name",
+        "status": "Status",
+        "submitDate": "Submit Date",
+        "createBy": "Create By",
+        "applicant": "Applicant",
+        "accountType": "SL/SA",
+        "expiryDate": "Expiry Date"
+    },
+    "tabs": {
+        "headerDetails": {
+            "title": "Header Details",
+            "shipOwner": "Ship Owner",
+            "shipName": "Ship Name",
+            "identification": "Identification",
+            "arrival": "Arrival",
+            "imoNo": "IMO No",
+            "callSign": "Call Sign",
+            "country": "Country",
+            "shippingLineTIN": "Shipping Line TIN",
+            "shippingLineName": "Shipping Line Name",
+            "shippingLineAddress": "Shipping Line Address",
+            "typeOfShip": "Type of Ship",
+            "port": "Port Applied",
+            "numberOfCrew": "Number of Crew",
+            "shipLevelInfo": {
+                "title": "Ship Level Info",
+                "passengerCrew": "Passenger/Crew",
+                "totalPassenger": "Number of Passengers",
+                "security": "Security",
+                "isISSC": {
+                    "title": "Does the ship have a valid International Ship Security Certificate (ISSC)?",
+                    "yes": "YES",
+                    "no": "NO"
+                },
+                "ifYesISSC": "If Yes, Please specify:",
+                "issuingAuthority": "Issuing Authority",
+                "certNo": "Cert No",
+                "placeOfIssued": "Place of Issued",
+                "dateIssued": "Date Issued",
+                "dateExpires": "Date Expires",
+                "ifNotISSC": "If Not, Please specify:",
+                "isApprovedSSP": {
+                    "title": "Does it have an approved SSP?",
+                    "yes": "YES",
+                    "no": "NO"
+                }
+            },
+            "securityLevel": "Security Level",
+            "estTimeArrival": "Estimated Time of Arrival",
+            "estDateArrival": "Estimated Date of Arrival"
+        },
+        "shipLevelInfo": {
+            "title": "Ship Level Info",
+            "country": "Country",
+            "portOfCall": "Port of Call",
+            "note": "Please List The Last 10 Ports (Most Recent First)",
+            "No": "No.",
+            "nameOfPort": "Name of Port",
+            "dateOfArrival": "Date of Arrival",
+            "dateOfDeparture": "Date of Departure",
+            "securityLevel": "Security Level"
+        },
+        "cargoDetails": {
+            "title": "Cargo Details",
+            "fields": {
+                "popup": {
+                    "title": "Add Cargo Details",
+                    "cargoType": "Type of Cargo",
+                    "cargoName": "Name of Cargo",
+                    "empty": "Empty",
+                    "laden": "Laden",
+                    "totalQty": "Total Quantity",
+                    "qty": "Quantity",
+                    "type": "Type",
+                    "selectCargoType": "Select Cargo Type"
+                }
+            }
+        },
+        "field": {
+            "required": "This field is required"
+        }
+    }
+}

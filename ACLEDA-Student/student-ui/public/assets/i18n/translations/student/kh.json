@@ -1,0 +1,171 @@
+{
+    "audit": {
+        "list": {
+            "routeSegment": "បញ្ជីកំណត់ហេតុសវនកម្ម",
+            "table": {
+                "title": "បញ្ជីកំណត់ហេតុសវនកម្ម",
+                "headers": {
+                    "audtId": "ឯកសារយោង",
+                    "audtEvent": "ព្រឹត្តិការណ៍",
+                    "audtUid": "លេខសម្គាល់អ្នកប្រើប្រាស់",
+                    "audtUname": "ឈ្មោះ​អ្នកប្រើប្រាស់",
+                    "audtReckey": "លេខដាក់ពាក្យ"
+                }
+            }
+        },
+        "details": {
+            "view": "មើលកំណត់ហេតុសវនកម្",
+            "tabs": {
+                "recordDetails": {
+                    "audtId": "ឯកសារយោង",
+                    "audtEvent": "ព្រឹត្តិការណ៍",
+                    "audtUid": "លេខសម្គាល់អ្នកប្រើប្រាស់",
+                    "audtAccnid": "គណនី",
+                    "audtTimestamp": "កាលបរិច្ឆេទ/ពេលវេលាព្រឹត្តិការណ៍",
+                    "audtCreatedDate": "កាលបរិច្ឆេទបង្កើត",
+                    "audtRemoteIp": "ប្រភព IP",
+                    "audtUname": "កត់ត្រា",
+                    "audtParam1": "ប៉ារ៉ាម៉ែត្រ ១",
+                    "audtParam2": "ប៉ារ៉ាម៉ែត្រ ២",
+                    "audtParam3": "ប៉ារ៉ាម៉ែត្រ ៣",
+                    "audtRemarks": "កំណត់សំគាល់ផ្សេងៗ"
+                }
+            }
+        }
+    },
+    "exception": {
+        "list": {
+            "routeSegment": "បញ្ជីករណីលើកលែង",
+            "table": {
+                "title": "បញ្ជីករណីលើកលែង",
+                "headers": {
+                    "expToken": "ឯកសារយោង",
+                    "expCode": "កូដកម្មវិធី",
+                    "expMsg": "សារលើកលែង",
+                    "expUid": "លេខសម្គាល់អ្នកប្រើប្រាស់"
+                }
+            }
+        },
+        "details": {
+            "view": "មើលករណីលើកលែង",
+            "tabs": {
+                "recordDetails": {
+                    "expToken": "ឯកសារយោង",
+                    "expCode": "កូដកម្មវិធី",
+                    "expMsg": "សារលើកលែង",
+                    "expUid": "លេខសម្គាល់អ្នកប្រើប្រាស់",
+                    "expLevel": "កម្រិតលើកលែង",
+                    "expSvrAddr": "IP",
+                    "expApp": "ឈ្មោះកម្មវិធី",
+                    "expAddinfo": "ព័ត៌មានករណីលើកលែង",
+                    "expDetails": "ព័ត៌មានលម្អិតករណីលើកលែង",
+                    "expTimestamp": "កាលបរិច្ឆេទ/ពេលវេលាលើកលែង",
+                    "expCreatedDate": "កាលបរិច្ឆេទបង្កើត"
+                }
+            }
+        }
+    },
+    "document": {
+        "list": {
+            "routeSegment": "គ្រប់គ្រងឯកសារ",
+            "table": {
+                "title": "គ្រប់គ្រងឯកសារ",
+                "subtitle": "ឯកសារ",
+                "headers": {
+                    "appnId": "លេខសម្គាល់ពាក្យស្នើសុំ",
+                    "appnAppType": "ប្រភេទពាក្យស្នើសុំ",
+                    "attDtCreate": "កាលបរិច្ឆេទ",
+                    "docType": "ប្រភេទ​ឯកសារ",
+                    "refNo": "លេខយោងឯកសារ",
+                    "attName": "ឈ្មោះឯកសារ",
+                    "shipperName": "ក្រុមហ៊ុនកប៉ាល់/ឈ្មោះភ្នាក់ងារ",
+                    "shipName": "ឈ្មោះនាវា",
+                    "voyageType": "ប្រភេទជើងដំណើរ",
+                    "voyageNo": "លេខជើងធើ្វដំណើររបស់នាវា"
+                },
+                "button": {
+                    "search": "ស្វែងរក",
+                    "download": "ទាញយក"
+                }
+            }
+        },
+        "options": {
+            "appnId": "លេខសម្គាល់ពាក្យស្នើសុំ",
+            "appType": "ប្រភេទពាក្យស្នើសុំ",
+            "docType": "ប្រភេទ​ឯកសារ",
+            "shipperName": "ក្រុមហ៊ុនកប៉ាល់/ឈ្មោះភ្នាក់ងារ",
+            "fromDate": "កាលបរិច្ឆេទចាប់ផ្តើម",
+            "toDate": "កាលបរិច្ឆេទបញ្ចប់"
+        }
+    },
+    "report": {
+        "title": {
+            "reports": "របាយការណ៍",
+            "report": "របាយការណ៍",
+            "reportFilters": "តម្រងរបាយការណ៍",
+            "reportPreview": "មើលជាមុន"
+        },
+        "list": {
+            "reportGroup": "ក្រុមរបាយការណ៍",
+            "reportName": "ឈ្មោះរបាយការណ៍",
+            "reportTitle": "ចំណងជើងរបាយការណ៍"
+        },
+        "button": {
+            "search": "ស្វែងរក",
+            "generateReport": "ទាញយករបាយការណ៍",
+            "generateExcel": "បង្កើត Excel",
+            "cancel": "បោះបង់",
+            "previewReport": "មើលរបាយការណ៍ជាមុន"
+        },
+        "msg": {
+            "generate": "បង្កើត",
+            "confirmGenerate": "តើអ្នកប្រាកដថាចង់បង្កើតទេ?"
+        }
+    },
+    "sysParam": {
+        "list": {
+            "routeSegment": "តារាងប៉ារ៉ាម៉ែត្រ",
+            "table": {
+                "title": "តារាងប៉ារ៉ាម៉ែត្រ",
+                "headers": {
+                    "sysKey": "ប៉ារ៉ាម៉ែត្រសំខាន់",
+                    "sysVal": "តម្លៃប៉ារ៉ាម៉ែត្រ",
+                    "sysDesc": "ការពិពណ៌នា",
+                    "sysStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "តារាងប៉ារ៉ាម៉ែត្រ",
+                "sub": {
+                    "edit": "កែសម្រួលប៉ារ៉ាម៉ែត្រ",
+                    "view": "មើលប៉ារ៉ាម៉ែត្រ"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "sysKey": "តារាងប៉ារ៉ាម៉ែត្រ",
+                    "sysVal": "តម្លៃប៉ារ៉ាម៉ែត្រ",
+                    "sysDesc": "ការពិពណ៌នា"
+                }
+            }
+        }
+    },
+    "certificate": {
+        "list": {
+            "routeSegment": "Application Certificate List",
+            "table": {
+                "title": "Application Certificate List",
+                "headers": {
+                    "appId": "Application ID",
+                    "certType": "Certificate Type",
+                    "certStatus": "Certificate Status",
+                    "qrRetry": "QR Retry",
+                    "dgRetry": "Digital Certificate Retry",
+                    "status": "Status"
+                }
+            }
+        }
+    }
+}

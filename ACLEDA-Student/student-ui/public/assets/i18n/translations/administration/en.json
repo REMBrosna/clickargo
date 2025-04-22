@@ -1,0 +1,231 @@
+{
+    "audit": {
+        "list": {
+            "routeSegment": "Audit Logs List",
+            "table": {
+                "title": "Audit Logs List",
+                "headers": {
+                    "audtId": "Reference",
+                    "audtEvent": "Event",
+                    "audtUid": "User ID",
+                    "audtUname": "User Name",
+                    "audtReckey": "Application Ref. No"
+                }
+            }
+        },
+        "details": {
+            "view": "View Audit Logs",
+            "tabs": {
+                "recordDetails": {
+                    "audtId": "Reference",
+                    "audtEvent": "Event",
+                    "audtUid": "User ID",
+                    "audtAccnid": "Account",
+                    "audtTimestamp": "Date/Time Event",
+                    "audtCreatedDate": "Created Date",
+                    "audtRemoteIp": "Source IP",
+                    "audtUname": "Record",
+                    "audtParam1": "Param 1",
+                    "audtParam2": "Param 2",
+                    "audtParam3": "Param 3",
+                    "audtRemarks": "Remarks"
+                }
+            }
+        }
+    },
+    "exception": {
+        "list": {
+            "routeSegment": "Exceptions List",
+            "table": {
+                "title": "Exceptions List",
+                "headers": {
+                    "expToken": "Reference",
+                    "expCode": "Application Code",
+                    "expMsg": "Exception Message",
+                    "expUid": "User ID"
+                }
+            }
+        },
+        "details": {
+            "view": "View Exception",
+            "tabs": {
+                "recordDetails": {
+                    "expToken": "Reference",
+                    "expCode": "Application Code",
+                    "expMsg": "Exception Message",
+                    "expUid": "User ID",
+                    "expLevel": "Exception Level",
+                    "expSvrAddr": "IP",
+                    "expApp": "App Name",
+                    "expAddinfo": "Exception Information",
+                    "expDetails": "Exception Detail",
+                    "expTimestamp": "Exception Date/Time",
+                    "expCreatedDate": "Created Date"
+                }
+            }
+        }
+    },
+    "document": {
+        "list": {
+            "routeSegment": "Manage Documents",
+            "table": {
+                "title": "Manage Documents",
+                "subtitle": "Documents",
+                "headers": {
+                    "appnId": "Application ID",
+                    "appnAppType": "Application Type",
+                    "attDtCreate": "Date",
+                    "docType": "Document Type",
+                    "refNo": "Document Ref. No.",
+                    "attName": "Document Name",
+                    "shipperName": "Shipping Line/Agent Name",
+                    "shipName": "Vessel Name",
+                    "voyageType": "Voyage Type",
+                    "voyageNo": "Voyage No."
+                },
+                "button": {
+                    "search": "Search",
+                    "download": "Download"
+                }
+            }
+        },
+        "options": {
+            "appnId": "Application ID",
+            "appType": "Application Type",
+            "docType": "Document Type",
+            "shipperName": "Shipping Line/Agent Name",
+            "fromDate": "Date Start",
+            "toDate": "Date End"
+        }
+    },
+    "applicationAdvancedSearch": {
+        "list": {
+            "routeSegment": "Application Advanced Search",
+            "table": {
+                "title": "Application Advanced Search",
+                "subtitle": "Advanced Search List",
+                "headers": {
+                    "appnId": "Application ID",
+                    "appnParentId": "Parent ID",
+                    "appnAppType": "Application Type",
+                    "appnAppStatus": "Application Status/Overall Status",
+                    "appnDtSubmit": "Submit Date",
+                    "lastActionDate": "Approve/Acknowledge Date",
+                    "docType": "Application Type",
+                    "refNo": "Application Ref. No.",
+                    "attName": "Application Name",
+                    "shipperName": "Shipping Line/Agent Name",
+                    "shipName": "Vessel Name",
+                    "portName": "Port Name",
+                    "voyageType": "Voyage Type",
+                    "voyageNo": "Voyage No."
+                },
+                "button": {
+                    "search": "Search",
+                    "download": "Download",
+                    "clear": "Clear"
+                }
+            }
+        },
+        "options": {
+            "appnId": "Dynamic Fields",
+            "appnParentId": "Parent ID",
+            "appType": "Application Type",
+            "docType": "Application Type",
+            "appnAppStatus": "Application Status",
+            "port": "Port",
+            "shipperName": "Shipping Line/Agent Name",
+            "fromDate": "{{status}} Date From",
+            "toDate": "{{status}} Till Date"
+        }
+    },
+    "report": {
+        "title": {
+            "reports": "Reports",
+            "report": "Report",
+            "reportFilters": "Report Filters",
+            "reportPreview": "Preview"
+        },
+        "list": {
+            "reportGroup": "Report Group",
+            "reportName": "Report Name",
+            "reportTitle": "Report Title"
+        },
+        "button": {
+            "search": "Search",
+            "generateReport": "Generate Report",
+            "generateExcel": "Generate Excel",
+            "cancel": "Cancel",
+            "previewReport": "Preview Report"
+        },
+        "msg": {
+            "generate": "Generate",
+            "confirmGenerate": "Are you sure you want to generate?"
+        }
+    },
+    "sysParam": {
+        "list": {
+            "routeSegment": "System Parameters List",
+            "table": {
+                "title": "System Parameters List",
+                "headers": {
+                    "sysKey": "System Parameter Key",
+                    "sysVal": "System Parameter Value",
+                    "sysDesc": "Description",
+                    "sysStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "System Parameters List",
+                "sub": {
+                    "edit": "Edit System Parameters",
+                    "view": "View System Parameters"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "sysKey": "System Parameter Key",
+                    "sysVal": "System Parameter Value",
+                    "sysDesc": "Description"
+                }
+            }
+        }
+    },
+    "certificate": {
+        "list": {
+            "routeSegment": "Application Certificate List",
+            "table": {
+                "title": "Application Certificate List",
+                "headers": {
+                    "appId": "Application ID",
+                    "certType": "Certificate Type",
+                    "certStatus": "Certificate Status",
+                    "qrRetry": "QR Retry",
+                    "dgRetry": "Digital Certificate Retry",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Application Certificate List",
+                "sub": {
+                    "edit": "View Application Certificate",
+                    "view": "View Application Certificate"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "appId": "Application ID",
+                    "certType": "Certificate Type",
+                    "certStatus": "Certificate Status",
+                    "qrRetry": "QR Retry",
+                    "dgRetry": "Digital Certificate Retry",
+                    "printParent": "Print Parent"
+                }
+            }
+        }
+    }
+}

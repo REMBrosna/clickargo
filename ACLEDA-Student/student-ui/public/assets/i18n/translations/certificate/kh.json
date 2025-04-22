@@ -1,0 +1,16 @@
+{
+    "certificate" : {
+        "title": "ផ្ទៀងផ្ទាត់វិញ្ញាបនបត្រ",
+        "fields": {
+            "certificateNo": "លេខវិញ្ញាបនបត្រ",
+            "vesselName": "ឈ្មោះនាវា",
+            "imoNo": "លេខ IMO",
+            "certificateType": "ប្រភេទវិញ្ញាបនប័ត្រ",
+            "search": "ស្វែងរក"
+        },
+        "message": {
+            "certificateNotFound": "រកមិនឃើញវិញ្ញាបនបត្រទេ។",
+            "required": "ចន្លោះ​នេះ​ត្រូវតែ​បំពេញ"
+        }
+    }
+}

@@ -1,0 +1,1488 @@
+{
+    "country": {
+        "list": {
+            "routeSegment": "Country Codes List",
+            "table": {
+                "title": "Country Codes List",
+                "headers": {
+                    "ctryCode": "Country Code",
+                    "ctryName": "Country Name",
+                    "ctryStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Country Codes List",
+                "sub": {
+                    "edit": "Edit Country Code",
+                    "view": "View Country Code",
+                    "new": "New Country Code"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ctryCode": "Country Code",
+                    "ctryDesc": "Country Description"
+                }
+            }
+        },
+        "sms": {
+            "invalidCode": "This country code {{countryCode}} is already exist."
+        }
+    },
+    "currency": {
+        "list": {
+            "routeSegment": "Currency Codes List",
+            "table": {
+                "title": "Currency Codes List",
+                "headers": {
+                    "ccyCode": "Currency Code",
+                    "ccyDescription": "Currency Description",
+                    "ccyDescriptionOth": "Other Description ",
+                    "ccyStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Currency Codes List",
+                "sub": {
+                    "edit": "Edit Currency Code",
+                    "view": "View Currency Code",
+                    "new": "New Currency Code"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ccyCode": "Currency Code",
+                    "ccyDescription": "Currency Description",
+                    "ccyDescriptionOth": "Other Description"
+                }
+            }
+        }
+    },
+    "hsCode": {
+        "list": {
+            "routeSegment": "Harmonized System Code List",
+            "table": {
+                "title": "Harmonized System Code List",
+                "headers": {
+                    "hsCode": "Harmonized Code",
+                    "hsDescription": "Harmonized Type Description",
+                    "hsStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Harmonized System Code List",
+                "sub": {
+                    "edit": "Edit Harmonized System Code",
+                    "view": "View Harmonized System Code",
+                    "new": "New Harmonized System Code"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "hsCode": "Harmonized Code",
+                    "hsDescription": "Harmonized Type Description",
+                    "controlled": {
+                        "label": "Controlled",
+                        "hsImpControlled": "Import Controlled",
+                        "hsExpControlled": "Export Controlled"
+                    },
+                    "hstypeCode": "Goods Type",
+                    "hsDutyType": "Duty Type",
+                    "hsExciseDutyRate": "Excise Duty Rate (%)",
+                    "hsCustomsDutyRate": "Custom Duty Rate (%)",
+                    "uomCode": "UOM",
+                    "TMstUomByHsExciseDutyUom": "Excise Duty UOM",
+                    "TMstUomByHsCustomsDutyUom": "Custom Duty UOM"
+                }
+            }
+        }
+    },
+    "ports": {
+        "list": {
+            "routeSegment": "Ports List",
+            "table": {
+                "title": "Ports List",
+                "headers": {
+                    "portCode": "Port Code",
+                    "portDescription": "Port Description",
+                    "portDescriptionOth": "Port Description (Khmer)",
+                    "TMstCountry": "Country",
+                    "TMstPortType": "Port Type",
+                    "portStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Ports List",
+                "sub": {
+                    "edit": "Edit Port",
+                    "view": "View Port",
+                    "new": "New Port"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "portCode": "Port Code",
+                    "portDescription": "Port Description",
+                    "portDescriptionOth": "Port Description (Khmer)",
+                    "TMstCountry": "Country",
+                    "TMstPortType": "Port Type"
+                }
+            }
+        }
+    },
+    "uom": {
+        "list": {
+            "routeSegment": "UOM Codes List",
+            "table": {
+                "title": "UOM Codes List",
+                "headers": {
+                    "uomCode": "UOM Code",
+                    "uomDescription": "UOM Description",
+                    "otherLangDesc": "UOM Description (Other Language)",
+                    "uomStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "UOM Codes List",
+                "sub": {
+                    "edit": "Edit UOM",
+                    "view": "View UOM",
+                    "new": "New UOM"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "uomCode": "UOM Code",
+                    "uomDescription": "UOM Description",
+                    "otherLangDesc": "UOM Description (Other Language)"
+                }
+            }
+        }
+    },
+    "dutyPaidAt": {
+        "list": {
+            "routeSegment": "Duty Paid At List",
+            "table": {
+                "title": "Duty Paid At List",
+                "headers": {
+                    "dutyPaidId": "Duty Paid ID",
+                    "dutyPaidPort": "Parent Port",
+                    "dutyPaidName": "Duty Paid Name",
+                    "dutyPaidDesc": "Duty Paid Description",
+                    "dutyPaidStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Duty Paid At List",
+                "sub": {
+                    "edit": "Edit Duty Paid",
+                    "view": "View Duty Paid",
+                    "new": "New Duty Paid"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "dutyPaidId": "Duty Paid ID",
+                    "dutyPaidPort": "Parent Port",
+                    "dutyPaidName": "Duty Paid Name",
+                    "dutyPaidDesc": "Duty Paid Description"
+                }
+            }
+        }
+    },
+    "ministry": {
+        "list": {
+            "routeSegment": "Ministry List",
+            "table": {
+                "title": "Ministry List",
+                "headers": {
+                    "minCode": "Ministry Code",
+                    "minDesc": "Ministry Name (English)",
+                    "minDescOth": "Ministry Name (Khmer)",
+                    "minRegNo": "Registration Number"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Ministry List",
+                "sub": {
+                    "edit": "Edit Ministry",
+                    "view": "View Ministry",
+                    "new": "New Ministry"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "minCode": "Ministry Code",
+                    "minDesc": "Ministry Name (English)",
+                    "minDescOth": "Ministry Name (Khmer)",
+                    "minRegNo": "Registration Number"
+                }
+            }
+        }
+    },
+    "agency": {
+        "list": {
+            "routeSegment": "Agency List",
+            "table": {
+                "title": "Agency List",
+                "headers": {
+                    "agyCode": "Agency Code",
+                    "agyDesc": "Agency Name (English)",
+                    "agyDescOth": "Agency Name (Khmer)",
+                    "agyRegNo": "Registration Number",
+                    "TCoreMinistry": "Ministry Code"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Agency List",
+                "sub": {
+                    "edit": "Edit Agency",
+                    "view": "View Agency",
+                    "new": "New Agency"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "agyCode": "Agency Code",
+                    "agyDesc": "Agency Name (English)",
+                    "agyDescOth": "Agency Name (Khmer)",
+                    "agyRegNo": "Registration Number",
+                    "TCoreMinistry": "Ministry Code"
+                }
+            }
+        }
+    },
+    "agencyOffice": {
+        "list": {
+            "routeSegment": "Agency Office List",
+            "table": {
+                "title": "Agency Office List",
+                "headers": {
+                    "agoCode": "Agency Office Code",
+                    "agoAgyCode": "Agency Code",
+                    "agoDesc": "Agency Office Name (English)",
+                    "agoDescOth": "Agency Office Name (Khmer)",
+                    "agoAddrList": "Agency Office Address List"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Agency Office List",
+                "sub": {
+                    "edit": "Edit Agency Office",
+                    "view": "View Agenc Office",
+                    "new": "New Agency Office"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "agoCode": "Agency Office Code",
+                    "agoAgyCode": "Agency Code",
+                    "agoDesc": "Agency Office Name (English)",
+                    "agoDescOth": "Agency Office Name (Khmer)",
+                    "addrType": "Address Type"
+                }
+            }
+        },
+        "dialog": {
+            "officeAddress": "Office Address"
+        }
+    },
+    "contract": {
+        "list": {
+            "routeSegment": "Nomination Letter List",
+            "table": {
+                "title": "Nomination Letter List",
+                "headers": {
+                    "radio": "Radio",
+                    "companyName": "Company Name",
+                    "aconSagName": "Shipping Agent Name",
+                    "phoneNumber": "Telephone",
+                    "aconDtCreate": "Nomination Letter Date",
+                    "status": "Status",
+                    "recordStatus": "Rec Status",
+                    "email": "Email",
+                    "fax": "Fax",
+                    "accnExpiryDate": "Expiry Date",
+                    "address1": "Address Line1",
+                    "address2": "Address Line2",
+                    "address3": "Address Line3",
+                    "addressProvince": "Address Province",
+                    "cityCode": "City Code",
+                    "proCode": "Province Code",
+                    "postCode": "Postal Code"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Nomination Letter List",
+                "sub": {
+                    "edit": "Edit Nomination Letter",
+                    "view": "View Nomination Letter",
+                    "new": "New Nomination Letter"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "radio": "Radio",
+                    "companyName": "Company Name",
+                    "aconSagName": "Shipping Agent Name",
+                    "phoneNumber": "Telephone",
+                    "aconDtCreate": "Nomination Letter Date",
+                    "status": "Status",
+                    "recordStatus": "កំណត់ត្រាស្ថានភាព",
+                    "email": "Email",
+                    "fax": "Fax",
+                    "accnExpiryDate": "Expiry Date",
+                    "address1": "Address Line1",
+                    "address2": "Address Line2",
+                    "address3": "Address Line3",
+                    "cityCode": "City Code",
+                    "proCode": "Province Code",
+                    "postCode": "Postal Code"
+                }
+            }
+        },
+        "message": {
+            "action": "Are you sure you want to {{action}}?",
+            "success": {
+                "submitted": "Nomination Letter has been submitted.",
+                "save": "Nomination Letter has been save.",
+                "approved": "Nomination Letter has been approved.",
+                "active": "Nomination Letter has been activated.",
+                "deactivated": "Nomination Letter has been deactivated.",
+                "deleted": "File deleted successfully!"
+            }
+        },
+        "suppDocs": {
+            "no": "No",
+            "docType": "Doc Type",
+            "required": "Required",
+            "file": "File",
+            "action": "Action"
+        }
+    },
+    "attachType": {
+        "list": {
+            "routeSegment": "Attach Type List",
+            "table": {
+                "title": "Attach Type List",
+                "headers": {
+                    "mattId": "Attachment Type Id",
+                    "mattName": "Attachment Type Name",
+                    "mattDesc": "Attachment Type Description",
+                    "mattDescOth": "Attachment Type Description(Khmer)",
+                    "mattRefNo": "Ref No. Required",
+                    "mattExpiry": "Expiry Date Required",
+                    "mattStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Attach Type List",
+                "sub": {
+                    "edit": "Edit Attach Type",
+                    "view": "View Attach Type",
+                    "new": "New Attach Type"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "mattId": "Attachment Type Id",
+                    "mattName": "Attachment Type Name",
+                    "mattDesc": "Attachment Type Description",
+                    "mattDescOth": "Attachment Type Description(Khmer)",
+                    "mattStatus": "Status"
+                }
+            }
+        },
+        "field": {
+            "required": "Required",
+            "overLength": "Input must be {{max}} characters or less",
+            "hasWhitespace": "Input should not contain space"
+        }
+    },
+    "feeConfig": {
+        "list": {
+            "routeSegment": "Fee Config List",
+            "table": {
+                "title": "Fee Config List",
+                "headers": {
+                    "feeConfigId": "Fee Config Id",
+                    "feeAppType": "App Type",
+                    "feeConfigFee": "Config Fee",
+                    "feeParentAgency": "Parent Agency",
+                    "feeCurrency": "Fee Currency",
+                    "feeStatus": "Status",
+                    "feeType": "Fee Type"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Fee Config List",
+                "sub": {
+                    "edit": "Edit Fee Config",
+                    "view": "View Fee Config",
+                    "new": "New Fee Config"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "feeConfigId": "Fee Config Id",
+                    "feeAppType": "App Type",
+                    "feeConfigFee": "Config Fee",
+                    "feeParentAgency": "Parent Agency",
+                    "feeCurrency": "Fee Currency",
+                    "feeStatus": "Status",
+                    "feeType": "Fee Type"
+                }
+            }
+        }
+    },
+    "docAssociate": {
+        "list": {
+            "routeSegment": "Document Associate List",
+            "table": {
+                "title": "Document Associate List",
+                "headers": {
+                    "id": "Document Association",
+                    "supportName": "Supporting Document Type",
+                    "appName": "App Type",
+                    "shipTypeName": "Ship Type Name",
+                    "parentPortName": "Parent Port Name",
+                    "mandate": "Mandatory",
+                    "status": "Status",
+                    "clearance": "Ship Clearance",
+                    "terminalName": "Port Terminal",
+                    "yes": "Y",
+                    "no": "N"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Document Associate List",
+                "sub": {
+                    "edit": "Edit Document Association",
+                    "view": "View Document Association",
+                    "new": "New Document Association"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "id": "Document Association",
+                    "supportName": "Supporting Document Type",
+                    "appName": "App Type",
+                    "shipTypeName": "Ship Type Name",
+                    "parentPortName": "Parent Port Name",
+                    "mandate": "Mandatory",
+                    "status": "Status",
+                    "clearance": "Ship Clearance",
+                    "terminalName": "Port Terminal",
+                    "yes": "Yes",
+                    "no": "No"
+                }
+            }
+        }
+    },
+    "province": {
+        "list": {
+            "routeSegment": "Province List",
+            "table": {
+                "title": "Province List",
+                "headers": {
+                    "provId": "Province ID",
+                    "provDesc": "Province Description",
+                    "country": "Country",
+                    "province": "Province",
+                    "city": "City",
+                    "status": "Status"
+                }
+            }
+        },
+        
+        "details": {
+            "breadCrumbs": {
+                "main": "Province List",
+                "sub": {
+                    "edit": "Edit Province",
+                    "view": "View Province",
+                    "new": "New Province"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "provId": "Province ID",
+                    "provDesc": "Province Description",
+                    "provDescOth": "Province Description in Khmer",
+                    "country": "Country"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Province has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "commune": {
+        "list": {
+            "routeSegment": "Commune List",
+            "table": {
+                "title": "Commune List",
+                "headers": {
+                    "provId": "Commune ID",
+                    "provDesc": "Commune Description",
+                    "country": "Country",
+                    "province": "Commune",
+                    "city": "City",
+                    "status": "Status"
+                }
+            }
+        },
+        
+        "details": {
+            "breadCrumbs": {
+                "main": "Commune List",
+                "sub": {
+                    "edit": "Edit Commune",
+                    "view": "View Commune",
+                    "new": "New Commune"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "provId": "Commune ID",
+                    "provDesc": "Commune Description",
+                    "provDescOth": "Commune Description in Khmer",
+                    "country": "Commune"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Commune has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "district": {
+        "list": {
+            "routeSegment": "District List",
+            "table": {
+                "title": "District List",
+                "headers": {
+                    "disId": "District ID",
+                    "provDesc": "District Description",
+                    "country": "Country",
+                    "province": "District",
+                    "city": "City",
+                    "status": "Status"
+                }
+            }
+        },
+        
+        "details": {
+            "breadCrumbs": {
+                "main": "District List",
+                "sub": {
+                    "edit": "Edit District",
+                    "view": "View District",
+                    "new": "New District"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "disId": "District ID",
+                    "disDesc": "District Description",
+                    "disDescOth": "District Description in Khmer",
+                    "country": "Country"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "District has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+  
+    "book": {
+        "list": {
+            "routeSegment": "Book List",
+            "table": {
+                "title": "Book List",
+                "headers": {
+                    "provId": "Province ID",
+                    "provDesc": "Province Description",
+                    "country": "Country",
+                    "province": "Province",
+                    "city": "City",
+                    "status": "Status"
+                }
+            }
+        },
+        
+        "details": {
+            "breadCrumbs": {
+                "main": "Book List",
+                "sub": {
+                    "edit": "Edit Book",
+                    "view": "View Book",
+                    "new": "New Book"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "provId": "Province ID",
+                    "provDesc": "Province Description",
+                    "provDescOth": "Province Description in Khmer",
+                    "country": "Country"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Province has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "borrow": {
+        "list": {
+            "routeSegment": "Borrow List",
+            "table": {
+                "title": "Borrow List",
+                "headers": {
+                    "borId": "Borrow ID",
+                    "borDesc": "Borrow Description",
+                    "country": "Country",
+                    "bor": "Borrow",
+                    "city": "City",
+                    "status": "Status"
+                }
+            }
+        },
+        
+        "details": {
+            "breadCrumbs": {
+                "main": "Borrow List",
+                "sub": {
+                    "edit": "Edit Borrow",
+                    "view": "View Borrow",
+                    "new": "New Borrow"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "provId": "Borrow ID",
+                    "provDesc": "Borrow Description",
+                    "provDescOth": "Borrow Description in Khmer",
+                    "country": "Country"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Borrow has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "portTerminal": {
+        "list": {
+            "routeSegment": "Port Terminal List",
+            "table": {
+                "title": "Port Terminal List",
+                "headers": {
+                    "portTermId": "Port Terminal ID",
+                    "port": "Port",
+                    "portTermName": "Port Terminal Name",
+                    "portTermDesc": "Port Terminal Description",
+                    "portTeminalIsClearance": "Port Terminal is Clearance",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Port Terminal  List",
+                "sub": {
+                    "edit": "Edit Port Terminal",
+                    "view": "View Port Terminal",
+                    "new": "New Port Terminal"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "portTermId": "Port Terminal ID",
+                    "port": "Port",
+                    "portTermName": "Port Terminal Name",
+                    "portTermDesc": "Port Terminal Description",
+                    "portTeminalIsClearance": "Port Terminal is Clearance"
+                }
+            }
+        }
+    },
+    "dosActivity": {
+        "list": {
+            "routeSegment": "DOS Activity List",
+            "table": {
+                "title": "DOS Activity List",
+                "headers": {
+                    "dosActivityId": "DOS Activity ID",
+                    "dosActivityName": "DOS Activity Name",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "DOS Activity List",
+                "sub": {
+                    "edit": "Edit DOS Activity",
+                    "view": "View DOS Activity",
+                    "new": "New DOS Activity"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "dosActivityId": "DOS Activity ID",
+                    "dosActivityName": "DOS Activity Name"
+                }
+            }
+        }
+    },
+    "areasInspected": {
+        "list": {
+            "routeSegment": "Areas Inspected List",
+            "table": {
+                "title": "Areas Inspected List",
+                "headers": {
+                    "areaInsId": "Areas Inspected ID",
+                    "areaInsSeq": "Sequence",
+                    "areaInsType": "Areas Inspected Type",
+                    "areaInsGrp": "Areas Inspected Group",
+                    "areaInsName": "Areas Inspected Name",
+                    "areaInsDesc": "Description",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Areas Inspected List",
+                "sub": {
+                    "edit": "Edit Areas Inspected",
+                    "view": "View Areas Inspected",
+                    "new": "New Areas Inspected"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "areaInsId": "Areas Inspected ID",
+                    "areaInsSeq": "Areas Inspected Sequence",
+                    "areaInsType": "Areas Inspected Type",
+                    "areaInsGrp": "Areas Inspected Group",
+                    "areaInsName": "Areas Inspected Name",
+                    "areaInsDesc": "Areas Inspected Description"
+                }
+            }
+        },
+        "dropDown": {
+            "attachment": "Attachment",
+            "certificate": "Certificate"
+        },
+        "field": {
+            "required": "Required",
+            "min": "Input must be greater than or equal to {{min}}",
+            "maxDigits": "Input must be less than or equal to {{maxDigits}} digits",
+            "overLength": "Input must be {{max}} characters or less",
+            "hasWhitespace": "Input should not contain space"
+        }
+    },
+    "notificationTemplate": {
+        "list": {
+            "routeSegment": "Notification Template List",
+            "table": {
+                "title": "Notification Template List",
+                "headers": {
+                    "notifTemplateId": "Template ID",
+                    "notifTemplateAppCode": "Application Code",
+                    "notifTemplateChannel": "Channel",
+                    "notifTemplateSubject": "Subject",
+                    "notifTemplateStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Notification Template List",
+                "sub": {
+                    "edit": "Edit Notification Template",
+                    "view": "View Notification Template",
+                    "new": "New Notification Template"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "notifTemplateID": "Template ID",
+                    "notifTemplateSeq": "Sequence",
+                    "notifTmplAppCode": "Application Code",
+                    "notifTemplateChannel": "Notification Channel",
+                    "notifTemplateNotifContent": "Notification Content",
+                    "notifTemplateDesc": "Template Description",
+                    "notifTemplateSubj": "Subject",
+                    "notifTemplateContent": "Content"
+                }
+            }
+        }
+    },
+    "certificateConfig": {
+        "list": {
+            "routeSegment": "Certificate Config List",
+            "table": {
+                "title": "Certificate Config List",
+                "headers": {
+                    "certId": "ID",
+                    "certsId": "Certs ID",
+                    "certTemplateType": "Template Type",
+                    "certSubReportKey": "Subreport Key",
+                    "certJrxmlPath": "JRXML Path",
+                    "certReportTitle": "Report Title",
+                    "certReportTitleKh": "Report Title (Khmer)",
+                    "certStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Certificate Config List",
+                "sub": {
+                    "edit": "Edit Certificate Config",
+                    "view": "View Certificate Config",
+                    "new": "New Certificate Config"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "certId": "ID",
+                    "certsId": "Certs ID",
+                    "certTemplateType": "Template Type",
+                    "certSubReportKey": "Subreport Key",
+                    "certLogoPath": "Logo Path",
+                    "certWaterMarkPath": "Watermark Path",
+                    "certJrxmlPath": "JRXML Path",
+                    "certReportTitle": "Report Title",
+                    "certReportTitleKh": "Report Title (Khmer)",
+                    "certReportWebviewTitle": "Webview Title",
+                    "certReportWebviewTitleKh": "Webview Title (Khmer)",
+                    "certDepartment": "Department",
+                    "certDepartmentKh": "Department (Khmer)",
+                    "certInchargeTitle": "Incharge Title",
+                    "certInchargeTitleKh": "Incharge Title (Khmer)",
+                    "certMinistry": "Ministry",
+                    "certMinistryKh": "Ministry (Khmer)",
+                    "certStatus": "Status"
+                }
+            }
+        }
+    },
+    "certificateSvc": {
+        "list": {
+            "routeSegment": "Certificate Service List",
+            "table": {
+                "title": "Certificate Service List",
+                "headers": {
+                    "certsId": "ID",
+                    "certsVal": "Value",
+                    "certsModuleService": "Module Service",
+                    "certsDecs": "Description",
+                    "certsStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Certificate Service List",
+                "sub": {
+                    "edit": "Edit Certificate Service",
+                    "view": "View Certificate Service",
+                    "new": "New Certificate Service"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "certsId": "ID",
+                    "certsVal": "Value",
+                    "certsModuleService": "Module Service",
+                    "certsDecs": "Description"
+                }
+            }
+        }
+    },
+    "shipTypeEF": {
+        "list": {
+            "table": {
+                "headers": {
+                    "fieldName": "Field Name",
+                    "fieldNameOth": "Field Name Other",
+                    "fieldInputType": "Field input Type",
+                    "mandatory": "Mandatory",
+                    "shipType": "Ship Type",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Extra Fields List",
+                "shipTypeList": "Ship Type List",
+                "shipTypeExtraFields": "Ship Types & Extra Fields List",
+                "sub": {
+                    "edit": "Edit ShipType Extra Fields",
+                    "view": "View",
+                    "viewShipType": "View Ship Type",
+                    "new": "New Ship Type"
+                }
+            },
+            "tabs": {
+                "shipDetails": {
+                    "shipType": "Ship Type",
+                    "shipTypeOthLang": "Ship Type Other Lang",
+                    "desc": "Description",
+                    "extraFields": "Extra Fields"
+                }
+            }
+        },
+        "msg": {
+            "successChange": "Changes submitted successfully!",
+            "errorChange": "Error encountered whilte trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        }
+    },
+    "shipType": {
+        "list": {
+            "routeSegment": "Ship Type",
+            "table": {
+                "headers": {
+                    "shipTypeId": "Ship Type ID",
+                    "shipTypeName": "Ship Type Name",
+                    "shipTypeDesc": "Ship Type Description",
+                    "shipTypeStatus": "Ship Type Status",
+                    "mandatory": "Mandatory",
+                    "shipType": "Ship Type",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Ship Type List",
+                "sub": {
+                    "edit": "Edit Ship Type",
+                    "view": "View Ship Type",
+                    "new": "New Ship Type"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "shipTypeId": "Ship Type Code",
+                    "shipTypeName": "Ship Type Name",
+                    "shipTypeDesc": "Ship Type Description"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Ship Type successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered whilte trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "thrusterType": {
+        "list": {
+            "routeSegment": "Thruster Type",
+            "table": {
+                "headers": {
+                    "ttCode": "Thruster Type Code",
+                    "ttName": "Name",
+                    "ttDesc": "Description",
+                    "ttStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "thrusterType": "Ship Type",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Thruster Type List",
+                "sub": {
+                    "edit": "Edit Ship Type",
+                    "view": "View Thruster Type",
+                    "new": "New Thruster Type"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ttCode": "Thruster Type Code",
+                    "ttName": "Thruster Type Name",
+                    "ttDesc": "Thruster Type Description"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Thruster Type successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered whilte trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "OfficeCode": {
+        "list": {
+            "routeSegment": "Office Code",
+            "table": {
+                "headers": {
+                    "ocId": "Office Code",
+                    "ocName": "Name",
+                    "ocDescription": "Description",
+                    "ocDescriptionOther": "Description Other",
+                    "ocStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Office Code List",
+                "sub": {
+                    "edit": "Edit Office Code",
+                    "view": "View Office Code",
+                    "new": "New Office Code"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ocId": "Office Code",
+                    "ocName": "Name",
+                    "ocDescription": "Description",
+                    "ocDescriptionOther": "Description Other"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Office Code successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "clearanceFlag": {
+        "list": {
+            "routeSegment": "Country Exemption",
+            "table": {
+                "title": "Country Exemption",
+                "headers": {
+                    "cfId": "ID",
+                    "cfCountryCode": "Country Code",
+                    "cfStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Country Exemption List",
+                "sub": {
+                    "edit": "Edit Country Exemption",
+                    "view": "View Country Exemption",
+                    "new": "New Country Exemption"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "cfCountryCode": "Country Code"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Country Exemption successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "amendmentApplications": {
+        "list": {
+            "routeSegment": "Amendment Applications",
+            "table": {
+                "title": "Amendment Applications",
+                "headers": {
+                    "ammID": "Amendment ID",
+                    "ammAppType": "Amendment Applications Type",
+                    "ammAppDescription": "Amendment Application Descriptions",
+                    "ammStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Amendment Applications List",
+                "sub": {
+                    "edit": "Edit Amendment Applications",
+                    "view": "View Amendment Applications",
+                    "new": "New Amendment Applications"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ammAppType": "Amendment Applications Type",
+                    "ammAppDescription": "Amendment Application Description"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Amendment Applications successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "amendmentFields": {
+        "list": {
+            "routeSegment": "Amendment Fields",
+            "table": {
+                "title": "Amendment Fields",
+                "headers": {
+                    "amfID": "Amendment ID",
+                    "amfLabel": "Field Label",
+                    "amfQRParams": "QR Parameter",
+                    "amfFieldType": "Field Type",
+                    "amfOptionProperty": "Option Property",
+                    "amfAppType": "Amendment Applications Type",
+                    "amfFieldsName": "Field Name",
+                    "amfFieldsRequired": "Certificate Required",
+                    "yes": "Yes",
+                    "no": "No",
+                    "amfStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Amendment Fields List",
+                "sub": {
+                    "edit": "Edit Amendment Fields",
+                    "view": "View Amendment Fields",
+                    "new": "New Amendment Fields"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "amfID": "Amendment ID",
+                    "amfLabel": "Field Label",
+                    "amfFieldType": "Field Type",
+                    "amfQRParams": "QR Parameter",
+                    "amfOptionProperty": "Option Property",
+                    "amfAppType": "Amendment Applications Type",
+                    "amfFieldsName": "Field Name",
+                    "amfFieldsRequired": "Is Certificate Required?",
+                    "yes": "Yes",
+                    "no": "No"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Amendment Fields successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered while trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "paymentType": {
+        "list": {
+            "routeSegment": "Payment Type",
+            "table": {
+                "headers": {
+                    "ptCode": "Payment Type Code",
+                    "ptName": "Name",
+                    "ptDesc": "Description",
+                    "ptStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "paymentType": "Payment Type",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Payment Type List",
+                "sub": {
+                    "edit": "Edit Ship Type",
+                    "view": "View Payment Type",
+                    "new": "New Payment Type"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "ptCode": "Payment Type Code",
+                    "ptName": "Payment Type Name",
+                    "ptDesc": "Payment Type Description"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Payment Type successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered whilte trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required"
+        }
+    },
+    "recoveryApplication": {
+        "list": {
+            "routeSegment": "Recovery Application Configuration",
+            "table": {
+                "headers": {
+                    "recId": "Recovery Application Configuration Code",
+                    "recAccnId": "Shipping Line/Agent ID",
+                    "recAccnName": "Shipping Line/Agent Name",
+                    "recStartDate": "Recovery Start Date",
+                    "recExpiryDate": "Recovery Till Date",
+                    "recStatus": "Status",
+                    "mandatory": "Mandatory",
+                    "recoveryApplication": "Recovery Application Configuration",
+                    "createdBy": "Created By",
+                    "createdDate": "Created Date",
+                    "updatedDate": "Updated Date"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Recovery Application Configuration List",
+                "sub": {
+                    "edit": "Edit Recovery Application Configuration",
+                    "view": "View Recovery Application Configuration",
+                    "new": "New Recovery Application Configuration"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "recAccnId": "Shipping Line/Agent",
+                    "recStartDate": "Recovery Start Date",
+                    "recExpiryDate": "Recovery Till Date",
+                    "recStatus": "Status"
+                }
+            }
+        },
+        "msg": {
+            "successCreate": "Create Configuration successfully!",
+            "successChange": "Changes submitted successfully!",
+            "successOperation": "Status Updated successfully!",
+            "errorChange": "Error encountered whilte trying to submit the changes!"
+        },
+        "dropDown": {
+            "textBox": "Text Box",
+            "dropDown": "Drop Down"
+        },
+        "validate": {
+            "required": "Required",
+            "notAllow": "Some character not allowed (NA, N-A, N/A, N.A, NIL), Please input the proper value."
+        }
+    },
+    "numberEngine": {
+        "list": {
+            "routeSegment": "Number Engine List",
+            "table": {
+                "title": "Number Engine List",
+                "headers": {
+                    "neCode": "Number Engine ID",
+                    "neName": "Number Engine Name",
+                    "neDesc": "Number Engine Description",
+                    "numberEngine": "Number Engine",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Number Engine List",
+                "sub": {
+                    "edit": "Edit Number Engine",
+                    "view": "View Number Engine",
+                    "new": "New Number Engine"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "neCode": "Number Engine Code",
+                    "neName": "Number Engine Name",
+                    "neDesc": "Number Engine Description",
+                    "numberSequence": "Number Engine Sequence"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Number Engine has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "articleCat": {
+        "list": {
+            "routeSegment": "Article Category List",
+            "table": {
+                "title": "Article Category List",
+                "headers": {
+                    "arcCode": "Article Category ID",
+                    "arcName": "Article Category Name",
+                    "arcDesc": "Article Category Description",
+                    "articleCat": "Article Category",
+                    "status": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Article Category List",
+                "sub": {
+                    "edit": "Edit Article Category",
+                    "view": "View Article Category",
+                    "new": "New Article Category"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "arcCode": "Article Category Code",
+                    "arcName": "Article Category Name",
+                    "arcDesc": "Article Category Description"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Article Category has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    },
+    "crewRank": {
+        "list": {
+            "routeSegment": "Crew Rank List",
+            "table": {
+                "title": "Crew Rank List",
+                "headers": {
+                    "crewRankId": "Crew Rank ID",
+                    "crewRankName": "Crew Rank Name",
+                    "crewRankDesc": "Crew Rank Description",
+                    "crewRank": "Crew Rank",
+                    "crewRankStatus": "Status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Crew Rank List",
+                "sub": {
+                    "edit": "Crew Rank Engine",
+                    "view": "Crew Rank Engine",
+                    "new": "Crew Rank Engine"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "crewRankId": "Crew Rank Code",
+                    "crewRankName": "Crew Rank Name",
+                    "crewRankDesc": "Crew Rank Description"
+                }
+            }
+        },
+        "msg": {
+            "successMsg": "Crew Rank has been added successfully.",
+            "successOperation": "Operation successfully."
+        }
+    }
+}

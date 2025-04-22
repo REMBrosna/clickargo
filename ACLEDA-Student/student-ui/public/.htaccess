@@ -1,0 +1,19 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+
+#to disable directory browsing
+Options -Indexes
+
+#to add strict transport security in the response header
+Header always set Strict-Transport-Security "max-age=15552000; includeSubDomains"
+
+#to add CSP; need to update SHA every after deployment in react
+Header set Content-Security-Policy "frame-src data:; default-src 'self' cdnjs.cloudflare.com cdns.jsdelivr.net fonts.googleapis.com fonts.gstatic.com; img-src 'self' cdnjs.cloudflare.com cdns.jsdelivr.net cdn.jsdelivr.net; font-src 'self' fonts.googleapis.com fonts.gstatic.com; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com cdns.jsdelivr.net fonts.googleapis.com fonts.gstatic.com; script-src 'self' 'sha256-J++d6LP5YG+DwZatdxG3AByE8S+XocMCZeUQ8Qxpw/A='"
+
+#to add x-content-type-options in headers
+Header set X-Content-Type-Options: "nosniff"
+
+#to configure x-frame-options
+Header always append X-Frame-Options SAMEORIGIN

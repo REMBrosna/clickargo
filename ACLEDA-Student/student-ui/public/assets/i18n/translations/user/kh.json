@@ -1,0 +1,30 @@
+{
+    "user": {
+        "details": {
+            "username": "ឈ្មោះអ្នកប្រើប្រាស់",
+            "dateOfBirth": "ថ្ងៃខែឆ្នាំកំណើត",
+            "firstName": "នាមត្រកូល",
+            "lastName": "ឈ្មោះ",
+            "email" : "អ៊ីមែល",
+            "gender": "ភេទ",
+            "address" : "អាស័យដ្ឋាន",
+            "conNumber": "លេខទូរស័ព្ទ"
+        },
+        "list": {
+            "reportGroup": "Report Group",
+            "reportName": "Report Name",
+            "reportTitle": "Report Title"
+        },
+        "button": {
+            "search": "Search",
+            "generateReport": "Generate Report",
+            "generateExcel": "Generate Excel",
+            "cancel": "Cancel",
+            "previewReport": "Preview Report"
+        },
+        "msg": {
+            "generate": "Generate",
+            "confirmGenerate": "Are you sure you want to generate?"
+        }
+    }
+}

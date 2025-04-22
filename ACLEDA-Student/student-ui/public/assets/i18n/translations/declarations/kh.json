@@ -1,0 +1,733 @@
+{
+    "app": {
+        "workbench": "កន្លែងធ្វើការ",
+        "dec": {
+            "msgs": {
+                "createSuccess": "{{module}} ត្រូវបានបង្កើតឡើង {{appnId}}. អ្នកនឹងត្រូវបានបញ្ជូនបន្តទៅកែសម្រួលទំព័រ.",
+                "updateSuccess": "{{module}} {{appnId}} ត្រូវបានធ្វើបច្ចុប្បន្នភាព.",
+                "submitSuccess": "{{module}} {{appnId}} ត្រូវបានដាក់សើ្នដោយជោគជ័យ.",
+                "validateSuccess": "{{module}} {{appnId}} ត្រូវបានផ្ទៀងផ្ទាត់ដោយជោគជ័យ.",
+                "submitFail": "សូមបំពេញព័ត៌មានលម្អិតដែលត្រូវការ",
+                "action": "{{module}} {{appnId}} បាន {{action}}.",
+                "unequalBLs": "{{moduleDesc}} មិនអាចដាក់ស្នើបានទេ. 'ចំនួនសរុបនៃ Master Bill of Lading' នៅក្នុង Manifest Header គួរតែស្មើនឹងទំហំផ្ទាំងបញ្ជីនៃ 'Bill of Lading'.",
+                "unequualNoCntPkgGrossMass": "{{moduleDesc}} មិនអាចដាក់ស្នើបានទេ. 'ចំនួនសរុបនៃ Packages/Gross Mass/កុងតឺន័រនៅក្នុង Manifest Header គួរតែស្មើនឹងផលបូកនៃFieldsផ្ទាំងព័ត៌មានទំនិញនៅក្នុង Bill of Lading",
+                "unequualNoPkgGrossMassCont": "{{moduleDesc}} មិនអាចដាក់ស្នើបានទេ. 'ចំនួនសរុបនៃ Packages/Gross Mass នៅក្នុងផ្ទាំងព័ត៌មានទំនិញនៅក្នុង Bill of Lading នីមួយៗគួរតែស្មើនឹងផលបូកនៃField នៅក្នុងបញ្ជីផ្ទាំងកុងតឺន័រ.",
+                "adSubmitFail": "{{moduleDesc}} មិនអាចដាក់ស្នើបានទេ. ដើម្បីបន្តធ្វើឱ្យប្រាកដថាពាក្យស្នើសុំលិខិតអនុញ្ញាតឱ្យនាវាចូលផែត្រូវបានអនុម័ត ហើយការជូនដំណឹងមុនពេលមកដល់ត្រូវបានទទួលស្គាល់.",
+                "adApproveFail": "{{moduleDesc}} មិន​អាច​ត្រូវ​បាន​អនុម័ត. ដើម្បីបន្ត ត្រូវប្រាកដថាការជូនដំណឹងមុនពេលមកដល់ត្រូវបានទទួលស្គាល់ ពាក្យស្នើសុំ់កណ្ណធារត្រូវបានអនុម័ត.",
+                "panAckFail": "សេចក្តីជូនដំណឹងមុនពេលមកដល់មិនត្រូវបានទទួលស្គាល់ទេ ដើម្បីបន្ត សូមប្រាកដថា ពាក្យស្នើសុំលិខិតអនុញ្ញាតឱ្យនាវាចូលផែត្រូវបានអនុម័ត.",
+                "adPOUnapproveFail": "ប្រកាសប្រតិវេទន៍ការមកដល់មិនត្រូវបានអនុម័ត ដើម្បីបន្តត្រូវបាកដថាពាក្យស្នើសុំកណ្ណធារត្រូវបានអនុម័ត",
+                "cargoDecRequired": "*សូមបញ្ចូលប្រកាសទំនិញលម្អិតយ៉ាងហោចណាស់មួយ",
+                "atanoset": "សូមបញ្ជាក់កាលបរិច្ឆេទ/ពេលវេលានៃការមកដល់ពិតប្រាកដ (ATA) នៅក្នុងការហៅតាមនាវា - ការប្រើប្រាស់ជាផ្លូវការ",
+                "atdnoset": "សូមបញ្ជាក់កាលបរិច្ឆេទ/ពេលវេលាចេញដំណើរពិតប្រាកដ (ATD) នៅក្នុងការហៅតាមនាវា - ការប្រើប្រាស់ជាផ្លូវការ"
+            },
+            "ad": {
+                "dashboard": "ដំណើរការប្រតិវេទន៍ការមកដល់",
+                "title": "ប្រតិវេទន៍ការមកដល់",
+                "list": {
+                    "appNo": "លេខពាក្យស្នើសុំ",
+                    "shipName": "ឈ្មោះនាវា",
+                    "voyageNo": "លេខជើងធើ្វដំណើរនាវា",
+                    "terminal": "ស្ថានីយ",
+                    "officeCode": "ការិយាល័យស្ថានីយ",
+                    "subAppNo": "អនុលេខពាក្យស្នើសុំ.",
+                    "arrPort": "កំពង់ផែចូលចត",
+                    "imoNo": "លេខIMO",
+                    "createDt": "កាលបរិច្ឆេទ​បង្កើត",
+                    "submitDt": "កាលបរិច្ឆេទដាក់ស្នើ",
+                    "createBy": "អ្នក​ស្នើសុំ",
+                    "applicant": "ក្រុមហ៊ុនស្នើសុំ",
+                    "accountType": "ក្រុមហ៊ុន/ភ្នាក់ងារនាវា",
+                    "overallStatus": "សរុបពីស្ថានភាព",
+                    "status": "ស្ថានភាព",
+                    "brdrClearance": "បែបបទចូលព្រំដែន",
+                    "portClearance": "បែបបទចូលកំពង់ផែ",
+                    "eta": "កាលបរិច្ឆេទប៉ាន់ស្មាននៃការមកដល់"
+                }
+            },
+            "dd": {
+                "dashboard": "ដំណើរការប្រតិវេទន៍ចេញដំណើរ",
+                "title": "ប្រតិវេទន៍ចេញដំណើរ",
+                "list": {
+                    "appNo": "លេខពាក្យស្នើសុំ",
+                    "shipName": "ឈ្មោះនាវា",
+                    "voyageNo": "លេខជើងធើ្វដំណើរនាវា",
+                    "terminal": "ស្ថានីយ",
+                    "officeCode": "ការិយាល័យស្ថានីយ",
+                    "subAppNo": "អនុលេខពាក្យស្នើសុំ",
+                    "arrPort": "កំពង់ផែចូលចត",
+                    "imoNo": "លេខIMO",
+                    "createDt": "កាលបរិច្ឆេទ​បង្កើត",
+                    "submitDt": "កាលបរិច្ឆេទដាក់ស្នើ",
+                    "createBy": "អ្នក​ស្នើសុំ",
+                    "applicant": "ក្រុមហ៊ុនស្នើសុំ",
+                    "accountType": "ក្រុមហ៊ុន/ភ្នាក់ងារនាវា",
+                    "overallStatus": "សរុបពីស្ថានភាព",
+                    "status": "ស្ថានភាព",
+                    "brdrClearance": "បែបបទចេញពីព្រំដែន",
+                    "portClearance": "បែបបទចេញពីកំពង់ផែ",
+                    "eta": "កាលបរិច្ឆេទប៉ាន់ស្មាននៃការមកដល់"
+                }
+            },
+            "pan": {
+                "dashboard": "ដំណើរការនៃសេចក្តីជូនដំណឹងមុនពេលមកដល់",
+                "title": "សេចក្តីជូនដំណឹងមុនពេលមកដល់",
+                "list": {
+                    "appNo": "លេខពាក្យស្នើសុំ",
+                    "shipName": "ឈ្មោះនាវា",
+                    "voyageNo": "លេខជើងធើ្វដំណើរនាវា",
+                    "terminal": "ស្ថានីយ",
+                    "arrPort": "កំពង់ផែចូលចត",
+                    "imoNo": "លេខIMO",
+                    "submitDt": "កាលបរិច្ឆេទដាក់ស្នើ",
+                    "createBy": "អ្នក​ស្នើសុំ",
+                    "applicant": "ក្រុមហ៊ុនស្នើសុំ",
+                    "accountType": "ក្រុមហ៊ុន/ភ្នាក់ងារនាវា",
+                    "status": "ស្ថានភាព",
+                    "eta": "កាលបរិច្ឆេទប៉ាន់ស្មាននៃការមកដល់"
+                }
+            },
+            "preview": "ចូលមើលហត្ថលេខាមេបញ្ជាការជាមុន",
+            "header": {
+                "title": "Header",
+                "tabs": {
+                    "voyage": {
+                        "title": "ជើងនាវាលម្អិត",
+                        "arrivalSubTitle": "ព័ត៌មានលម្អិតអំពីការមកដល់",
+                        "departureSubTitle": "ព័ត៌មានលម្អិតអំពីការចេញដំណើរ",
+                        "otherDetails": "ព័ត៌មានលម្អិតផ្សេងទៀត។",
+                        "signatureSubTitle": "ហត្ថលេខា",
+                        "fields": {
+                            "vesselCallRefNo": "លេខយោង Vessel Call",
+                            "shippingLine": "ក្រុមហ៊ុននាវា",
+                            "voyageNo": "លេខជើងធើ្វដំណើរនាវា",
+                            "nameOfMaster": "ឈ្មោះមេបញ្ជាការនាវា",
+                            "poa": "កំពង់ផែចូលចត",
+                            "doa": "ការប៉ាន់ស្មានកាលបរិច្ឆេទចូលចត",
+                            "toa": "ការប៉ាន់ស្មានពេលវេលាចូលចត",
+                            "countryLastPoc": "ប្រទេសនៃកំពង់ផែចូលចតចុងក្រោយ",
+                            "lastPoc": "កំពង់ផែចុងក្រោយ",
+                            "dutyPaidAt": "ទីតាំងដែលត្រូវបង់ពន្ធ",
+                            "pod": "កំពង់ផែចេញដំណើរ",
+                            "dod": "កាលបរិច្ឆេទចេញដំណើរ",
+                            "tod": "ពេលវេលាចេញដំណើរ",
+                            "countrynextpoc": "ប្រទេសនៃកំពង់ផែបន្ទាប់",
+                            "nextpoc": "កំពង់ផែបន្ទាប់",
+                            "mastersign": "ហត្ថលេខាមេបញ្ជាការ(*.jpeg,*.png only)",
+                            "dlMasterSign": "ទាញយកហត្ថលេខាមេបញ្ជាការ",
+                            "removeMasterSign": "លុបហត្ថលេខាម្ចាស់នាវា",
+                            "altSignature": "ហត្ថលេខា",
+                            "borderGate": "ច្រកទ្វារព្រំដែន",
+                            "clearanceOnBorder": "ធ្វើបែបបទគយនៅច្រកទ្វារព្រំដែន",
+                            "reqPilotOnBoard": "កាលបរិច្ឆេទសុំកណ្ណធារ",
+                            "reqPilotOnBoardTime": "ម៉ោងសុំកណ្ណធារ",
+                            "reqCommOnBoard": "កាលបរិច្ឆេទនៃសំណើរ​របស់គណៈកម្មាធិការ",
+                            "reqCommOnBoardTime": "ពេលវេលា",
+                            "terminal": "ស្ថានីយ",
+                            "inwardCargo": "ទំនិញនាំចូល",
+                            "outwardCargo": "ទំនិញនាំចេញ",
+                            "cargoInTransit": "ទំនិញឆ្លងដែន",
+                            "dgCargo": "ទំនិញគ្រោះថ្នាក់",
+                            "suppliesRequested": "ស្នើរផ្គត់ផ្គង់",
+                            "petroleumUseInVessel": "ប្រេងសំរាប់ប្រើប្រាស់លើនាវា"
+                        }
+                    },
+                    "shipdetails": {
+                        "title": "ព័ត៌មានលម្អិតនាវា",
+                        "partSubtitle": " លក្ខណៈសម្គាល់របស់ក្រុមហ៊ុ​ននាវា",
+                        "fields": {
+                            "imoNo": "លេខ IMO",
+                            "callSign": "សញ្ញាហៅ",
+                            "shipType": "ប្រភេទនាវា",
+                            "flagState": "សញ្ជាតិនាវា",
+                            "applicantTin": "TIN នៃពាក្យស្នើសុំ",
+                            "country": "ប្រទេស",
+                            "loa": "បណ្តោយសរុប (ម)",
+                            "draft": "ជម្រៅស៊ីទឹកពេលមកដល់​ (ម)",
+                            "arrDraftFrwrd": "ជម្រៅស៊ីទឹកពេលមកដល់​ (ខាងមុខ)",
+                            "arrDraftAftr": "ជម្រៅស៊ីទឹកពេលមកដល់​ (ខាងក្រោយ)",
+                            "depDraftFrwrd": "ជម្រៅស៊ីទឹកចេញដំណើរ​ (ខាងមុខ)",
+                            "depDraftAftr": "ជម្រៅស៊ីទឹកចេញដំណើរ​ (ខាងក្រោយ)",
+                            "airDrft": "កម្ពស់លំហរនាវា",
+                            "gt": "ចំណុះផ្ទុកសរុប"
+                        }
+                    }
+                }
+            },
+            "fal": {
+                "title": "ទម្រង់ FAL FORMs",
+                "tabs": {
+                    "cargoDeclarationYN": "តើវានារបស់អ្នកមានផ្ទុកទំនិញដែររឺទេ? បើមាន សូមបញ្ជាក់៖ ",
+                    "passengerListYN": "តើនាវារបស់អ្នកដឹកអ្នកដំណើរដែររឺទេ? បើមាន សូមបញ្ជាក់៖ ",
+                    "dangerousGoodsYN": "តើនាវារបស់អ្នកផ្ទុកទំនិញគ្រោះថ្នាក់ដែររឺទេ? បើមាន សូមបញ្ជាក់៖ ",
+                    "header": {
+                        "shipName": "ឈ្មោះនាវា",
+                        "callSign": "សញ្ញាហៅ",
+                        "imoNo": "លេខ IMO",
+                        "voyageNo": "លេខជើងធើ្វដំណើរនាវា",
+                        "portOf": "កំពង់ផែនៃ {{forDecl}}",
+                        "departureDate": "កាលបរិច្ឆេទនៃ {{forDecl}}",
+                        "estimateDepartureDate": "ការប៉ាន់ស្មានកាលបរិច្ឆេទ {{forDecl}}",
+                        "flagState": "សញ្ជាតិនាវា",
+                        "portOfCall": "កំពង់ផែចុងក្រោយ/ កំពង់ផែបន្ទាប់",
+                        "time": "ពេលវេលានៃ {{forDecl}}",
+                        "estimateTime": "ការប៉ាន់ស្មាននៃពេលវេលា {{forDecl}}",
+                        "arrival": "ចូលចត",
+                        "nameOfShip": "1.1 ឈ្មោះនាវា",
+                        "vesselCode": "Vessel Code",
+                        "imoNumber": "1.2 លេខ ​IMO",
+                        "callSn": "1.3 សញ្ញាហៅ",
+                        "voyageNumber": "1.4 លេខជើងធើ្វដំណើរនាវា",
+                        "portOfArrDept": "2. កំពង់ផែចូលចត/ចេញដំណើរ",
+                        "ata": "ពេលវេលាការមកដល់ជាក់ស្តែង",
+                        "eta": "3. កាលបរិច្ឆេទប៉ាន់ស្មាននៃការមកដល់",
+                        "atd": "ពេលវេលាការចេញដំណើរជាក់ស្តែង",
+                        "etd": "3. កាលបរិច្ឆេទប៉ាន់ស្មាននៃការចាកចេញ",
+                        "estTime": "ពេលវេលា",
+                        "flagStateOfShip": "4. សញ្ជាតិនាវា",
+                        "nameOfMaster": "5. ឈ្ឈ្មោះមេបញ្ជាការនាវា",
+                        "lastPoc": "6. កំពង់ផែចុងក្រោយ",
+                        "nextPoc": "6. កំពង់ផែបន្ទាប់",
+                        "nationality": "4. សញ្ជាតិ",
+                        "masterName": "មោះមេបញ្ជាការនាវា",
+                        "dateOfDeparture": "កាលបរិច្ឆេទចេញដំណើរ",
+                        "timeOfDeparture": "ពេលវេលា",
+                        "netTonnage": "ទម្ងន់ពិតប្រាកដ",
+                        "noOfCrew": "ចំនួននាវិក",
+                        "noOfPassengers": "ចំនួនអ្នកដំណើរ",
+                        "noOfCargo": "ផ្ទុកទំនិញចំនួន",
+                        "boundFor": "ចេញទៅ",
+                        "dateOfArrv": "កាលបរិច្ឆេទប៉ាន់ស្មានចូលមកដល់",
+                        "dateOfDept": "កាលបរិច្ឆេទប៉ាន់ស្មានចាកចេញ",
+                        "timeOfArrv": "ម៉ោងប៉ាន់ស្មាននៃការមកដល់",
+                        "timeOfDept": "ពេលវេលាចេញដំណើរប៉ាន់ស្មាន",
+                        "portOfArr": "កំពង់ផែចូលចត",
+                        "portOfDept": "កំពង់ផែចេញដំណើរ"
+                    },
+                    "general": {
+                        "title": "ប្រតិវេទន៍ទូទៅ",
+                        "subtitle": "ប្រតិវេទន៍ទូទៅ",
+                        "fields": {
+                            "cor": "7.1 វិញ្ញាបនបត្រចុះបញ្ជីឈ្មោះផែ",
+                            "corDate": "7.2 កាលបរិច្ឆេទវិញ្ញាបនបត្រចុះបញ្ជី",
+                            "corNumber": "7.3 លេខវិញ្ញាបនបត្រចុះបញ្ជី",
+                            "corName": "7.4 វិញ្ញាបនបត្រចុះបញ្ជីឈ្មោះ",
+                            "rcd": "11. ទំនិញដែលនៅសល់",
+                            "gt": "9. ចំណុះផ្ទុកសរុប",
+                            "nt": "10. ចំណុះផ្ទុកសុទ្ធ",
+                            "crew": "13. ចំនួននាវិក",
+                            "pob": "14. ចំនួនអ្នកដំណើរ",
+                            "descVoy": "11. ព័ត៌មានសង្ខេបជើងនាវា",
+                            "descCargo": "12. ព័ត៌មានសង្ខេបទំនិញ",
+                            "remark": "15. កំណត់សំគាល់ផ្សេងៗ",
+                            "attCargoDec": "16. ប្រតិវេទន៍ទំនិញ",
+                            "attShipStore": "17. Ship's Store Declaration",
+                            "attCrewList": "18. បញ្ជីនាវិក",
+                            "attPssngrList": "19. បញ្ជីអ្នកដំណើរ",
+                            "attCrewEffct": "21. Crew's Effects Declaration (only on arrival)",
+                            "attMaritimeDec": "22. Maritime Declaration of Health (only on arrival)",
+                            "shpreq": "20. Ship Req in Terms of Waste and Residue Reception Facilities",
+                            "agentContactName": "8.1 ឈ្មោះទំនាក់ទំនងភ្នាក់ងារ",
+                            "agentEmail": "8.2 សារអេឡិចត្រូនិចភ្នាក់ងារ",
+                            "agentCountryCode": "8.3 លេខកូដប្រទេសរបស់ភ្នាក់ងារ",
+                            "agentName": "8.4 ឈ្មោះភ្នាក់ងារ",
+                            "agentMobileNo": "8.5 លេខទូរស័ព្ទភ្នាក់ងារ",
+                            "agentPostalCode": "8.6 លេខកូដប្រៃសនីយ៍របស់ភ្នាក់ងារ",
+                            "agentIdNo": "8.7 លេខបណ័្ណសម្គាល់ខ្លួនភ្នាក់ងារ",
+                            "agentLandlineNo": "8.8 លេខទំនាក់ទំនងភ្នាក់ងារ",
+                            "poBox": "8.9 លេខផ្លូវ P.O.Box",
+                            "subdivisionName": "8.10 ឈ្មោះផ្នែករង",
+                            "agentCity": "8.11 ទីក្រុងភ្នាក់ងារ"
+                        }
+                    },
+                    "cargoDeclaration": {
+                        "title": "ប្រតិវេទន៍ទំនិញបំព្រួញ",
+                        "subTitle": "ព័ត៌មានលម្អិតអំពីប្រតិវេទន៍ទំនិញបំព្រួញ",
+                        "hsPopup": {
+                            "title": "",
+                            "headers": {
+                                "hsCode": "លេខកូដ​ HS​",
+                                "hsDesc": "ការពិពណ៌នា​ HS"
+                            }
+                        },
+                        "fields": {
+                            "blNo": "លេខ B/L",
+                            "marks": "សម្គាល់ និងលេខ",
+                            "kindofpkg": "ប្រភេទវេចខ្ចប់",
+                            "pkgtype": "ចំនួន/ ចំនួនប្រភេទវេចខ្ចប់",
+                            "grosswt": "ចំណុះផ្ទុកសរុប (kg)",
+                            "msmt": "បខ្នាត (m)",
+                            "mn": "6. សម្គាល់ និងលេខ",
+                            "transEqmtId": "6.1 លេខសម្គាល់ឧបករណ៍ដឹកជញ្ជូន",
+                            "cgItemMNos": "6.2 លេខសម្គាល់ទំនិញ និងលេខទំនិញ",
+                            "noAndKop": "7. ចំនួននិងប្រភេទវេចខ្ចប់; ការពិពណ៌នាអំពីទំនិញ ឬប្រសិនបើមាន លេខកូដ HS",
+                            "cgiPkgTypeCode": "7.1 លេខកូដប្រភេទវេចខ្ចប់ទំនិញ",
+                            "cgiHSCode": "7.2 លេខកូដទំនិញ HS",
+                            "cgiDescGood": "7.3 ការពិពណ៌នាអំពីទំនិញ",
+                            "cgiNoOfPkgs": "7.4 ចំនួនទំនិញនៃវេចខ្ចប់",
+                            "cgiGrossWt": "8. ទម្ងន់សរុបទំនិញគិតជា Kg",
+                            "cgiGrossVol": "9. បរិមាណទំនិញសរុបគិតជា MTQ",
+                            "gw": "8. ទម្ងន់សរុប",
+                            "msmnt": "9. ខ្នាត",
+                            "aap": "10.1 ភ្នាក់ងារនៅកំពង់ផែ",
+                            "aapIdNo": "10.2 អត្តសញ្ញាណភ្នាក់ងារនៅកំពង់ផែ",
+                            "contactName": "10.3 ឈ្មោះទំនាក់ទំនងបុគ្គលិករបស់ភ្នាក់ងារ",
+                            "authName": "10.4 ឈ្មោះអ្នកផ្ទៀងផ្ទាត់",
+                            "authCode": "10.5 លេខកូដតួនាទីការផ្ទៀងផ្ទាត់",
+                            "authDate": "10.6 កាលបរិច្ឆេទផ្ទៀងផ្ទាត់",
+                            "voyageNo": "1.3 លេខជើងដំណើរនាវា",
+                            "port": "2. ឈ្មោះផែដែលធ្វើរបាយការណ៍",
+                            "flagStateOfShip": "3. សញ្ជាតិនាវា",
+                            "nameOfMaster": "4. ឈ្មោះមេបញ្ជាការនាវា",
+                            "portOfDsch": "5. ឈ្មោះផែលើក/ដាក់ទំនិញ"
+                        },
+                        "validationMsgs": {
+                            "rangeValidationGrsWt": "តម្លៃមិនគួរតិចជាង ឬច្រើនជាងនេះទេ 0.1 9999999999999999.999999.",
+                            "decimalAllowedGrsWt": "Only allows up to 6 decimal places",
+                            "rangeValidationGrsVol": "តម្លៃមិនគួរតិចជាង ឬច្រើនជាងនេះទេ 0.0 9999999999999999.999999.",
+                            "decimalAllowedGrsVol": "Only allows up to 6 decimal places"
+                        }
+                    },
+                    "shipstore": {
+                        "title": "ប្រតិវេទន៍សន្និធិនាវា",
+                        "fields": {
+                            "lastPoc": "5.1 កំពង់ផែចុងក្រោយ",
+                            "nextPoc": "5.2 កំពង់ផែបន្ទាប់",
+                            "noOfPerOnb": "6. ចំនួនមនុស្សលើនាវា",
+                            "prdOfStay": "7. ចំនួនថ្ងៃដែលស្នាក់នៅ",
+                            "articlename": "8.2 Name of Article",
+                            "qty": "9. បរិមាណ",
+                            "lob": "ទីតាំងលើនាវា",
+                            "offUse": "សម្រាប់មន្ត្រី",
+                            "articlecode": "8.1 Article Category",
+                            "nameOfArticle": "8. Name of Article",
+                            "uom": "UOM"
+                        }
+                    },
+                    "crewEffect": {
+                        "title": "ប្រតិវេទន៍សម្ភារផ្ទាល់ខ្លួនរបស់ក្រុមនាវិក",
+                        "subTitle": "ប្រតិវេទន៍សម្ភារផ្ទាល់ខ្លួនរបស់ក្រុមនាវិក",
+                        "fields": {
+                            "seqNo": "3. ល.រ",
+                            "fn": "គោត្តនាម",
+                            "gn": "នាម",
+                            "ror": "ចំណាត់ថ្នាក់",
+                            "eff": "Effects Ineligible For Relief From Customs Duties and Taxes or Subject to Prohibitions or Restrictions",
+                            "sign": "ហត្ថលេខា(*.jpeg,*.png only)",
+                            "flagStateOfShip": "2. សញ្ជាតិនាវា",
+                            "type": "ប្រភេទ",
+                            "qty": "បរិមាណ",
+                            "uom": "UOM",
+                            "desc": "ការពិពណ៌នា",
+                            "fName": "4. គោត្តនាម",
+                            "gName": "5. នាម",
+                            "roRt": "ចំណាត់ថ្នាក់",
+                            "inEff": "7. Ineligible Effects",
+                            "signature": "8. ហត្ថលេខា",
+                            "effInfo": "Effects Info",
+                            "effType": "Crew Effect Type"
+                        }
+                    },
+                    "crewList": {
+                        "title": "បញ្ជីឈ្មោះក្រុមនាវិក",
+                        "subTitle": "ព័ត៌មានលម្អិតបញ្ជីឈ្មោះក្រុមនាវិក",
+                        "fields": {
+                            "seqNo": "6. ល.រ",
+                            "fn": "7. គោត្តនាម",
+                            "gn": "8. នាម",
+                            "ror": "ចំណាត់ថ្នាក់",
+                            "nat": "10. សញ្ជាតិ",
+                            "dob": "11. ថ្ងៃ ខែ ឆ្នាំកំណើត",
+                            "pob": "12.1 ទីកន្លែងកំណើត",
+                            "pobp": "12.2 ទី​កន្លែង​កំណើត",
+                            "gender": "13. ភេទ",
+                            "id": "14. ប្រភេទនៃឯកសារអត្តសញ្ញាណ",
+                            "no": "15. លេខឯកសារអត្តសញ្ញាណ",
+                            "state": "16. រដ្ឋដែលចេញឯកសារអត្តសញ្ញាណ",
+                            "expdate": "17. កាលបរិច្ឆេទផុតកំណត់នៃឯកសារអត្តសញ្ញាណ",
+                            "iddoc": "18. ឯកសារអត្តសញ្ញាណ",
+                            "departureDate": "3.1កាលបរិច្ឆេទនៃ {{forDecl}}",
+                            "time": "3.2 ពេលវេលានៃ {{forDecl}}",
+                            "lastPoc": "5.ច្រកចុងក្រោយនៃការហៅ",
+                            "idDoc": "ឯកសារអត្តសញ្ញាណ"
+                        }
+                    },
+                    "passangerList": {
+                        "title": "បញ្ជីឈ្មោះអ្នកដំណើរ",
+                        "fields": {
+                            "seqNo": "ល.រ",
+                            "fn": "5. គោត្តនាម",
+                            "gn": "6. នាម",
+                            "nat": "7. សញ្ជាតិ",
+                            "dob": "8. ថ្ងៃ ខែ ឆ្នាំកំណើត",
+                            "pob": "ប្រទេសកំណើត",
+                            "pobp": "9.2 ទី​កន្លែង​កំណើត",
+                            "gender": "10. ភេទ",
+                            "id": "11. ប្រភេទនៃឯកសារអត្តសញ្ញាណ រឺឯកសារធ្វើដំណើរ",
+                            "no": "12. លេខសេរ៊ីនៃឯកសារអត្តសញ្ញាណ រឺឯកសារធ្វើដំណើរ",
+                            "state": "13. រដ្ឋដែលចេញឯកសារអត្តសញ្ញាណ",
+                            "expdate": "14. កាលបរិច្ឆេទផុតកំណត់នៃឯកសារអត្តសញ្ញាណ",
+                            "country": "Country of Embarkation",
+                            "port": "15. Port of Embarkation",
+                            "visa": "16. លេខទិដ្ឋាការ (ប្រសិនបើអាច)",
+                            "countryde": "Country of Disembarkation",
+                            "portde": "17. Port of Disembarkation",
+                            "transit": "មានអ្នកដំណើរឆ្លងកាត់​ឬទេ",
+                            "iddoc": "ឯកសារអត្តសញ្ញាណ",
+                            "idDoc": "10. ឯកសារអត្តសញ្ញាណ"
+                        }
+                    },
+                    "dangerousGoods": {
+                        "title": "និវេទនបណ្ណទំនិញគ្រោះថ្នាក់",
+                        "fields": {
+                            "sp": "5. Stowage Position",
+                            "rn": "6. លេខយោង",
+                            "unno": "8. លេខ UN",
+                            "mn": "7.1 សម្គាល់ និងលេខ",
+                            "fr": "7.2 លេខសម្គាល់ដឹកជញ្ជូនកុងតឺន័រ",
+                            "vr": "7.3 លេខចុះបញ្ជីយានយន្ត",
+                            "shipname": "9.1 Proper Shipping Name",
+                            "ts": "9.2 លក្ខណៈបច្ចេកទេស",
+                            "class": "10.1 Class",
+                            "sr": "10.2 ហានិភ័យរង",
+                            "pgp": "11. ក្រុមវេចខ្ចប់",
+                            "fp": "12.3 Flash Point",
+                            "ai": "12.1 ព័​ត៍​មាន​បន្ថែម",
+                            "mp": "12.2 ការបំពុលសមុទ្រ",
+                            "code": "13.1 ចំនួន ",
+                            "uom": "13.2 ខា្នត",
+                            "no": "13.3 ប្រភេទវេចខ្ចប់",
+                            "ems": "15. EmS",
+                            "mass": "14.1 ម៉ាស (គក) ",
+                            "vol": "14.2  បរិមាណ (លីត្រ)",
+                            "voyageNo": "1.4 លេខជើងធើ្វដំណើរនាវា",
+                            "flagStateOfShip": "2. សញ្ជាតិនាវា",
+                            "portOfLoading": "3. Port of Loading",
+                            "portOfDischarge": "4. Port of Discharge"
+                        }
+                    }
+                }
+            },
+            "manifest": {
+                "title": "និវេទន៍ប័ណ្ណ",
+                "tabs": {
+                    "header": {
+                        "title": "Header",
+                        "fields": {
+                            "manifestType": "ប្រភេទនិវេទន៍ប័ណ្ណ",
+                            "transportMode": "មធ្យោបាយដឹកជញ្ជូន",
+                            "manifestNo": "លេខនិវេទន៍ប័ណ្ណ",
+                            "overdueTime": "រយៈពេលយឺតយ៉ាវក្នុងការដាក់ស្នើឯកសារ",
+                            "customOffice": "ការិយាល័យគយ",
+                            "totalNoBOL": "ចំនួនសរុប Master Bill of Lading",
+                            "totalNoPackages": "ចំនួនសរុបវេចខ្ចប់",
+                            "totalNoContainers": "ចំំនួនសរុបនៃកុងតឺន័រ",
+                            "totalGrossMass": "ចំនួនសរុប Gross Mass (kg)",
+                            "sendManifest": "ផ្ញើព័ត៌មាននិវេទនប័ណ្ណ",
+                            "yes": "មាន",
+                            "no": "មិនមាន"
+                        }
+                    },
+                    "billOfLading": {
+                        "title": "Bill of Lading",
+                        "tableColumns": {
+                            "bolNo": "លេខBL",
+                            "marksNo": "សញ្ញាសម្គាល់/លេខ",
+                            "noKindPkg": "លេខ​ និងប្រភេទវេចខ្ចប់",
+                            "grossWt": "ទម្ងន់សរុប",
+                            "measurement": "ខ្នាត",
+                            "grossMass": "Gross Mass (kg)",
+                            "noOfContainers": "ចំនួនកុងតឺន័រ",
+                            "volumeCM": "បរិមាណគិតជាម៉ែត្រគូប",
+                            "noOfPkgs": "ចំនួនវេចខ្ចប់",
+                            "pkgType": "ប្រភេទវេចខ្ចប់"
+                        },
+                        "popup": {
+                            "title": "និវេទន៍ប័ណ្ណ",
+                            "popupTabs": {
+                                "billInfo": {
+                                    "title": "Bill Info",
+                                    "subGroups": {
+                                        "blAwbDetails": "ព័ត៌មានលម្អិត​BL/AWB",
+                                        "locationDetails": "ព័ត៌​មានទីតាំង"
+                                    },
+                                    "fields": {
+                                        "blAwbNo": "លេខBL/ AWB",
+                                        "blAwbType": "ប្រភេទBL/ AWB",
+                                        "billNature": "Bill Nature",
+                                        "blAwbMasterNo": "លេខ BL/AWB Master",
+                                        "placeOfLoading": "Place of Loading",
+                                        "placeofUnloading": "Place of Unloading",
+                                        "portOfLoading": "ទីកន្លែងផ្ទុក",
+                                        "portOfUnloading": "ទីកន្លែងមិនបានផ្ទុក"
+                                    }
+                                },
+                                "traderInfo": {
+                                    "title": "Trader Info",
+                                    "subGroups": {
+                                        "exporter": "អ្នកនាំចេញ",
+                                        "consignee": "អ្នកទទួលទំនិញ",
+                                        "notifyParty": "ភាគីដែលត្រូវជូនដំណឹង"
+                                    },
+                                    "fields": {
+                                        "exporterName": "ឈ្មោះ",
+                                        "exporterAddress": "អសយដ្ឋាន",
+                                        "consigneeName": "ឈ្មោះ",
+                                        "consigneeAddress": "អសយដ្ឋាន",
+                                        "consigneeCode": "កូដ",
+                                        "notifyPartyName": "ឈ្មោះ",
+                                        "notifyPartyAddress": "អសយដ្ឋាន",
+                                        "notifyPartyCode": "កូដ"
+                                    }
+                                },
+                                "goodsInfo": {
+                                    "title": "ព័ត៌មានទំនិញ",
+                                    "subGroups": {
+                                        "goodsDetails": "ព័ត៌មានលម្អិតអំពីទំនិញ",
+                                        "sealDetails": "ព័ត៌មានលម្អិតត្រា"
+                                    },
+                                    "fields": {
+                                        "goodsDescription": "ការពិពណ៌នាទំនិញ",
+                                        "grossMass": "Gross Mass (kg)",
+                                        "noOfContainers": "ចំនួនកុងតឺន័រ",
+                                        "volumeCM": "បរិមាណគិតជាម៉ែត្រគូប",
+                                        "noOfPkgs": "ចំនួនវេចខ្ចប់",
+                                        "pkgType": "ប្រភេទវេចខ្ចប់",
+                                        "noOfSeals": "ចំនួននៃត្រា​",
+                                        "info": "ព័ត៌មាន",
+                                        "sealPartyCode": "លេខកូដត្រា",
+                                        "sealMarks": "សញ្ញាសម្គាល់ត្រា",
+                                        "shippingMarks": "សញ្ញាសម្គាល់ក្រុមហ៊ុនដឹកជញ្ជូន"
+                                    }
+                                },
+                                "valueInfo": {
+                                    "title": "ព័ត៌មានតម្លៃ",
+                                    "subGroups": {
+                                        "transpoDetails": "ព័ត៌មានលម្អិតអំពីតម្លៃដឹកជញ្ជូន",
+                                        "freightDetails": "ព័ត៌មានលម្អិតអំពីតម្លៃដឹកទំនិញ",
+                                        "customDetails": "ព័ត៌មានលម្អិតអំពីតម្លៃគយ",
+                                        "insuranceDetails": "ព័ត៌មានលម្អិតអំពីតម្លៃធានារ៉ាប់រង"
+                                    },
+                                    "fields": {
+                                        "transpoVal": "តម្លៃដឹកជញ្ជូន",
+                                        "transpoCurr": "រូបិយប័ណ្ណដឹកជញ្ជូន",
+                                        "freightVal": "តម្លៃដឹកទំនិញ",
+                                        "freightCurr": "រូបិយប័ណ្ណដឹកទំនិញ",
+                                        "customVal": "តម្លៃគយ",
+                                        "customCurr": "រូបិយប័ណ្ណគយ",
+                                        "insureVal": "ព័ត៌មានលម្អិតអំពីធានារ៉ាប់រង",
+                                        "insureCurr": "រូបិយប័ណ្ណធានារ៉ាប់រង"
+                                    }
+                                },
+                                "containerInfo": {
+                                    "title": "ព័ត៌មានកុងតឺន័រ",
+                                    "tableColumns": {
+                                        "containerNo": "លេខកុងតឺន័រ",
+                                        "containerType": "ប្រភេទកុងតឺន័រ",
+                                        "emptyOrFull": "ទទេ ឬពេញ",
+                                        "sealingPartyNameCode": "Sealing Party Name / Code"
+                                    },
+                                    "popup": {
+                                        "title": "ព័ត៌មានលម្អិតអំពីកុងតឺន័រ",
+                                        "subGroups": {
+                                            "containerInfo": "ព័ត៌មានកុងតឺន័រ",
+                                            "otherInfo": "ព័ត៌មានផ្សេងៗ"
+                                        },
+                                        "fields": {
+                                            "containerInfo": "ព័ត៌មានកុងតឺន័រ",
+                                            "containerType": "ប្រភេទកុងតឺន័រ",
+                                            "goodsDesc": "ការពិពណ៌នាទំនិញ",
+                                            "noOfPkg": "ចំនួនវេចខ្ចប់",
+                                            "emptyOrFull": "ទទេ ឬពេញ",
+                                            "grossMass": "Gross Mass (kg)",
+                                            "sealingParty": "Sealing Party",
+                                            "marks1": "សញ្ញាសម្គាល់ ១",
+                                            "marks2": "សញ្ញាសម្គាល់ ២",
+                                            "marks3": "សញ្ញាសម្គាល់ ៣",
+                                            "minTemp": "សីតុណ្ហភាពអប្បបរមា",
+                                            "maxTemp": "សីតុណ្ហភាពអតិបរមា",
+                                            "humidity": "សំណើម",
+                                            "dangerousGoods": "ទំនិញ​គ្រោះថ្នាក់"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "others": {
+                "title": "ទម្រង់ផ្សេងទៀត",
+                "tabs": {
+                    "containerInfo": {
+                        "title": "ព័ត៌មានអំពីកុងតឺន័រ",
+                        "fields": {
+                            "contType": "ប្រភេទកុងតឺន័រ",
+                            "contCat": "ប្រភេទ",
+                            "contCatOthr": "ផ្សេងទៀត",
+                            "contSize": "ទំហំ",
+                            "contQty": "បរិមាណ",
+                            "contGw": "ទំងន់សរុប",
+                            "contTotalWeight": "ទំងន់សរុប (KGM)",
+                            "total": "សរុប: "
+                        },
+                        "buttons": {
+                            "addContainerInfo": "បន្ថែមព័ត៌មានកុងតឺន័រ"
+                        },
+                        "info": {
+                            "totalGw": "ប្រសិនបើកំណត់ត្រាថ្មីត្រូវបានបន្ថែម វានឹងត្រូវបានគណនាដោយស្វ័យប្រវត្តិ។ ប៉ុន្តែនេះក៏អាចផ្លាស់ប្តូរដោយដៃផងដែរ។"
+                        }
+                    },
+                    "nillist": {
+                        "title": "បញ្ជីគ្មានទំនិញ",
+                        "subGroups": {
+                            "radioPanel": "យើង​បញ្ជាក់​ថា​បញ្ជី​ទំនិញ​ខាងក្រោម​មិន​ត្រូវ​បាន​រក​ឃើញ​ក្នុង​នាវា​ទេ"
+                        },
+                        "fields": {
+                            "stowaways": "អាហារដ្ឋាន",
+                            "animalPlants": "សត្វ / រុក្ខជាតិ",
+                            "parcelPackage": "Parcel / Package",
+                            "armsAmmo": "គ្រាប់រំសេវអាវុធ",
+                            "drugs": "គ្រឿងញៀនខុសច្បាប់",
+                            "passengers": "អ្នកដំណើរ",
+                            "livestocks": "ការចិញ្ចឹមសត្វ"
+                        }
+                    },
+                    "healthdeclaration": {
+                        "title": "Maritime Declaration Of Health",
+                        "subGroups": {
+                            "questions": "សំណួរ"
+                        },
+                        "fields": {
+                            "yes": "មាន",
+                            "no": "មិនមាន"
+                        }
+                    },
+                    "declarationOfHealth": {
+                        "isSSCEC": {
+                            "title": "តើនាវាមានវិញ្ញាបនបត្រសបញ្ជាក់អនាម័យកប៉ាល់ភ្ជាប់មកជាមួយដែរឬទេ(SSCEC)?",
+                            "yes": "មាន",
+                            "no": "គ្មាន",
+                            "place": "ទីកន្លែងចុះបញ្ជី",
+                            "date": "ថ្ងៃចុះបញ្ជី"
+                        },
+                        "reinspection": "Re-inspection required?",
+                        "aft": {
+                            "title": "Has ship/vessel visited an affected area identified by the World Health Organization?",
+                            "country": "ប្រទេស",
+                            "port": "កំពង់ផែ",
+                            "date": "ថ្ងៃខែ"
+                        },
+                        "commencement": "List port of call from commencement of voyage with dates of departure, or within past thirty day, whichever is shorter.",
+                        "commencementBox": "Commencement",
+                        "title": "ប្រកាសសុខភាពសំរាប់ការចេញដំណើរនៃនាវា",
+                        "subGroups": {
+                            "questions": "សំណួរខាងក្រោមត្រូវឆ្លើយដោយមេបញ្ជាការនាវា ឬ គ្រូពេទ្យប្រចំាការនាវា"
+                        }
+                    },
+                    "report": {
+                        "title": "របាយការណ៍ទឹកនៅលើនាវា",
+                        "popup": {
+                            "title": "ទម្រង់ទឹកលើនាវា"
+                        },
+                        "fields": {
+                            "hold": "រក្សាទុក",
+                            "kow": "ប្រភេទទឹក",
+                            "qty": "បរិមាណ",
+                            "country": "ប្រទេស",
+                            "port": "កំពង់ផែដែលជាកន្លែងយក់ទឹកនៅលើនាវា",
+                            "rem": "នៅសល់",
+                            "date": "កាលបរិច្ឆេទយកទឹក",
+                            "remarks": "កំណត់សំគាល់ផ្សេងៗ"
+                        }
+                    },
+                    "narcotics": {
+                        "title": "បញ្ជីឈ្មោះគ្រឿងញៀន",
+                        "popup": {
+                            "title": "ព័ត៌មានលម្អិតអំពីគ្រឿងញៀន"
+                        },
+                        "fields": {
+                            "seqNo": "ល.រ",
+                            "kom": "ប្រភេទឱសថ",
+                            "qty": "បរិមាណ",
+                            "uom": "UOM",
+                            "expDate": "ថ្ងៃ​ផុតកំណត់"
+                        }
+                    },
+                    "portofcall": {
+                        "title": "បញ្ជីផែដែលចូលចត",
+                        "subTitlePoc": "កំពង់ផែចុងក្រោយបង្អស់នៃការចេញដំណើរចំនួន 10 ដង",
+                        "popup": {
+                            "title": "ផែដែលចូលចត"
+                        },
+                        "fields": {
+                            "country": "ប្រទេស",
+                            "poc": "ផែដែលចូលចត",
+                            "berth": "ចំណតផែ/កន្លែងបោះយុថ្កា/ឆ្លងកាត់",
+                            "unCode": "UNCODE (ប្រសិនបើមាន)",
+                            "arrDate": "កាលបរិច្ឆេទមកដល់",
+                            "depDate": "កាលបរិច្ឆេទចេញដំណើរ",
+                            "pSeclevel": "កម្រិតសុវត្ថិភាពកំពង់ផែ",
+                            "sSeclevel": "កម្រិតសុវត្ថិភាពនាវា",
+                            "remarks": "កំណត់សំគាល់ផ្សេងៗ"
+                        }
+                    },
+                    "wasteDelivery": {
+                        "title": "សេចក្តីជូនដំណឹងអំពីការប្រគល់ទទួលសំណល់",
+                        "subGroups": {
+                            "type": "ប្រភេទ និងបរិមាណសំណល់/សំណល់សម្រាប់ការបង្ហូរទៅកន្លែងប្រើប្រាស់"
+                        },
+                        "fields": {}
+                    },
+                    "vaccination": {
+                        "title": "បញ្ជីចាក់ថ្នាំវ៉ាក់សាំង",
+                        "popup": {
+                            "title": "បញ្ជីចាក់ថ្នាំវ៉ាក់សាំងលម្អិត"
+                        },
+                        "fields": {
+                            "seqNo": "ល.រ",
+                            "fName": "គោត្តនាម",
+                            "gName": "នាម",
+                            "ror": "តួនាទី រឺ តំណែង",
+                            "nat": "សញ្ជាតិ",
+                            "expDate": "កាលបរិច្ឆេទផុតកំណត់នៃការទទួលថ្នាំវ៉ាក់សាំង",
+                            "yBook": "សៀវភៅលឿង",
+                            "yfExpDate": "ផុត​កំណត់​ថ្នាំ​បង្ការ​ជំងឺ​គ្រុន​",
+                            "upload": "បញ្ចូលវិញ្ញាបនប័ត្រវ៉ាក់សាំងអន្តរជាតិ (សៀវភៅលឿង)(*.pdf, *.png, *.jpg, *.jpeg តែប៉ុណ្ណោះ)",
+                            "cert": "វិញ្ញាបនប័ត្រវ៉ាក់សាំងអន្តរជាតិ (សៀវភៅលឿង)"
+                        }
+                    }
+                }
+            },
+            "docAudit": {
+                "title": "ឯកសារ និង សវនកម្ម",
+                "tabs": {
+                    "suppDoc": {
+                        "title": "ឯកសារយោង",
+                        "fields": {}
+                    },
+                    "audit": {
+                        "title": "សវនកម្ម",
+                        "fields": {}
+                    }
+                }
+            },
+            "queryRemark": {
+                "title": "សំនួរ និង​ កំណត់សំគាល់ផ្សេងៗ",
+                "tabs": {
+                    "query": {
+                        "title": "សំនួរ",
+                        "fields": {}
+                    },
+                    "remark": {
+                        "title": "កំណត់សំគាល់ផ្សេងៗ",
+                        "fields": {}
+                    }
+                }
+            },
+            "certificates": {
+                "poc": "Port Clearance Certificate",
+                "qfd": "Quarantine for Departure"
+            }
+        }
+    }
+}

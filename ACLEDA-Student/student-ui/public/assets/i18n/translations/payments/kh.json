@@ -1,0 +1,61 @@
+{
+    "paymentAdvice": {
+        "list": {
+            "routeSegment": "ទូទាត់ប្រាក់ និងបង្កើតវិក័យបត្របង់ប្រាក់",
+            "table": {
+                "title": "ទូទាត់ប្រាក់ និងបង្កើតវិក័យបត្របង់ប្រាក់",
+                "title_db": "ការប្រមូលការទូទាត់",
+                "headers": {
+                    "payAdvRefNo": "លេខយោងនៃការទូទាត់",
+                    "payInvRefNo": "លេខវិក័យបត្រ",
+                    "payAdvAppNo": "លេខពាក្យស្នើសុំ",
+                    "payAdvAppType": "ប្រភេទពាក្យស្នើសុំ",
+                    "payAdvPayDate": "កាលបរិច្ឆេទបង់ប្រាក់",
+                    "payAdvPayAmt": "ចំនួនទឹកប្រាក់",
+                    "payAdvStatus": "ស្ថានភាព"
+                }
+            }
+        },
+        "details": {
+            "title": "ទូទាត់ប្រាក់ និងបង្កើតវិក័យបត្របង់ប្រាក់",
+            "viewAdvLabel": "មើលបង្កើតវិក័យបត្របង់ប្រាក់",
+            "payAdvLabel": "បង្កើតវិក័យបត្របង់ប្រាក់",
+            "table": {
+                "title": "ទូទាត់ប្រាក់ និងបង្កើតវិក័យបត្របង់ប្រាក់",
+                "detailsTitle": "ព័ត៌មានលម្អិតទូទាត់ប្រាក់",
+                "headers": {
+                    "payAdvRefNo": "លេខយោងនៃការទូទាត់ប្រាក់",
+                    "payInvRefNo": "លេខវិក័យបត្រ",
+                    "payAdvAppNo": "លេខយោងពាក្យស្នើរសុំ",
+                    "payAdvAppType": "ប្រភេទពាក្យស្នើរសុំ",
+                    "payAdvPayDate": "កាលបរិច្ឆេទនៃការទូទាត់ប្រាក់",
+                    "payAdvPayAmt": "ចំនួនទឹកប្រាក់នៃការទូទាត់ប្រាក់",
+                    "payAdvStatus": "ស្ថានភាព"
+                },
+                "fields": {
+                    "balanceAmount": "ចំនួនទឹកប្រាក់តុល្យភាព",
+                    "totalAmount": "ចំនួនទឹកប្រាក់សរុប",
+                    "paidAmount": "ចំនួនទឹកប្រាក់ដែលបានបង់",
+                    "outstandingBalanceAmount": "ចំនួនសមតុល្យដែលលើស ",
+                    "importantText": " សំខាន់៖ ការណែនាំអំពីការទូទាត់នឹងត្រូវបានរក្សាទុកនៅពេលជ្រើសរើសបន្តទៅការទូទាត់",
+                    "btnProceedText": "បន្តទៅការទូទាត់",
+                    "btnOk": "យល់ព្រម"
+                }
+            },
+            "msg": {
+                "refNoIs": "លេខយោងវិក្កយបត្រទូទាត់{{payInvRefNo}}",
+                "notice": "សូមចំណាំលើវិក្កយបត្រទូទាត់យោង។ លេខ និងប្រើប្រាស់ MPWT Payment Gateway ដើម្បីបន្តទៅកាន់អ្នកបង់ប្រាក់t."
+            },
+            "bank": "ធនាគា",
+            "paymentDate": "ថ្ងៃខែបង់លុយ",
+            "uploadReceipt": "Upload Receipt",
+            "transactionNo": "លេខប្រតិបត្តិការ",
+            "refNo": "លេខសម្គាល់បង់ប្រាក់",
+            "paymentAdvDate": "កាលបរិច្ឆេទលិខិតជូនដំណឹងបង់ប្រាក់",
+            "remarks": "កំណត់ចំណាំ",
+            "officerRemarks": "កំណត់ចំណាំមន្រ្តី",
+            "paymentType": "ប្រភេទការទូទាត់",
+            "paymentExemption": "Exemption Payment"
+        }
+    }
+}

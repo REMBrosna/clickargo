@@ -1,0 +1,287 @@
+{
+    "audits": {
+        "title": "សវនកម្ម",
+        "table": {
+            "headers": {
+                "event": "ព្រឹត្តិការណ៍",
+                "timestamp": "កាលបរិច្ឆេទ និងពេលវេលា",
+                "remarks": "កំណត់សម្គាល់",
+                "usrUid": "លេខសម្គាល់អ្នកប្រើប្រាស់",
+                "usrName": "ឈ្មោះគណនីអ្នកប្រើប្រាស់"
+            }
+        }
+    },
+    "common": {
+        "msg": {
+            "createSuccess": "បានបង្កើត {{item}} ដោយជោគជ័យ!",
+            "deleteSuccess": "បានលុប {{item}} ដោយជោគជ័យ!",
+            "fetchFail": "`កំហុសបានជួបប្រទះខណៈពេលព្យាយាមទាញយក {{item}} កំណត់ត្រា!",
+            "resubmitted": "ពាក្យស្នើសុំត្រូវបានផ្ញើត្រឡប់មកវិញ និងបានធ្វើការដាក់ស្នើម្តងទៀតរួចរាល់",
+            "submitted": "Application has been submitted.",
+            "created": "បានបង្កើតដោយជោគជ័យ",
+            "updated": "បានធ្វើបច្ចុប្បន្នភាពដោយជោគជ័យ",
+            "approve": "បានអនុម័តដោយជោគជ័យ",
+            "reject": "បានបដិសេធដោយជោគជ័យ",
+            "deleted": "បានលុបដោយជោគជ័យ"
+        },
+        "queriesRemarks": {
+            "title": "សំនួរ និងកំណត់សំគាល់"
+        },
+        "dataTable": {
+            "department": "នាយកដ្ឋាន",
+            "docName": "ឈ្មោះឯកសារ",
+            "docRefNo": "លេខឯកសារយោង.",
+            "docType": "ប្រភេទ​ឯកសារ",
+            "borderStatus": "ស្ថានភាពច្រកទ្វារព្រំដែន",
+            "fileName": "ឈ្មោះ​ឯកសារ",
+            "number": "ល.រ",
+            "portStatus": "ស្ថានភាពកំពង់ផែ",
+            "required": "ទាមទារ",
+            "docRefNoExceed": "លើសពីប្រវែងអតិបរមា - 256",
+            "action": "សកម្មភាព"
+        },
+        "label": {
+            "docType": "ប្រភេទ​ឯកសារ",
+            "docRefNo": "លេខឯកសារយោង",
+            "uploadFile": "បញ្ចូលឯកសារ"
+        },
+        "placeHolder": {
+            "contactTel": "+85512345678",
+            "contactMobile": "+85512345678",
+            "contactFax": "+85512345678"
+        }
+    },
+    "queries": {
+        "title": "សំនួរ",
+        "altTitle": "សំនួរ",
+        "replyTitle": "ឆ្លើយតបសំនួរ",
+        "msgs": {
+            "confirm": "តើអ្នកប្រាកដទេថាចង់ធ្វើការ QUERY?",
+            "replySuccess": "ការឆ្លើយតប ទទួលបានជោគជ័យ!"
+        },
+        "buttons": {
+            "reply": "ឆ្លើយតប",
+            "close": "បិត"
+        },
+        "list": {
+            "section": "ផ្នែក",
+            "subSection": "ផ្នែករង",
+            "agency": "ភ្នាក់ងារ",
+            "userName": "អ្នកប្រើ",
+            "query": "សំនួរ",
+            "queryDate": "ថ្ងៃសួរ",
+            "responseDate": "ថ្ងៃឆ្លើយតប",
+            "replyMsg": "ឆ្លើយតប",
+            "action": "សកម្មភាព"
+        },
+        "subGroup": {
+            "queryHistory": "ប្រវត្តិ នៃការសួរ"
+        },
+        "fields": {
+            "section": "ផ្នែក",
+            "subSection": "ផ្នែករង",
+            "agency": "ភ្នាក់ងារ",
+            "userName": "អ្នកប្រើ",
+            "dateTime": "កាលបរិច្ឆេទ និងពេលវេលា",
+            "replyDateTime": "កាលបរិច្ឆេទ និងពេលវេលា ឆ្លើយតប",
+            "query": "សំនួរ",
+            "replyQuery": "ឆ្លើយតបសំនួរ"
+        }
+    },
+    "remarks": {
+        "title": "កំណត់សម្គាល់",
+        "altTitle": "កំណត់សម្គាល់",
+        "msgs": {
+            "confirm": "តើអ្នកប្រាកដទេថាចង់ធ្វើការ REMARK?"
+        },
+        "list": {
+            "section": "ផ្នែក",
+            "subSection": "ផ្នែករង",
+            "agency": "ភ្នាក់ងារ",
+            "userName": "ឈ្មោះ អ្នកប្រើ",
+            "remark": "កំណត់សម្គាល់",
+            "dateTime": "កាលបរិច្ឆេទ និងពេលវេលា",
+            "action": "សកម្មភាព"
+        },
+        "subGroup": {
+            "remarkHistory": "ប្រវត្តិនៃកំណត់សម្គាល់"
+        },
+        "fields": {
+            "section": "ផ្នែក",
+            "subSection": "ផ្នែករង",
+            "agency": "ភ្នាក់ងារ",
+            "userName": "ឈ្មោះ អ្នកប្រើ",
+            "dateTime": "កាលបរិច្ឆេទ និងពេលវេលា",
+            "remark": "កំណត់សម្គាល់"
+        }
+    },
+    "supportingDocs": {
+        "title": "ឯកសារគាំទ្រ",
+        "documentDetails": "ព័ត៌មានលម្អិតអំពីឯកសារ",
+        "documentReference": "ឯកសារយោង",
+        "upload": "បញ្ចូល​",
+        "add": "បន្ថែម",
+        "fields": {
+            "category": "ប្រភេទ",
+            "docType": "ប្រភេទឯកសារ",
+            "docRef": "លេខឯកសារយោង",
+            "expiryDate": "កាលបរិច្ឆេទផុតកំណត់",
+            "uploadFile": "ឯកសារ"
+        },
+        "tableHdrs": {
+            "no": "ល.រ",
+            "docType": "ប្រភេទឯកសារ",
+            "category": "ប្រភេទ",
+            "mandatory": "ចាំបាច់",
+            "docName": "ឈ្មោះឯកសារ",
+            "docRefNo": "លេខឯកសារយោង",
+            "expiredDate": "កាលបរិច្ឆេទ​ផុត​កំណត់"
+        },
+        "msg": {
+            "fileTooSmall": "ទំហំ​ឯកសារ​តូច​ពេក",
+            "fileSizeTooBig": "ទំហំឯកសារមិនអាចធំជាង  {{size}} MB ទេ",
+            "fileNameLen": "ឈ្មោះឯកសារគួរតែតិចជាង 128 តួអក្សរ",
+            "fileDuplicate": "កុំបញ្ចូលឈ្មោះឯកសារស្ទួន",
+            "uploadSuccess": "បញ្ចូលឯកសារដោយជោគជ័យ!",
+            "deleteSuccess": "លុបឯកសារដោយជោគជ័យ!",
+            "extsNotAllowed": "ផ្នែកបន្ថែមឈ្មោះឯកសារមិនត្រូវបានអនុញ្ញាតទេ។ ទទួលយកតែឯកសារប៉ុណ្ណោះដូចជា PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT.",
+            "onlyPdf": "ផ្នែកបន្ថែមឈ្មោះឯកសារមិនត្រូវបានអនុញ្ញាតទេ។ ទទួលយកតែ PDF",
+            "allowedExts": "ប្រភេទឯកសារដែលគាំទ្រ - PDF, CSV, XLS, XLXS, DOC, DOCX, JPEG, JPG, PNG, PPT",
+            "allowedPdf": "ប្រភេទឯកសារដែលគាំទ្រ បានតែPDF"
+        }
+    },
+    "recoveryDetails": {
+        "officialDetails": "ព័ត៌មានលម្អិតផ្លូវការ",
+        "tableHdrs": {
+            "event": "ព្រឹត្តិការណ៍",
+            "actionDate": "កាលបរិច្ឆេទសកម្មភាព (ដំណើរការដោយដៃ)",
+            "confirmMsg": "ពិពណ៌នាបញ្ជាក់",
+            "usrId": "លេខសម្គាល់អ្នកប្រើប្រាស់",
+            "usrName": "ឈ្មោះគណនីអ្នកប្រើប្រាស់"
+        }
+    },
+    "recordDetails": "ព័ត៌មានលម្អិតនៃកំណត់ត្រា",
+    "language": "ភាសា",
+    "properties": {
+        "title": "Properties",
+        "dtCreated": "កាលបរិច្ឆេទបានបង្កើត",
+        "usrCreated": "ឈ្មោះគណនីបានបង្កើត",
+        "dtLupd": "កាលបរិច្ចេទកែតម្រូវចុងក្រោយបង្អស់",
+        "usrLupd": "ឈ្មោះគណនីកែតម្រូវចុងក្រោយបង្អស់"
+    },
+    "register": {
+        "header": " ព័ត៌មានលម្អិតនៃការចុះឈ្មោះរបស់ក្រុមហ៊ុន",
+        "tabs": {
+            "details": {
+                "title": "ព័ត៌មានលម្អិតពីក្រុមហ៊ុន"
+            },
+            "admin": {
+                "title": "ព័ត៌មានលម្អិតពីរដ្ឋបាល"
+            },
+            "logo": {
+                "title": "ព័ត៌មានលម្អិតនៃរូបសញ្ញាក្រុមហ៊ុន"
+            },
+            "suppDocs": {
+                "title": "ឯកសារយោង"
+            }
+        }
+    },
+    "pageHeaders": {
+        "edit": "កែតម្រូវ {{appType}}",
+        "recovery": "Recovery {{appType}}",
+        "view": "មើល​ {{appType}}",
+        "new": "{{appType}}​ ថ្មី"
+    },
+    "genericMsgs": {
+        "success": "ការប្តូត្រូវបានដាក់ស្នើដោយជោគជ័យ",
+        "error": "រក្សាទុកមិនបានជោគជ័យ។ សូមពិនិត្យកំហុសផ្សេងៗ ហើយព្យាយាមម្តងទៀត។",
+        "emptyTable": "សូមអភ័យទោស រកមិនឃើញកំណត់ត្រាដែលត្រូវគ្នា"
+    },
+    "confirmMsgs": {
+        "delete": {
+            "title": "លុបចោល",
+            "content": "តើអ្នកប្រាកដទេថាចង់ធ្វើការលុប {{appnId}}នេះ?"
+        },
+        "confirm": {
+            "title": "យល់ព្រម",
+            "content": "តើអ្នកប្រាកដទេថាចង់ធ្វើការ {{action}} {{type}} {{appnId}}នេះ?",
+            "ftApproveNote": "គយកំពង់ផែនឹងទទួលបានការអនុម័តដោយស្វ័យប្រវត្តិ"
+        },
+        "proceed": {
+            "title": "បន្ត",
+            "content": "តើអ្នកប្រាកដទេថាចង់ធ្វើការ {{action}} {{type}} {{paymentRefNo}}?"
+        },
+        "clone": {
+            "title": "ចម្លង",
+            "content": "តើអ្នកប្រាកដទេថាចង់ធ្វើការចម្លង {{appnId}}នេះ?"
+        },
+        "confirmDates": {
+            "title": "យល់ព្រម",
+            "content": "តើអ្នកប្រាកដទេថាចង់ធ្វើការ រក្សាទុក {{fields}}?"
+        },
+        "confirmRecovery": {
+            "title": "យល់ព្រម",
+            "content": "អ្នកមិនអាចបិទ Recovery Mode វិញបានទេ។  \n តើអ្នកប្រាកដទេថាចង់បើកវាឥឡូវនេះ? "
+        }
+    },
+    "template": {
+        "upload": "បញ្ចូលទម្រង់គំរូ"
+    },
+    "validationMsgs": {
+        "overLength": "អាចបញ្វូលបានត្រឹមតែ​ ​១០​០០០​ តួរអក្សរតែប៉ុណ្ណោះ!",
+        "required": "ចន្លោះ​នេះ​ត្រូវតែ​បំពេញ!",
+        "lengthValidation": "ប្រវែងមិនគួរលើសពីតួអក្សរទេ {{length}}.",
+        "rangeValidation": "តម្លៃមិនគួរតិចជាង ឬច្រើនជាងនេះទេ {{minValue}}{{maxValue}}.",
+        "precisionValidation": "តម្លៃគួរតែឡើងដល់ {{precision}} លេខ និង {{scale}} ទសភាគ.",
+        "valueValidation": "តម្លៃមិនគួរលើសពី {{length}}.",
+        "negationValidation": "តម្លៃមិនគួរអវិជ្ជមានទេ.",
+        "invalidTelFormat": "សូមបញ្ចូល +លេខកូដប្រទេស និងដកឃ្លាចេញ.",
+        "invalidEmailFormat": "Email ដែលបានបញ្ចូលមិនត្រឹមត្រូវ",
+        "signSizeMax": "ទំហំហត្ថលេខាមិនអាចធំជាង 64 KB បានទេ",
+        "signExtNotAllowed": "ប្រភេទឯកសារនេះមិនត្រូវបានអនុញ្ញាតទេ។",
+        "uploadTypeNotAllowed": "ប្រភេទឯកសារនេះមិនអនុញ្ញាតឱ្យបញ្ចូលបានទេ"
+    },
+    "uploadSignature": {
+        "msg": {
+            "uploadSuccess": "ហត្ថលេខាបានបញ្ជូលដោយជោគជ័យ",
+            "fetchError": "កំហុសបានជួបប្រទះ ខណៈពេលព្យាយាមទាញយកទិន្នន័យ!",
+            "signatureRequired": "*ត្រូវការរូបភាពហត្ថលេខា"
+        },
+        "fields": {
+            "uploadSignature": "បញ្ចូលរូបភាពហត្ថលេខា",
+            "photoSpec": "ការបញ្ជាក់រូបថត",
+            "photoSpecDesc1": "* ត្រូវតែ .jpg, .jpeg, or .png",
+            "photoSpecDesc2": "* ទំហំចន្លោះពី 50 KB និង 1.5 MB.",
+            "previewSignature": "មើលហត្ថលេខាជាមុន"
+        }
+    },
+    "validationAlerts": {
+        "title": "ការព្រមាន!",
+        "msgBody": "សូមអភ័យទោស យើងមិនអាចទទួលយកពាក្យសើ្នសុំរបស់អ្នកបានទេ សូមដាក់ម៉ោងដាក់ពាក្យរបស់អ្នកជាមុន {{validationErr}}.",
+        "certNoAvailable": "វិញ្ញាបនបត្រមិនទាន់រួចរាល់ទេ។ សូម​ព្យាយាម​ម្តង​ទៀត​នៅ​ពេល​ក្រោយ។",
+        "certNotAvailable": "វិញ្ញាបនបត្រមិនទាន់បង្កើតបានទេ។ អាជ្ញាធរកំពង់ផែត្រូវបំពេញ Official Use ក្នុង Vessel Call ជាមុនសិន។"
+    },
+    "concurrentError": {
+        "title": "Warning!",
+        "alreadySubmitted": "Your application has already been submitted previously."
+    },
+    "status": {
+        "drf": "សេចក្តីព្រាង",
+        "sub": "បានដាក់ស្នើ",
+        "pen": "រង់ចាំទូទាត់ប្រាក់",
+        "pay": "បានទូទាត់",
+        "rej": "បានបដិសេធ",
+        "ret": "បានត្រឡប់មកវិញ",
+        "amn": "បានកែប្រែ",
+        "ver": "ផ្ទៀងផ្ទាត់",
+        "app": "បានអនុម័ត"
+    },
+    "tooltip": {
+        "viewChanges": "ចុចដើម្បីមើលការផ្លាស់ប្តូរ",
+        "changes": "ការផ្លាស់ប្តូរ",
+        "appLock": "កម្មវិធីអាចត្រូវបានដំណើរការដោយនរណាម្នាក់រួចហើយ"
+    },
+    "appLock": {
+        "text": "ចាក់សោដោយ {{who}} - {{when}}"
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "announcementType": {
+        "list": {
+            "routeSegment": "Announcement Type List",
+            "table": {
+                "title": "Announcement Type List",
+                "headers": {
+                    "anypId": "Announcement Type ID",
+                    "anypDescription": "Announcement Type Name ",
+                    "anypStatus": "Status",
+                    "anypIconName": "CSS Class Name"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Announcement Type List",
+                "sub": {
+                    "edit": "Edit Announcement Type",
+                    "view": "View Announcement Type",
+                    "new": "New Announcement Type"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "anypId": "Announcement Type ID",
+                    "anypDescription": "Announcement Type Name ",
+                    "anypStatus": "Status",
+                    "anypColor": "Color",
+                    "anypIconName": "CSS Class Name"
+                }
+            }
+        },
+        "messages": {
+            "updateSuccess": "Updated successfully",
+            "failedSubmit": "Failed to submit"
+        }
+    },
+    "announcement": {
+        "list": {
+            "routeSegment": "Announcement Setup",
+            "table": {
+                "title": "Announcement Setup List",
+                "headers": {
+                    "id": "Announcement ID",
+                    "application": "Application",
+                    "announceType": "Announcement Type",
+                    "subject": "Subject",
+                    "public": "Public",
+                    "status": "status"
+                }
+            }
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Announcement Setup List",
+                "sub": {
+                    "edit": "Edit Announcement Setup",
+                    "view": "View Announcement Setup",
+                    "new": "New Announcement Setup"
+                }
+            },
+            "tabs": {
+                "recordDetails": {
+                    "id": "Announcement ID",
+                    "application": "Application",
+                    "announceType": "Announcement Type",
+                    "subject": "Subject",
+                    "public": "Public",
+                    "status": "status",
+                    "name": "Announcement Name/Description ",
+                    "content": "Content",
+                    "url": "URL",
+                    "accountType": "Account Type",
+                    "fromDate": "From Date",
+                    "display": "Display Date",
+                    "endDate": "End Date",
+                    "all": "All",
+                    "non": "Non"
+                }
+            }
+        }
+    },
+    "notificationPreferences": {
+        "messages": {
+            "noAppTypeAction": "Please select an Application Type and Action before selecting templates.",
+            "noSelectedError": "Please select Templates first.",
+            "selectSuccess": "Templates selected successfully.",
+            "saveSuccess": "Template changes submitted successfully.",
+            "confirmOnExit": "There are unsaved changes on template data. Are you sure you want to exit this screen?",
+            "required": "Required",
+            "viewAllNotif": "View All Notifications",
+            "projectName": "Project Name",
+            "ago": "ago",
+            "notifications": "Notifications"
+        },
+        "details": {
+            "breadCrumbs": {
+                "main": "Notification Preferences",
+                "sub": {
+                    "view": "View Notification Preferences"
+                }
+            },
+            "tabs": {
+                "subTitle1": "Template Selection",
+                "subTitle2": "Templates",
+                "recordDetails": {
+                    "appType": "Application Type",
+                    "action": "Action",
+                    "id": "Notification Preference ID",
+                    "emailNotifTemplSubject": "Email Template Subject",
+                    "emailNotifTemplContent": "Email Template Content",
+                    "smsNotifTemplSubject": "SMS Template Subject",
+                    "smsNotifTemplContent": "SMS Template Content",
+                    "telegramNotifTemplSubject": "Telegram Template Subject",
+                    "telegramNotifTemplContent": "Telegram Template Content",
+                    "selectTemplate": "Select Templates"
+                }
+            }
+        }
+    }
+}

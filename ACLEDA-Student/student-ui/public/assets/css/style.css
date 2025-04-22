@@ -1,0 +1,60 @@
+html{
+	background:#b2a300;
+	color:#222;
+	padding:15px;
+}
+
+@media screen and (max-width:772px)
+{
+	body{background:none;margin-top:0;max-width:none;padding-right:0}
+}
+
+body {
+	margin: 7% auto 0;
+	max-width: 390px;
+	min-height: 180px;
+	padding: 30px 0 15px;
+	background-color: #b2a300;
+	text-align:unset;
+	max-width:390px;
+	min-height:180px;
+	padding:30px 0 15px;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+#logo{
+	display: inline-block;
+	height: 54px;
+	width: 150px;
+	background: url('../images/logos/portEdiLogo_err.jpg') no-repeat;
+	margin-left: -5px;
+}
+@media only screen and (min-resolution:192dpi){
+	#logo{background:url('../images/logos/portEdiLogo_err.jpg') no-repeat 0% 0%/100% 100%;-moz-border-image:url('../images/logos/portEdiLogo_err.jpg') 0}}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2)
+{
+	#logo{background:url('../images/logos/portEdiLogo_err.jpg') no-repeat;-webkit-background-size:100% 100%}
+}
+
+#logo{
+	display:inline-block;height:54px;width:150px
+}
+
+p{
+	margin:11px 0 22px;overflow:hidden;
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+ins{color:#777;text-decoration:none}
+
+b {
+	font-weight: bold;
+}
+

@@ -1,0 +1,126 @@
+{
+    "register": {
+        "title": "Manage Account",
+        "list": "Account Onboarding List",
+        "header": "Student Registration",
+        "save": "Registration save successfully!",
+        "submit": "Registration submitted successfully!",
+        "approved": "Student Registration successfully approved!",
+        "rejected": "Student Registration successfully rejected!",
+        "required": "This field is required.",
+        "error": {
+            "fileTooBig": "File too big!",
+            "fileMustBe": "File must be in jpg, jpeg or png",
+            "compInitialMaxLength": "Please specify company initial (max. 5 characters)",
+            "emptyNotAllowed": "Empty Account ID or Spaces are not allowed",
+            "accountExist": "Account ID {{accnrCoIntial}} already exists!"
+        },
+        "activate": {
+            "done": {
+                "header": "Account Already Active!",
+                "msg": "Account has already been activated! Check your email for the login details."
+            },
+            "success": {
+                "header": "Account Activated!",
+                "msg": "Your Account is Successfully Activated! You will receive an Email for Username/Password shortly."
+            },
+            "notFound": {
+                "header": "Error"
+            }
+        },
+        "rejectRemarks": "Remarks",
+        "btnReject": "Reject",
+        "table": {
+            "accountRegID": "Account Reg ID",
+            "accountID": "Account ID",
+            "companyName": "Company Name",
+            "accountType": "Account Type",
+            "vatTin": "VAT/TIN",
+            "dateSubmitted": "Date Submitted",
+            "status": "Status"
+        },
+        "validation": {
+            "usernameRequired": "Username is required.",
+            "usernameTooShort": "Username must be at least 3 characters.",
+            "emailRequired": "Email is required.",
+            "emailInvalid": "Invalid email format.",
+            "passwordRequired": "Password is required.",
+            "passwordTooShort": "Password must be at least 6 characters.",
+            "firstnameRequired": "First name is required.",
+            "lastnameRequired": "Last name is required.",
+            "genderRequired": "Gender is required.",
+            "dobRequired": "Date of birth is required.",
+            "contactRequired": "Contact number is required.",
+            "contactInvalid": "Invalid contact number.",
+            "addressRequired": "Address is required."
+        }
+    },
+    "companyDetails": {
+        "title": "Company Details",
+        "accnrCoIntial": "Account ID",
+        "atypId": "Account Type",
+        "accnName": "Company Name",
+        "accnCoyRegn": "Business Registration No",
+        "accnDtExpire": "Expiry Date",
+        "contactTel": "Contact Number",
+        "contactTlgrm": "Telegram Chat ID",
+        "contactEmail": "Company Email Address",
+        "addrLn1": "Address Line 1",
+        "addrLn2": "Address Line 2",
+        "addrLn3": "Address Line 3",
+        "addrProv": "Province",
+        "addrCity": "City/Distict",
+        "addrPcode": "Postal Code",
+        "ctyCode": "Country"
+    },
+    "permissions": {
+        "title": "Permissions",
+        "heading": "Enable/Disable Permissions",
+        "shipClearanceProcess": "Ship Clearance Process"
+    },
+    "userDetails": {
+        "title": "User Details",
+        "username": "Username",
+        "email": "Email",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "enterYourEmail": "Enter your email",
+        "enterYourUsername": "Enter your username",
+        "enterYourPassword": "Enter your password",
+        "enterYourFirstName": "Enter your First Name",
+        "enterYourLastName": "Enter your Last Name",
+        "password": "Password",
+        "usrTitle": "Position",
+        "contactEmail": "Email ID",
+        "contactTel": "Contact No.",
+        "addrLn1": "Address (Line 1)",
+        "addrLn2": "Address (Line 2)",
+        "addrLn3": "Address (Line 3)",
+        "addrProv": "Province",
+        "addrCity": "City/District",
+        "addrPcode": "Postal Code",
+        "ctyCode": "Country"
+    },
+    "companyStamp": {
+        "title": "Company Logo Details",
+        "btnUpload": "Upload Agent/Ship Line Stamp Image",
+        "stampPhotoSpec1": "Photo Specification",
+        "stampPhotoSpec2": "Must be .jpg, .jpeg or .png",
+        "stampPhotoSpec3": "Between 50 KB and 1.5 MB in size.",
+        "stampPhotoSpec4": "Between 50 KB and 1 MB in size.",
+        "preview": "Company stamp preview"
+    },
+    "suppDocs": {
+        "title": "Supporting Documents",
+        "no": "No.",
+        "docType": "Document Type",
+        "docName": "Document Name",
+        "required": "Required",
+        "file": "File",
+        "viewFile": "View File",
+        "reference": "Reference",
+        "yes": "Yes",
+        "not": "No"
+    }
+
+}

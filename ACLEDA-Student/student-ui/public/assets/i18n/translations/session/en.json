@@ -1,0 +1,59 @@
+{
+    "login": {
+        "label": {
+            "userId": "User ID",
+            "pwd": "Password",
+            "forgotPwd": "Forgot Password?",
+            "rememberMe": "Remember Me",
+            "or": "or",
+            "greetings": "Hello, "
+        },
+        "btn": {
+            "signIn": "Sign In",
+            "signUp": "Sign Up"
+        },
+        "msgs": {
+            "error": {
+                "usrIdRequired": "User ID is required",
+                "pwdRequired": "Password is required"
+            }
+        }
+    },
+    "forgotPwd": {
+        "msgs": {
+            "success": "If provided email is a registered email ID on PortEDI, you will receive an email with further instructions on how to reset your password."
+        }
+    },
+    "forcedPwdChange": {
+        "label": {
+            "header": "Please change your password",
+            "userId": "User ID",
+            "currentPwd": "Current Password",
+            "newPwd": "New Password",
+            "confirmPwd": "Confirm Password"
+        },
+        "msgs": {
+            "usrIdRequired": "User ID is required",
+            "oldPwdRequired": "Current Password is required",
+            "newPwdRequired": "New Password is required",
+            "confPwdRequired": "Confirmed Password is required",
+            "pwdNoMatch": "Passwords do not match",
+            "pwdChngSuccess": "Password Changed!",
+            "passwordFormat": "Password must be 8-20 characters long. Passwords are case sensitive."
+        },
+        "btn": {
+            "changePwd": "Change Password",
+            "signIn": "Sign In",
+            "backToSignIn": "Back to Sign In"
+        }
+    },
+    "resetPwd": {
+        "reset": "Reset Password",
+        "signIn": "Sign In",
+        "email": "Email"
+    },
+    "notFound": {
+        "msg": "That page doesn't exist or is unavailable.",
+        "btnBack": "Back to Dashboard"
+    }
+}
